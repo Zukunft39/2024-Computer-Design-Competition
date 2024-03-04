@@ -61,7 +61,7 @@ MonoBehaviour:
       radiusFrom: 60
       radiusTo: 70
       color: {r: 0, g: 0.26723528, b: 1, a: 0}
-  - levelName: "\u7B2C\u4E94\u5207\uFF1A\u55B5"
+  - levelName: "\u6700\u7EC8\u5207\uFF1A\u55B5"
     targetAreaDatas:
     - distributeType: 0
       radiusFrom: 10
