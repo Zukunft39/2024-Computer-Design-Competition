@@ -16,6 +16,7 @@ public class ChopCircleGamePlay : MonoBehaviour
     public ChopCircleLevelSO levelSo;
     public Text missText;
     public Text timeText;
+    public Text levelnameText;
     public float totalTime;
     public int missTimes
     {
@@ -26,6 +27,8 @@ public class ChopCircleGamePlay : MonoBehaviour
             OnMissed();
         }
     }
+
+    public String endingText;
 
     private int missTimesPri;
     private int gamePhase;
@@ -66,11 +69,13 @@ public class ChopCircleGamePlay : MonoBehaviour
             //Game Clear
             Debug.Log("Game Clear");
             isGaming = false;
+            levelnameText.text= endingText;
             return;
         }
         Debug.Log("Start Game");
         chopGameSlider.ActivateHandle();
         isGaming= true;
+        levelnameText.text = levelSo.levels[gamePhase].levelName;
         GenerateTargetAreas();
     }
     void FinishGame()

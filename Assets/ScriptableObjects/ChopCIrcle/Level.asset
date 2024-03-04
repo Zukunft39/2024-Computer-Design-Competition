@@ -13,73 +13,77 @@ MonoBehaviour:
   m_Name: Level
   m_EditorClassIdentifier: 
   levels:
-  - levelName: 
+  - levelName: "\u7B2C\u4E00\u5207\uFF1A\u521D\u51FA\u8305\u5E90"
     targetAreaDatas:
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 140
       radiusTo: 120
       color: {r: 1, g: 0, b: 0, a: 1}
-  - levelName: 
+  - levelName: "\u7B2C\u4E8C\u5207\uFF1A\u5173"
     targetAreaDatas:
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 80
       radiusTo: 120
       color: {r: 1, g: 0, b: 0, a: 0}
-    - distributeType: 0
+    - distributeType: 1
       radiusFrom: 70
       radiusTo: 100
       color: {r: 0.3042903, g: 1, b: 0, a: 0}
-  - levelName: 
+  - levelName: "\u7B2C\u4E09\u5207\uFF1A\u6CE8"
     targetAreaDatas:
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 30
       radiusTo: 40
       color: {r: 1, g: 0, b: 0, a: 0}
-    - distributeType: 0
+    - distributeType: 1
       radiusFrom: 50
       radiusTo: 60
       color: {r: 0, g: 1, b: 0.123636246, a: 0}
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 70
       radiusTo: 80
       color: {r: 1, g: 0.96559095, b: 0, a: 0}
-  - levelName: 
+  - levelName: "\u7B2C\u56DB\u5207\uFF1A\u6C38\u96CF\u5854\u83F2"
     targetAreaDatas:
-    - distributeType: 0
+    - distributeType: 1
       radiusFrom: 30
       radiusTo: 40
       color: {r: 1, g: 0, b: 0, a: 0}
-    - distributeType: 0
+    - distributeType: 1
       radiusFrom: 40
       radiusTo: 50
       color: {r: 0, g: 1, b: 0.19270587, a: 0}
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 20
       radiusTo: 20
       color: {r: 1, g: 0, b: 0.93470955, a: 0}
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 60
       radiusTo: 70
       color: {r: 0, g: 0.26723528, b: 1, a: 0}
-  - levelName: 
+  - levelName: "\u7B2C\u4E94\u5207\uFF1A\u55B5"
     targetAreaDatas:
-    - distributeType: 1
+    - distributeType: 0
       radiusFrom: 10
       radiusTo: 10
       color: {r: 1, g: 0, b: 0, a: 0}
-    - distributeType: 0
+    - distributeType: 1
       radiusFrom: 20
       radiusTo: 20
       color: {r: 0.12834764, g: 1, b: 0, a: 0}
-    - distributeType: 1
-      radiusFrom: 20
-      radiusTo: 30
-      color: {r: 0.891067, g: 1, b: 0, a: 0}
     - distributeType: 0
+      radiusFrom: 10
+      radiusTo: 15
+      color: {r: 0.891067, g: 1, b: 0, a: 0}
+    - distributeType: 1
       radiusFrom: 30
       radiusTo: 30
       color: {r: 0.047379494, g: 0, b: 1, a: 0}
     - distributeType: 1
-      radiusFrom: 20
+      radiusFrom: 15
       radiusTo: 20
       color: {r: 1, g: 0, b: 0.8365736, a: 0}
+    - distributeType: 0
+      radiusFrom: 7
+      radiusTo: 10
+      color: {r: 0, g: 1, b: 0.95004964, a: 0}
