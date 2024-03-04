@@ -60,7 +60,7 @@ public class CircleRenderer : MonoBehaviour
                 break;
             case Status.Chopping:
                 chopTimer += Time.deltaTime;
-                ShowChoppingChoplines(chopTimer / chopDuration);
+                ShowChoppingChopLines(chopTimer / chopDuration);
                 EstimatePi();
                 //Switch Status
                 if (chopTimer >= chopDuration)
@@ -88,7 +88,7 @@ public class CircleRenderer : MonoBehaviour
         piText.text = "Estimated Pi: " + estimatedPi;
     }
     
-    void ShowIdleChoplines()
+    void ShowInitialChopLines()
     {
         chopLineRenderer.useWorldSpace = false;
         float angle = angleOffset;
@@ -102,7 +102,7 @@ public class CircleRenderer : MonoBehaviour
         }
     }
 
-    void ShowChoppingChoplines(float t)
+    void ShowChoppingChopLines(float t)
     {
         for (int i = 0; i < edgeCount*2 + 1; i++)
         {
@@ -112,6 +112,7 @@ public class CircleRenderer : MonoBehaviour
             chopLineRenderer.SetPosition(i, new Vector3(x, y, 0));
         }
     }
+    
     /// <summary>
     /// 全てのチョップラインを削除する
     /// </summary>
@@ -119,7 +120,10 @@ public class CircleRenderer : MonoBehaviour
     {
         chopLineRenderer.positionCount = 0;
     }
-
+    
+    /// <summary>
+    /// Chop the Circle
+    /// </summary>
     public void Chop()
     {
         chopTimes++;
@@ -148,7 +152,7 @@ public class CircleRenderer : MonoBehaviour
 
     private void Start()
     {
-        ShowIdleChoplines();
+        ShowInitialChopLines();
     }
 
     private void Update()
@@ -156,10 +160,5 @@ public class CircleRenderer : MonoBehaviour
         ShowCircle(circleSegments);
         ShowChopLines();
     }
-
-    // private void OnValidate()
-    // {
-    //     ShowCircle(circleSegments);
-    //     ShowChopLines();
-    // }
+    
 }

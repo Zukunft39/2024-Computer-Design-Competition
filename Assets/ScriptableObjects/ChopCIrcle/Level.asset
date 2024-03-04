@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8251ab574ff6aec4b81260a8796a401d, type: 3}
+  m_Name: Level
+  m_EditorClassIdentifier: 
+  levels:
+  - levelName: 
+    targetAreaDatas:
+    - distributeType: 1
+      radiusFrom: 140
+      radiusTo: 120
+      color: {r: 1, g: 0, b: 0, a: 1}
+  - levelName: 
+    targetAreaDatas:
+    - distributeType: 1
+      radiusFrom: 80
+      radiusTo: 120
+      color: {r: 1, g: 0, b: 0, a: 0}
+    - distributeType: 0
+      radiusFrom: 70
+      radiusTo: 100
+      color: {r: 0.3042903, g: 1, b: 0, a: 0}
+  - levelName: 
+    targetAreaDatas:
+    - distributeType: 1
+      radiusFrom: 30
+      radiusTo: 40
+      color: {r: 1, g: 0, b: 0, a: 0}
+    - distributeType: 0
+      radiusFrom: 50
+      radiusTo: 60
+      color: {r: 0, g: 1, b: 0.123636246, a: 0}
+    - distributeType: 1
+      radiusFrom: 70
+      radiusTo: 80
+      color: {r: 1, g: 0.96559095, b: 0, a: 0}
+  - levelName: 
+    targetAreaDatas:
+    - distributeType: 0
+      radiusFrom: 30
+      radiusTo: 40
+      color: {r: 1, g: 0, b: 0, a: 0}
+    - distributeType: 0
+      radiusFrom: 40
+      radiusTo: 50
+      color: {r: 0, g: 1, b: 0.19270587, a: 0}
+    - distributeType: 1
+      radiusFrom: 20
+      radiusTo: 20
+      color: {r: 1, g: 0, b: 0.93470955, a: 0}
+    - distributeType: 1
+      radiusFrom: 60
+      radiusTo: 70
+      color: {r: 0, g: 0.26723528, b: 1, a: 0}
+  - levelName: 
+    targetAreaDatas:
+    - distributeType: 1
+      radiusFrom: 10
+      radiusTo: 10
+      color: {r: 1, g: 0, b: 0, a: 0}
+    - distributeType: 0
+      radiusFrom: 20
+      radiusTo: 20
+      color: {r: 0.12834764, g: 1, b: 0, a: 0}
+    - distributeType: 1
+      radiusFrom: 20
+      radiusTo: 30
+      color: {r: 0.891067, g: 1, b: 0, a: 0}
+    - distributeType: 0
+      radiusFrom: 30
+      radiusTo: 30
+      color: {r: 0.047379494, g: 0, b: 1, a: 0}
+    - distributeType: 1
+      radiusFrom: 20
+      radiusTo: 20
+      color: {r: 1, g: 0, b: 0.8365736, a: 0}
