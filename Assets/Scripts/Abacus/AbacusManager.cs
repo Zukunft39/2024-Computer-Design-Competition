@@ -8,10 +8,6 @@ public class AbacusManager : MonoBehaviour
     [Tooltip("通过次数")]
     [SerializeField] private int count = 0;
 
-    [Space]
-
-    [Tooltip("结果")]
-    [SerializeField] private int result = 0;
 
     [Space]
     [Tooltip("是否开始")]
@@ -19,39 +15,47 @@ public class AbacusManager : MonoBehaviour
 
     int target = 0;//真实结果
     float time = 0;//经过时间
+    bool isPause = false;//UI开启判断
 
-    public const float latestTime = 15f;
+    public const float latestTime = 16f;
+    public static int result = 0;
     [Tooltip("计时UI显示")] public Text timerText;
     [Tooltip("算式UI显示")] public List<Text> texts;
+    [Tooltip("胜利UI")] public GameObject wPanel;
+    [Tooltip("失败UI")] public GameObject lPanel;
+    [Tooltip("暂停UI")] public GameObject pPanel;
+    [Tooltip("总UI")] public GameObject tCanvas;
+
     private void Awake()
     {
         time = latestTime;
-        texts = new List<Text>();
+        AddSubCal();
     }
     private void Update()
     {
-        //计时器
-        if (isBegin)
+        #region 计时器
+        if (isBegin && !isPause)
         {
             time -= Time.deltaTime;
-            if (timerText != null)
+            if (timerText != null && texts[4] != null)
             {
-                timerText.text = time.ToString();
+                timerText.text = ((int)time).ToString();
+                texts[4].text = result.ToString();
             }
 #if UNITY_EDITOR
-            else Debug.LogError("No TimerText in UI");
+            else if (timerText == null) Debug.LogError("No TimerText in UI");
+            else Debug.LogError("No Result in UI");
 #endif
+            if (time <= 0) Judge();
         }
-        else time = latestTime;
+        else if(!isBegin) time = latestTime;
+        #endregion
 
-        //进行算盘的具体操作
-
-        //判断是否继续进行游戏
-        if (count < 3)
-        {
-            AddSubCal();
-        }
-        else Win();
+        #region 进行UI操作
+        if (Input.GetKey(KeyCode.Escape)) Pause();
+        //else if (Input.GetKey(KeyCode.L)) Lose();
+        //else if (Input.GetKey(KeyCode.W)) Win();
+        #endregion
     }
     //出现算式
     private void AddSubCal()
@@ -63,6 +67,7 @@ public class AbacusManager : MonoBehaviour
 
 #if UNITY_EDITOR
         if (texts.Count <= 0) Debug.LogError("No Calculation UI");
+        Debug.Log(texts.Count);
 #endif
 
         //场景表示
@@ -102,7 +107,7 @@ public class AbacusManager : MonoBehaviour
 
     }
     //关于最终次数的计算,进行最终结果判断时调用
-    private void Judge()
+    public void Judge()
     {
         if (isBegin)
         {
@@ -118,6 +123,13 @@ public class AbacusManager : MonoBehaviour
         timerText.text = "";
         foreach (var item in texts) item.text = "";
 
+        //判断是否继续进行游戏
+        if (count < 3 && !isBegin && !isPause)
+        {
+            AddSubCal();
+        }
+        else if (count == 3) Win();
+
 #if UNITY_EDITOR
         Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
 #endif
@@ -126,10 +138,43 @@ public class AbacusManager : MonoBehaviour
     private void Win()
     {
         //UI显示成功界面
+        wPanel.SetActive(true);
+        isPause = true;
     }
     //关于失败
     private void Lose()
     {
         //UI显示失败界面
+        lPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于暂停
+    private void Pause()
+    {
+        //UI显示暂停界面
+        pPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于重新开始
+    public void Restart()
+    {
+        count = 0;
+        result = 0;
+        time = latestTime;
+        AddSubCal();
+        lPanel.SetActive(false);
+        isPause = false;
+    }
+    //关于继续
+    public void Continue()
+    {
+        pPanel.SetActive(false);
+        isPause = false;
+    }
+    //关于退出
+    public void Exit()
+    {
+        tCanvas.SetActive(false);
+        isPause = false;
     }
 }
