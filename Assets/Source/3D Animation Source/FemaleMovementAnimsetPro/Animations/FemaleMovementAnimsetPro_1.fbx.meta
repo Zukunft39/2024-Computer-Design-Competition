@@ -16893,7 +16893,7 @@ ModelImporter:
     - name: LeftArm
       parentName: LeftShoulder
       position: {x: -0.112815596, y: 0.00000015258789, z: -0.000000028610229}
-      rotation: {x: 0.00395855, y: 0.05519549, z: 0.1881463, w: 0.98058087}
+      rotation: {x: 0.0007990009, y: 0.09476129, z: -0.023960743, w: 0.9952113}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
     - name: LeftArmRoll
       parentName: LeftArm
@@ -16903,7 +16903,7 @@ ModelImporter:
     - name: LeftForeArm
       parentName: LeftArm
       position: {x: -0.2710414, y: -2.2737367e-15, z: 0.000000020774468}
-      rotation: {x: -0.005807798, y: 0.030219175, z: -0.022760512, w: 0.9992673}
+      rotation: {x: -0.032803833, y: -0.005366162, z: 0.15978861, w: 0.98659146}
       scale: {x: 1.0000002, y: 1, z: 1.0000002}
     - name: LeftForeArmRoll
       parentName: LeftForeArm
@@ -16913,7 +16913,7 @@ ModelImporter:
     - name: LeftHand
       parentName: LeftForeArm
       position: {x: -0.23482943, y: -0.0000001566176, z: 0.00000011444058}
-      rotation: {x: -0.05855469, y: 0.005765164, z: 0.018105028, w: 0.9981034}
+      rotation: {x: -0.061299425, y: -0.004993993, z: 0.055857033, w: 0.9965428}
       scale: {x: 0.9999999, y: 1, z: 1.0000002}
     - name: LeftHandIndex1
       parentName: LeftHand
@@ -17033,12 +17033,12 @@ ModelImporter:
     - name: RightShoulder
       parentName: Spine1
       position: {x: 0.035467427, y: 0.19058868, z: 0.0026850742}
-      rotation: {x: 0.993077, y: -0.058391802, z: -0.101748295, w: -0.0059825536}
+      rotation: {x: 0.993077, y: -0.058391817, z: -0.101748295, w: -0.0059825554}
       scale: {x: 1.000001, y: 1.0000002, z: 1.0000002}
     - name: RightArm
       parentName: RightShoulder
       position: {x: 0.11281534, y: -0.00000247362, z: -0.00000032867163}
-      rotation: {x: 0.06463995, y: 0.11597389, z: 0.091970585, w: 0.9868704}
+      rotation: {x: 0.052107144, y: 0.102605894, z: -0.028666016, w: 0.99294263}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
     - name: RightArmRoll
       parentName: RightArm
@@ -17048,7 +17048,7 @@ ModelImporter:
     - name: RightForeArm
       parentName: RightArm
       position: {x: 0.2710439, y: 0.0000026377656, z: 0.00000057430935}
-      rotation: {x: -0.005809583, y: 0.030210154, z: -0.022746716, w: 0.9992678}
+      rotation: {x: 0.020047102, y: 0.007963076, z: 0.18471284, w: 0.98255587}
       scale: {x: 1.0000002, y: 1, z: 1.0000002}
     - name: RightForeArmRoll
       parentName: RightForeArm
@@ -17058,7 +17058,7 @@ ModelImporter:
     - name: RightHand
       parentName: RightForeArm
       position: {x: 0.234827, y: -0.0000044285603, z: -0.0000036005529}
-      rotation: {x: -0.05855471, y: 0.005765164, z: 0.01810505, w: 0.9981034}
+      rotation: {x: -0.05462838, y: -0.001173741, z: 0.059360772, w: 0.99674}
       scale: {x: 0.9999999, y: 1, z: 1.0000002}
     - name: RightHandIndex1
       parentName: RightHand
@@ -17133,7 +17133,7 @@ ModelImporter:
     - name: RightHandRing2
       parentName: RightHandRing1
       position: {x: 0.029505037, y: -0.0000019048084, z: -0.0000017901558}
-      rotation: {x: 0.000007100139, y: 0.00008408722, z: 0.032998227, w: 0.9994554}
+      rotation: {x: 0.000007100141, y: 0.00008408722, z: 0.03299824, w: 0.9994554}
       scale: {x: 1.0000002, y: 0.99999994, z: 1.0000001}
     - name: RightHandRing3
       parentName: RightHandRing2
@@ -17148,7 +17148,7 @@ ModelImporter:
     - name: RightHandThumb1
       parentName: RightHand
       position: {x: 0.011841082, y: 0.0088620465, z: -0.021983372}
-      rotation: {x: 0.7384234, y: 0.25767684, z: -0.1957048, w: 0.59163606}
+      rotation: {x: 0.7315654, y: 0.25868103, z: -0.21557236, w: 0.592811}
       scale: {x: 1.0000002, y: 1, z: 1.0000001}
     - name: RightHandThumb2
       parentName: RightHandThumb1
