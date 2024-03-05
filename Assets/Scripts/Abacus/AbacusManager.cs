@@ -28,7 +28,6 @@ public class AbacusManager : MonoBehaviour
 
     private void Awake()
     {
-        time = latestTime;
         AddSubCal();
     }
     private void Update()
@@ -70,8 +69,12 @@ public class AbacusManager : MonoBehaviour
         Debug.Log(texts.Count);
 #endif
 
-        //场景表示
-
+        //场景初始化
+        #region 算珠初始化
+        Abacus abacus = FindObjectOfType<Abacus>();
+        abacus.BeadClear();
+        #endregion
+        #region UI初始化
         if (isAdd)
         {
             //场景表示
@@ -95,7 +98,9 @@ public class AbacusManager : MonoBehaviour
             target = nums1 - nums2;
         }
         texts[3].text = "=";
-
+        #endregion
+        time = latestTime;
+        result = 0;
         //开始游戏
         isBegin = true;
     }
@@ -159,8 +164,6 @@ public class AbacusManager : MonoBehaviour
     public void Restart()
     {
         count = 0;
-        result = 0;
-        time = latestTime;
         AddSubCal();
         lPanel.SetActive(false);
         isPause = false;
@@ -177,4 +180,5 @@ public class AbacusManager : MonoBehaviour
         tCanvas.SetActive(false);
         isPause = false;
     }
+
 }

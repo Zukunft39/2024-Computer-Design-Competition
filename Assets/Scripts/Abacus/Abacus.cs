@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class Abacus : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
@@ -19,6 +20,7 @@ public class Abacus : MonoBehaviour
 
     private void Awake()
     {
+        #region 算盘初始化
         beads = new AbacusBead[col, row];
         for (int x = 0; x < col; x++)
         {
@@ -44,24 +46,31 @@ public class Abacus : MonoBehaviour
 #endif
             }
         }
+        #endregion
     }
     private void Update()
     {
         //射线检测，算盘得分操作
-        if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject())
+        if(Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics.Raycast(ray,out hit))
+            if (EventSystem.current.IsPointerOverGameObject())
             {
-                for (int x = 0; x < col; x++)
+                List<RaycastResult> raycasts = new List<RaycastResult>();
+                PointerEventData eventData = new PointerEventData(EventSystem.current);
+                eventData.position = Input.mousePosition;
+                EventSystem.current.RaycastAll(eventData, raycasts);
+                foreach(var r in raycasts)
                 {
-                    for (int y = 0; y < row; y++)
+                    GameObject clickObj = r.gameObject;
+                    for(int x = 0; x < col; x++)
                     {
-                        if(hit.collider.gameObject == beads[x, y].obj)
+                        for(int y = 0; y < row; y++)
                         {
-                            if (beads[x, y].GetCount() > 0) BeadClose(x, y, y);
-                            else if (beads[x, y].GetCount() == 0) BeadOpen(x, y, row - 2 - y);
+                            if(clickObj == beads[x, y].obj)
+                            {
+                                if (beads[x, y].GetCount() > 0) BeadClose(x, y, y);
+                                else if (beads[x, y].GetCount() == 0) BeadOpen(x, y, row - 2 - y);
+                            }
                         }
                     }
                 }
@@ -72,11 +81,17 @@ public class Abacus : MonoBehaviour
     private void BeadOpen(int currentX, int currentY, int nextY)
     {
         //current指被点击的顺序，next指其上还有多少
-        AbacusManager.result += beads[currentX, currentY].GetValue();
-        //上珠操作
-        if(currentY < row - 1)
+        if (beads[currentX, currentY].GetCount() == 0)
         {
-            beads[currentX, currentY].DragBead(new Vector2(0, (row - 2) * offestY));
+            AbacusManager.result += beads[currentX, currentY].GetValue() * (int)Mathf.Pow(10, col - 1 - currentX);
+#if UNITY_EDITOR
+            Debug.Log("beads[" + currentX + "," + currentY + "]" + "value:" + beads[currentX, currentY].GetValue());
+#endif
+        }
+        //上珠操作
+        if (currentY < row - 1 && beads[currentX, currentY].GetCount() == 0)
+        {
+            beads[currentX, currentY].DragBead(new Vector2(0, (row - 3) * offestY));
             beads[currentX, currentY].SetCount(1);
             nextY--;
             if (currentY < row - 2) currentY++;
@@ -93,21 +108,31 @@ public class Abacus : MonoBehaviour
     private void BeadClose(int currentX, int currentY, int nextY)
     {
         //同上
-        AbacusManager.result -= beads[currentX, currentY].GetValue();
+        if (beads[currentX,currentY].GetCount() == 1)
+            AbacusManager.result -= beads[currentX, currentY].GetValue() * (int)Mathf.Pow(10, col - 1 - currentX);
         //上珠操作
-        if(currentY < row - 1)
+        if (currentY < row - 1 && beads[currentX, currentY].GetCount() == 1)
         {
             beads[currentX, currentY].ReturnBead();
             beads[currentX, currentY].SetCount(-1);
             nextY--;
             if (currentY > 0) currentY--;
-            if (nextY >= 0) BeadClose(currentX, currentY, nextY);
+            if (nextY > 0) BeadClose(currentX, currentY, nextY);
         }
         //下珠操作
         else if(currentY == row - 1)
         {
             beads[currentX, currentY].ReturnBead();
             beads[currentX, currentY].SetCount(-1);
+        }
+    }
+    //算珠初始化（用于被调用）
+    public void BeadClear()
+    {
+        foreach (var bead in beads)
+        {
+            bead.ReturnBead();
+            if (bead.GetCount() == 1) bead.SetCount(-1);
         }
     }
 }
