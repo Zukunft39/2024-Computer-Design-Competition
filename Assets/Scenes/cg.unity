@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4256c66c1043a1e4cb6b96bb90feee35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1445,6 +1445,9 @@ MonoBehaviour:
   prefab: {fileID: 1136138380749347526, guid: ba06c29e001d45c42bd723e4ee10bc2d, type: 3}
   offestX: 20
   offestY: 10
+  sprites:
+  - {fileID: 21300000, guid: 1d374c4ce78ed7140a667c3f0ec9b259, type: 3}
+  - {fileID: 21300000, guid: d3755a80f980483408c50eb93fcc3872, type: 3}
 --- !u!1 &808235974
 GameObject:
   m_ObjectHideFlags: 0

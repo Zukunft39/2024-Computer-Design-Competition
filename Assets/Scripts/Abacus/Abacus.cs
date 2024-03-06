@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class Abacus : MonoBehaviour
@@ -10,16 +11,28 @@ public class Abacus : MonoBehaviour
     [Space]
     [Tooltip("误差X")]
     [SerializeField] private int offestX;
-    [Tooltip("误差Y")]
     [Space]
+    [Tooltip("误差Y")]
     [SerializeField] private int offestY;
+    [Space]
+    [Tooltip("算珠图片")]
+    [SerializeField] private Sprite[] sprites;
     private AbacusBead[,] beads;
     private int row = 5;//5行
     private int col = 3;//3列
 
-
+    RectTransform myRect;//挂载本身
     private void Awake()
     {
+        #region 算珠间距初始化
+        myRect = GetComponent<RectTransform>();
+        offestX = (int)myRect.rect.width / 15;
+        offestY = (int)myRect.rect.height / 13;
+#if UNITY_EDITOR 
+        Debug.Log("长宽：" + offestX + "&" + offestY);
+#endif
+        #endregion
+
         #region 算盘初始化
         beads = new AbacusBead[col, row];
         for (int x = 0; x < col; x++)
@@ -29,16 +42,20 @@ public class Abacus : MonoBehaviour
                 GameObject obj = Instantiate(prefab);
                 obj.transform.SetParent(transform, false);
                 RectTransform rect = obj.GetComponent<RectTransform>();
-                rect.anchoredPosition = new Vector2((x - 1) * 2 * offestX, (y - row + 1) * offestY);
+                rect.anchoredPosition = new Vector2((x + 3.75f) * offestX, (y - row + 0.9f) * offestY);
 
                 if (y == row - 1)
                 {
-                    rect.anchoredPosition = new Vector2((x - 1) * 2 * offestX, y * offestY);
+                    rect.anchoredPosition = new Vector2((x + 3.75f) * offestX, (y - 0.6f) * offestY);
                     beads[x, y] = new AbacusBead(rect, true);
                 }
                 else beads[x, y] = new AbacusBead(rect, false);
 
                 beads[x, y].obj = obj;
+
+                Image image = obj.GetComponent<Image>();
+                if (beads[x, y].GetBool()) image.sprite = sprites[0];//顶珠
+                else image.sprite = sprites[1];//底珠
 
 #if UNITY_EDITOR
                 if (beads[x, y].obj == null) Debug.LogWarning("obj is null:" + x + "&" + y);
@@ -91,7 +108,7 @@ public class Abacus : MonoBehaviour
         //上珠操作
         if (currentY < row - 1 && beads[currentX, currentY].GetCount() == 0)
         {
-            beads[currentX, currentY].DragBead(new Vector2(0, (row - 3) * offestY));
+            beads[currentX, currentY].DragBead(new Vector2(0, (row - 3.5f) * offestY));
             beads[currentX, currentY].SetCount(1);
             nextY--;
             if (currentY < row - 2) currentY++;
@@ -117,7 +134,7 @@ public class Abacus : MonoBehaviour
             beads[currentX, currentY].SetCount(-1);
             nextY--;
             if (currentY > 0) currentY--;
-            if (nextY > 0) BeadClose(currentX, currentY, nextY);
+            if (nextY >= 0) BeadClose(currentX, currentY, nextY);
         }
         //下珠操作
         else if(currentY == row - 1)
