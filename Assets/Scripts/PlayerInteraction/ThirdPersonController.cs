@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -56,6 +57,13 @@ public class ThirdPersonController : MonoBehaviour
     int postureHash;
     int moveSpeedHash;
     int turnSpeedHash;
+/// <summary>
+/// 角色重力手动添加
+/// </summary>
+    public float gravity = -9.81f;
+    private float verticalVelocity = 0.0f;
+    public float jumpVelocity = 5.0f;
+
     void Start()
     {
         playerTransform = transform; // 提高运行效率
@@ -71,7 +79,9 @@ public class ThirdPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CalculateGravity();
         CalculateInputDirection();
+        Jump();
         SwitchPlayerState();
         SetupAnimator();
     }
@@ -85,6 +95,9 @@ public class ThirdPersonController : MonoBehaviour
     }
     public void GetCrouchInput(InputAction.CallbackContext ctx){
         isCrouching = ctx.ReadValueAsButton();
+    }
+    public void GetJumpInput(InputAction.CallbackContext ctx){
+        isJumping = ctx.ReadValueAsButton();
     }
     #endregion
     void SwitchPlayerState(){
@@ -157,9 +170,25 @@ public class ThirdPersonController : MonoBehaviour
         }
     }
     /// <summary>
-    /// 使用Character Controller接管动画 控制玩家移动
+    /// 使用Character Controller接管动画 控制玩家移动（Character不自带重力需手动添加）
     /// </summary>
-    private void OnAnimatorMove() {
-        characterController.Move(animator.deltaPosition);
+    void OnAnimatorMove() {
+        Vector3 playerDeltaMovement = animator.deltaPosition;
+        playerDeltaMovement.y = verticalVelocity * Time.deltaTime;
+        characterController.Move(playerDeltaMovement);
+    }
+    void CalculateGravity(){
+        if(characterController.isGrounded){
+            verticalVelocity = 0f;
+            return;
+        }
+        else{
+            verticalVelocity += gravity * Time.deltaTime;
+        }
+    }
+    void Jump(){
+        if(characterController.isGrounded && isJumping){
+            verticalVelocity = jumpVelocity;  
+        }
     }
 }

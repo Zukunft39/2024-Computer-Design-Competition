@@ -1,12 +1,14 @@
 # About this repository
 
-This repository is NOT the full version NiloToonURP.
-This repository only contains a very simple and short URP toon shader example, only for tutorial purposes, it is under MIT license so you can do whatever you want with the code.
-If you want to keep the current tutorial shader, please fork it or download a copy now since it may be removed in the future. 
------------------------------------------
+This repository does NOT contain the full version of NiloToonURP.  
+Instead, it includes a simple, short and easy-to-read URP toon shader example for Unity2022.3LTS, which is intended for shader coding tutorial purposes. The shader example is licensed under the MIT license, giving you the freedom to use the code as you wish. If you'd like to retain the current tutorial shader, we recommend forking it or downloading a copy now, as it may be removed in the future.  
+  
+*this README also shows photos and information about the NiloToonURP(full version)
+
 # NiloToonURP(full version)'s rendering
 
 ![screenshot](https://i.imgur.com/lfu2wZd.jpg)
+![screenshot](https://i.imgur.com/F0nlZYh.jpg)
 shader ON
 ![screenshot](https://i.imgur.com/fSpM9zM.jpg)
 shader OFF
@@ -15,10 +17,6 @@ shader ON
 ![screenshot](https://i.imgur.com/N7J2A28.jpg)
 shader OFF
 ![screenshot](https://i.imgur.com/9tiHehF.jpg)
-shader ON
-![screenshot](https://i.imgur.com/vXcIGQ0.jpg)
-shader OFF
-![screenshot](https://i.imgur.com/tx643sR.jpg)
 shader ON
 ![screenshot](https://i.imgur.com/195Mzq7.jpg)
 shader OFF
@@ -29,21 +27,21 @@ Outline options(1/2/3)
 ![screenshot](https://i.imgur.com/Vkx0oN9.gif)
 ![screenshot](https://i.imgur.com/wUrVD7n.jpg)
 ![screenshot](https://i.imgur.com/aP3YmYV.jpg)
-![screenshot](https://i.imgur.com/qZWo4wN.jpg)
-![screenshot](https://i.imgur.com/RayvhGE.jpg)
+![screenshot](https://i.imgur.com/FxIv1Yl.jpg)
+![screenshot](https://i.imgur.com/XW5aNL4.jpg)
 shader ON
-![screenshot](https://i.imgur.com/5pVMWVN.png)
+![screenshot](https://i.imgur.com/VlA6hU6.jpg)
 shader OFF
-![screenshot](https://i.imgur.com/ds7LfLo.png)
+![screenshot](https://i.imgur.com/o1xm92a.jpg)
 ![screenshot](https://i.imgur.com/6dtu43p.jpg)
 ![screenshot](https://i.imgur.com/UyXuss9.jpg)
-![screenshot](https://i.imgur.com/tduYcFM.jpg)
 ![screenshot](https://i.imgur.com/UbtyddV.jpg)
 ![screenshot](https://i.imgur.com/jUrwwLb.jpg)
+![screenshot](https://i.imgur.com/ZSBwaHo.jpg)
 ![screenshot](https://i.imgur.com/i4O6m4z.jpg)
 
-We are now developing an "easy-to-use + high-performance + cross-platform(include mobile)" Closed source toon shader package - NiloToonURP,
-to meet the toon shading needs of Unity URP user.  
+We are now developing an "easy-to-use + high-performance + cross-platform(including mobile/VR/WebGL)" Closed source toon shader package - NiloToonURP,
+to assist Unity URP users in achieving high-quality anime/toon-like rendering.  
 
 NiloToonURP is supporting:
 - Unity 2021.3LTS(URP 12.x)
@@ -68,16 +66,16 @@ If you or your company/organization/team needs:
 - latest user document
 - perpetual royalty-free commercial license
 - every future update
+- NiloToon's tech support
 - (optional) we set up your character models's rendering in the best way possible for you, using NiloToonURP
-- (optional) tech support
 - (optional) your project-specific customization and support 
 
 of NiloToonURP for your URP project, please send the following info to nilotoon@gmail.com
 - name (your personal name or your company/organization/team's name)
 - a google account email for gaining permission to download all NiloToonURP files in google drive
-- any public website that shows your/your company/organization/team's work or public media  
+- any public website that shows your/your company/organization/team's work or public media (e.g. personal website/company website/youtube/bilibili/twitter...) 
 
-# NiloToonURP user's creations (public media, not NDA contents)
+# NiloToonURP user's creations (public media, not NDA content)
 *we only provided NiloToonURP's download permission + tech support, we didn't work on these creations directly
 
 ### Genshin Impact MV - When The Stars Align (Genshin Impact website -> http://genshin.hoyoverse.com)
@@ -97,22 +95,39 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/bEjNiOj.jpg)
 - 【原神生日会】When The Stars Align -> https://www.bilibili.com/video/BV1vT411T79n
 
-### VSPO!(ぶいすぽっ！) - 花芽すみれ (https://www.youtube.com/@KagaSumire)
-![screenshot](https://i.imgur.com/zk7AsTW.jpg)
-![screenshot](https://i.imgur.com/Asq0arH.jpg)
-![screenshot](https://i.imgur.com/GeX49uo.jpg)
-![screenshot](https://i.imgur.com/kLlSAgm.jpg)
-![screenshot](https://i.imgur.com/kCPEPt0.jpg)
-![screenshot](https://i.imgur.com/bSb3PY6.jpg)
-![screenshot](https://i.imgur.com/pLPpfKY.jpg)
-![screenshot](https://i.imgur.com/LV0zGNF.jpg)
-![screenshot](https://i.imgur.com/h9PCXAh.jpg)
-- #花芽すみれ3D うおおおおお！！【 ぶいすぽ / 花芽すみれ 】 -> https://www.youtube.com/live/g-bN6gisi3g?feature=share
+### キラッとプリ⭐︎チャン (https://twitter.com/pretty_vlive)
+![screenshot](https://i.imgur.com/Ul1u4hz.jpg)
+![screenshot](https://i.imgur.com/hJPCGmE.jpg)
+![screenshot](https://i.imgur.com/qwcCPN0.jpg)
+![screenshot](https://i.imgur.com/JbZRJXG.jpg)
+![screenshot](https://i.imgur.com/TwBlQe0.jpg)
+![screenshot](https://i.imgur.com/FnpWMuV.jpg)
+![screenshot](https://i.imgur.com/SdgQvOA.jpg)
+![screenshot](https://i.imgur.com/frhGcNt.jpg)
+![screenshot](https://i.imgur.com/8suihAg.jpg)
+![screenshot](https://i.imgur.com/RCo6T3s.jpg)
+![screenshot](https://i.imgur.com/apSrmFa.jpg)
+![screenshot](https://i.imgur.com/SdgQvOA.jpg)
+![screenshot](https://i.imgur.com/pTyaOOW.jpg)
+![screenshot](https://i.imgur.com/gSJLGDF.jpg)
+![screenshot](https://i.imgur.com/AtJqovW.jpg)
+- バーチャルミュージカル「ハイスクール！キラッとプリ☆チャン ～キラキラ☆未来の運命～」 -> https://www.zan-live.com/ja/live/detail/10395
 
-### VirtuaReal Star - 泠鸢yousa (https://space.bilibili.com/282994)
+### VSPO!(ぶいすぽっ！) - 胡桃のあ (https://www.youtube.com/@963Noah)
+![screenshot](https://i.imgur.com/bRNlOWG.jpg)
+![screenshot](https://i.imgur.com/Ffuybg8.jpg)
+![screenshot](https://i.imgur.com/xewWdKO.jpg)
+![screenshot](https://i.imgur.com/TdYcCSz.jpg)
+![screenshot](https://i.imgur.com/7itrZ89.jpg)
+![screenshot](https://i.imgur.com/Ro1uw6s.jpg)
+![screenshot](https://i.imgur.com/B1zzDqV.jpg)
+![screenshot](https://i.imgur.com/lTYv5uO.jpg)
+![screenshot](https://i.imgur.com/ThgxjXs.jpg)
+- #胡桃のあ3Dライブ│ 星降る夜に願いを込めて 🌠 -> https://www.youtube.com/live/otBLdDjhmp4?si=4YsH2jpEedQ7UaHK&t=1875
+
+### 泠鸢yousa (https://space.bilibili.com/282994)
 ![screenshot](https://i.imgur.com/Y5ZqAQR.jpg)
 ![screenshot](https://i.imgur.com/Jx2hWbF.jpg)
-![screenshot](https://i.imgur.com/S14efCf.jpg)
 ![screenshot](https://i.imgur.com/lWlwyQj.jpg)
 ![screenshot](https://i.imgur.com/42ZWOk4.jpg)
 ![screenshot](https://i.imgur.com/SBuq9fg.jpg)
@@ -120,70 +135,7 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/N87LdKE.jpg)
 ![screenshot](https://i.imgur.com/eKaaJS2.jpg)
 ![screenshot](https://i.imgur.com/7Cab1UP.jpg)
-- 《我的故事未写完》【原创曲-泠鸢词曲】-> https://www.bilibili.com/video/BV1JG4y1W7ub?share_source=copy_web&vd_source=833e89d3d9a150b0feba26e590fd09ce
-
-### VSPO!(ぶいすぽっ！【公式】) (https://www.youtube.com/@Vspo77)
-![screenshot](https://i.imgur.com/4LV7Sv3.jpg)
-![screenshot](https://i.imgur.com/NfBeCOG.jpg)
-![screenshot](https://i.imgur.com/2JPu8AB.jpg)
-![screenshot](https://i.imgur.com/PBRMIDn.jpg)
-![screenshot](https://i.imgur.com/cWntQRN.jpg)
-![screenshot](https://i.imgur.com/RUUPu2E.jpg)
-![screenshot](https://i.imgur.com/9KeaeqO.jpg)
-![screenshot](https://i.imgur.com/BqvLFq4.jpg)
-![screenshot](https://i.imgur.com/ZDh6cpT.jpg)
-![screenshot](https://i.imgur.com/8wJCcs3.jpg)
-![screenshot](https://i.imgur.com/m1X2Odj.jpg)
-![screenshot](https://i.imgur.com/y1BvqRe.jpg)
-![screenshot](https://i.imgur.com/CET2UlW.jpg)
-![screenshot](https://i.imgur.com/IAEDyfl.jpg)
-- 【3D企画】ぶいすぽ公式音楽番組「ぶいすPOP！」【#ぶいすぽ３D】-> https://www.youtube.com/live/9GaGcoDiULw?feature=share
-
-### VirtuaReal / Nijisanji CN - 七海Nana7mi (https://space.bilibili.com/434334701)
-![screenshot](https://i.imgur.com/Tp29cyb.jpg)
-![screenshot](https://i.imgur.com/9OsMvwh.jpg)
-![screenshot](https://i.imgur.com/HTBHcYg.jpg)
-![screenshot](https://i.imgur.com/PvSWEwl.jpg)
-- 【恋愛偏差値上昇中！】 https://www.bilibili.com/video/BV1v84y1K74A
-- 【情人节当一天恋爱脑也可以吧！】 https://www.bilibili.com/video/BV1wv4y1x7NZ
-- 【这次是全身版！！】 https://www.bilibili.com/video/BV1QM411b7pe
-
-### hololive-EN (https://hololive.hololivepro.com/en/talents?gp=english):
-![screenshot](https://i.imgur.com/cp5VTI1.jpg)
-![screenshot](https://i.imgur.com/9CloXLw.jpg)
-![screenshot](https://i.imgur.com/eVTmJT7.jpg)
-![screenshot](https://i.imgur.com/bc46ZRF.jpg)
-![screenshot](https://i.imgur.com/Ls2lt02.jpg)
-![screenshot](https://i.imgur.com/wfzBTfb.jpg)
-![screenshot](https://i.imgur.com/CLNxKnu.jpg)
-![screenshot](https://i.imgur.com/DcfrNdL.jpg)
-![screenshot](https://i.imgur.com/2ZggtS7.jpg)
-- 【3D BIRTHDAY】PARTY TIME! 🌊 #gawrgura -> https://youtu.be/lsFr7NzVVM8?t=2042
-
-![screenshot](https://i.imgur.com/QT0acUh.jpg)
-![screenshot](https://i.imgur.com/TW8QBwh.jpg)
-![screenshot](https://i.imgur.com/eA1YPzW.jpg)
-![screenshot](https://i.imgur.com/pS7qRwM.jpg)
-![screenshot](https://i.imgur.com/8hh4MU0.jpg)
-![screenshot](https://i.imgur.com/AzE873T.jpg)
-![screenshot](https://i.imgur.com/burEUOf.jpg)
-- DO U - Takanashi Kiara (Official Music Video) -> https://youtu.be/QI96hnhcr2E
-
-### VirtuaReal Star - hanser (https://space.bilibili.com/11073)
-![screenshot](https://i.imgur.com/nfVckVo.jpg)
-![screenshot](https://i.imgur.com/Ij7zvhz.jpg)
-![screenshot](https://i.imgur.com/ooybJus.jpg)
-![screenshot](https://i.imgur.com/LtziYj5.jpg)
-- 感谢300关注 跳个舞 -> https://www.bilibili.com/video/BV1CR4y1j7bY?share_source=copy_web
-
-### VSPO!(ぶいすぽっ！【公式】) (https://www.youtube.com/@Vspo77)
-![screenshot](https://i.imgur.com/3uQmdm9.jpg)
-![screenshot](https://i.imgur.com/FpGxHDL.jpg)
-![screenshot](https://i.imgur.com/GsOj7iO.jpg)
-![screenshot](https://i.imgur.com/iG0KCMX.jpg)
-![screenshot](https://i.imgur.com/UH6y3yb.jpg)
-![screenshot](https://i.imgur.com/sMX9DJq.jpg)
-- 【協力脱出】ぶいすぽデスゲーム【#ぶいすぽ３D】 -> https://www.youtube.com/live/nMTQyZ70TCQ?feature=share
+- 《我的故事未写完》【原创曲-泠鸢词曲】 -> https://www.bilibili.com/video/BV1JG4y1W7ub
 
 ### hololive ホロライブ - VTuber Group (https://www.youtube.com/@hololive)
 ![screenshot](https://i.imgur.com/Qrexl3d.jpg)
@@ -198,7 +150,143 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/eFNnSlt.jpg)
 ![screenshot](https://i.imgur.com/riHY7nk.jpg)
 ![screenshot](https://i.imgur.com/nZiNMOL.jpg)
-- 『ホロライブ・サマー2023 3DLIVE Splash Party!』ティザーPV【#hololivesummer2023】-> https://youtu.be/8aKFN2YbGLQ
+- 『ホロライブ・サマー2023 3DLIVE Splash Party!』ティザーPV【#hololivesummer2023】 -> https://youtu.be/8aKFN2YbGLQ
+
+### 杏仁ミル Annin Miru Channel (https://www.youtube.com/@AnninMiru)
+![screenshot](https://i.imgur.com/ynQZIdr.jpg)
+![screenshot](https://i.imgur.com/rmpF7lb.jpg)
+![screenshot](https://i.imgur.com/f2SJHtG.jpg)
+![screenshot](https://i.imgur.com/6Prfcc3.jpg)
+![screenshot](https://i.imgur.com/ep6Cxym.jpg)
+![screenshot](https://i.imgur.com/QI9xM6x.jpg)
+![screenshot](https://i.imgur.com/RRPgbSQ.jpg)
+![screenshot](https://i.imgur.com/oAgTkxU.jpg)
+![screenshot](https://i.imgur.com/qkJO7Cr.jpg)
+![screenshot](https://i.imgur.com/4gkLntJ.jpg)
+![screenshot](https://i.imgur.com/QzvwSx3.jpg)
+- 【#杏仁ミル5周年LIVE】Back To A Beginner's Spirit | 回歸初心3D演唱會【#杏仁ミル】->   
+Youtube: https://www.youtube.com/watch?v=u8NKu9wnF24&t=3286s  
+Twitch: https://www.twitch.tv/videos/2014344400?t=00h54m30s
+
+### ぶいごまチャンネル　V後藤真希 (https://www.youtube.com/@V_GOTO_MAKI)
+![screenshot](https://i.imgur.com/gFAPtTS.jpg)
+![screenshot](https://i.imgur.com/hI9cd0g.jpg)
+![screenshot](https://i.imgur.com/9gcADgz.jpg)
+![screenshot](https://i.imgur.com/EWcR7xg.jpg)
+![screenshot](https://i.imgur.com/RBnZmGK.jpg)
+![screenshot](https://i.imgur.com/okgCZ5b.jpg)
+![screenshot](https://i.imgur.com/6yXHYed.jpg)
+![screenshot](https://i.imgur.com/gZpw73O.jpg)
+![screenshot](https://i.imgur.com/c4II8j3.jpg)
+![screenshot](https://i.imgur.com/N426j2R.jpg)
+![screenshot](https://i.imgur.com/r44ixaR.jpg)
+- モーニング娘。『LOVEマシーン』 / V後藤真希が歌って踊ってみた -> https://youtu.be/zyuLj0fbn9w?si=ovX0OF4bOx-wscD2
+
+### VSPO!(ぶいすぽっ！) - 小森めと (https://www.youtube.com/@Met_Komori)
+![screenshot](https://i.imgur.com/G8slEDj.jpg)
+![screenshot](https://i.imgur.com/UzofUqj.jpg)
+![screenshot](https://i.imgur.com/APcD4Cy.jpg)
+![screenshot](https://i.imgur.com/Z6sGj3c.jpg)
+![screenshot](https://i.imgur.com/Cx0qTOb.jpg)
+![screenshot](https://i.imgur.com/ILqORSQ.jpg)
+![screenshot](https://i.imgur.com/s9dyTJP.jpg)
+![screenshot](https://i.imgur.com/ppVwAsN.jpg)
+![screenshot](https://i.imgur.com/BHzmmYt.jpg)
+- 【 #小森めと爆誕2023 】小森めと爆誕3Dライブ！~食え！寝ろ！遊べ！~ 【 ぶいすぽっ！ / 小森めと 】 -> https://www.youtube.com/live/buF_TtzS9SA?si=vU6pt_XNCuwr5CB6&t=179
+
+### VirtuaReal / Nijisanji CN - 七海Nana7mi (https://space.bilibili.com/434334701)
+![screenshot](https://i.imgur.com/Tp29cyb.jpg)
+![screenshot](https://i.imgur.com/9OsMvwh.jpg)
+![screenshot](https://i.imgur.com/HTBHcYg.jpg)
+![screenshot](https://i.imgur.com/PvSWEwl.jpg)
+- 【恋愛偏差値上昇中！】 -> https://www.bilibili.com/video/BV1v84y1K74A
+- 【情人节当一天恋爱脑也可以吧！】 -> https://www.bilibili.com/video/BV1wv4y1x7NZ
+- 【这次是全身版！！】 -> https://www.bilibili.com/video/BV1QM411b7pe
+- 【因为我是最棒滴！【僕が最高だから／ハコニワリリィ】】 -> https://www.bilibili.com/video/BV1rs4y1S7uB
+
+### VSPO!(ぶいすぽっ！) - 花芽すみれ (https://www.youtube.com/@KagaSumire)
+![screenshot](https://i.imgur.com/zk7AsTW.jpg)
+![screenshot](https://i.imgur.com/Asq0arH.jpg)
+![screenshot](https://i.imgur.com/GeX49uo.jpg)
+![screenshot](https://i.imgur.com/kLlSAgm.jpg)
+![screenshot](https://i.imgur.com/kCPEPt0.jpg)
+![screenshot](https://i.imgur.com/bSb3PY6.jpg)
+![screenshot](https://i.imgur.com/pLPpfKY.jpg)
+![screenshot](https://i.imgur.com/LV0zGNF.jpg)
+![screenshot](https://i.imgur.com/h9PCXAh.jpg)
+- #花芽すみれ3D うおおおおお！！【 ぶいすぽ / 花芽すみれ 】 -> https://www.youtube.com/live/g-bN6gisi3g?si=_5opnk-tvTbVU3x5&t=1321
+
+### VirtuaReal Star - hanser (https://space.bilibili.com/11073)
+![screenshot](https://i.imgur.com/nfVckVo.jpg)
+![screenshot](https://i.imgur.com/Ij7zvhz.jpg)
+![screenshot](https://i.imgur.com/ooybJus.jpg)
+![screenshot](https://i.imgur.com/LtziYj5.jpg)
+- 感谢300关注 跳个舞 -> https://www.bilibili.com/video/BV1CR4y1j7bY/
+
+### Gawr Gura Ch. hololive-EN (https://www.youtube.com/@GawrGura):
+![screenshot](https://i.imgur.com/cp5VTI1.jpg)
+![screenshot](https://i.imgur.com/9CloXLw.jpg)
+![screenshot](https://i.imgur.com/eVTmJT7.jpg)
+![screenshot](https://i.imgur.com/bc46ZRF.jpg)
+![screenshot](https://i.imgur.com/Ls2lt02.jpg)
+![screenshot](https://i.imgur.com/wfzBTfb.jpg)
+![screenshot](https://i.imgur.com/CLNxKnu.jpg)
+![screenshot](https://i.imgur.com/DcfrNdL.jpg)
+![screenshot](https://i.imgur.com/2ZggtS7.jpg)
+- 【3D BIRTHDAY】PARTY TIME! 🌊 #gawrgura -> https://youtu.be/lsFr7NzVVM8?t=2042
+
+### VSPO!(ぶいすぽっ！【公式】) (https://www.youtube.com/@Vspo77)
+![screenshot](https://i.imgur.com/4LV7Sv3.jpg)
+![screenshot](https://i.imgur.com/NfBeCOG.jpg)
+![screenshot](https://i.imgur.com/PBRMIDn.jpg)
+![screenshot](https://i.imgur.com/cWntQRN.jpg)
+![screenshot](https://i.imgur.com/RUUPu2E.jpg)
+![screenshot](https://i.imgur.com/BqvLFq4.jpg)
+![screenshot](https://i.imgur.com/8wJCcs3.jpg)
+![screenshot](https://i.imgur.com/m1X2Odj.jpg)
+![screenshot](https://i.imgur.com/y1BvqRe.jpg)
+![screenshot](https://i.imgur.com/CET2UlW.jpg)
+![screenshot](https://i.imgur.com/IAEDyfl.jpg)
+- 【3D企画】ぶいすぽ公式音楽番組「ぶいすPOP！」【#ぶいすぽ３D】 -> https://www.youtube.com/live/9GaGcoDiULw?feature=share
+
+### Takanashi Kiara Ch. hololive-EN (https://www.youtube.com/@TakanashiKiara)
+![screenshot](https://i.imgur.com/QT0acUh.jpg)
+![screenshot](https://i.imgur.com/TW8QBwh.jpg)
+![screenshot](https://i.imgur.com/eA1YPzW.jpg)
+![screenshot](https://i.imgur.com/pS7qRwM.jpg)
+![screenshot](https://i.imgur.com/8hh4MU0.jpg)
+![screenshot](https://i.imgur.com/AzE873T.jpg)
+![screenshot](https://i.imgur.com/burEUOf.jpg)
+- DO U - Takanashi Kiara (Official Music Video) -> https://youtu.be/QI96hnhcr2E
+
+### ISEGYE IDOL (이세계아이돌) - 주르르 JURURU (https://www.youtube.com/@JU_RURU)
+![screenshot](https://i.imgur.com/acdR9Lj.jpg)
+![screenshot](https://i.imgur.com/DUq6AlZ.jpg)
+![screenshot](https://i.imgur.com/ZOT96go.jpg)
+![screenshot](https://i.imgur.com/SSKKyLY.jpg)
+![screenshot](https://i.imgur.com/l0W9J72.jpg)
+![screenshot](https://i.imgur.com/nC3nGFo.jpg)
+![screenshot](https://i.imgur.com/v7NusDY.jpg)
+![screenshot](https://i.imgur.com/Ytln6oQ.jpg)
+![screenshot](https://i.imgur.com/XAL2vEg.jpg)
+![screenshot](https://i.imgur.com/K9OlGaK.jpg)
+![screenshot](https://i.imgur.com/yGgFYYB.jpg)
+![screenshot](https://i.imgur.com/R9Sq8bw.jpg)
+- [MV] GIRL'S DAY - Darling｜Cover by Jururu -> https://youtu.be/7sFIjj5BW3M?si=xySDbq-FxfX-KPWJ
+
+### 浠Mizuki Channel (https://www.youtube.com/@MizukiVsinger)
+![screenshot](https://i.imgur.com/MLD53cv.jpg)
+![screenshot](https://i.imgur.com/hPGrptq.jpg)
+![screenshot](https://i.imgur.com/N1nzvz8.jpg)
+![screenshot](https://i.imgur.com/Irlz7pv.jpg)
+![screenshot](https://i.imgur.com/mvWl3a2.jpg)
+![screenshot](https://i.imgur.com/eX5wcLm.jpg)
+![screenshot](https://i.imgur.com/0UjUA7U.jpg)
+![screenshot](https://i.imgur.com/0FALsOV.jpg)
+![screenshot](https://i.imgur.com/IM414Xu.jpg)
+![screenshot](https://i.imgur.com/QyXXtuF.jpg)
+![screenshot](https://i.imgur.com/PIdv650.jpg)
+- 浠Mizuki 1st 3D Live『Bon Voyage!』 -> https://www.youtube.com/live/Z8vh7LdIfd8?si=qPchZCkqLWNL8Tj-
 
 ### VSPO!(ぶいすぽっ！【公式】) (https://www.youtube.com/@Vspo77)
 ![screenshot](https://i.imgur.com/gbCCiSL.jpg)
@@ -214,12 +302,35 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/y3yRORf.jpg)
 - 【3D企画】ぶいすぽ公式音楽番組「ぶいすPOP！」第２弾【#ぶいすぽ３D】-> https://www.youtube.com/live/97_o-WI4ihc?feature=share
 
+### 阿梓从小就很可爱 (https://space.bilibili.com/7706705/)
+![screenshot](https://i.imgur.com/v3VNAbm.jpg)
+![screenshot](https://i.imgur.com/ywGqO4f.jpg)
+![screenshot](https://i.imgur.com/8RYOo4a.jpg)
+![screenshot](https://i.imgur.com/y13uJN0.jpg)
+![screenshot](https://i.imgur.com/186xRLg.jpg)
+- 【【直播回放】【3d】三周年新衣发布～ 2023年8月9日19点场】 -> https://www.bilibili.com/video/BV1uX4y1j7BY
+
 ### hololive - Shion Ch. 紫咲シオン (https://www.youtube.com/@MurasakiShion)
 ![screenshot](https://i.imgur.com/qjVT4M7.jpg)
 ![screenshot](https://i.imgur.com/i050aGy.jpg)
 ![screenshot](https://i.imgur.com/pOOn3wn.jpg)
 ![screenshot](https://i.imgur.com/p33Rr9U.jpg)
-- 【holo*27 MV】紫咲シオン x ラプラス・ダークネス - リップシンク【ホロライブ x DECO*27】-> https://youtu.be/NjtIAuZQN_E
+- 【holo*27 MV】紫咲シオン x ラプラス・ダークネス - リップシンク【ホロライブ x DECO*27】 -> https://youtu.be/NjtIAuZQN_E
+
+### VSPO!(ぶいすぽっ！【公式】) (https://www.youtube.com/@Vspo77)
+![screenshot](https://i.imgur.com/6EPwhK3.jpg)
+![screenshot](https://i.imgur.com/9AZN4eJ.jpg)
+![screenshot](https://i.imgur.com/Ggco1mq.jpg)
+![screenshot](https://i.imgur.com/ZKBLdgX.jpg)
+![screenshot](https://i.imgur.com/OF5Kbhw.jpg)
+![screenshot](https://i.imgur.com/cQZ8jP5.jpg)
+- 【協力脱出】ぶいすぽデスゲーム【#ぶいすぽ３D】 -> https://www.youtube.com/live/nMTQyZ70TCQ?feature=share
+
+### Kanauru (https://www.youtube.com/user/kanauru):
+![screenshot](https://i.imgur.com/iVbJHQo.jpg)
+![screenshot](https://i.imgur.com/x8WdatG.jpg)
+![screenshot](https://i.imgur.com/OUXsMzI.jpg)
+- Hoshimachi Suisei - TRUE GIRL SHOW | Kanauru PV -> https://youtu.be/FhtabnK3kso
 
 ### VSPO!(ぶいすぽっ！) - 八雲べに (https://www.youtube.com/@yakumo_beni)
 ![screenshot](https://i.imgur.com/TpMR0Sa.jpg)
@@ -228,12 +339,6 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/eNPQhVi.jpg)
 ![screenshot](https://i.imgur.com/ooIHqsB.jpg)
 - 【#八雲べに3D】ついにキタ！耐えろYouTube！【ぶいすぽ/八雲べに】 -> https://www.youtube.com/live/WZ2zvy_gxtM?feature=share
-
-### Kanauru (https://www.youtube.com/user/kanauru):
-![screenshot](https://i.imgur.com/iVbJHQo.jpg)
-![screenshot](https://i.imgur.com/x8WdatG.jpg)
-![screenshot](https://i.imgur.com/OUXsMzI.jpg)
-- Hoshimachi Suisei - TRUE GIRL SHOW | Kanauru PV -> https://youtu.be/FhtabnK3kso
 
 ### Moona Hoshinova hololive-ID (https://www.youtube.com/@MoonaHoshinova):
 ![screenshot](https://i.imgur.com/CJGhfxo.jpg)
@@ -244,7 +349,7 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/5PtoW1R.jpg)
 ![screenshot](https://i.imgur.com/cCxz82L.jpg)
 ![screenshot](https://i.imgur.com/skcjPAy.jpg)
-- 【Original Song】Who’s Toxic ? It’s You! - Moona Hoshinova【3DMV】-> https://youtu.be/PFoGNZ05CJw
+- 【Original Song】Who’s Toxic ? It’s You! - Moona Hoshinova【3DMV】 -> https://youtu.be/PFoGNZ05CJw
 
 ### AIChannel中国绊爱 (https://space.bilibili.com/484322035)
 ![screenshot](https://i.imgur.com/xEyCBXZ.jpg)
@@ -254,9 +359,9 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/hhSrW74.jpg)
 ![screenshot](https://i.imgur.com/Us8tEer.jpg)
 ![screenshot](https://i.imgur.com/uAYhE8V.jpg)
-- 小 看 我 了 吧✨【BDF2023聚光】-> https://www.bilibili.com/video/BV1FL411Y7Zc
+- 小 看 我 了 吧✨【BDF2023聚光】 -> https://www.bilibili.com/video/BV1FL411Y7Zc
 
-### VirtuaReal Star - 泠鸢yousa (https://space.bilibili.com/282994)
+### 泠鸢yousa (https://space.bilibili.com/282994)
 ![screenshot](https://i.imgur.com/SVWHinD.jpg)
 ![screenshot](https://i.imgur.com/NKlm7QI.jpg)
 ![screenshot](https://i.imgur.com/fHIsbYi.jpg)
@@ -268,7 +373,7 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/EslbmcQ.jpg)
 ![screenshot](https://i.imgur.com/QKidTrM.jpg)
 - 【高清回放】泠鸢个人演唱会【时光标记】十周年纪念-高清全程回放 -> https://www.bilibili.com/video/BV1D24y1B7FA
-- 【泠鸢时光标记演唱会】 一镜到底4K纯享版】-> https://space.bilibili.com/434021034/channel/collectiondetail?sid=1082531
+- 【泠鸢时光标记演唱会】 一镜到底4K纯享版】 -> https://space.bilibili.com/434021034/channel/collectiondetail?sid=1082531
 
 ### Nijisanji & bilibili - VirtuaReal (https://www.nijisanji.jp/talents?filter=virtuareal):
 ![screenshot](https://i.imgur.com/IKpdkTI.jpg)
@@ -369,7 +474,6 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/zqFjdNW.jpg)
 - 【3D Live】ニャタタリズム - 杏仁ミル【#杏仁ミル3D】-> https://youtu.be/vICHoj4d_jE
 - 【3D Live】アスミルキミヘ - 杏仁ミル【#杏仁ミル3D】-> https://youtu.be/ujcUdrf7YBg
-- 【3D動補試跳】I’m Your Treasure Box / マリ箱ダンス #マリ箱チャレンジ -> https://youtube.com/shorts/dvjXjd_RSRs?feature=share
 
 ### 穆小泠Official (https://space.bilibili.com/43272050)
 ![screenshot](https://i.imgur.com/QF7t3x2.jpg)
@@ -377,6 +481,17 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/nfSngMl.jpg)
 ![screenshot](https://i.imgur.com/MwkNyDt.jpg)
 - 【【国风原创曲】弹指醉｜精美歌舞MMD【穆小泠】】 -> https://www.bilibili.com/video/BV1WG4y1t7o1
+
+### 兔眠可可 (https://space.bilibili.com/1096034982)
+![screenshot](https://i.imgur.com/PlJCN49.jpg)
+![screenshot](https://i.imgur.com/la6Qg7n.jpg)
+![screenshot](https://i.imgur.com/KEUiqAo.jpg)
+![screenshot](https://i.imgur.com/hZ3279a.jpg)
+![screenshot](https://i.imgur.com/KgLGgot.jpg)
+![screenshot](https://i.imgur.com/Y1iv1xR.jpg)
+- 【个人整了个6位数的舞台跳寄明月，效果还行吗？】 -> https://www.bilibili.com/video/BV12N4y1y7DX
+- 【做v一年花了6位数用3D跳舞，值吗？】 -> https://www.bilibili.com/video/BV1334y1G7Wf
+- 【谁家的温婉姑娘，邀你花月成双❀《花月成双》3D舞台4K纯享版】 -> https://www.bilibili.com/video/BV1pN4y1y7Mx
 
 ### Kanauru (https://www.youtube.com/user/kanauru):
 ![screenshot](https://i.imgur.com/7TRdfHh.jpg)
@@ -404,6 +519,25 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/kfnccw6.jpg)
 - VSHOJO Mahou Idols - Nyanners Ironmouse Silvervale | VILLS -> https://youtu.be/-OultaM3TMg
 
+### VirtuaReal (https://space.bilibili.com/413748120)
+![screenshot](https://i.imgur.com/mFYajQZ.jpg)
+![screenshot](https://i.imgur.com/ouCYYuu.jpg)
+![screenshot](https://i.imgur.com/4PIdzV0.jpg)
+![screenshot](https://i.imgur.com/SZuYnrT.jpg)
+![screenshot](https://i.imgur.com/P7vwKgc.jpg)
+![screenshot](https://i.imgur.com/UDSkD38.jpg)
+![screenshot](https://i.imgur.com/yBeVFyq.jpg)
+![screenshot](https://i.imgur.com/OU85vvo.jpg)
+![screenshot](https://i.imgur.com/VYdimOq.jpg)
+![screenshot](https://i.imgur.com/DhjXBtS.jpg)
+![screenshot](https://i.imgur.com/iVony9f.jpg)
+![screenshot](https://i.imgur.com/0IMkaM1.jpg)
+![screenshot](https://i.imgur.com/9bjvA9d.jpg)
+- 【【4K】summertime 夏日海边我们在一起】 -> https://www.bilibili.com/video/BV1XN4y1R7K9
+- 【【4K】LOVE DIVE 没想到我们跳了吧】 -> https://www.bilibili.com/video/BV1Hz4y1K7K6
+- 【【4K】泳装这么可爱真是抱歉/可愛くてごめん～】 -> https://www.bilibili.com/video/BV1xF411k7T7
+- 【想去海边 3D泳装直播】 https://www.bilibili.com/video/BV1jN411q7Qy
+
 ### Warudo on Steam(supporting NiloToonURP) (https://store.steampowered.com/app/2079120/Warudo/)
 ![screenshot](https://i.imgur.com/CLq5tte.jpg)
 ![screenshot](https://i.imgur.com/weIU8Ua.jpg)
@@ -413,7 +547,7 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/XVT386s.jpg)
 ![screenshot](https://i.imgur.com/Rq3uqR8.jpg)
 ![screenshot](https://i.imgur.com/njJBhHV.jpg)
-- 【超高可玩性！全新3D虚拟主播软件【Warudo】】-> https://www.bilibili.com/video/BV198411D7Ui/?share_source=copy_web&vd_source=833e89d3d9a150b0feba26e590fd09ce
+- 【超高可玩性！全新3D虚拟主播软件【Warudo】】-> https://www.bilibili.com/video/BV198411D7Ui
 
 ### VShojo Highlights (https://www.youtube.com/@VShojoHighlights)
 ![screenshot](https://i.imgur.com/gPQc1Ls.jpg)
@@ -437,9 +571,9 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 
 ### 米亞 Mya (https://www.youtube.com/@mya./featured)
 ![screenshot](https://i.imgur.com/QzISOsI.jpg)
-![screenshot](https://i.imgur.com/P4ErH0x.png)
+![screenshot](https://i.imgur.com/MQ07xce.jpg)
 ![screenshot](https://i.imgur.com/W4UI45S.jpg)
-![screenshot](https://i.imgur.com/sBQVJ0h.png)
+![screenshot](https://i.imgur.com/E3WiIi8.jpg)
 ![screenshot](https://i.imgur.com/0bZFhwU.jpg)
 - 【#米亞兩週年】🎉兩週年🌸新房間攝影大會！補讀SC & 雜談 -> https://youtu.be/eC1djsRKSjY
 - 【#米亞兩週年】🎉跟大家一起慶祝 🎈 回饋粉絲向、紀念活動發表！-> https://youtu.be/1acQeY5hsgg?t=3480
@@ -447,17 +581,11 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 - 🔴週年活動來入坑！玩玩彈射世界🐼＜有好多免費抽抽喔...我能抽到好東西嗎✨！ -> https://youtu.be/z3pQR7wgCdc
 
 ### VSPO!(ぶいすぽっ！) - 英リサ.Hanabusa Lisa (https://www.youtube.com/@lisahanabusa)
-![screenshot](https://i.imgur.com/ZM8qq51.jpg)
-![screenshot](https://i.imgur.com/d0gEvDD.jpg)
-![screenshot](https://i.imgur.com/tRrRM9G.jpg)
-![screenshot](https://i.imgur.com/f7jFXrL.jpg)
+![screenshot](https://i.imgur.com/gQHAQhs.jpg)
+![screenshot](https://i.imgur.com/budQFko.jpg)
+![screenshot](https://i.imgur.com/ghUkysz.jpg)
+![screenshot](https://i.imgur.com/nT0EUVI.jpg)
 - 【#英リサ3Dお披露目】3次元、お邪魔します【ぶいすぽっ！/英リサ】 -> https://www.youtube.com/live/ey9KCNzSALQ?feature=share
-
-### VSPO!(ぶいすぽっ！) - 胡桃のあ (https://www.youtube.com/@963Noah)
-![screenshot](https://i.imgur.com/xdTiGo8.jpg)
-![screenshot](https://i.imgur.com/4WPOKJS.jpg)
-![screenshot](https://i.imgur.com/A8PKDEx.jpg)
-- #胡桃のあ3D✨あざとい女は3Dになってもあざといのか❓ -> https://www.youtube.com/live/ZpAJBxTsuTE?feature=share
 
 ### myer gugu(崩坏的栗子_108番) (https://www.artstation.com/myergugu)
 ![screenshot](https://i.imgur.com/VZPTL1E.jpg)
@@ -473,7 +601,7 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/9ClFTst.jpg)
 ![screenshot](https://i.imgur.com/8PNIXUo.jpg)
 
-### VirtuaReal Star - 泠鸢yousa (https://space.bilibili.com/282994)
+### 泠鸢yousa (https://space.bilibili.com/282994)
 ![screenshot](https://i.imgur.com/fsAc12K.jpg)
 ![screenshot](https://i.imgur.com/lnkV7Io.jpg)
 ![screenshot](https://i.imgur.com/IJZiIYD.jpg)
@@ -576,7 +704,7 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 ![screenshot](https://i.imgur.com/xJ78uRL.jpg)
 - (4K画质)hanser个人演唱会《海上油菜花》-> https://www.bilibili.com/video/BV1Bq4y1r7bn (part of the rendering is NiloToonURP)
 
-### VirtuaReal Star - 泠鸢yousa (https://space.bilibili.com/282994)
+### 泠鸢yousa (https://space.bilibili.com/282994)
 ![screenshot](https://i.imgur.com/ENqYsBN.jpg)
 ![screenshot](https://i.imgur.com/tUfB3hf.jpg)
 ![screenshot](https://i.imgur.com/DaNt9rE.jpg)
@@ -617,18 +745,27 @@ of NiloToonURP for your URP project, please send the following info to nilotoon@
 
 # Other NiloToonURP's images (gallery)
 
+![screenshot](https://i.imgur.com/NYgkGQp.jpg)
+
 shader ON
-![screenshot](https://i.imgur.com/BgiZbfa.png)
-normal debug
-![screenshot](https://i.imgur.com/d1tqNLd.png)
+![screenshot](https://i.imgur.com/vXcIGQ0.jpg)
 shader OFF
-![screenshot](https://i.imgur.com/Beu4mGP.png)
+![screenshot](https://i.imgur.com/tx643sR.jpg)
+
+![screenshot](https://i.imgur.com/tduYcFM.jpg)
+
+shader ON
+![screenshot](https://i.imgur.com/cM5RJFJ.jpg)
+normal debug
+![screenshot](https://i.imgur.com/ynw0UBz.jpg)
+shader OFF
+![screenshot](https://i.imgur.com/XPmC2nt.jpg)
 
 ![screenshot](https://i.imgur.com/kPiktkr.jpg)
 ![screenshot](https://i.imgur.com/ltT2yHs.jpg)
 ![screenshot](https://i.imgur.com/JWbp20K.jpg)
 ![screenshot](https://i.imgur.com/183MzTr.jpg)
-![screenshot](https://i.imgur.com/fXgArpo.jpg)
+![screenshot](https://i.imgur.com/6LUJMZV.jpg)
 ![screenshot](https://i.imgur.com/1F9GxjT.jpg)
 ![screenshot](https://i.imgur.com/wXNlCNq.jpg)
 ![screenshot](https://i.imgur.com/Pbs5LAf.jpg)
@@ -640,56 +777,56 @@ shader OFF
 ![screenshot](https://i.imgur.com/G9Eo2eb.jpg)
 ![screenshot](https://i.imgur.com/HUX3Em4.jpg)
 ![screenshot](https://i.imgur.com/vQQsD7j.jpg)
-![screenshot](https://i.imgur.com/HgpZRAM.png)
-![screenshot](https://i.imgur.com/YuYkbG7.png)
-![screenshot](https://i.imgur.com/T0QBUFP.png)
-![screenshot](https://i.imgur.com/LDa6JC9.png)
-![screenshot](https://i.imgur.com/3EoqpF0.png)
-![screenshot](https://i.imgur.com/mwZb9xZ.png)
-![screenshot](https://i.imgur.com/O7eMz5Q.png)
-![screenshot](https://i.imgur.com/bUn3f0q.png)
-![screenshot](https://i.imgur.com/WH7aW4J.png)
-![screenshot](https://i.imgur.com/NP2LMr6.png)
-![screenshot](https://i.imgur.com/Uv4seOB.png)
-![screenshot](https://i.imgur.com/MCqHtlQ.png)
-![screenshot](https://i.imgur.com/yu37Jr0.png)
-![screenshot](https://i.imgur.com/1CZ2XJa.png)
-![screenshot](https://i.imgur.com/Hxc7U5M.png)
-![screenshot](https://i.imgur.com/pbBcur0.png)
-![screenshot](https://i.imgur.com/WjT1sZp.png)
-![screenshot](https://i.imgur.com/BMyOEl9.png)
-![screenshot](https://i.imgur.com/JF4iDhM.png)
-![screenshot](https://i.imgur.com/Rtft0od.png)
-![screenshot](https://i.imgur.com/xptIKZy.png)
-![screenshot](https://i.imgur.com/f8EEr3o.png)
-![screenshot](https://i.imgur.com/nFPy1KS.png)
-![screenshot](https://i.imgur.com/sBpX10Y.png)
-![screenshot](https://i.imgur.com/EyiMbKP.png)
-![screenshot](https://i.imgur.com/McKrRYW.png)
-![screenshot](https://i.imgur.com/DaRpLLX.png)
+![screenshot](https://i.imgur.com/M3vVDZZ.jpg)
+![screenshot](https://i.imgur.com/DfAGBNL.jpg)
+![screenshot](https://i.imgur.com/gIbAOkS.jpg)
+![screenshot](https://i.imgur.com/LdKhKsA.jpg)
+![screenshot](https://i.imgur.com/LHrgEw8.jpg)
+![screenshot](https://i.imgur.com/x1KZFou.jpg)
+![screenshot](https://i.imgur.com/V2N59VY.jpg)
+![screenshot](https://i.imgur.com/D4VeHH5.jpg)
+![screenshot](https://i.imgur.com/qJBkQ0X.jpg)
+![screenshot](https://i.imgur.com/oVO96ml.jpg)
+![screenshot](https://i.imgur.com/v7E6fkU.jpg)
+![screenshot](https://i.imgur.com/d2R1L10.jpg)
+![screenshot](https://i.imgur.com/MinoelW.jpg)
+![screenshot](https://i.imgur.com/c0zQJP5.jpg)
+![screenshot](https://i.imgur.com/3RPeUSP.jpg)
+![screenshot](https://i.imgur.com/PZP4P3f.jpg)
+![screenshot](https://i.imgur.com/NRHrNfc.jpg)
+![screenshot](https://i.imgur.com/cZHp2de.jpg)
+![screenshot](https://i.imgur.com/cb9H6YP.jpg)
+![screenshot](https://i.imgur.com/2avJKYG.jpg)
+![screenshot](https://i.imgur.com/wf00agx.jpg)
+![screenshot](https://i.imgur.com/eYoZpKo.jpg)
+![screenshot](https://i.imgur.com/VjsNwS8.jpg)
+![screenshot](https://i.imgur.com/jClzSlf.jpg)
+![screenshot](https://i.imgur.com/AKM46Os.jpg)
+![screenshot](https://i.imgur.com/K8qHw6E.jpg)
+![screenshot](https://i.imgur.com/Xw5PBsw.jpg)
 ![screenshot](https://i.imgur.com/N02piW3.jpg)
 
 -------------------
 
 SHADER ON
-![screenshot](https://i.imgur.com/utXF8Qq.png)
-![screenshot](https://i.imgur.com/oEsHSMM.png)
+![screenshot](https://i.imgur.com/QyrLHYb.jpg)
+![screenshot](https://i.imgur.com/T00U1qO.jpg)
 BEFORE
-![screenshot](https://i.imgur.com/K6mZCcH.png)
+![screenshot](https://i.imgur.com/qAbvxEZ.jpg)
 AFTER:
-![screenshot](https://i.imgur.com/hjEeAoM.png)
+![screenshot](https://i.imgur.com/373jFLC.jpg)
 see it in motion-> https://youtu.be/D9ocVzGJfI8
 
 ---
 3D enviroment model TEST  
-![screenshot](https://i.imgur.com/AOAxQJ8.png)
-![screenshot](https://i.imgur.com/WlOQtCf.png)
+![screenshot](https://i.imgur.com/Ob6xlwI.jpg)
+![screenshot](https://i.imgur.com/1GgqIZx.jpg)
 see it in motion-> https://youtu.be/GcW0pNo-zus
 ---
 湊 あくあ（みなと あくあ，Minato Aqua） model TEST
-![screenshot](https://i.imgur.com/iDDFjoO.png)
-![screenshot](https://i.imgur.com/4aFqOND.png)
-![screenshot](https://i.imgur.com/7KjUwrI.png)
+![screenshot](https://i.imgur.com/bV1fIu8.jpg)
+![screenshot](https://i.imgur.com/vCcnuso.jpg)
+![screenshot](https://i.imgur.com/phqlwZE.jpg)
 see it in motion-> https://youtu.be/7zICgzdxuGg
 ---
 see it in motion-> https://youtu.be/X3XoYMTleJ0
@@ -697,77 +834,76 @@ see it in motion-> https://youtu.be/X3XoYMTleJ0
 Auto Phong tessellation  
 
 (shader off, no tessellation)
-![screenshot](https://i.imgur.com/yAUdcmK.png)
+![screenshot](https://i.imgur.com/OLAKa24.jpg)
 (shader on, no tessellation)
-![screenshot](https://i.imgur.com/pncbBUq.png)
+![screenshot](https://i.imgur.com/Q2DyIG7.jpg)
 (shader on, enable tessellation! Phong tessellation can make your model smooth without changing your .fbx)
-![screenshot](https://i.imgur.com/nGCmiEj.png)
+![screenshot](https://i.imgur.com/qlJ2bQQ.jpg)
 see it in motion-> https://youtu.be/D-MxyBa0nJE
 ---
 
 Kawaii model TEST (@ganbaru_sisters)
-![screenshot](https://i.imgur.com/7CAw71u.png)
-![screenshot](https://i.imgur.com/42CUENh.png)
+![screenshot](https://i.imgur.com/v9TRN5A.jpg)
+![screenshot](https://i.imgur.com/FIeltjQ.jpg)
 
-Upgraded to Unity2020.2 (URP 10.2.1)
 SHADER ON
-![screenshot](https://i.imgur.com/6chTRCl.png)
+![screenshot](https://i.imgur.com/ztEdBPp.jpg)
 SHADER OFF
-![screenshot](https://i.imgur.com/Vu2M5zB.png)
+![screenshot](https://i.imgur.com/JiqrUkk.jpg)
 HD
-![screenshot](https://i.imgur.com/KXYYfaN.png)
+![screenshot](https://i.imgur.com/oV6iTsP.jpg)
 
 shader ON
-![screenshot](https://i.imgur.com/VLZKP5h.png)
+![screenshot](https://i.imgur.com/ZZ0vVjz.jpg)
 shader OFF
-![screenshot](https://i.imgur.com/lTm0zvH.png)
+![screenshot](https://i.imgur.com/POagEfm.jpg)
 
 ---
 
 BEFORE
-![screenshot](https://i.imgur.com/JImt9l4.png)
+![screenshot](https://i.imgur.com/oxi44CQ.jpg)
 AFTER
-![screenshot](https://i.imgur.com/0oc1hFK.png)
+![screenshot](https://i.imgur.com/FpbVbc0.jpg)
 see it in motion-> https://youtu.be/KpRkxPnHuK0
 ---
 BEFORE
-![screenshot](https://i.imgur.com/Ak6rFTp.png)
+![screenshot](https://i.imgur.com/ChhR8Bj.jpg)
 AFTER
-![screenshot](https://i.imgur.com/6BTsiRF.png)
+![screenshot](https://i.imgur.com/h8lkC3L.jpg)
 (more shadow from trees)
-![screenshot](https://i.imgur.com/qSygREh.png)
+![screenshot](https://i.imgur.com/GV1QZh6.jpg)
 ---
 
 BEFORE
-![screenshot](https://i.imgur.com/rXEDmiy.png)
+![screenshot](https://i.imgur.com/vgssMwd.jpg)
 AFTER:
-![screenshot](https://i.imgur.com/J7F3vuC.png)
+![screenshot](https://i.imgur.com/MUBfY1H.jpg)
 see it in motion-> https://youtu.be/hUWacEQH6js
 ---
 BEFORE
 
-![screenshot](https://i.imgur.com/kZFNunW.png)
+![screenshot](https://i.imgur.com/x9mhDzt.jpg)
 
 AFTER:
 
-![screenshot](https://i.imgur.com/mnm5uYS.png)
+![screenshot](https://i.imgur.com/Gf5RyTd.jpg)
 
 BEFORE
 
 
-![screenshot](https://i.imgur.com/a9VUVgd.png)
+![screenshot](https://i.imgur.com/Y39qHYk.jpg)
 
 
 AFTER:
 
 
-![screenshot](https://i.imgur.com/VgSZMka.png)
+![screenshot](https://i.imgur.com/VwIN3sH.jpg)
 
 
 add 2D hair shadow & rim light
 
 
-![screenshot](https://i.imgur.com/KXdMhhv.png)
+![screenshot](https://i.imgur.com/3UqLwYH.jpg)
 
 
 
@@ -777,75 +913,75 @@ see it in motion-> https://youtu.be/S67GlGAnvWA
 
 ---
 BEFORE
-![screenshot](https://i.imgur.com/ApJyl6p.png)
+![screenshot](https://i.imgur.com/qeljSpf.jpg)
 AFTER:
-![screenshot](https://i.imgur.com/5GiKMUG.png)
+![screenshot](https://i.imgur.com/dzK985t.jpg)
 
 see it in motion-> https://youtu.be/M6FKoEiOAzU
 ---
 -------------------
 BEFORE
-![screenshot](https://i.imgur.com/FiuK1Cj.png)
+![screenshot](https://i.imgur.com/A2PyqyJ.jpg)
 AFTER:
 Sunny + StreetLight ON
-![screenshot](https://i.imgur.com/Lh5D9Y9.png)
+![screenshot](https://i.imgur.com/mFoMG6n.jpg)
 Sunny + StreetLight OFF
-![screenshot](https://i.imgur.com/NcsKQL8.png)
+![screenshot](https://i.imgur.com/CwQwVWV.jpg)
 Night + StreetLight ON
-![screenshot](https://i.imgur.com/AXV9Yig.png)
+![screenshot](https://i.imgur.com/K2sGcZH.jpg)
 Night + StreetLight OFF
-![screenshot](https://i.imgur.com/mJ1sjUm.png)
+![screenshot](https://i.imgur.com/CXCeJsK.jpg)
 see it in motion -> https://youtu.be/jDSnJmZrKPw
 ---
 BEFORE
-![screenshot](https://i.imgur.com/U5ba2lM.png)
+![screenshot](https://i.imgur.com/xY7XacI.jpg)
 AFTER
-![screenshot](https://i.imgur.com/cuZUqwW.png)
+![screenshot](https://i.imgur.com/NLSgYm9.jpg)
 ---
 BEFORE
-![screenshot](https://i.imgur.com/AMDcMdG.png)
+![screenshot](https://i.imgur.com/t9UnHK0.jpg)
 AFTER
-![screenshot](https://i.imgur.com/GB31Nay.png)
+![screenshot](https://i.imgur.com/qlDP3KN.jpg)
 see it in motion -> https://youtu.be/ZfSZOHTBypc
 ---
 BEFORE
-![screenshot](https://i.imgur.com/UCETVsr.png)
+![screenshot](https://i.imgur.com/4aEs2eo.jpg)
 AFTER
-![screenshot](https://i.imgur.com/7Wjdp8W.png)
+![screenshot](https://i.imgur.com/Nsl24so.jpg)
 see it in motion -> https://youtu.be/EgxiWPk-vaE
 
 ---
 BEFORE
-![screenshot](https://i.imgur.com/5afc5z5.png)
+![screenshot](https://i.imgur.com/7hgVTZb.jpg)
 AFTER
-![screenshot](https://i.imgur.com/pQ4DIqe.png)
+![screenshot](https://i.imgur.com/3jzOYAs.jpg)
 see it in motion -> https://youtu.be/Ty4DXLFqqDo
 ---
 BEFORE
-![screenshot](https://i.imgur.com/WKL3NwV.png)
+![screenshot](https://i.imgur.com/K08rm3X.jpg)
 AFTER
-![screenshot](https://i.imgur.com/8e6wtVZ.png)
+![screenshot](https://i.imgur.com/PknYemC.jpg)
 see it in motion -> https://youtu.be/cebGl_MaWnI
 ---
 BEFORE
-![screenshot](https://i.imgur.com/KwpjGHz.png)
+![screenshot](https://i.imgur.com/QUFEnam.jpg)
 AFTER
-![screenshot](https://i.imgur.com/KPxL4vR.png)
+![screenshot](https://i.imgur.com/0fpAVnH.jpg)
 see it in motion ->https://youtu.be/nl5z0r8a9vk
 ---
-![screenshot](https://i.imgur.com/KxdjhCx.png)
-![screenshot](https://i.imgur.com/6t2FMcg.png)
-![screenshot](https://i.imgur.com/CZHnfMC.png)
+![screenshot](https://i.imgur.com/leuzJ5w.jpg)
+![screenshot](https://i.imgur.com/AaHctFN.jpg)
+![screenshot](https://i.imgur.com/Ie6nYSH.jpg)
 see it in motion -> https://youtu.be/uVI_QOioER4
 ---
 Fake Skin SSS & specular
-![screenshot](https://i.imgur.com/ZoDO5TB.png)
-![screenshot](https://i.imgur.com/ICH4dFt.png)
+![screenshot](https://i.imgur.com/aO6a3gU.jpg)
+![screenshot](https://i.imgur.com/kVZ0vVg.jpg)
 
 BEFORE
-![screenshot](https://i.imgur.com/dPvjIQK.png)
+![screenshot](https://i.imgur.com/PQoFKIM.jpg)
 AFTER
-![screenshot](https://i.imgur.com/GvxXtva.png)
+![screenshot](https://i.imgur.com/P7CIuSX.jpg)
 
 
 What is included in this simplified tutorial example toon-lit shader repository?
@@ -853,7 +989,7 @@ What is included in this simplified tutorial example toon-lit shader repository?
 This repository only contains a very simple toon-lit URP tutorial shader example, to help people write their first custom toon-lit shader in URP.
 
 This example shader's default result(without editing material params) = the following picture
-![screenshot](https://i.imgur.com/mbUnvsA.png)
+![screenshot](https://i.imgur.com/7vo6Duo.jpg)
 
 Because this example toon lit shader aims to help people learn shader writing in URP, it is an extremely simplified version. This repository only contains ~3% of the NiloToonURP(full version)'s code, which only contains the most basic & easily understandable sections, to make sure everyone can understand the shader code easily.
 
@@ -884,13 +1020,13 @@ but doing this will make the lighting slightly incorrect.
 3. edit "Normals" to Calculate
 4. edit "Smoothing Angle" to 180  
   
-![screenshot](https://i.imgur.com/yxDkeGP.png)  
+![screenshot](https://i.imgur.com/rqefuLr.jpg)  
 before calculating smooth normal (print screen of the tutorial shader, not NiloToonURP)  
-![screenshot](https://i.imgur.com/uTJ3gxB.png)  
+![screenshot](https://i.imgur.com/wbjjNtF.jpg)  
 after calculating smooth normal  (print screen of the tutorial shader, not NiloToonURP)
-![screenshot](https://i.imgur.com/9Jnnigf.png)
+![screenshot](https://i.imgur.com/fTscZV0.jpg)
 
-*NiloToonURP(full version) contains a few editor C# scripts, which can help the shader to produce correct lighting and perfect outline together automatically.
+*NiloToonURP(full version) contains many editor/runtime C# scripts, some of them are for producing correct lighting and perfect outline together automatically.
 
 What is NOT included in this simplified tutorial shader?
 -------------------
@@ -929,41 +1065,40 @@ http://stereoarts.jp/
 if you downloaded a .vrm file, use UniVRM to convert it to prefab directly inside Unity
 https://github.com/vrm-c/UniVRM
 
-Editor environment requirement
+Editor version requirement
 -----------------------
-- URP 12
-- Unity 2021.3
+- Unity 2022.3
 
 ---------------------------
 Apply our shader to another model (2020-2 early version screenshots)
 https://youtu.be/uVI_QOioER4
 
-![screenshot](https://i.imgur.com/LBTNZCH.png)
-![screenshot](https://i.imgur.com/X6hAD7W.png)
-![screenshot](https://i.imgur.com/WIGyMVx.png)
-![screenshot](https://i.imgur.com/zou7PxL.png)
-![screenshot](https://i.imgur.com/WpkJyFB.png)
-![screenshot](https://i.imgur.com/3iyu3eG.png)
+![screenshot](https://i.imgur.com/qsx3VYw.jpg)
+![screenshot](https://i.imgur.com/NTek8q8.jpg)
+![screenshot](https://i.imgur.com/ee9dakE.jpg)
+![screenshot](https://i.imgur.com/Bs0AKcb.jpg)
+![screenshot](https://i.imgur.com/RITr1Il.jpg)
+![screenshot](https://i.imgur.com/R2yHbz7.jpg)
 
 More old screenshots from the Full version shader:
 ---
 
-![screenshot](https://i.imgur.com/DDr32Mu.png)
+![screenshot](https://i.imgur.com/j5RgZpO.jpg)
 https://youtu.be/IP293mAmBCk
 
-![screenshot](https://i.imgur.com/kbpw4Me.png)
-![screenshot](https://i.imgur.com/jaMaTKt.png)
-![screenshot](https://i.imgur.com/D7ARBo0.png)
+![screenshot](https://i.imgur.com/Wi0qy8V.jpg)
+![screenshot](https://i.imgur.com/ncdJ7vp.jpg)
+![screenshot](https://i.imgur.com/xoxrIZW.jpg)
 
-![screenshot](https://i.imgur.com/lt45arW.png)
-![screenshot](https://i.imgur.com/RcSz8H1.png)
+![screenshot](https://i.imgur.com/aj12x53.jpg)
+![screenshot](https://i.imgur.com/mXOkXOJ.jpg)
 
 different Background image TEST
-![screenshot](https://i.imgur.com/hev9PtZ.png)
-![screenshot](https://i.imgur.com/lRdXn3I.png)
-![screenshot](https://i.imgur.com/cx8tZox.png)
-![screenshot](https://i.imgur.com/GYPoNWT.png)
-![screenshot](https://i.imgur.com/fZw0Wzt.png)
+![screenshot](https://i.imgur.com/p6EcR8C.jpg)
+![screenshot](https://i.imgur.com/yT1IFKo.jpg)
+![screenshot](https://i.imgur.com/EyKmmH5.jpg)
+![screenshot](https://i.imgur.com/WzuA4rN.jpg)
+![screenshot](https://i.imgur.com/QxJ3tUR.jpg)
 
 Credits
 ------------------------
