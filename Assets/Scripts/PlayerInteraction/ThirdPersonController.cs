@@ -10,6 +10,7 @@ public class ThirdPersonController : MonoBehaviour
     Transform playerTransform;
     Transform cameraTransform;
     Animator animator;
+    CharacterController characterController;
     public enum PlayerState{
         Crouch,
         Stand,
@@ -59,6 +60,7 @@ public class ThirdPersonController : MonoBehaviour
     {
         playerTransform = transform; // 提高运行效率
         animator = GetComponent<Animator>();
+        characterController = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
 
         postureHash = Animator.StringToHash("Status");
@@ -151,7 +153,13 @@ public class ThirdPersonController : MonoBehaviour
         if(actionState == ActionState.Normal){
             float rad = Mathf.Atan2(playerMovement.x, playerMovement.z);
             animator.SetFloat(turnSpeedHash, rad, 0.1f, Time.deltaTime);
-            playerTransform.Rotate(0,rad * 180 * Time.deltaTime,0);//转向速度慢，人为添加转向速度
+            playerTransform.Rotate(0,rad * 200 * Time.deltaTime,0);//转向速度慢，人为添加转向速度
         }
+    }
+    /// <summary>
+    /// 使用Character Controller接管动画 控制玩家移动
+    /// </summary>
+    private void OnAnimatorMove() {
+        characterController.Move(animator.deltaPosition);
     }
 }
