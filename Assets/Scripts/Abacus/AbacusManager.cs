@@ -19,15 +19,18 @@ public class AbacusManager : MonoBehaviour
 
     public const float latestTime = 16f;
     public static int result = 0;
+    public GameState state;//用于数据传递
     [Tooltip("计时UI显示")] public Text timerText;
     [Tooltip("算式UI显示")] public List<Text> texts;
     [Tooltip("胜利UI")] public GameObject wPanel;
     [Tooltip("失败UI")] public GameObject lPanel;
     [Tooltip("暂停UI")] public GameObject pPanel;
+    [Tooltip("帮助UI")] public GameObject hPanel;
     [Tooltip("总UI")] public GameObject tCanvas;
 
     private void Awake()
     {
+        Help();
         AddSubCal();
     }
     private void Update()
@@ -142,6 +145,11 @@ public class AbacusManager : MonoBehaviour
     //关于胜利
     private void Win()
     {
+        //传递数据
+        if (state != null) state.Count(count);
+#if UNITY_EDITOR
+        else Debug.LogError("No State Object!");
+#endif
         //UI显示成功界面
         wPanel.SetActive(true);
         isPause = true;
@@ -180,5 +188,16 @@ public class AbacusManager : MonoBehaviour
         tCanvas.SetActive(false);
         isPause = false;
     }
-
+    //关于帮助
+    public void Help()
+    {
+        hPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于跳过
+    public void Skip()
+    {
+        hPanel.SetActive(false);
+        isPause = false;
+    }
 }
