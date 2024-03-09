@@ -15,7 +15,7 @@ public class ThirdPersonController : MonoBehaviour
     public enum PlayerState{
         Crouch,
         Stand,
-        Midair
+        //Midair
     }
     [HideInInspector]
     public PlayerState playerState = PlayerState.Stand;
@@ -25,7 +25,8 @@ public class ThirdPersonController : MonoBehaviour
 /// </summary>
     float crouchThreshold = 0f;
     float standThresshold = 1f;
-    float midairThreshold = 2f;
+    //float midairThreshold = 2f;
+
     public enum LocomotionState{
         Idle,
         Walk,
@@ -54,15 +55,26 @@ public class ThirdPersonController : MonoBehaviour
 /// <summary>
 /// animator 动画状态对应哈希值
 /// </summary>
-    int postureHash;
+    int statusHash;
     int moveSpeedHash;
     int turnSpeedHash;
+    int verticalSpeedHash;
+
 /// <summary>
 /// 角色重力手动添加
 /// </summary>
     public float gravity = -9.81f;
     private float verticalVelocity = 0.0f;
     public float jumpVelocity = 5.0f;
+
+/// <summary>
+/// 选用目标前几帧的平均值，作为空中水平移动速度进行截取
+/// CACHE_FRAME 为选取的固定帧数，velocityCache作为速度的缓冲池，averageVelocity作为平均速度的记录，currentCacheIndex作为池中当前的索引，
+/// </summary>
+    public static readonly int CACHE_SIZE = 4;
+    Vector3[] velocityCache = new Vector3[CACHE_SIZE];
+    Vector3 averageVelocity;
+    int currentCacheIndex = 0;
 
     void Start()
     {
@@ -71,9 +83,10 @@ public class ThirdPersonController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
 
-        postureHash = Animator.StringToHash("Status");
+        statusHash = Animator.StringToHash("Status");
         moveSpeedHash = Animator.StringToHash("Move Speed");
         turnSpeedHash = Animator.StringToHash("Turn Speed");
+        verticalSpeedHash = Animator.StringToHash("Vertical Speed");
     }
 
     // Update is called once per frame
@@ -81,7 +94,7 @@ public class ThirdPersonController : MonoBehaviour
     {
         CalculateGravity();
         CalculateInputDirection();
-        Jump();
+        //Jump();
         SwitchPlayerState();
         SetupAnimator();
     }
@@ -101,7 +114,10 @@ public class ThirdPersonController : MonoBehaviour
     }
     #endregion
     void SwitchPlayerState(){
-        if(isCrouching){
+        /*if(!characterController.isGrounded){
+            playerState = PlayerState.Midair;
+        }
+        else*/ if(isCrouching){
             playerState = PlayerState.Crouch;
         }
         else{
@@ -138,7 +154,7 @@ public class ThirdPersonController : MonoBehaviour
     void SetupAnimator(){
         //计算玩家移动速度
         if(playerState == PlayerState.Stand){
-            animator.SetFloat(postureHash, standThresshold,0.1f,Time.deltaTime);
+            animator.SetFloat(statusHash, standThresshold,0.1f,Time.deltaTime);
             switch(locomotionState){
                 case LocomotionState.Idle:
                     animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);
@@ -152,7 +168,7 @@ public class ThirdPersonController : MonoBehaviour
             }
         }
         else if(playerState == PlayerState.Crouch){
-            animator.SetFloat(postureHash, crouchThreshold, 0.1f, Time.deltaTime);
+            animator.SetFloat(statusHash, crouchThreshold, 0.1f, Time.deltaTime);
             switch(locomotionState){
                 case LocomotionState.Idle:
                     animator.SetFloat(moveSpeedHash, 0, 0.1f, Time.deltaTime);
@@ -162,6 +178,10 @@ public class ThirdPersonController : MonoBehaviour
                     break;
             }
         }
+        /*else if(playerState == PlayerState.Midair){
+            animator.SetFloat(statusHash, midairThreshold, 0.1f, Time.deltaTime);
+            animator.SetFloat(verticalSpeedHash, verticalVelocity, 0.1f, Time.deltaTime);
+        }*/
         //计算玩家转向速度
         if(actionState == ActionState.Normal){
             float rad = Mathf.Atan2(playerMovement.x, playerMovement.z);
@@ -170,25 +190,50 @@ public class ThirdPersonController : MonoBehaviour
         }
     }
     /// <summary>
+    /// 计算平均速度并及时清除数组元素
+    /// </summary>
+    /// <param name="newVelocity"></param>
+    /// <returns></returns>
+    Vector3 AverageVelocity(Vector3 newVelocity){
+        velocityCache[currentCacheIndex] = newVelocity;
+        currentCacheIndex++;
+        currentCacheIndex %= CACHE_SIZE;
+        Vector3 averageVelocity = Vector3.zero;
+        foreach(var v in velocityCache){
+            averageVelocity += v;
+        }
+        return averageVelocity / CACHE_SIZE;
+    }
+
+    /// <summary>
     /// 使用Character Controller接管动画 控制玩家移动（Character不自带重力需手动添加）
     /// </summary>
     void OnAnimatorMove() {
-        Vector3 playerDeltaMovement = animator.deltaPosition;
-        playerDeltaMovement.y = verticalVelocity * Time.deltaTime;
-        characterController.Move(playerDeltaMovement);
+        //if(playerState != PlayerState.Midair){
+            Vector3 playerDeltaMovement = animator.deltaPosition;
+            playerDeltaMovement.y = verticalVelocity * Time.deltaTime;
+            characterController.Move(playerDeltaMovement);
+            averageVelocity = AverageVelocity(animator.velocity);
+        //}
+        /*else{
+            // todo 沿用地面平均速度代替空中的移动速度
+            Vector3 playerDeltaMovement = averageVelocity * Time.deltaTime;
+            playerDeltaMovement.y = verticalVelocity * Time.deltaTime;
+            characterController.Move(playerDeltaMovement);
+        }*/
     }
     void CalculateGravity(){
         if(characterController.isGrounded){
-            verticalVelocity = 0f;
+            verticalVelocity = gravity * Time.deltaTime;
             return;
         }
         else{
             verticalVelocity += gravity * Time.deltaTime;
         }
     }
-    void Jump(){
+    /*void Jump(){
         if(characterController.isGrounded && isJumping){
             verticalVelocity = jumpVelocity;  
         }
-    }
+    }*/
 }

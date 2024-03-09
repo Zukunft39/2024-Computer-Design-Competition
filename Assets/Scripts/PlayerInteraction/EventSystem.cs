@@ -5,9 +5,11 @@ using UnityEngine;
 public class EventSystem : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float timeScale = 1;
     void Start()
     {
         HideCursor();
+        TimeScale();
     }
     /// <summary>
     /// 锁定鼠标位置并隐藏鼠标.
@@ -15,5 +17,8 @@ public class EventSystem : MonoBehaviour
     private void HideCursor(){
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+    public void TimeScale(){
+        Time.timeScale = timeScale;
     }
 }

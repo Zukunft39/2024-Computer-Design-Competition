@@ -11456,7 +11456,7 @@ ModelImporter:
       takeName: JumpPlace1_Start
       internalID: 0
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 23
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -11999,7 +11999,7 @@ ModelImporter:
       takeName: JumpFwd1_Start
       internalID: 0
       firstFrame: 0
-      lastFrame: 43
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -12018,7 +12018,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.34234235
+        functionName: JumpUp
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -12179,8 +12186,8 @@ ModelImporter:
       name: JumpFwd1_Land
       takeName: JumpFwd1_Land
       internalID: 0
-      firstFrame: 60
-      lastFrame: 138
+      firstFrame: 74
+      lastFrame: 75
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -12355,7 +12362,7 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 60
     - serializedVersion: 16
       name: JumpFwd_Both_preview
       takeName: JumpFwd_Both_preview
@@ -17066,8 +17073,8 @@ ModelImporter:
       name: JumpPlace1_Midair
       takeName: JumpPlace1_Start
       internalID: -6910933921423127792
-      firstFrame: 19
-      lastFrame: 202
+      firstFrame: 107
+      lastFrame: 247
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
