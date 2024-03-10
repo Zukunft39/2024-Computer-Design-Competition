@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class EventSystem : MonoBehaviour
+public class AbacusEventSystem : MonoBehaviour
 {
     // Start is called before the first frame update
     public float timeScale = 1;
+
     void Start()
     {
         HideCursor();
