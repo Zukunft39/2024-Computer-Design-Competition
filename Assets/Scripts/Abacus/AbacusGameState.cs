@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName ="AbacusData",menuName ="GamesData")]
-public class GameState : ScriptableObject
+public class AbacusGameState : ScriptableObject
 {
     [SerializeField] private int count = 0;
     public void Count(int count)
