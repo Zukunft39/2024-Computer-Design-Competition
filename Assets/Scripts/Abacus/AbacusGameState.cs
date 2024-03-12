@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="AbacusData",menuName ="GamesData")]
 public class AbacusGameState : ScriptableObject
 {
-    [SerializeField] private int count = 0;
+    private int count = 0;
     public void Count(int count)
     {
         this.count = count;

@@ -23,6 +23,8 @@ public class CageManager : MonoBehaviour
     [SerializeField] private int currentRabbit = 0;
     [SerializeField] private int currentChicken = 0;
     private float timer;
+    private int rabbit = 0;
+    private int chicken = 0;
 
     public Text timerText;
     public Text headText;
@@ -45,7 +47,10 @@ public class CageManager : MonoBehaviour
 #if UNITY_EDITOR
         else if (timerText == null) Debug.LogError("No TimerText!");
 #endif
-#endregion
+        #endregion
+        #region 检查
+        Check();
+        #endregion
     }
     //初始化
     private void Init()
@@ -61,5 +66,32 @@ public class CageManager : MonoBehaviour
         if (foot > 4 * head) foot = 4 * head;
         headText.text = head.ToString();
         footText.text = foot.ToString();
+
+        rabbit = foot / 2 - head;
+        chicken = head - rabbit;
+    }
+    private void Check()
+    {
+        if(currentChicken == chicken && currentRabbit == rabbit)
+        {
+            //UI显示
+
+            isBegin = false;
+        }
+    }
+    public void AddNum(string tag)
+    {
+        //type=1->rabbit, type=0->chicken
+        switch (tag)
+        {
+            case "Rabbit":
+                currentChicken++;
+                currentCText.text = currentChicken.ToString();
+                break;
+            case "Chicken":
+                currentRabbit++;
+                currentRText.text = currentRabbit.ToString();
+                break;
+        }
     }
 }
