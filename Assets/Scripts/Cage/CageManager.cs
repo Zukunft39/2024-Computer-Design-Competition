@@ -31,6 +31,12 @@ public class CageManager : MonoBehaviour
     public Text footText;
     [Tooltip("兔子")]public Text currentRText;
     [Tooltip("鸡")]public Text currentCText;
+    [Tooltip("轻重切换")]
+    public Transform lightIma;
+    public Transform heavyIma;
+    public Transform arrowIma;
+
+    ObjectPooler pooler;
 
     private void Start()
     {
@@ -51,6 +57,9 @@ public class CageManager : MonoBehaviour
         #region 检查
         Check();
         #endregion
+        #region 生成
+        InstantiateObj();
+        #endregion
     }
     //初始化
     private void Init()
@@ -69,6 +78,9 @@ public class CageManager : MonoBehaviour
 
         rabbit = foot / 2 - head;
         chicken = head - rabbit;
+
+        //对象池启动
+        pooler = ObjectPooler.Instance;
     }
     private void Check()
     {
@@ -81,17 +93,21 @@ public class CageManager : MonoBehaviour
     }
     public void AddNum(string tag)
     {
-        //type=1->rabbit, type=0->chicken
         switch (tag)
         {
-            case "Rabbit":
+            case "Chicken":
                 currentChicken++;
                 currentCText.text = currentChicken.ToString();
                 break;
-            case "Chicken":
+            case "Rabbit":
                 currentRabbit++;
                 currentRText.text = currentRabbit.ToString();
                 break;
         }
+    }
+    private void InstantiateObj()
+    {
+        pooler.GetSpawnObj("Rabbit", 2.5f);
+        pooler.GetSpawnObj("Chicken", 5f);
     }
 }

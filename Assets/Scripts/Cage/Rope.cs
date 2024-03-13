@@ -28,6 +28,12 @@ public class Rope : MonoBehaviour
 
     CageManager manager;
 
+    public State GetState
+    {
+        set { state = value; }
+        get { return state; }
+    }
+
     private void Start()
     {
         rope = transform;
@@ -44,19 +50,21 @@ public class Rope : MonoBehaviour
 
 
         if (state == State.Shorten) Shorten();
-        else if(state == State.None) Rotate();
+        else if(state == State.None)
+        {
+            Rotate();
+            Switch();
+        }
         else if(state == State.Stretch) Stretch();
-        Switch();
     }
     //旋转
     private void Rotate()
-    { 
+    {
         float rotate = Input.GetAxisRaw("Horizontal");
         Vector3 vector = new Vector3(0, 0, -rotate);
-        if (Mathf.Abs(rope.localRotation.z) >= minAngle)
+        if (Mathf.Abs(rope.localRotation.z) > minAngle)
         {
             rope.Rotate(vector * 60 * Time.deltaTime);
-
         }
         else
         {
@@ -89,16 +97,21 @@ public class Rope : MonoBehaviour
         if (length <= 1)
         {
             length = 1;
+            state = State.None;
             if (hook.childCount != 0)
             {
                 manager.AddNum(hook.GetChild(0).tag);
+                //摧毁子物体
             }
-            hook.localScale = new Vector3(hook.localScale.x, hookScale / length , hook.localScale.z);
-            state = State.None;
+            hook.GetComponent<Collider2D>().enabled = true;
+            rope.localScale = new Vector3(rope.localScale.x, length, rope.localScale.z);
+            hook.localScale = new Vector3(hook.localScale.x, hookScale / length, hook.localScale.z);
+            return;
         }
         length -= Time.deltaTime * speed;
         rope.localScale = new Vector3(rope.localScale.x, length, rope.localScale.z);
         hook.localScale = new Vector3(hook.localScale.x, hookScale / length, hook.localScale.z);
+
     }
 
     //切换
@@ -106,8 +119,17 @@ public class Rope : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            if (currentMaxLength == maxLength1) currentMaxLength = maxLength2;
-            else if (currentMaxLength == maxLength2) currentMaxLength = maxLength1;
+            if (currentMaxLength == maxLength1)
+            {
+                currentMaxLength = maxLength2;
+                manager.arrowIma.transform.position = new Vector3(manager.heavyIma.transform.position.x, manager.arrowIma.transform.position.y, manager.arrowIma.transform.position.z);
+            }
+            else if (currentMaxLength == maxLength2)
+            {
+                currentMaxLength = maxLength1;
+                manager.arrowIma.transform.position = new Vector3(manager.lightIma.transform.position.x, manager.arrowIma.transform.position.y, manager.arrowIma.transform.position.z);
+            }
         }
     }
+
 }
