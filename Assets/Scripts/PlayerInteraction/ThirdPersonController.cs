@@ -63,19 +63,24 @@ public class ThirdPersonController : MonoBehaviour
 /// <summary>
 /// 角色重力手动添加
 /// </summary>
-    public float gravity = -9.81f;
+    private float gravity = -9.81f;
     private float verticalVelocity = 0.0f;
-    public float jumpVelocity = 5.0f;
+    private float jumpVelocity = 5.0f;
 
 /// <summary>
-/// 选用目标前几帧的平均值，作为空中水平移动速度进行截取
-/// CACHE_FRAME 为选取的固定帧数，velocityCache作为速度的缓冲池，averageVelocity作为平均速度的记录，currentCacheIndex作为池中当前的索引，
+/// 选用目标前几帧的平均值,作为空中水平移动速度进行截取
+/// CACHE_FRAME 为选取的固定帧数,velocityCache作为速度的缓冲池,averageVelocity作为平均速度的记录,currentCacheIndex作为池中当前的索引,
 /// </summary>
     public static readonly int CACHE_SIZE = 4;
     Vector3[] velocityCache = new Vector3[CACHE_SIZE];
     Vector3 averageVelocity;
     int currentCacheIndex = 0;
 
+/// <summary>
+/// 脚步状态的选择
+/// </summary>
+    public int walkSound = 0;
+    public int runSound = 1;
     void Start()
     {
         playerTransform = transform; // 提高运行效率
@@ -92,6 +97,7 @@ public class ThirdPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        WalkSound();
         CalculateGravity();
         CalculateInputDirection();
         //Jump();
@@ -186,7 +192,7 @@ public class ThirdPersonController : MonoBehaviour
         if(actionState == ActionState.Normal){
             float rad = Mathf.Atan2(playerMovement.x, playerMovement.z);
             animator.SetFloat(turnSpeedHash, rad, 0.1f, Time.deltaTime);
-            playerTransform.Rotate(0,rad * 200 * Time.deltaTime,0);//转向速度慢，人为添加转向速度
+            playerTransform.Rotate(0,rad * 200 * Time.deltaTime,0);//转向速度慢,人为添加转向速度
         }
     }
     /// <summary>
@@ -206,7 +212,7 @@ public class ThirdPersonController : MonoBehaviour
     }
 
     /// <summary>
-    /// 使用Character Controller接管动画 控制玩家移动（Character不自带重力需手动添加）
+    /// 使用Character Controller接管动画 控制玩家移动(Character不自带重力需手动添加)
     /// </summary>
     void OnAnimatorMove() {
         //if(playerState != PlayerState.Midair){
@@ -236,4 +242,17 @@ public class ThirdPersonController : MonoBehaviour
             verticalVelocity = jumpVelocity;  
         }
     }*/
+    
+    /// <summary>
+    /// 处理人物脚步声
+    /// </summary>
+    void WalkSound(){
+        if(locomotionState == LocomotionState.Walk){
+            MainEventManager.TriggerFootStep(MainEventManager.SoundType.WalkSound);
+        }
+        else if(locomotionState == LocomotionState.Run){
+            MainEventManager.TriggerFootStep(MainEventManager.SoundType.RunSound);
+        }
+    }
 }
+

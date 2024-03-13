@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class AbacusEventSystem : MonoBehaviour
+public class MainEventSystem : MonoBehaviour
 {
     // Start is called before the first frame update
     public float timeScale = 1;
