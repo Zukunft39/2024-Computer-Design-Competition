@@ -12,10 +12,14 @@ public class Move : MonoBehaviour
     [Tooltip("速度")]
     [SerializeField] private float speed;
     private Vector3 dir;
-    [SerializeField] private Vector3 initialPos;
+    [SerializeField] private Transform initialPos;
+
+    ObjectPooler pooler;
     private void Start()
     {
+        pooler = ObjectPooler.Instance;
         currentTag = transform.tag;
+        initialPos = GameObject.Find(currentTag).GetComponent<Transform>();
 #if UNITY_EDITOR
         if (initialPos == null) Debug.LogError(initialPos + "is not exit");
 #endif
@@ -31,10 +35,18 @@ public class Move : MonoBehaviour
 #if UNITY_EDITOR
         else Debug.LogError("No Tag:" + currentTag);
 #endif
-        if (Mathf.Abs(transform.position.x - initialPos.x) <= maxDis)
+        if (Mathf.Abs(transform.position.x - initialPos.position.x) <= maxDis)
         {
             if(isMoving) transform.position += speed * Time.deltaTime * dir;
         }
-        else isMoving = false;
+        else
+        {
+            //isMoving = false;
+            if (gameObject.activeSelf) pooler.Recover(gameObject, transform.tag);
+        }
+    }
+    public Transform GetTransform()
+    {
+        return initialPos;
     }
 }

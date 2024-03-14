@@ -27,6 +27,7 @@ public class Rope : MonoBehaviour
     [SerializeField] private float minAngle;
 
     CageManager manager;
+    ObjectPooler pooler;
 
     public State GetState
     {
@@ -43,6 +44,7 @@ public class Rope : MonoBehaviour
         currentMaxLength = maxLength1;
         hookScale = hook.localScale.y;
         manager = FindObjectOfType<CageManager>();
+        pooler = ObjectPooler.Instance;
     }
     private void Update()
     {
@@ -102,6 +104,13 @@ public class Rope : MonoBehaviour
             {
                 manager.AddNum(hook.GetChild(0).tag);
                 //摧毁子物体
+                Move move = hook.GetChild(0).GetComponent<Move>();
+#if UNITY_EDITOR
+                if (move == null) Debug.LogError("" + hook.GetChild(0).name + "have no Move Script");
+#endif
+                pooler.Recover(hook.GetChild(0).gameObject, hook.GetChild(0).tag);
+                hook.GetChild(0).gameObject.transform.SetParent(move.GetTransform(), false);
+                move.isMoving = true;
             }
             hook.GetComponent<Collider2D>().enabled = true;
             rope.localScale = new Vector3(rope.localScale.x, length, rope.localScale.z);

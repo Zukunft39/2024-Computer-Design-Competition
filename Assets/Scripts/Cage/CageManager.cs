@@ -23,6 +23,7 @@ public class CageManager : MonoBehaviour
     [SerializeField] private int currentRabbit = 0;
     [SerializeField] private int currentChicken = 0;
     private float timer;
+    private float tempTimer;
     private int rabbit = 0;
     private int chicken = 0;
 
@@ -41,6 +42,10 @@ public class CageManager : MonoBehaviour
     private void Start()
     {
         Init();
+        #region 生成
+        InvokeRepeating(nameof(InstantiateObjC), 0f, 5f);
+        InvokeRepeating(nameof(InstantiateObjR), 0f, 2.5f);
+        #endregion
     }
     private void Update()
     {
@@ -56,9 +61,6 @@ public class CageManager : MonoBehaviour
         #endregion
         #region 检查
         Check();
-        #endregion
-        #region 生成
-        InstantiateObj();
         #endregion
     }
     //初始化
@@ -91,6 +93,14 @@ public class CageManager : MonoBehaviour
             isBegin = false;
         }
     }
+    private void InstantiateObjC()
+    {
+        pooler.GetSpawnObj("Chicken");
+    }
+    private void InstantiateObjR()
+    {
+        pooler.GetSpawnObj("Rabbit");
+    }
     public void AddNum(string tag)
     {
         switch (tag)
@@ -104,10 +114,5 @@ public class CageManager : MonoBehaviour
                 currentRText.text = currentRabbit.ToString();
                 break;
         }
-    }
-    private void InstantiateObj()
-    {
-        pooler.GetSpawnObj("Rabbit", 2.5f);
-        pooler.GetSpawnObj("Chicken", 5f);
     }
 }

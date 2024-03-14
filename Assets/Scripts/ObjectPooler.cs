@@ -62,40 +62,14 @@ public class ObjectPooler : MonoBehaviour
         if (!gameObject.activeSelf) gameObject.SetActive(true);
 #if UNITY_EDITOR
         else Debug.LogWarning(gameObject + "should not be active");
+        Debug.Log(gameObject.name);
 #endif
 
         //直接入池
-        poolDic[tag].Enqueue(gameObject);
+        //poolDic[tag].Enqueue(gameObject);
         return gameObject;
     }
-    //有tag和time
-    public GameObject GetSpawnObj(string tag, float delayTime)
-    {
-#if UNITY_EDITOR
-        if (!poolDic.ContainsKey(tag))
-        {
-            Debug.LogError("No Obj With the Tag(" + tag + ") in the Dictionary");
-            return null;
-        }
-#endif
-        Queue<GameObject> prefabs = poolDic[tag];
-        int i = 0;
-
-        while (prefabs.Count > 0 && i < prefabs.Count)
-        {
-            GameObject gameObject = poolDic[tag].Dequeue();
-            gameObject.transform.rotation = Quaternion.identity;
-            if (!gameObject.activeSelf) gameObject.SetActive(true);
-#if UNITY_EDITOR
-            else Debug.LogWarning(gameObject + "should not be active");
-#endif
-
-            StartCoroutine(Delay(tag, gameObject, delayTime));
-            i++;
-        }
-        return gameObject;
-        
-    }
+    
     #endregion
     //销毁，用于特殊情况手动销毁
     public void Recover(GameObject gameObject,string tag) 
@@ -104,6 +78,7 @@ public class ObjectPooler : MonoBehaviour
         if (poolDic.ContainsKey(tag))
         {
             poolDic[tag].Enqueue(gameObject);
+            gameObject.transform.localPosition = Vector3.zero;
         }
 #if UNITY_EDITOR
         else
@@ -112,11 +87,11 @@ public class ObjectPooler : MonoBehaviour
         }
 #endif
     }
-    IEnumerator Delay(string tag,GameObject gameObject,float time)
+    #region 测试
+    public void Display()
     {
-        yield return new WaitForSeconds(time);
-        gameObject.SetActive(false);
-        //直接入池
-        poolDic[tag].Enqueue(gameObject);
+        Debug.Log("Chicken Count:" + poolDic["Chicken"].Count);
+        Debug.Log("Rabbit Count:" + poolDic["Rabbit"].Count);
     }
+    #endregion
 }
