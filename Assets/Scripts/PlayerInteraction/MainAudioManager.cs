@@ -33,17 +33,39 @@ public class MainAudioManager : MonoBehaviour
         Sound s = Array.Find(sfxSounds,x => x.name == name);
         if(s == null) Debug.Log("Sound Not Found");
         else{
-            musicSource.clip = s.audioClip;
-            musicSource.Play();
+            sfxSource.clip = s.audioClip;
+            sfxSource.Play();
         }
     }
     public void PlayDialogue(string name){
         Sound s = Array.Find(dialogue,x => x.name == name);
         if(s == null) Debug.Log("Sound Not Found");
         else{
-            musicSource.clip = s.audioClip;
-            musicSource.Play();
+            dialogueSource.clip = s.audioClip;
+            dialogueSource.Play();
         }
     }
+/// <summary>
+/// UI调整音量
+/// </summary>
+    public void ToggleMusic(){
+        musicSource.mute = !musicSource.mute;
+    }
+    public void ToggleSFX(){
+        sfxSource.mute = !sfxSource.mute;
+    }
+    public void ToggleDialogue(){
+        dialogueSource.mute = !dialogueSource.mute;
+    }
+    public void MusicVolume(float volume){
+        musicSource.volume = volume;
+    }
+    public void SFXVolume(float volume){
+        sfxSource.volume = volume;
+    }
+    public void DialogueVolume(float volume){
+        dialogueSource.volume = volume;
+    }
 
+    
 }

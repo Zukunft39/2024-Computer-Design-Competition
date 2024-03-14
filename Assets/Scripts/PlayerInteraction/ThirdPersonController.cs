@@ -65,7 +65,7 @@ public class ThirdPersonController : MonoBehaviour
 /// </summary>
     private float gravity = -9.81f;
     private float verticalVelocity = 0.0f;
-    private float jumpVelocity = 5.0f;
+    //private float jumpVelocity = 5.0f;
 
 /// <summary>
 /// 选用目标前几帧的平均值,作为空中水平移动速度进行截取
@@ -252,6 +252,9 @@ public class ThirdPersonController : MonoBehaviour
         }
         else if(locomotionState == LocomotionState.Run){
             MainEventManager.TriggerFootStep(MainEventManager.SoundType.RunSound);
+        }
+        else if(locomotionState == LocomotionState.Idle){
+            MainEventManager.TriggerFootStep(MainEventManager.SoundType.NoSound);
         }
     }
 }
