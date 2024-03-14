@@ -79,8 +79,7 @@ public class ThirdPersonController : MonoBehaviour
 /// <summary>
 /// 脚步状态的选择
 /// </summary>
-    public int walkSound = 0;
-    public int runSound = 1;
+
     void Start()
     {
         playerTransform = transform; // 提高运行效率
@@ -248,13 +247,13 @@ public class ThirdPersonController : MonoBehaviour
     /// </summary>
     void WalkSound(){
         if(locomotionState == LocomotionState.Walk){
-            MainEventManager.TriggerFootStep(MainEventManager.SoundType.WalkSound);
+            PlayerFootstepListen.TriggerFootStep(PlayerFootstepListen.SoundType.WalkSound);
         }
         else if(locomotionState == LocomotionState.Run){
-            MainEventManager.TriggerFootStep(MainEventManager.SoundType.RunSound);
+            PlayerFootstepListen.TriggerFootStep(PlayerFootstepListen.SoundType.RunSound);
         }
         else if(locomotionState == LocomotionState.Idle){
-            MainEventManager.TriggerFootStep(MainEventManager.SoundType.NoSound);
+            PlayerFootstepListen.TriggerFootStep(PlayerFootstepListen.SoundType.NoSound);
         }
     }
 }

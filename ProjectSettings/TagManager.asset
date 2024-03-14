@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bead
+  - Door
+  - NPC
   layers:
   - Default
   - TransparentFX

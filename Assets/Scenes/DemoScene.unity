@@ -12185,12 +12185,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 326902618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf677b545dee4c042ab2ef5926e34aae, type: 3}
+  m_Script: {fileID: 11500000, guid: a2624f895baba1148bbce32e87f912ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeScale: 1
-  isWalkSound: 0
-  isRunSound: 0
 --- !u!1001 &327729255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13260,7 +13258,7 @@ Transform:
   m_GameObject: {fileID: 361852742}
   serializedVersion: 2
   m_LocalRotation: {x: 0.47185794, y: -1e-45, z: 1e-45, w: 0.88167465}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13637,8 +13635,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368143469}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268346, y: 0.000000015896623, z: -0.0000000065845964, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.38268358, y: -0.000000009559911, z: 0.000000003959846, w: 0.9238795}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14746,6 +14744,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 392723822}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 392723818}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
@@ -14903,8 +14905,6 @@ MonoBehaviour:
   playerState: 1
   locomotionState: 0
   actionState: 0
-  walkSound: 0
-  runSound: 1
 --- !u!143 &392723820
 CharacterController:
   m_ObjectHideFlags: 0
@@ -14950,8 +14950,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.9064941, y: 2.144307, z: 0.3131714}
-  m_Center: {x: 0.9532471, y: 0.57215357, z: -0.3434143}
+  m_Size: {x: 1.7427368, y: 2.144307, z: 1.0709229}
+  m_Center: {x: -0.023468018, y: 0.57215357, z: -0.11608887}
+--- !u!114 &392723822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392723815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf677b545dee4c042ab2ef5926e34aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWalkSound: 0
+  isRunSound: 0
 --- !u!4 &398328221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 780063121698031702, guid: 2de9e1a3806f3fc4bab1c23c152648fe,
@@ -19428,7 +19442,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 383aae4673d3a4a4aa0f9619a7fbc755, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -47421,7 +47435,7 @@ GameObject:
   - component: {fileID: 1244255003}
   m_Layer: 0
   m_Name: Fence_Gate_Door001.001 (1)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51773,7 +51787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372618687}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3826835, y: 0.00000003179325, z: -0.000000013169196, w: 0.92387956}
+  m_LocalRotation: {x: 0.3826836, y: -0.000000055891164, z: 0.00000002315089, w: 0.9238795}
   m_LocalPosition: {x: 547.55, y: 2.5, z: 609.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -71273,8 +71287,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804210939}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.42415538, y: 1e-45, z: -1e-45, w: 0.90558946}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.42415544, y: 0.000000013494338, z: -0.00000000632041, w: 0.90558946}
+  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83428,7 +83442,7 @@ GameObject:
   - component: {fileID: 2087505688}
   m_Layer: 0
   m_Name: Fence_Gate_Door001 (1)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93884,7 +93898,7 @@ GameObject:
   - component: {fileID: 5219457877872976288}
   m_Layer: 0
   m_Name: Fence_Gate_Door001
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97591,7 +97605,7 @@ GameObject:
   - component: {fileID: 7412091944620427328}
   m_Layer: 0
   m_Name: Fence_Gate_Door001.001
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
