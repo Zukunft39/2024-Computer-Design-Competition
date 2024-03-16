@@ -7,6 +7,7 @@ public class PlayerSceneInteraction : MonoBehaviour
 {
     public delegate void InteractionHandler(Interaction interaction);
     public static event InteractionHandler OnInteraction;
+    public GameObject fDoorButton;
     public enum Interaction{
         Door,
         NPC
@@ -20,19 +21,25 @@ public class PlayerSceneInteraction : MonoBehaviour
     public void SceneInteract(Interaction interaction){
         switch (interaction){
             case Interaction.Door:
-                if(Door.isOpenDoor == true){
-                    Debug.Log("按F键打开门");
-                }
-                else{
-                    Debug.Log("按F键关闭门");
+                if(Door.isOpenDoorInfo == true){
+                    MainUIController.mainUIControllerInstance.ShowInteractionInfo(MainUIController.InteractionInfo.DoorInfo);
+                    Debug.Log("传递可以开门信息");
                 }
                 break;
             case Interaction.NPC:
-                Debug.Log("按F键与NPC对话");
+
                 break;
         }
     }
     public static void TriggerInteraction(Interaction interaction){
         OnInteraction?.Invoke(interaction);
+    }
+    public void PressFDoorButton(){
+        if(fDoorButton.activeSelf == true){
+            if(Input.GetKeyDown(KeyCode.F)){//检测键盘F键输入
+                Door.isOpenDoor = true;
+                Debug.Log(Door.isOpenDoor);
+            }
+        }
     }
 }
