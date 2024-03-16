@@ -9160,36 +9160,36 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 547.47235
-        y: 3.0108514
-        z: 610.1451
-      - x: 547.474
-        y: 2.992363
-        z: 610.1451
-      - x: 547.4756
-        y: 2.973874
-        z: 610.1451
-      - x: 547.47723
-        y: 2.9553854
-        z: 610.1451
-      - x: 547.4788
-        y: 2.9368968
-        z: 610.1451
-      - x: 547.6357
-        y: 3.0064666
-        z: 610.1506
-      - x: 547.63367
-        y: 2.989707
-        z: 610.1506
-      - x: 547.63165
-        y: 2.9729476
-        z: 610.1506
-      - x: 547.6296
-        y: 2.9561887
-        z: 610.1506
-      - x: 547.62756
-        y: 2.939429
-        z: 610.1506
+      - x: 547.6276
+        y: 1.4108515
+        z: 610.25494
+      - x: 547.626
+        y: 1.392363
+        z: 610.25494
+      - x: 547.6244
+        y: 1.3738741
+        z: 610.25494
+      - x: 547.62274
+        y: 1.3553854
+        z: 610.25494
+      - x: 547.62115
+        y: 1.3368967
+        z: 610.25494
+      - x: 547.4643
+        y: 1.4064666
+        z: 610.24945
+      - x: 547.4663
+        y: 1.389707
+        z: 610.24945
+      - x: 547.4683
+        y: 1.3729476
+        z: 610.24945
+      - x: 547.4704
+        y: 1.3561885
+        z: 610.24945
+      - x: 547.4724
+        y: 1.339429
+        z: 610.24945
       attributes:
       - Value: 1
       - Value: 2
@@ -10695,6 +10695,7 @@ Transform:
   m_Children:
   - {fileID: 638520089}
   - {fileID: 529329302}
+  - {fileID: 1674714840}
   - {fileID: 1210298673}
   m_Father: {fileID: 586970600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10721,6 +10722,7 @@ MonoBehaviour:
   - name: Run
     character: System
     audioClip: {fileID: 8300000, guid: 22930b36726559b4e9a2274be75c261d, type: 3}
+  sfxSceneSounds:
   - name: OpenDoor
     character: System
     audioClip: {fileID: 8300000, guid: 9e5f49784a971fb41b9170fcb1c196e8, type: 3}
@@ -10733,6 +10735,7 @@ MonoBehaviour:
     audioClip: {fileID: 0}
   musicSource: {fileID: 638520090}
   sfxSource: {fileID: 529329303}
+  sfxSceneSource: {fileID: 1674714841}
   dialogueSource: {fileID: 1210298674}
 --- !u!4 &305148363 stripped
 Transform:
@@ -11160,48 +11163,48 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 547.3902
-        y: 2.70923
-        z: 610.2592
-      - x: 547.4305
-        y: 2.6679811
-        z: 610.3137
-      - x: 547.4708
-        y: 2.626732
-        z: 610.36816
-      - x: 547.51117
-        y: 2.585483
-        z: 610.42267
-      - x: 547.55145
-        y: 2.544234
-        z: 610.4772
-      - x: 547.5918
-        y: 2.5029852
-        z: 610.5317
-      - x: 547.63214
-        y: 2.4617362
-        z: 610.5861
       - x: 547.7098
-        y: 2.7092295
-        z: 610.2592
+        y: 1.10923
+        z: 610.1408
       - x: 547.6695
-        y: 2.6679807
-        z: 610.3137
+        y: 1.067981
+        z: 610.0863
       - x: 547.62915
-        y: 2.6267316
-        z: 610.36816
+        y: 1.0267321
+        z: 610.03186
       - x: 547.5888
-        y: 2.5854826
-        z: 610.42267
+        y: 0.9854831
+        z: 609.97736
       - x: 547.5485
-        y: 2.5442336
-        z: 610.4772
+        y: 0.944234
+        z: 609.92285
       - x: 547.5082
-        y: 2.5029848
-        z: 610.5317
+        y: 0.9029852
+        z: 609.86835
       - x: 547.46783
-        y: 2.4617357
-        z: 610.5861
+        y: 0.8617363
+        z: 609.8139
+      - x: 547.3902
+        y: 1.1092296
+        z: 610.1408
+      - x: 547.4305
+        y: 1.0679806
+        z: 610.0863
+      - x: 547.4708
+        y: 1.0267316
+        z: 610.03186
+      - x: 547.51117
+        y: 0.9854826
+        z: 609.97736
+      - x: 547.55145
+        y: 0.94423354
+        z: 609.92285
+      - x: 547.5918
+        y: 0.90298474
+        z: 609.86835
+      - x: 547.63214
+        y: 0.8617357
+        z: 609.8139
       attributes:
       - Value: 1
       - Value: 2
@@ -13258,7 +13261,7 @@ Transform:
   m_GameObject: {fileID: 361852742}
   serializedVersion: 2
   m_LocalRotation: {x: 0.47185794, y: -1e-45, z: 1e-45, w: 0.88167465}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13635,8 +13638,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368143469}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268358, y: -0.000000009559911, z: 0.000000003959846, w: 0.9238795}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalRotation: {x: 0.38268346, y: -0.000000015896623, z: 0.0000000065845964, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14637,6 +14640,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keqing
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1073957663163385240, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14745,6 +14753,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 392723822}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 392723823}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       insertIndex: -1
@@ -14964,8 +14976,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf677b545dee4c042ab2ef5926e34aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkSound: 0
-  isRunSound: 0
+--- !u!114 &392723823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392723815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1996e6f33b2a94e99f029b8369d6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &398328221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 780063121698031702, guid: 2de9e1a3806f3fc4bab1c23c152648fe,
@@ -48045,6 +48067,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1253012724}
   - component: {fileID: 1253012725}
+  - component: {fileID: 1253012726}
+  - component: {fileID: 1253012727}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -48090,6 +48114,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1253012726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253012723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7ed211530f03343ace45d74011c394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1253012727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253012723}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.593628, y: 4.1626163, z: 4.345703}
+  m_Center: {x: 0.2857864, y: -0.01751211, z: -0.4203112}
 --- !u!4 &1255524566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4012734012178591657, guid: 6894b5aa7703ed549bf3086529074068,
@@ -51787,7 +51844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372618687}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3826836, y: -0.000000055891164, z: 0.00000002315089, w: 0.9238795}
+  m_LocalRotation: {x: 0.3826835, y: -0.00000003179325, z: 0.000000013169196, w: 0.92387956}
   m_LocalPosition: {x: 547.55, y: 2.5, z: 609.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -65326,6 +65383,134 @@ PrefabInstance:
       addedObject: {fileID: 682744050}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6894b5aa7703ed549bf3086529074068, type: 3}
+--- !u!1 &1674714839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674714840}
+  - component: {fileID: 1674714841}
+  m_Layer: 0
+  m_Name: SFXSceneSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1674714840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674714839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299958071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1674714841
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674714839}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1675220219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2360086540714841371, guid: 8cc123bafe5c1374588376550beadbe2,
@@ -71287,8 +71472,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804210939}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.42415544, y: 0.000000013494338, z: -0.00000000632041, w: 0.90558946}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalRotation: {x: 0.42415538, y: -1e-45, z: 1e-45, w: 0.90558946}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -73688,6 +73873,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1872728226}
   - component: {fileID: 1872728227}
+  - component: {fileID: 1872728228}
+  - component: {fileID: 1872728229}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -73733,6 +73920,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1872728228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872728225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7ed211530f03343ace45d74011c394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1872728229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872728225}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6351929, y: 4.8686113, z: 4.772156}
+  m_Center: {x: -0.17451024, y: -0.5390074, z: -0.23949476}
 --- !u!4 &1872879385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 780063121698031702, guid: 2de9e1a3806f3fc4bab1c23c152648fe,
@@ -74951,219 +75171,219 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 547.4947
-        y: 2.6159277
-        z: 610.0747
-      - x: 547.4853
-        y: 2.5776484
-        z: 610.0636
-      - x: 547.4759
-        y: 2.5393515
-        z: 610.05255
-      - x: 547.46655
-        y: 2.501042
-        z: 610.0415
-      - x: 547.45715
-        y: 2.4627247
-        z: 610.03046
-      - x: 547.4478
-        y: 2.4244027
-        z: 610.0194
-      - x: 547.45416
-        y: 2.6197553
-        z: 610.1005
-      - x: 547.4379
-        y: 2.5847182
-        z: 610.09424
-      - x: 547.4217
-        y: 2.5496416
-        z: 610.088
-      - x: 547.40546
-        y: 2.514539
-        z: 610.0818
-      - x: 547.3892
-        y: 2.47942
-        z: 610.07556
-      - x: 547.373
-        y: 2.4442902
-        z: 610.0694
-      - x: 547.43933
-        y: 2.6212897
-        z: 610.13574
-      - x: 547.4206
-        y: 2.5871305
-        z: 610.13574
-      - x: 547.40186
-        y: 2.5529714
-        z: 610.13574
-      - x: 547.3831
-        y: 2.5188122
-        z: 610.13574
-      - x: 547.3644
-        y: 2.484653
-        z: 610.13574
-      - x: 547.34564
-        y: 2.450494
-        z: 610.13574
-      - x: 547.45416
-        y: 2.618484
-        z: 610.17523
-      - x: 547.4379
-        y: 2.5807657
-        z: 610.18646
-      - x: 547.4217
-        y: 2.5430088
-        z: 610.19775
-      - x: 547.40546
-        y: 2.5052254
-        z: 610.2091
-      - x: 547.3892
-        y: 2.4674258
-        z: 610.2204
-      - x: 547.373
-        y: 2.429615
-        z: 610.23175
-      - x: 547.4947
-        y: 2.6137252
-        z: 610.2041
-      - x: 547.4853
-        y: 2.570803
-        z: 610.2234
-      - x: 547.4759
-        y: 2.5278625
-        z: 610.2427
-      - x: 547.46655
-        y: 2.4849102
-        z: 610.262
-      - x: 547.45715
-        y: 2.44195
-        z: 610.2813
-      - x: 547.4478
-        y: 2.398985
-        z: 610.30066
-      - x: 547.55
-        y: 2.6114118
-        z: 610.21466
-      - x: 547.55
-        y: 2.5660355
-        z: 610.2368
-      - x: 547.55
-        y: 2.5206594
-        z: 610.25903
-      - x: 547.55
-        y: 2.4752831
-        z: 610.2812
-      - x: 547.55
-        y: 2.4299068
-        z: 610.3034
-      - x: 547.55
-        y: 2.3845305
-        z: 610.32556
       - x: 547.6053
-        y: 2.6137252
-        z: 610.2041
+        y: 1.0159276
+        z: 610.3253
       - x: 547.6147
-        y: 2.570803
-        z: 610.2234
+        y: 0.9776484
+        z: 610.3364
       - x: 547.6241
-        y: 2.5278625
-        z: 610.2427
+        y: 0.9393513
+        z: 610.3475
       - x: 547.6334
-        y: 2.4849105
-        z: 610.262
+        y: 0.90104187
+        z: 610.3585
       - x: 547.6428
-        y: 2.4419503
-        z: 610.2813
+        y: 0.8627248
+        z: 610.36957
       - x: 547.65216
-        y: 2.3989851
-        z: 610.30066
+        y: 0.8244026
+        z: 610.3806
       - x: 547.6458
-        y: 2.618484
-        z: 610.17523
+        y: 1.0197554
+        z: 610.2995
       - x: 547.66205
-        y: 2.5807657
-        z: 610.18646
+        y: 0.9847181
+        z: 610.3058
       - x: 547.6783
-        y: 2.5430086
-        z: 610.19775
+        y: 0.9496417
+        z: 610.312
       - x: 547.6945
-        y: 2.5052257
-        z: 610.2091
+        y: 0.91453904
+        z: 610.31824
       - x: 547.71075
-        y: 2.4674258
-        z: 610.2204
+        y: 0.87941986
+        z: 610.32446
       - x: 547.727
-        y: 2.429615
-        z: 610.23175
+        y: 0.84429
+        z: 610.3306
       - x: 547.66064
-        y: 2.6212897
-        z: 610.13574
+        y: 1.0212898
+        z: 610.2643
       - x: 547.6794
-        y: 2.5871305
-        z: 610.13574
+        y: 0.9871305
+        z: 610.2643
       - x: 547.6981
-        y: 2.5529714
-        z: 610.13574
+        y: 0.95297134
+        z: 610.2643
       - x: 547.71686
-        y: 2.5188122
-        z: 610.13574
+        y: 0.91881204
+        z: 610.2643
       - x: 547.7356
-        y: 2.484653
-        z: 610.13574
+        y: 0.884653
+        z: 610.2643
       - x: 547.75433
-        y: 2.450494
-        z: 610.13574
+        y: 0.85049397
+        z: 610.2643
       - x: 547.6458
-        y: 2.6197553
-        z: 610.1005
+        y: 1.0184839
+        z: 610.2248
       - x: 547.66205
-        y: 2.584718
-        z: 610.09424
+        y: 0.98076576
+        z: 610.21356
       - x: 547.6783
-        y: 2.5496416
-        z: 610.088
+        y: 0.94300866
+        z: 610.2023
       - x: 547.6945
-        y: 2.514539
-        z: 610.0818
+        y: 0.9052254
+        z: 610.1909
       - x: 547.71075
-        y: 2.47942
-        z: 610.07556
+        y: 0.8674257
+        z: 610.1796
       - x: 547.727
-        y: 2.4442902
-        z: 610.0694
+        y: 0.82961506
+        z: 610.1683
       - x: 547.6053
-        y: 2.6159277
-        z: 610.0747
+        y: 1.0137252
+        z: 610.1959
       - x: 547.6147
-        y: 2.5776484
-        z: 610.0636
+        y: 0.97080296
+        z: 610.17664
       - x: 547.6241
-        y: 2.5393515
-        z: 610.05255
+        y: 0.92786264
+        z: 610.15735
       - x: 547.6334
-        y: 2.501042
-        z: 610.0415
+        y: 0.8849102
+        z: 610.138
+      - x: 547.6428
+        y: 0.84195006
+        z: 610.1187
       - x: 547.65216
-        y: 2.4244027
-        z: 610.0194
+        y: 0.7989848
+        z: 610.09937
       - x: 547.55
-        y: 2.613955
-        z: 610.06525
+        y: 1.0114118
+        z: 610.18536
       - x: 547.55
-        y: 2.5739398
-        z: 610.05237
+        y: 0.96603554
+        z: 610.1632
       - x: 547.55
-        y: 2.533925
-        z: 610.0395
+        y: 0.92065936
+        z: 610.141
       - x: 547.55
-        y: 2.4939103
-        z: 610.0266
+        y: 0.875283
+        z: 610.11884
       - x: 547.55
-        y: 2.4538956
-        z: 610.01373
+        y: 0.8299067
+        z: 610.0966
       - x: 547.55
-        y: 2.4138806
-        z: 610.00085
+        y: 0.7845305
+        z: 610.07446
+      - x: 547.4947
+        y: 1.0137252
+        z: 610.1959
+      - x: 547.4853
+        y: 0.97080296
+        z: 610.17664
+      - x: 547.4759
+        y: 0.92786264
+        z: 610.15735
+      - x: 547.46655
+        y: 0.8849104
+        z: 610.138
+      - x: 547.45715
+        y: 0.84195036
+        z: 610.1187
+      - x: 547.4478
+        y: 0.79898506
+        z: 610.09937
+      - x: 547.45416
+        y: 1.0184839
+        z: 610.2248
+      - x: 547.4379
+        y: 0.98076576
+        z: 610.21356
+      - x: 547.4217
+        y: 0.9430085
+        z: 610.2023
+      - x: 547.40546
+        y: 0.9052255
+        z: 610.1909
+      - x: 547.3892
+        y: 0.8674258
+        z: 610.1796
+      - x: 547.373
+        y: 0.8296151
+        z: 610.1683
+      - x: 547.43933
+        y: 1.0212897
+        z: 610.2643
+      - x: 547.4206
+        y: 0.98713064
+        z: 610.2643
+      - x: 547.40186
+        y: 0.95297134
+        z: 610.2643
+      - x: 547.3831
+        y: 0.9188121
+        z: 610.2643
+      - x: 547.3644
+        y: 0.8846531
+        z: 610.2643
+      - x: 547.34564
+        y: 0.85049397
+        z: 610.2643
+      - x: 547.45416
+        y: 1.0197554
+        z: 610.2995
+      - x: 547.4379
+        y: 0.984718
+        z: 610.3058
+      - x: 547.4217
+        y: 0.94964147
+        z: 610.312
+      - x: 547.40546
+        y: 0.91453904
+        z: 610.31824
+      - x: 547.3892
+        y: 0.87942
+        z: 610.32446
+      - x: 547.373
+        y: 0.84429
+        z: 610.3306
+      - x: 547.4947
+        y: 1.0159276
+        z: 610.3253
+      - x: 547.4853
+        y: 0.97764844
+        z: 610.3364
+      - x: 547.4759
+        y: 0.9393513
+        z: 610.3475
+      - x: 547.46655
+        y: 0.9010419
+        z: 610.3585
+      - x: 547.4478
+        y: 0.8244028
+        z: 610.3806
+      - x: 547.55
+        y: 1.0139549
+        z: 610.3348
+      - x: 547.55
+        y: 0.9739399
+        z: 610.34766
+      - x: 547.55
+        y: 0.93392503
+        z: 610.36053
+      - x: 547.55
+        y: 0.8939103
+        z: 610.3734
+      - x: 547.55
+        y: 0.8538954
+        z: 610.3863
+      - x: 547.55
+        y: 0.81388056
+        z: 610.3992
       attributes:
       - Value: 1
       - Value: 2
@@ -75236,7 +75456,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 2
       - Value: 2
-      maxConnectionDistance: 0.12378396
+      maxConnectionDistance: 0.123783894
       userEdit: 0
   gizmoSerializeData:
     always: 0
@@ -97761,8 +97981,8 @@ Transform:
   m_GameObject: {fileID: 7177079115507705077}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0025665006, y: 0.7071021, z: 0.7071021, w: -0.0025664999}
-  m_LocalPosition: {x: -4.02, y: 0, z: -1.583}
-  m_LocalScale: {x: 0.084892415, y: 0.084892415, z: 0.084892415}
+  m_LocalPosition: {x: 0.443, y: -0.522, z: -1.583}
+  m_LocalScale: {x: 0.111981556, y: 0.111981556, z: 0.111981556}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7423925642402284555}

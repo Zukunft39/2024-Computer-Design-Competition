@@ -13,7 +13,7 @@ public class PlayerFootstepListen: MonoBehaviour
 /// </summary>
     public delegate void FootstepEventHander(SoundType type);
     public static event FootstepEventHander OnFootstep;
-    public bool isWalkSound = false,isRunSound = false;
+    private bool isWalkSound = false,isRunSound = false;
     public enum SoundType{
         NoSound,
         WalkSound,
@@ -32,7 +32,6 @@ public class PlayerFootstepListen: MonoBehaviour
                 if(!isWalkSound){
                     isRunSound = false;
                     MainAudioManager.AudioManagerInstance.PlaySFX("Walk");
-                    Debug.Log("正在播放"+MainAudioManager.AudioManagerInstance.sfxSource.clip.name+"音效");
                     isWalkSound = true;
                 }
                 else return;
@@ -44,7 +43,6 @@ public class PlayerFootstepListen: MonoBehaviour
                 if(!isRunSound){
                     isWalkSound = false;
                     MainAudioManager.AudioManagerInstance.PlaySFX("Run");
-                    Debug.Log("正在播放"+MainAudioManager.AudioManagerInstance.sfxSource.clip.name+"音效");
                     isRunSound = true;
                 }
                 else return;
@@ -62,6 +60,4 @@ public class PlayerFootstepListen: MonoBehaviour
     public static void TriggerFootStep(SoundType type){
         OnFootstep?.Invoke(type);
     }
-
-
 }

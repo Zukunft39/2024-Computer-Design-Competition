@@ -14,16 +14,16 @@ AnimatorStateMachine:
     m_Position: {x: 250, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -941253626148946820}
-    m_Position: {x: 150, y: -10, z: 0}
+    m_Position: {x: 170, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1170298537468003907}
-    m_Position: {x: 150, y: 220, z: 0}
+    m_Position: {x: 140, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2327533523802703177}
     m_Position: {x: 400, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4000836124586484787}
-    m_Position: {x: 400, y: -10, z: 0}
+    m_Position: {x: 450, y: -10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -125,13 +125,13 @@ AnimatorController:
   m_Name: LeftDoor
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isLeftDoorOpen
+  - m_Name: isDoorOpen
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: isLeftDoorClose
+  - m_Name: isDoorClose
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -181,10 +181,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isLeftDoorOpen
+    m_ConditionEvent: isDoorOpen
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isLeftDoorClose
+    m_ConditionEvent: isDoorClose
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1170298537468003907}
@@ -263,10 +263,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isLeftDoorOpen
+    m_ConditionEvent: isDoorOpen
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: isLeftDoorClose
+    m_ConditionEvent: isDoorClose
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -214655568532107305}
@@ -313,10 +313,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isLeftDoorOpen
+    m_ConditionEvent: isDoorOpen
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isLeftDoorClose
+    m_ConditionEvent: isDoorClose
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -214655568532107305}
@@ -341,10 +341,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isLeftDoorOpen
+    m_ConditionEvent: isDoorOpen
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isLeftDoorClose
+    m_ConditionEvent: isDoorClose
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -941253626148946820}
