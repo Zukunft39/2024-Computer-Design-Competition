@@ -1,0 +1,28 @@
+{
+    "dialogue": [
+        {
+            "number": 1,
+            "name": "NPC0",
+            "dialogueContent": "Man!",
+            "others": "无"
+        },
+        {
+            "number": 2,
+            "name": "NPC0",
+            "dialogueContent": "(Laugh)",
+            "others": "无"
+        },
+        {
+            "number": 3,
+            "name": "Player",
+            "dialogueContent": "What can I say?",
+            "others": "无"
+        },
+        {
+            "number": 4,
+            "name": "NPC0",
+            "dialogueContent": "Manba Out.",
+            "others": "结束"
+        }
+    ]
+}

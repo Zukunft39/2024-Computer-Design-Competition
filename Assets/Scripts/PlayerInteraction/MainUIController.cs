@@ -9,10 +9,6 @@ public class MainUIController : MonoBehaviour
     public static MainUIController mainUIControllerInstance;
     public Slider _musicSlider,_sfxSlider,_dialogueSlider;
     public Image fDoorButton;
-    public enum InteractionInfo{
-        DoorInfo,
-        NPCInfo
-    }
     private void Awake() {
         if(mainUIControllerInstance == null){
             mainUIControllerInstance = this;
@@ -46,24 +42,10 @@ public class MainUIController : MonoBehaviour
 /// <summary>
 /// 显示交互按键
 /// </summary>
-    public void ShowInteractionInfo(InteractionInfo info){
-        switch (info)
-        {
-            case InteractionInfo.DoorInfo:
-                fDoorButton.gameObject.SetActive(true);
-                Debug.Log("显示按f开门");
-                if(Input.GetKeyDown(KeyCode.F))
-                {
-                    Debug.Log("玩家按下了F键");
-                    fDoorButton.gameObject.SetActive(false);
-                    Debug.Log("关闭按f开门");
-                }
-                break;
-            case InteractionInfo.NPCInfo:
-                
-                break;
-            default:
-                break;
-        }
+    public void GenerateDoorButton(){
+        fDoorButton.gameObject.SetActive(true);
+    }
+    public void DesTroyDoorButton(){
+        fDoorButton.gameObject.SetActive(false);
     }
 }
