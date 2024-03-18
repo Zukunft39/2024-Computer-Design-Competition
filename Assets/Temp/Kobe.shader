@@ -15,7 +15,7 @@ Shader "Kobe/Shader"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
-            
+             
             struct a2v// 用来命名传递从应用程序(即Application)到顶点着色器(即Vertex shader)的数据结构
             {
                 float4 pos : POSITION; //定义的一个四维的向量,来取物体的坐标
