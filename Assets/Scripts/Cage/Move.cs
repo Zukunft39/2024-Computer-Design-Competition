@@ -35,9 +35,9 @@ public class Move : MonoBehaviour
 #if UNITY_EDITOR
         else Debug.LogError("No Tag:" + currentTag);
 #endif
-        if (Mathf.Abs(transform.position.x - initialPos.position.x) <= maxDis)
+        if (Mathf.Abs(transform.localPosition.x) <= maxDis)
         {
-            if(isMoving) transform.position += speed * Time.deltaTime * dir;
+            if (isMoving) transform.position += speed * Time.deltaTime * dir;
         }
         else
         {

@@ -48,12 +48,12 @@ public class Rope : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space)) state = State.Stretch;
-
 
         if (state == State.Shorten) Shorten();
         else if(state == State.None)
         {
+            if (Input.GetKeyUp(KeyCode.Space)) state = State.Stretch;
+
             Rotate();
             Switch();
         }
@@ -64,16 +64,18 @@ public class Rope : MonoBehaviour
     {
         float rotate = Input.GetAxisRaw("Horizontal");
         Vector3 vector = new Vector3(0, 0, -rotate);
-        if (Mathf.Abs(rope.localRotation.z) > minAngle)
+        Quaternion ropeRotation = rope.rotation;
+        float currentAngle = ropeRotation.eulerAngles.z;
+        if (Mathf.Abs(currentAngle - 180f) <= minAngle)
         {
             rope.Rotate(vector * 60 * Time.deltaTime);
         }
         else
         {
-            Quaternion temp = transform.localRotation;
-            if (rope.localRotation.z < minAngle) temp.z = minAngle;
-            else if (rope.localRotation.z > -minAngle) temp.z = -minAngle;
-            transform.localRotation = temp;
+            Quaternion temp = transform.rotation;
+            if (currentAngle - 180f > minAngle) temp.eulerAngles = new Vector3(temp.eulerAngles.x, temp.eulerAngles.y, minAngle + 180f);
+            else if (currentAngle - 180f < -minAngle) temp.eulerAngles = new Vector3(temp.eulerAngles.x, temp.eulerAngles.y, -minAngle + 180f);
+            transform.rotation = temp;
         }
     }
 
@@ -103,6 +105,7 @@ public class Rope : MonoBehaviour
             if (hook.childCount != 0)
             {
                 manager.AddNum(hook.GetChild(0).tag);
+                //Debug.Log(hook.GetChild(0).tag);
                 //摧毁子物体
                 Move move = hook.GetChild(0).GetComponent<Move>();
 #if UNITY_EDITOR

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[CreateAssetMenu(fileName = "CageData", menuName = "GamesData")]
 public class CageGameState : ScriptableObject
 {
     private bool isOver = false;
@@ -38,6 +39,7 @@ public class CageManager : MonoBehaviour
     public Transform arrowIma;
 
     ObjectPooler pooler;
+    CageGameState state;
 
     private void Start()
     {
@@ -91,6 +93,7 @@ public class CageManager : MonoBehaviour
             //UI显示
 
             isBegin = false;
+            if (state != null) state.Over();
         }
     }
     private void InstantiateObjC()
@@ -114,5 +117,10 @@ public class CageManager : MonoBehaviour
                 currentRText.text = currentRabbit.ToString();
                 break;
         }
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        //UI显示
     }
 }

@@ -75,10 +75,13 @@ public class ObjectPooler : MonoBehaviour
     public void Recover(GameObject gameObject,string tag) 
     {
         gameObject.SetActive(false);
+        if (!gameObject.GetComponent<Collider2D>().enabled) gameObject.GetComponent<Collider2D>().enabled = true;
         if (poolDic.ContainsKey(tag))
         {
             poolDic[tag].Enqueue(gameObject);
             gameObject.transform.localPosition = Vector3.zero;
+            gameObject.transform.localScale = Vector3.one;
+            //Debug.Log("Name:" + tag + "    " + poolDic[tag].Count);
         }
 #if UNITY_EDITOR
         else

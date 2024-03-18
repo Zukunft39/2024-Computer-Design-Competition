@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 1
-  initialPos: {x: 10, y: 0, z: 0}
   currentTag: 
   maxDis: 20
   speed: 2
+  initialPos: {fileID: 0}
