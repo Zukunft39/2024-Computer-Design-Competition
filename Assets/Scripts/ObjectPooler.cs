@@ -29,12 +29,16 @@ public class ObjectPooler : MonoBehaviour
     //初始化
     private void Start()
     {
+        Init();
+    }
+    public void Init()
+    {
         poolDic = new Dictionary<string, Queue<GameObject>>();
-        foreach(var pool in pools)
+        foreach (var pool in pools)
         {
             //用于给每个pool一个队列存储
             Queue<GameObject> objectPool = new Queue<GameObject>();
-            for(int i = 0; i < pool.size; i++)
+            for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.prefab);
                 obj.transform.localPosition = Vector3.zero;

@@ -187,6 +187,8 @@ public class AbacusManager : MonoBehaviour
     {
         tCanvas.SetActive(false);
         isPause = false;
+
+        //跳转
     }
     //关于帮助
     public void Help()
