@@ -36,11 +36,12 @@ public class CageManager : MonoBehaviour
     [SerializeField] private int currentChicken = 0;
     [Space]
     private float timer;
-    private float tempTimer;
     private int rabbit = 0;
     private int chicken = 0;
     [Header("UI面板")]
     [SerializeField] private GameObject[] panels;//0、1、2、3对应说明、暂停、失败、成功
+    [Space]
+    [SerializeField] private Transform[] transforms;//0-Chicken，1-Rabbit
     [Space]
 
     public Text timerText;
@@ -90,12 +91,17 @@ public class CageManager : MonoBehaviour
         #region 检查
         Check();
         #endregion
+        //if (Input.GetKey(KeyCode.Alpha1)) LoseGame();
     }
+
+    #region 条件判断与初始化
     //初始化
     private void Init()
     {
         timer = 61f;
         timerText.text = "60s";
+        currentChicken = 0;
+        currentRabbit = 0;
 
         //feet>=2head并且feet是偶数
         head = Random.Range(1, 15);
@@ -136,6 +142,22 @@ public class CageManager : MonoBehaviour
     {
         if(!isPause) pooler.GetSpawnObj("Rabbit");
     }
+
+    //初始化包装
+    public void Initiall()
+    {
+        Init();
+        #region 生成
+        InvokeRepeating(nameof(InstantiateObjC), 0f, 5f);
+        InvokeRepeating(nameof(InstantiateObjR), 0f, 2.5f);
+        #endregion
+        currentPanel.SetActive(false);
+        isPause = false;
+        isBegin = true;
+    }
+    #endregion
+
+    #region UI相关信息
     //UI面板切换
     private GameObject PanelChange(string panelState)
     {
@@ -179,7 +201,7 @@ public class CageManager : MonoBehaviour
         }
 #if UNITY_EDITOR
         else if (currentPanel == null) Debug.LogError("No Panel!");
-        else if (currentPanel.activeSelf) Debug.LogWarning("Panel(" + panelState + ") is exist!");
+        else if (currentPanel.activeSelf) Debug.LogWarning("Panel(" + panelState + ") is not exist!");
 #endif
     }
     //失败
@@ -199,22 +221,12 @@ public class CageManager : MonoBehaviour
     //暂停
     public void PauseGame()
     {
+        Time.timeScale = 0;
         panelState = PanelState.Pause;
         PanelChange(panelState.ToString());
         PanelDisplay();
     }
-    //初始化包装
-    public void Initiall()
-    {
-        Init();
-        #region 生成
-        InvokeRepeating(nameof(InstantiateObjC), 0f, 5f);
-        InvokeRepeating(nameof(InstantiateObjR), 0f, 2.5f);
-        #endregion
-        currentPanel.SetActive(false);
-        isPause = false;
-        isBegin = true;
-    }
+    
     public void AddNum(string tag)
     {
         switch (tag)
@@ -239,17 +251,46 @@ public class CageManager : MonoBehaviour
     }
     public void Continue()
     {
+        Time.timeScale = 1;
 #if UNITY_EDITOR
         Debug.Log("继续");
 #endif
         currentPanel.SetActive(false);
         isPause = false;
     }
-    public void Restrat()
+    public void Restart()
     {
 #if UNITY_EDITOR
         Debug.Log("重来");
 #endif
+        Clear(transforms[0]);
+        Clear(transforms[1]);
+        isPause = false;
         currentPanel.SetActive(false);
+        Init();
     }
+    #endregion
+
+    #region 其他
+    //获取数据
+    public bool GetPause()
+    {
+        return isPause;
+    }
+    //清空
+    private void Clear(Transform trs)
+    {
+        int count = trs.childCount;
+        if(count > 0)
+        {
+            for(int i = 0; i < count; i++)
+            {
+                if (trs.GetChild(i).gameObject.activeSelf)
+                {
+                    pooler.Recover(trs.GetChild(i).gameObject, trs.GetChild(i).gameObject.tag);
+                }
+            }
+        }
+    }
+    #endregion
 }

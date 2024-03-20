@@ -15,13 +15,16 @@ public class Move : MonoBehaviour
     [SerializeField] private Transform initialPos;
 
     ObjectPooler pooler;
+    CageManager manager;
     private void Start()
     {
         pooler = ObjectPooler.Instance;
+        manager = FindObjectOfType<CageManager>();
         currentTag = transform.tag;
         initialPos = GameObject.Find(currentTag).GetComponent<Transform>();
 #if UNITY_EDITOR
         if (initialPos == null) Debug.LogError(initialPos + "is not exit");
+        if (manager == null) Debug.LogError("No CageManager!");
 #endif
     }
     private void Update()
@@ -37,7 +40,7 @@ public class Move : MonoBehaviour
 #endif
         if (Mathf.Abs(transform.localPosition.x) <= maxDis)
         {
-            if (isMoving) transform.position += speed * Time.deltaTime * dir;
+            if (isMoving && !manager.GetPause()) transform.position += speed * Time.deltaTime * dir;
         }
         else
         {

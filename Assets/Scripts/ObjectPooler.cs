@@ -73,9 +73,9 @@ public class ObjectPooler : MonoBehaviour
         //poolDic[tag].Enqueue(gameObject);
         return gameObject;
     }
-    
+
     #endregion
-    //销毁，用于特殊情况手动销毁
+    #region 销毁，用于特殊情况手动销毁
     public void Recover(GameObject gameObject,string tag) 
     {
         gameObject.SetActive(false);
@@ -93,12 +93,6 @@ public class ObjectPooler : MonoBehaviour
             Debug.LogError("No Obj ("+gameObject+")With the Tag(" + tag + ") in the Dictionary");
         }
 #endif
-    }
-    #region 测试
-    public void Display()
-    {
-        Debug.Log("Chicken Count:" + poolDic["Chicken"].Count);
-        Debug.Log("Rabbit Count:" + poolDic["Rabbit"].Count);
     }
     #endregion
 }
