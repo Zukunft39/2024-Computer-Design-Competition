@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Cinemachine;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,20 +13,20 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button option2Button;
 
     [SerializeField] private float typingSpeed = 0.05f; // 每个字出现的速度
-    [SerializeField] private float turnSpeed = 2f;
 
     private List<DialogueString> dialogueList;
 
     [Header("Player")]
     [SerializeField] private ThirdPersonController thirdPersonController;
     [SerializeField] private Animator animator;
+    [SerializeField] private CinemachineVirtualCamera dialogueCamera;
+    [SerializeField] private AudioSource playerFootsteps;
     // todo 这里切换到Cinemachine, 使用Frame Transposer实现固定相机轨道
-    private Transform playerCamera;
+
 
     public int currentDialogueIndex = 0;//当前读取的对话序列
     private void Start() {
         dialogueParent.SetActive(false);
-        playerCamera = Camera.main.transform;
     }
 
     /// <summary>
@@ -34,13 +35,15 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToPrint"> 对话详细设置内容 </param>
     /// <param name="NPC"> 摄像机转向的移动目标 </param>
     public void DialogueStart(List<DialogueString> textToPrint,Transform NPC){
-        Debug.Log("开始对话");
         dialogueParent.SetActive(true);
+
         thirdPersonController.enabled = false;
         animator.enabled = false;
+        playerFootsteps.enabled = false;
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Debug.Log("已解锁鼠标位置并弹出对话界面");
+
         StartCoroutine(TurnCameraTowardsNPC(NPC));
 
         dialogueList = textToPrint;
@@ -48,6 +51,8 @@ public class DialogueManager : MonoBehaviour
 
         DisableButtons();
         StartCoroutine(PrintDialogue());
+
+        Debug.Log("跳转到第"+currentDialogueIndex+"个对话");
     }
 
     /// <summary>
@@ -66,20 +71,10 @@ public class DialogueManager : MonoBehaviour
     /// 旋转相机到NPC的位置
     /// </summary>
     /// <param name="NPC"> 相机旋转到目标的位置 </param>
-    /// <returns> 返回一个协程 </returns>
     // todo 这里修改使用Cinemachine
     private IEnumerator TurnCameraTowardsNPC(Transform NPC){
-        Quaternion startRotation = playerCamera.rotation;
-        Quaternion targetRotation = Quaternion.LookRotation(NPC.position - playerCamera.position);
-
-        float elapsedTime = 0;
-        while (elapsedTime < 1f){
-            playerCamera.rotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime);
-            elapsedTime += Time.deltaTime + turnSpeed;
-            yield return null;
-        }
-        playerCamera.rotation = targetRotation;
-        Debug.Log("相机旋转到NPC位置完成");
+        dialogueCamera.Priority = 100;
+        yield return null;
     }
 
     private bool optionSelected = false;
@@ -90,14 +85,12 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator PrintDialogue(){
         while(currentDialogueIndex < dialogueList.Count){
             DialogueString line = dialogueList[currentDialogueIndex];
-
+            Debug.Log("跳转到第"+currentDialogueIndex+"个对话");
             line.startDialogueEvent?.Invoke();//启用调用当前处理事件
 
             if (line.isQuestion)
             {
                 yield return StartCoroutine(TypeText(line.text));
-
-                Debug.Log("当前为问句");
 
                 option1Button.interactable = true;
                 option2Button.interactable = true;
@@ -105,10 +98,12 @@ public class DialogueManager : MonoBehaviour
                 option1Button.GetComponentInChildren<TMP_Text>().text = line.answerOption1;
                 option2Button.GetComponentInChildren<TMP_Text>().text = line.answerOption2;
 
+                option1Button.onClick.RemoveAllListeners();
+                option2Button.onClick.RemoveAllListeners();
                 option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1IndexJump));
                 option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2IndexJump));
 
-                yield return new WaitUntil(() => optionSelected);
+                yield return new WaitUntil(() => optionSelected);//直到当前状态为optionSelected时才推出
             }
             else{
                 yield return StartCoroutine(TypeText(line.text));
@@ -125,8 +120,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="indexJump">跳转到得到对应目标</param>
     private void HandleOptionSelected(int indexJump){
-        Debug.Log("选项被选中了");
-        optionSelected = false;
+        optionSelected = true;
         DisableButtons();
 
         currentDialogueIndex = indexJump;
@@ -138,7 +132,6 @@ public class DialogueManager : MonoBehaviour
     /// <param name="text"> Dialoguelist 中的文字 </param>
     /// <returns></returns>
     private IEnumerator TypeText(string text){
-        Debug.Log("正在打字");
         dialogueText.text = "";
         foreach(char letter in text.ToCharArray()){
             dialogueText.text += letter;
@@ -166,6 +159,7 @@ public class DialogueManager : MonoBehaviour
 
         thirdPersonController.enabled = true;
         animator.enabled = true;
+        playerFootsteps.enabled = true;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
