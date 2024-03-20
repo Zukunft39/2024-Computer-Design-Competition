@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class JSONReader : MonoBehaviour
 {
+    /// <summary>
+    /// 用于读取Excel中的文本
+    /// </summary>
     public TextAsset textJSON;
     [System.Serializable]
     public class Dialogue{

@@ -25,6 +25,10 @@ public class PlayerFootstepListen: MonoBehaviour
     void OnDestroy() {
         OnFootstep -= PlayFootstepSound;
     }
+    /// <summary>
+    /// 当时写的时候没注意...这个能用Switch简单优化
+    /// </summary>
+    /// <param name="type"></param>
     public void PlayFootstepSound(SoundType type){
         if(type == SoundType.WalkSound){
             if(MainAudioManager.AudioManagerInstance.sfxSource.isPlaying == true && MainAudioManager.AudioManagerInstance.sfxSource.clip.name == "WalkSound") return;

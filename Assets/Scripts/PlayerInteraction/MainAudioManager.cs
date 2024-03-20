@@ -20,6 +20,10 @@ public class MainAudioManager : MonoBehaviour
     private void Start() {
         PlayMusic("MainBackGroundMusic");
     }
+    /// <summary>
+    /// 音效管理,播放对应的音效
+    /// </summary>
+    /// <param name="name"></param>
     public void PlayMusic(string name){
         Sound s = Array.Find(musicSounds,x => x.name == name);
         if(s == null) Debug.Log("Sound Not Found");

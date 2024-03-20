@@ -83,6 +83,10 @@ public class Door : MonoBehaviour
         }
         else return;
     }
+    /// <summary>
+    /// 计算玩家相对于门的朝向
+    /// </summary>
+    /// <returns></returns>
     private bool CalculateForward(){
         Vector3 toPlayer = playerTransform.position - doorTransform.position;
         float dotProduct = Vector3.Dot(toPlayer.normalized, doorTransform.forward);
