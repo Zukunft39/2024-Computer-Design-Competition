@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Cinemachine;
+using DG.Tweening;
+using DG.Tweening.Core;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -38,13 +40,15 @@ public class DialogueManager : MonoBehaviour
         dialogueParent.SetActive(true);
 
         thirdPersonController.enabled = false;
-        animator.enabled = false;
+        animator.SetFloat("Status",1f);
+        animator.SetFloat("Move Speed",0f);
+        animator.SetFloat("Turn Speed",0f);
         playerFootsteps.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        StartCoroutine(TurnCameraTowardsNPC(NPC));
+        //TurnCameraTowardsNPC(NPC);
 
         dialogueList = textToPrint;
         currentDialogueIndex = 0;
@@ -52,14 +56,12 @@ public class DialogueManager : MonoBehaviour
         DisableButtons();
         StartCoroutine(PrintDialogue());
 
-        Debug.Log("跳转到第"+currentDialogueIndex+"个对话");
     }
 
     /// <summary>
     /// 禁用按钮
     /// </summary>
     private void DisableButtons(){
-        Debug.Log("禁用按钮");
         option1Button.interactable = false;//这里我们可以写成取消显示Button
         option2Button.interactable = false;
 
@@ -72,9 +74,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="NPC"> 相机旋转到目标的位置 </param>
     // todo 这里修改使用Cinemachine
-    private IEnumerator TurnCameraTowardsNPC(Transform NPC){
+    private void TurnCameraTowardsNPC(Transform NPC){
         dialogueCamera.Priority = 100;
-        yield return null;
     }
 
     private bool optionSelected = false;
@@ -158,7 +159,6 @@ public class DialogueManager : MonoBehaviour
         dialogueParent.SetActive(false);
 
         thirdPersonController.enabled = true;
-        animator.enabled = true;
         playerFootsteps.enabled = true;
 
         Cursor.lockState = CursorLockMode.Locked;

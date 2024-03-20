@@ -12325,6 +12325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326902620}
   - component: {fileID: 326902621}
+  - component: {fileID: 326902622}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12360,6 +12361,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeScale: 1
+--- !u!114 &326902622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326902618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353489aed2f6f7a45a1c64823f52c692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &327729255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13428,7 +13441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361852742}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000013726169, y: 0.8816746, z: -0.47185794, w: 0.000000025647578}
+  m_LocalRotation: {x: -0.000000005924802, y: 0.8816746, z: -0.47185794, w: -0.0000000110705916}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13806,7 +13819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368143469}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000013169195, y: 0.92387956, z: -0.38268346, w: 0.00000003179325}
+  m_LocalRotation: {x: -0, y: 0.92387956, z: -0.38268346, w: 1e-45}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15136,9 +15149,11 @@ MonoBehaviour:
   option1Button: {fileID: 1315680230}
   option2Button: {fileID: 1895900891}
   typingSpeed: 0.05
-  turnSpeed: 2
   thirdPersonController: {fileID: 392723819}
   animator: {fileID: 392723816}
+  dialogueCamera: {fileID: 0}
+  playerFootsteps: {fileID: 529329303}
+  currentDialogueIndex: 0
 --- !u!4 &398328221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 780063121698031702, guid: 2de9e1a3806f3fc4bab1c23c152648fe,
@@ -19787,6 +19802,7 @@ GameObject:
   - component: {fileID: 533438657}
   - component: {fileID: 533438656}
   - component: {fileID: 533438655}
+  - component: {fileID: 533438658}
   m_Layer: 0
   m_Name: NPC0
   m_TagString: Untagged
@@ -19824,7 +19840,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -19880,6 +19896,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533438653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &533438658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533438653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9d7b3f5649bfa41b380c2f273ca313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &533572783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 780063121698031702, guid: 2de9e1a3806f3fc4bab1c23c152648fe,
@@ -35188,7 +35216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &898560716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51475,10 +51503,10 @@ RectTransform:
   - {fileID: 1704409616}
   m_Father: {fileID: 908355332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 246.1, y: -102.549995}
+  m_SizeDelta: {x: 1260.5, y: 143.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315680228
 MonoBehaviour:
@@ -53187,7 +53215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372618687}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000020822325, y: 0.92387956, z: -0.3826835, w: 0.000000050269534}
+  m_LocalRotation: {x: 0.000000016128903, y: 0.92387956, z: -0.3826835, w: 0.00000003893861}
   m_LocalPosition: {x: 551.19, y: 2.5, z: 609.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -72010,54 +72038,54 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 547.651
+      - x: 551.08984
         y: 1.4616069
-        z: 610.09735
-      - x: 547.6805
+        z: 608.5635
+      - x: 551.0604
         y: 1.3907886
-        z: 610.08264
-      - x: 547.7148
+        z: 608.5784
+      - x: 551.02625
         y: 1.3199764
-        z: 610.0675
-      - x: 547.7245
+        z: 608.5939
+      - x: 551.0167
         y: 1.2490841
-        z: 610.0524
-      - x: 547.7334
+        z: 608.609
+      - x: 551.00793
         y: 1.1781919
-        z: 610.03735
-      - x: 547.74243
+        z: 608.62415
+      - x: 550.99896
         y: 1.1072999
-        z: 610.0223
-      - x: 547.75195
+        z: 608.6393
+      - x: 550.98956
         y: 1.0364077
-        z: 610.0072
-      - x: 547.7616
+        z: 608.6544
+      - x: 550.98004
         y: 0.9655156
-        z: 609.9921
-      - x: 547.446
+        z: 608.66956
+      - x: 551.2948
         y: 1.461607
-        z: 610.09735
-      - x: 547.42053
+        z: 608.5618
+      - x: 551.3204
         y: 1.3910567
-        z: 610.082
-      - x: 547.39435
+        z: 608.577
+      - x: 551.3467
         y: 1.3199505
-        z: 610.0667
-      - x: 547.3725
+        z: 608.5921
+      - x: 551.36865
         y: 1.2487258
-        z: 610.0519
-      - x: 547.36676
+        z: 608.60675
+      - x: 551.3745
         y: 1.1704485
-        z: 610.0358
-      - x: 547.3577
+        z: 608.62274
+      - x: 551.3837
         y: 1.0995564
-        z: 610.02075
-      - x: 547.3482
+        z: 608.6377
+      - x: 551.3933
         y: 1.0286642
-        z: 610.00574
-      - x: 547.33856
+        z: 608.6527
+      - x: 551.4031
         y: 0.957772
-        z: 609.99066
+        z: 608.6677
       attributes:
       - Value: 1
       - Value: 2
@@ -72075,7 +72103,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 2
       - Value: 2
-      maxConnectionDistance: 0.080125436
+      maxConnectionDistance: 0.0801315
       userEdit: 1
   gizmoSerializeData:
     always: 0
@@ -73229,7 +73257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804210939}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000014596362, y: 0.90558946, z: -0.4241554, w: -0.00000003116384}
+  m_LocalRotation: {x: -0.000000015153232, y: 0.90558946, z: -0.4241554, w: -0.000000032352776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -77448,10 +77476,10 @@ RectTransform:
   - {fileID: 1763048101}
   m_Father: {fileID: 908355332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 246.1, y: -267.44998}
+  m_SizeDelta: {x: 1260.5, y: 143.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1896964608 stripped
 Transform:
