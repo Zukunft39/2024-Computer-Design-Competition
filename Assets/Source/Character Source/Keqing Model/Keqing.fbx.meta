@@ -1338,7 +1338,7 @@ ModelImporter:
     - name: MiddleFinger2_R
       parentName: MiddleFinger1_R
       position: {x: -0.000000010535587, y: 0.028702455, z: -0.000000013737008}
-      rotation: {x: -0.027404923, y: -0.036506083, z: 0.022755623, w: 0.9986985}
+      rotation: {x: -0.02740492, y: -0.036506083, z: 0.022755621, w: 0.9986985}
       scale: {x: 1, y: 1.0000004, z: 1.0000002}
     - name: MiddleFinger3_R
       parentName: MiddleFinger2_R
@@ -1373,7 +1373,7 @@ ModelImporter:
     - name: Thumb2_R
       parentName: Thumb1_R
       position: {x: 0.000000039115548, y: 0.020474894, z: -0.00000005401671}
-      rotation: {x: -0.00019184497, y: 0.030600928, z: -0.021705747, w: 0.99929595}
+      rotation: {x: -0.00019184499, y: 0.030600928, z: -0.021705749, w: 0.99929595}
       scale: {x: 0.9999997, y: 0.99999934, z: 0.9999992}
     - name: zHandTwist_R
       parentName: Right elbow
