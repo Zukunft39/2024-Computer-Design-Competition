@@ -113,7 +113,8 @@ public class Rope : MonoBehaviour
 #endif
                 pooler.Recover(hook.GetChild(0).gameObject, hook.GetChild(0).tag);
                 hook.GetChild(0).gameObject.transform.SetParent(move.GetTransform(), false);
-                move.isMoving = true;
+                move.enabled = true;
+                move.jumpTimer = 0;
             }
             hook.GetComponent<Collider2D>().enabled = true;
             rope.localScale = new Vector3(rope.localScale.x, length, rope.localScale.z);

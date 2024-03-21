@@ -149,7 +149,7 @@ public class CageManager : MonoBehaviour
         Init();
         #region 生成
         InvokeRepeating(nameof(InstantiateObjC), 0f, 5f);
-        InvokeRepeating(nameof(InstantiateObjR), 0f, 2.5f);
+        InvokeRepeating(nameof(InstantiateObjR), 2.5f, 4f);
         #endregion
         currentPanel.SetActive(false);
         isPause = false;

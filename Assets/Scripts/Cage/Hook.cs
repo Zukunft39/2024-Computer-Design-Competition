@@ -10,7 +10,7 @@ public class Hook : MonoBehaviour
 #if UNITY_EDITOR
         if (move == null) Debug.LogError("" + collision.name + "have no Move Script");
 #endif
-        move.isMoving = false;
+        move.enabled = false;
 
         collision.transform.parent = transform;
         transform.parent.GetComponent<Rope>().GetState = State.Shorten;
