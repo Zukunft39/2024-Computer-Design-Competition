@@ -19,7 +19,7 @@ public class AbacusManager : MonoBehaviour
 
     public const float latestTime = 16f;
     public static int result = 0;
-    public GameState state;//用于数据传递
+    public AbacusGameState state;//用于数据传递
     [Tooltip("计时UI显示")] public Text timerText;
     [Tooltip("算式UI显示")] public List<Text> texts;
     [Tooltip("胜利UI")] public GameObject wPanel;
@@ -187,6 +187,8 @@ public class AbacusManager : MonoBehaviour
     {
         tCanvas.SetActive(false);
         isPause = false;
+
+        //跳转
     }
     //关于帮助
     public void Help()
