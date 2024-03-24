@@ -4,6 +4,7 @@ Shader "Kobe/Shader"
     {//Unity界面窗口中可操控的部分
         _MainTex("MainTexture",2D) = "white"{}
         _Angle("Rotation",Range(1,180)) = 1
+        _Bend("Bend",Range(0,1)) = 0.2
         _NextTex("NextPage",2D) = "white"{}
     }
     SubShader
@@ -63,6 +64,7 @@ Shader "Kobe/Shader"
             };
             sampler2D _MainTex;
             float _Angle;
+            float _Bend;
 
             v2f vert(a2v i){
                 
@@ -80,7 +82,8 @@ Shader "Kobe/Shader"
                 };
                 v2f o;
                 i.pos -= float4(5,0,0,0);//偏移旋转轴
-                i.pos.y = sin(i.pos.x * 0.5f) * sins;//弯曲书本
+                i.pos.y =-_Bend* i.pos.x* sin(i.pos.x * 0.5f) *sins;//弯曲书本
+                i.pos.x*=1-0.5f*_Bend* sins;
                 i.pos = mul(rotateMatrix,i.pos);//旋转mesh
                 i.pos += float4(5,0,0,0);//将mesh还原到原来的坐标上
 
