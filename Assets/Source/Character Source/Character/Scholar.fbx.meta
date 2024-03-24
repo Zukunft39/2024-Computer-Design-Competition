@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 15a9f1ffd5eea9f49ade1cfd35107d36
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02
+    second: {fileID: 2100000, guid: 91c6741721782b040a293fd425ba9af3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.1
+    second: {fileID: 2100000, guid: ca640cb1d35ee7340a67d12cf8a1a46f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.10
+    second: {fileID: 2100000, guid: 0a9183efc53ce3149a4edd0d517b6467, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.11
+    second: {fileID: 2100000, guid: 64677b293110b6f40a5bd4f38a0394d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.12
+    second: {fileID: 2100000, guid: b6ff911c8234a7d4898ba31f7d31d6c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.13
+    second: {fileID: 2100000, guid: 12fd6788332b9d54fa9265c0869eafd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.14
+    second: {fileID: 2100000, guid: de5a8528b78880641ab0246ae6efacd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.15
+    second: {fileID: 2100000, guid: 3fee299a95245e14399bd3106fc03b6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.16
+    second: {fileID: 2100000, guid: e256d8d6a3de8214ca55360ccbed7f83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.17
+    second: {fileID: 2100000, guid: f2fd05c8b269e7a4092da8ac0114fe62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.18
+    second: {fileID: 2100000, guid: 977d3bed0531ecc4ca915a151f8ed67d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.19
+    second: {fileID: 2100000, guid: e2884578c73e8d64a9c074dc68760f8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.2
+    second: {fileID: 2100000, guid: 8987851df48afc147aacc94c848053bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.20
+    second: {fileID: 2100000, guid: 68bb0d43e59c385458e077a620f2ebc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.21
+    second: {fileID: 2100000, guid: 3c11b57b7615e984f8abe0f4659b20c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.22
+    second: {fileID: 2100000, guid: 19af4393c35edbb4c80dba55bd4c0f46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.23
+    second: {fileID: 2100000, guid: d33f44027eee41846a0e53c08a516716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.24
+    second: {fileID: 2100000, guid: da3e88a1b50938e4ab194ad122f4526a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.25
+    second: {fileID: 2100000, guid: 9eae54b3584c25844a913e8fe742dacf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.26
+    second: {fileID: 2100000, guid: 315998d77617087408d6545ff2959303, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.27
+    second: {fileID: 2100000, guid: a4d6b130ad8f9a44bbb0508553706fec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.28
+    second: {fileID: 2100000, guid: 240816867452fa04fb2ebde726ef5716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.29
+    second: {fileID: 2100000, guid: 1054cb04377f39645b826d85e75bb16f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.3
+    second: {fileID: 2100000, guid: 01132b2c418e4ad458a48571cfa27043, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.30
+    second: {fileID: 2100000, guid: 1b5bd066b482e0c47a84b5b6c12ed4dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.31
+    second: {fileID: 2100000, guid: f78882cedfd673e4cadaaefa77382230, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.32
+    second: {fileID: 2100000, guid: 5095e91a30f8e5e4a9e3bce2043d2b85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.33
+    second: {fileID: 2100000, guid: c15d20b9536e44047a4798ffc5544bca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.34
+    second: {fileID: 2100000, guid: 885657610167c76418456bacf6794593, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.35
+    second: {fileID: 2100000, guid: 47fc8a52ff6ffda479577305f80f808a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.36
+    second: {fileID: 2100000, guid: 7888ae4aa48424142ad2c5a7ff3e70ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.37
+    second: {fileID: 2100000, guid: 055152f7f682e5e4080b8c70e548a55c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.38
+    second: {fileID: 2100000, guid: be802f9a931a8814d9e7da8aad40795a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.39
+    second: {fileID: 2100000, guid: 7da6f35ff467cc14dba90192fa4d2c0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.4
+    second: {fileID: 2100000, guid: d5f8a5fd8d1813644a82958f4a030617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.40
+    second: {fileID: 2100000, guid: be0a064db57e7574f92649ba71d2b7f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.41
+    second: {fileID: 2100000, guid: 770f8ed34a1ca6c43a28d6668dbdf2e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.42
+    second: {fileID: 2100000, guid: 7dc89ba3f36984a45abf5018907429b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.43
+    second: {fileID: 2100000, guid: a8202d683a5bc794b9be27350e563f62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.44
+    second: {fileID: 2100000, guid: ae91561cc2a2ec44eb1cb0f29d66970f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.45
+    second: {fileID: 2100000, guid: a513c5283fd64cd40a5f4991830cf061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.46
+    second: {fileID: 2100000, guid: 845f1f84767a323439fad1d8555fa645, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.47
+    second: {fileID: 2100000, guid: 05382f5413048d1489869217ecb17134, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.48
+    second: {fileID: 2100000, guid: c1299969602805a458ef7ada0476b78a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.49
+    second: {fileID: 2100000, guid: c4764458a1e009e4ebd87b8683282628, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.5
+    second: {fileID: 2100000, guid: 80bb89c617afb0e40bbcb24887c31421, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.50
+    second: {fileID: 2100000, guid: fa9c7a9d3a1d6a74994bc1502be0573f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.51
+    second: {fileID: 2100000, guid: b1534fc7c4b5d184f988d0468bdfe9f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.52
+    second: {fileID: 2100000, guid: ff00ba3870963f142949a444e86ebb39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.53
+    second: {fileID: 2100000, guid: 4883ee4130b9ed3498f51228959b6d0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.54
+    second: {fileID: 2100000, guid: 766462d8811b61644bbfdd0c0b484643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.55
+    second: {fileID: 2100000, guid: d17aade3c22e01740a9414798503de5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.56
+    second: {fileID: 2100000, guid: f536ec1f4fdd31f4f9d15b5c3c2f3a23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.57
+    second: {fileID: 2100000, guid: fc5aa12e8e4193a49b94dcd3da62b9eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.58
+    second: {fileID: 2100000, guid: 6af344321db500340b3e0e7a37d9de16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.59
+    second: {fileID: 2100000, guid: de8f2937bacba9248828547ff4196f48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.6
+    second: {fileID: 2100000, guid: d1de6a49cbc13b046930e68e3bc6f8e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.60
+    second: {fileID: 2100000, guid: 41a79b5685e3a4a4194503e465ed0b03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.61
+    second: {fileID: 2100000, guid: 4445f01f82e892e4f907f4e29fdef2ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.62
+    second: {fileID: 2100000, guid: e5b8ed88fd142f843958c8761d1343a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.63
+    second: {fileID: 2100000, guid: cc7a31bc9fe258e4d976899f60fd1ad7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.64
+    second: {fileID: 2100000, guid: 5d889c93ba1c6d84db9664c31bc35a91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.65
+    second: {fileID: 2100000, guid: fd95d5ef865226c49a9121bf9909469c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.66
+    second: {fileID: 2100000, guid: 6ab37ed092fd73e4481546d0fc491267, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.67
+    second: {fileID: 2100000, guid: 83f52a29d548831418fe86e4c3dec1c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.68
+    second: {fileID: 2100000, guid: bbfb7cd03b4f01e44a92834d864d1fc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.69
+    second: {fileID: 2100000, guid: 82ef0d30d4473b947bbb1e934946386a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.7
+    second: {fileID: 2100000, guid: 28f5910b59ace334aa862c40c52d7985, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.70
+    second: {fileID: 2100000, guid: 74d9d3a1d054d9a4f8fc2392935b9e68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.71
+    second: {fileID: 2100000, guid: 8b506a1e76fafd14093737901786cc16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.72
+    second: {fileID: 2100000, guid: 767dd812824629a4f89b1e834450f1d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.73
+    second: {fileID: 2100000, guid: 949a9cc6874c5e049b8ffb92000fb3d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.74
+    second: {fileID: 2100000, guid: 85128800f0ea05e4b9a84ff1357c91e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.75
+    second: {fileID: 2100000, guid: 3cad989d468b0ce4aa3104a074ba8ff4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.76
+    second: {fileID: 2100000, guid: 08b4dee2897937c4fbfc68c8b6ad34d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.77
+    second: {fileID: 2100000, guid: 23c87a9294fbcf04f81885b5f72d4592, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.78
+    second: {fileID: 2100000, guid: 08888ae84faccee4e88db91009bfe649, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.79
+    second: {fileID: 2100000, guid: e98dd975c9196e14d8e09f64d6e039d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.8
+    second: {fileID: 2100000, guid: 2c6679b1a07e8254982ab9d503ac0310, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_NPC_Chumsung02.9
+    second: {fileID: 2100000, guid: f1f8c567340cac345bc5ed70a4534ba8, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

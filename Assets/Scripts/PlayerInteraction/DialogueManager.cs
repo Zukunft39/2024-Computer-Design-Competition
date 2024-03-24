@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
 
-    [SerializeField] private float typingSpeed = 0.05f; // 每个字出现的速度
+    [SerializeField] private float typingSpeed = 0.1f; // 每个字出现的速度
 
     private List<DialogueString> dialogueList;
 
@@ -23,12 +23,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private CinemachineVirtualCamera dialogueCamera;
     [SerializeField] private AudioSource playerFootsteps;
-    // todo 这里切换到Cinemachine, 使用Frame Transposer实现固定相机轨道
-
+    [SerializeField] private Transform playerTransform;
 
     public int currentDialogueIndex = 0;//当前读取的对话序列
     private void Start() {
         dialogueParent.SetActive(false);
+        playerTransform = transform;
     }
 
     /// <summary>
@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        //TurnCameraTowardsNPC(NPC);
+        TurnCameraTowardsNPC(NPC);
 
         dialogueList = textToPrint;
         currentDialogueIndex = 0;
@@ -64,6 +64,8 @@ public class DialogueManager : MonoBehaviour
     private void DisableButtons(){
         option1Button.interactable = false;//这里我们可以写成取消显示Button
         option2Button.interactable = false;
+        option1Button.gameObject.SetActive(false);
+        option2Button.gameObject.SetActive(false);
 
         option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
@@ -75,6 +77,7 @@ public class DialogueManager : MonoBehaviour
     /// <param name="NPC"> 相机旋转到目标的位置 </param>
     // todo 这里修改使用Cinemachine
     private void TurnCameraTowardsNPC(Transform NPC){
+        dialogueCamera.LookAt = NPC;
         dialogueCamera.Priority = 100;
     }
 
@@ -93,6 +96,8 @@ public class DialogueManager : MonoBehaviour
             {
                 yield return StartCoroutine(TypeText(line.text));
 
+                option1Button.gameObject.SetActive(true);
+                option2Button.gameObject.SetActive(true);
                 option1Button.interactable = true;
                 option2Button.interactable = true;
 
@@ -164,6 +169,8 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        dialogueCamera.Priority = 0;
+        dialogueCamera.LookAt = null;
         Debug.Log("对话结束");
     }
 }
