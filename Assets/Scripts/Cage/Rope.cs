@@ -145,4 +145,9 @@ public class Rope : MonoBehaviour
         }
     }
 
+    public bool CheckLength()
+    {
+        if (currentMaxLength == maxLength1) return true;
+        return false;
+    }
 }
