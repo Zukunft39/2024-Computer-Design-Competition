@@ -2377,7 +2377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 42.349, y: 88.49997}
+  m_AnchoredPosition: {x: 42, y: 88}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &620895019
@@ -2822,6 +2822,8 @@ MonoBehaviour:
   lightIma: {fileID: 881586899}
   heavyIma: {fileID: 829475400}
   arrowIma: {fileID: 620895018}
+  topOffest: 610
+  animDuration: 0.5
 --- !u!1 &802848126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,7 +5201,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1541129059
