@@ -3,6 +3,7 @@ Shader "Unlit/Trangle"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Color ("Color",Color) = (1,1,1,1)
     }
     SubShader
     {
@@ -11,6 +12,9 @@ Shader "Unlit/Trangle"
 
         Pass
         {
+//            Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+//            ZWrite Off
+//            Blend SrcAlpha OneMinusSrcAlpha
             CULL OFF
             CGPROGRAM
             #pragma vertex vert
@@ -35,6 +39,7 @@ Shader "Unlit/Trangle"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            fixed4 _Color;
 
             v2f vert (appdata v)
             {
@@ -48,7 +53,7 @@ Shader "Unlit/Trangle"
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
+                fixed4 col = _Color* tex2D(_MainTex, i.uv);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;

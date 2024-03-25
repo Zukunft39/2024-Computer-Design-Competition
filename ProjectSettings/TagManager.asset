@@ -9,6 +9,8 @@ TagManager:
   - NPC
   - Chicken
   - Rabbit
+  - Triangle
+  - Ground
   layers:
   - Default
   - TransparentFX
