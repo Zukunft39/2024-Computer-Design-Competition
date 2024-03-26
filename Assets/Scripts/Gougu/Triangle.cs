@@ -134,12 +134,19 @@ public class Triangle : MonoBehaviour
         Destroy(ghostTriGOInstance);
         Destroy(gameObject);
     }
-
+    
     public void UpdateLineRenderer()
     {
         Vector3[] positions = new Vector3[4];
         for (int i=0;i<positions.Length-1;i++)
-            positions[i] = transform.position+transform.rotation * vertices[i];
+            try
+            {
+                positions[i] = transform.position + transform.rotation * vertices[i];
+            }
+            catch
+            {
+                ;
+            }
         positions[3] = positions[0];
         _lineRenderer.SetPositions(positions);
     }
