@@ -3,23 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Bead
-  - Door
-  - NPC
-<<<<<<< Updated upstream
-  - Chicken
-  - Rabbit
-  - Triangle
-  - Ground
-=======
-  - Girl
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - 
