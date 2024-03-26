@@ -20,9 +20,9 @@ MonoBehaviour:
       j: 0
       dir: 0
       type: 0
-    - i: 7
-      j: 7
+    - i: 5
+      j: 5
       dir: 2
       type: 1
     guideLine: {fileID: 0}
-    gridMapSize: 7
+    gridMapSize: 5

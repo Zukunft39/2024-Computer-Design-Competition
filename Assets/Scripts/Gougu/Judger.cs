@@ -34,10 +34,16 @@ public class Judger : MonoBehaviourSingleton<Judger>
 
         return isApproved;
     }
+
+    void OnIsApproved()
+    {
+        curLevelHashTable.Clear();
+    }
     
     
     private void Awake()
     {
         curLevelHashTable = new();
+        GridGameManager.Instance.approvedAct += OnIsApproved;
     }
 }

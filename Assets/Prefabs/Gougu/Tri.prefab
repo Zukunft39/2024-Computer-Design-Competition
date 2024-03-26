@@ -58,13 +58,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   e1: 3
   e2: 4
-  angle: 90
+  angle1: 0
+  angle2: 0
   ghostTriMat: {fileID: 2100000, guid: b99f8d183cf89954eb2bbb612ad89019, type: 2}
   ghostTriGO: {fileID: 6609008786175240377}
   rotateOffset: {x: 0, y: 0}
   pivotedGrid: {fileID: 0}
   dir: 0
   triType: 0
+  triRepresentMethod: 0
 --- !u!23 &2208742177901386674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -151,8 +153,8 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 1185.64, y: 484.26, z: -1}
-  - {x: 1185.64, y: 484.26, z: -1}
-  - {x: 1185.64, y: 484.26, z: -1}
+  - {x: 1194.64, y: 484.26, z: -1}
+  - {x: 1197.64, y: 484.26, z: -1}
   - {x: 1185.64, y: 484.26, z: -1}
   m_Parameters:
     serializedVersion: 3

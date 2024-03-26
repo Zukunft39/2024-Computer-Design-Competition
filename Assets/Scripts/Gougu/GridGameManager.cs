@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
 {
     public Button geneTriBtn;
@@ -15,6 +16,8 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     public float maxPivotDistance;
     public Action approvedAct;
     public GameObject[] guideLines;
+    public float generateRange = 2;
+    public Text levelNameTxt;
    
 
     private bool clicked;
@@ -26,10 +29,11 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     private bool isGaming;
     private int cur_id;
 
-     void GenerateTriangle(int _triType)
+    public void GenerateTriangle(int _triType)
     {
         if(!isGaming)return;
-        Triangle triangle = Instantiate(triangleGO, genePoint.position, Quaternion.identity).GetComponent<Triangle>();
+        Triangle triangle = Instantiate(triangleGO, genePoint.position + new Vector3(UnityEngine.Random.Range(-generateRange,generateRange),
+            UnityEngine.Random.Range(-generateRange,generateRange),0), Quaternion.identity).GetComponent<Triangle>();
         generatedTriangles.Add(triangle);
         switch (_triType)
         {
@@ -43,8 +47,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         triangle.triType = _triType;
         var pos = triangle.transform.position;
         pos.z = -0.5f;
-        triangle.transform.position = pos;
-    }
+        triangle.transform.position = pos; }
 
     void DragTri()
     {
@@ -83,7 +86,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
                 pos.z = curTriangle.transform.position.z;
                 crossPoint = pos;
                 curTriangle.transform.position = Vector3.Lerp(pos+(Vector3)offset+ (Vector3)curTriangle.rotateOffset, curTriangle.transform.position, smoothFactor);
-                curTriangle.UpdateLineRenderer();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     curTriangle.Rotate(pos);
@@ -121,11 +123,20 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         isGaming = false;
         guideLines[cur_id]?.SetActive(false);
         if(cur_id!= GouguData.Instance.levels.Length-1) GridMap.Instance.DeconstructGrid();
+        foreach (var i in generatedTriangles)
+        {
+            i.DeleteTri();
+        }
+        generatedTriangles.Clear();
+        curTriangle = null;
+        clicked = false;
+        dummy.SetActive(false);
+        levelNameTxt.text = "";
     }
 
     private void Awake()
     {
-        geneTriBtn.onClick.AddListener(()=>GenerateTriangle(0));
+        // geneTriBtn.onClick.AddListener(()=>GenerateTriangle(0));
         generatedTriangles = new();
         approvedAct += OnApproved;
     }
@@ -175,6 +186,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         isGaming = true;
         cur_id = level_id;
         GridMap.Instance.ConstructGrid(GouguData.Instance.levels[level_id].levelData.gridMapSize);
+        levelNameTxt.text = GouguData.Instance.levels[level_id].levelName;
     }
 }
 

@@ -3,15 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class GouguGameplay : MonoBehaviour
 {
-    public Text isApprovedTxt;
-
+    public PlayableDirector director;
     IEnumerator Gameplay()
     {
-        yield return new GridGameManager.WaitForGameEnds(0);
-        Debug.Log(1);
+        for(int i=0;i<GouguData.Instance.levels.Length;i++)
+            yield return new GridGameManager.WaitForGameEnds(i);
+        director.Play();
+        //TODO Switch Scene
+        
     }
 
     private void Start()

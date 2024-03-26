@@ -19,18 +19,18 @@ MonoBehaviour:
     - i: 1
       j: 1
       dir: 0
-      type: 0
+      type: 1
     - i: 1
       j: 6
       dir: 1
-      type: 0
+      type: 1
     - i: 6
       j: 1
       dir: 3
-      type: 0
+      type: 1
     - i: 6
       j: 6
       dir: 2
-      type: 0
+      type: 1
     guideLine: {fileID: 0}
     gridMapSize: 7

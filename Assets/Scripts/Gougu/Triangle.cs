@@ -7,17 +7,23 @@ using UnityEngine;
 
 public class Triangle : MonoBehaviour
 {
-    public float e1,e2,angle;
+    public float e1,e2,angle1,angle2;
     public Material ghostTriMat;
     public GameObject ghostTriGO;
     public Vector2 rotateOffset;
     public Grid pivotedGrid;
     public TriDir dir=TriDir.LEFT;
     public int triType;
-
+    public TriRepresentMethod triRepresentMethod;
+    
     public enum TriDir
     {
         LEFT,UP,RIGHT,DOWN
+    }
+
+    public enum TriRepresentMethod
+    {
+        SAS,SASA
     }
     
     private Mesh triangleMesh;
@@ -47,7 +53,6 @@ public class Triangle : MonoBehaviour
 //        meshCollider.sharedMesh = triangleMesh;
         GetComponent<MeshFilter>().mesh=triangleMesh;
         _lineRenderer.positionCount = 4;
-        UpdateLineRenderer();
     }
     
     /// <summary>
@@ -109,8 +114,6 @@ public class Triangle : MonoBehaviour
             pos.z = transform.position.z;
             transform.position=pos;
             pivotedGrid = _pivotedGrid;
-            
-            UpdateLineRenderer();
         }
     }
 
@@ -151,12 +154,24 @@ public class Triangle : MonoBehaviour
        //CreateTriangle(e1,angle,e2);
        GeneGhostTri();
     }
-    
-    
+
+    private void Update()
+    {
+        UpdateLineRenderer();
+    }
 
     private void OnValidate()
     {
         InitializeTriangleMesh();
-        CreateTriangle(e1,angle,e2);
+        switch (triRepresentMethod)
+        {
+            case TriRepresentMethod.SAS:
+                CreateTriangle(e1,angle1,e2);
+                break;
+            case TriRepresentMethod.SASA:
+                CreateTriangle(e1,angle1,e2,angle2);
+                break;
+        }
+        UpdateLineRenderer();
     }
 }
