@@ -4000,14 +4000,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 73
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2190\u2192  \u7EF3\u7D22\u65B9\u5411\u952E\nX\u952E   \u5207\u6362\u7EF3\u7D22\u8F7B\u91CD\n\u7A7A\u683C 
-    \u91CA\u653E\u7EF3\u7D22"
+  m_Text: "    \u2190\u2192\uFF1A\u7EF3\u7D22\u65B9\u5411\u952E\n       X\u952E\uFF1A\u5207\u6362\u7EF3\u7D22\u8F7B\u91CD\n\u7A7A\u683C\uFF1A\u91CA\u653E\u7EF3\u7D22"
 --- !u!222 &1014910177
 CanvasRenderer:
   m_ObjectHideFlags: 0
