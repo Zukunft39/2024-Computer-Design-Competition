@@ -24,6 +24,7 @@ public class CageManager : MonoBehaviour
 {
     [SerializeField] private bool isBegin = false;
     [SerializeField] private bool isPause = false;
+    //private bool isAnim = false;//判断动画是否开始播放
     [Tooltip("头")]
     [SerializeField] private int head = 0;
     [Tooltip("脚")]
@@ -55,6 +56,9 @@ public class CageManager : MonoBehaviour
     public Transform lightIma;
     public Transform heavyIma;
     public Transform arrowIma;
+    [Header("UI动画信息")]
+    public float topOffest;
+    public float animDuration;
 
     ObjectPooler pooler;
     CageGameState state;
@@ -198,6 +202,7 @@ public class CageManager : MonoBehaviour
             
             isPause = true;
             currentPanel.SetActive(true);
+            Anim();
         }
 #if UNITY_EDITOR
         else if (currentPanel == null) Debug.LogError("No Panel!");
@@ -291,6 +296,35 @@ public class CageManager : MonoBehaviour
                 }
             }
         }
+    }
+    //动画播放
+    private void Anim()
+    {
+#if UNITY_EDITOR
+        if(currentPanel == null || !currentPanel.GetComponent<RectTransform>())
+        {
+            Debug.LogError("No Panel!");
+            return;
+        }
+#endif
+        RectTransform panelTransform = currentPanel.GetComponent<RectTransform>();
+        Vector2 start = new Vector2(panelTransform.anchoredPosition.x, topOffest);
+        Vector2 end = new Vector2(panelTransform.anchoredPosition.x, 0);
+        StartCoroutine(AnimSlide(start, end, panelTransform));
+
+    }
+    IEnumerator AnimSlide(Vector2 start, Vector2 end, RectTransform transform)
+    {
+        float startTime = Time.time;
+        while (Time.time < startTime + animDuration)
+        {
+            float t = (Time.time - startTime) / animDuration;
+            Vector2 temp = Vector2.Lerp(start, end, t);
+            transform.anchoredPosition = temp;
+
+            yield return null;
+        }
+        transform.anchoredPosition = end;
     }
     #endregion
 }
