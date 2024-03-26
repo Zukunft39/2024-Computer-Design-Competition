@@ -44,7 +44,6 @@ public class PaintingPen : MonoBehaviour
  
         texRender = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB32);
         Clear(texRender);
-        Debug.Log("开始计算");
     }
  
     Vector3 startPosition = Vector3.zero;
@@ -56,7 +55,6 @@ public class PaintingPen : MonoBehaviour
         {
             if (isMouseEnter){
                 SaveTexture();
-                Debug.Log("按下鼠标");
             }
         }
         if (Input.GetMouseButton(0))
@@ -71,7 +69,6 @@ public class PaintingPen : MonoBehaviour
         {
             isMouseDown = false;
             OnMouseUp();
-            Debug.Log("松开鼠标");
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -86,18 +83,15 @@ public class PaintingPen : MonoBehaviour
         RenderTexture newRenderTexture = new RenderTexture(texRender);
         Graphics.Blit(texRender,newRenderTexture);
         savedList.Push(newRenderTexture);
-        Debug.Log("记录保存的图像");
     }
 
    public void CanclePaint()
     {
-        print(savedList.Count);
         if (savedList.Count > 0)
         {
             texRender.Release();
             texRender = savedList.Pop();
         }
-        Debug.Log("撤销Texture");
     }
 
     void OnMouseUp()
@@ -135,7 +129,6 @@ public class PaintingPen : MonoBehaviour
         endPosition = pos;
         float distance = Vector3.Distance(startPosition, endPosition);
         brushScale = SetScale(distance);
-        Debug.Log("正在按住鼠标移动");
         ThreeOrderBézierCurse(pos, distance, 4.5f);
  
         startPosition = endPosition;
@@ -147,8 +140,6 @@ public class PaintingPen : MonoBehaviour
         GL.PushMatrix();
         GL.Clear(true, true, Color.white);
         GL.PopMatrix();
-
-        Debug.Log("清屏");
     }
  
     void DrawBrush(RenderTexture destTexture, int x, int y, Texture sourceTexture, Color color, float scale)
@@ -182,13 +173,10 @@ public class PaintingPen : MonoBehaviour
  
         GL.End();
         GL.PopMatrix();
-
-        Debug.Log("正在绘画");
     }
     void DrawImage()
     {
         raw.texture = texRender;
-        Debug.Log("绘画Texture替换");
     }
     public void OnClickClear()
     {
@@ -198,7 +186,6 @@ public class PaintingPen : MonoBehaviour
     //三阶贝塞尔曲线
     private void ThreeOrderBézierCurse(Vector3 pos, float distance, float targetPosOffset)
     {
-        Debug.Log("贝赛尔曲线计算");
         //记录坐标
         PositionArray[b] = pos;
         b++;

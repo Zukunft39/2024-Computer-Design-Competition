@@ -23,12 +23,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private CinemachineVirtualCamera dialogueCamera;
     [SerializeField] private AudioSource playerFootsteps;
-    [SerializeField] private Transform playerTransform;
 
     public int currentDialogueIndex = 0;//当前读取的对话序列
+    private bool optionSelected = false;//选项被选中判定
     private void Start() {
         dialogueParent.SetActive(false);
-        playerTransform = transform;
     }
 
     /// <summary>
@@ -36,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="textToPrint"> 对话详细设置内容 </param>
     /// <param name="NPC"> 摄像机转向的移动目标 </param>
-    public void DialogueStart(List<DialogueString> textToPrint,Transform NPC){
+    public void DialogueStart(List<DialogueString> textToPrint,Transform NPC,Transform Cam){
         dialogueParent.SetActive(true);
 
         thirdPersonController.enabled = false;
@@ -48,12 +47,13 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        TurnCameraTowardsNPC(NPC);
+        TurnCameraTowardsNPC(Cam);
 
         dialogueList = textToPrint;
         currentDialogueIndex = 0;
 
         DisableButtons();
+        RotateToPlayer(NPC);
         StartCoroutine(PrintDialogue());
 
     }
@@ -70,18 +70,28 @@ public class DialogueManager : MonoBehaviour
         option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
         option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
     }
-
+    private void RotateToPlayer(Transform NPC){
+        Vector3 directionToNPC = NPC.position - transform.position;
+        Vector3 directionToPlayer = transform.position - NPC.position;
+        transform.rotation = Quaternion.LookRotation(directionToNPC);
+        if(NPC.tag == "Girl"){
+            Quaternion quaternionToPlayer = Quaternion.LookRotation(directionToPlayer);
+            Quaternion additionalRotation = Quaternion.Euler(0, 55f, 0);
+            NPC.rotation = quaternionToPlayer * additionalRotation;
+        }
+        else{
+            NPC.rotation = Quaternion.LookRotation(directionToPlayer); 
+            Debug.Log(NPC.tag);        
+        }
+    }
     /// <summary>
     /// 旋转相机到NPC的位置
     /// </summary>
     /// <param name="NPC"> 相机旋转到目标的位置 </param>
-    // todo 这里修改使用Cinemachine
     private void TurnCameraTowardsNPC(Transform NPC){
         dialogueCamera.LookAt = NPC;
         dialogueCamera.Priority = 100;
     }
-
-    private bool optionSelected = false;
     /// <summary>
     /// 打印输入对话文字
     /// </summary>

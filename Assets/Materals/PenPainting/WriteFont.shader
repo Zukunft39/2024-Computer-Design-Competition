@@ -16,7 +16,7 @@ Shader "WriteFont"
             "PreviewType"="Plane"  
             "CanUseSpriteAtlas"="True"  
         }  
-  
+        
         Cull Off  
         Lighting Off  
         ZWrite Off  
@@ -25,10 +25,9 @@ Shader "WriteFont"
   
         Pass  
         {  
-            Tags{"LightMode" = "UniversalForward"}
             CGPROGRAM  
             #pragma vertex vert  
-            #pragma fragment frag  
+            #pragma fragment frag 
             #include "UnityCG.cginc"  
   
             struct v2f  

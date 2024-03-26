@@ -8,10 +8,11 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
     [SerializeField] private Transform NPCTransform;
+    [SerializeField] private Transform CamTargetTransform;
     private bool hasSpoken = false;
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Player") && !hasSpoken) {
-            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform);
+            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform);
             hasSpoken = true;
         }
     }

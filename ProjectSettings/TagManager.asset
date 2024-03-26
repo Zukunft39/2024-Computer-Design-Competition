@@ -7,10 +7,14 @@ TagManager:
   - Bead
   - Door
   - NPC
+<<<<<<< Updated upstream
   - Chicken
   - Rabbit
   - Triangle
   - Ground
+=======
+  - Girl
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
