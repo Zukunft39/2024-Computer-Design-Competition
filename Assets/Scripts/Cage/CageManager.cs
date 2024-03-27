@@ -42,7 +42,7 @@ public class CageManager : MonoBehaviour
     [Header("UI面板")]
     [SerializeField] private GameObject[] panels;//0、1、2、3对应说明、暂停、失败、成功
     [Space]
-    [SerializeField] private Transform[] transforms;//0-Chicken，1-Rabbit
+    [SerializeField] private Transform[] transforms;//0-Chicken,1-Rabbit
     [Space]
 
     public Text timerText;

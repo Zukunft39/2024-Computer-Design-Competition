@@ -17,6 +17,10 @@ public class Judger : MonoBehaviourSingleton<Judger>
 
     public static int GenerateHashKey(int x, int y, Triangle.TriDir dir, int triType)
     {
+        Debug.Log("x:"+x);
+        Debug.Log("y:"+y);
+        Debug.Log("dir:"+dir);
+        Debug.Log("triType:"+triType);
         return Convert.ToInt32(Convert.ToString(x) + Convert.ToString(y)+Convert.ToString((int)dir)+Convert.ToString(triType));
     }
 
