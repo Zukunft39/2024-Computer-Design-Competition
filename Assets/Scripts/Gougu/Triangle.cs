@@ -119,7 +119,7 @@ public class Triangle : MonoBehaviour
 
     public void Rotate(Vector3 dragPos,bool isRight = true)
     {
-        dir=(TriDir)(((int)dir + (isRight ? -1 : 1))%4);
+        dir=(TriDir)((((byte)dir + (isRight ? -1 : 1)) & 3));
         float deg = isRight ? -90 : 90;
         dragPos.z = transform.position.z;
         Vector3 startVec = dragPos - transform.position;
