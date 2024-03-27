@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Judger : MonoBehaviourSingleton<Judger>
@@ -17,7 +18,7 @@ public class Judger : MonoBehaviourSingleton<Judger>
 
     public static int GenerateHashKey(int x, int y, Triangle.TriDir dir, int triType)
     {
-        return Convert.ToInt32(Convert.ToString(x) + Convert.ToString(y)+Convert.ToString((int)dir)+Convert.ToString(triType));
+        return ((x & 15) << 7) + ((y & 15) << 3) + ((int)dir << 1) + triType;
     }
 
     public bool JudgeIsApproved(List<Triangle> tris)
