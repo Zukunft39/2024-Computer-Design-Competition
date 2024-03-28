@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class ChopGameSlider : MonoBehaviour
-{
-    public Animator sliderAnimator;
+{ 
+    public AnimationCurve handleCurve;
+    public float handleMoveDuration;
     public GameObject targetArea;
     public float targetAreaAlpha;
     public RectTransform sliderBg;
@@ -15,13 +17,20 @@ public class ChopGameSlider : MonoBehaviour
     public Transform rightPivot;
     public float normalClampRange=1;
     public GameObject handle;
-    
 
     private List<GameObject> targetAreas;
+    private float sliderTimer;
 
-    public void Slide()
+     void Slide(float time)
     {
-        sliderAnimator.SetTrigger("isSliding");
+        handle.transform.position =
+            Vector3.LerpUnclamped(leftPivot.position, rightPivot.position, handleCurve.Evaluate(
+                (time % handleMoveDuration)/handleMoveDuration));
+    }
+
+    public void ResetSlider()
+    {
+        sliderTimer = 0;
     }
 
      public enum DistributeType
@@ -77,5 +86,9 @@ public class ChopGameSlider : MonoBehaviour
         targetAreas = new();
     }
 
-    
+    private void Update()
+    {
+        sliderTimer += Time.deltaTime;
+        Slide(sliderTimer);
+    }
 }

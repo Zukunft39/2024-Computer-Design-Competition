@@ -93,6 +93,7 @@ public class ChopCircleGamePlay : MonoBehaviour
         yield return new WaitForSeconds(transitionDuration);
         Debug.Log("Next Phase");
         isTransitioning= false;
+        chopGameSlider.ResetSlider();
         StartGame();
     }
 
