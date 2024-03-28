@@ -76,13 +76,14 @@ public class Move : MonoBehaviour
         #region 移动
         if (Mathf.Abs(transform.localPosition.x) <= maxDis)
         {
-            if (jumpTimer <= 2.5f)
+            if (jumpTimer <= 2f)
             {
                 isMoving = false;
-            }else if (jumpTimer > 2.5f && jumpTimer < 4.5f)
+                transform.localPosition = new Vector3(transform.localPosition.x, 0f, transform.localPosition.z);
+            }else if (jumpTimer > 2f && jumpTimer < 3f)
             {
                 isMoving = true;
-            }else if (jumpTimer >= 4.5f)
+            }else if (jumpTimer >= 3f)
             {
                 jumpTimer = 0;
             }
@@ -90,13 +91,17 @@ public class Move : MonoBehaviour
             if (isMoving && !manager.GetPause())
             {
                 float horizontal = speed * Time.deltaTime * dir.x;
-                float vertical = Time.deltaTime * (-jumpTimer + 3.5f);
-                transform.position += new Vector3(horizontal, vertical, 0f);
+                float vertical = Time.deltaTime * (-jumpTimer + 2.5f) * 3;
+                transform.Translate(new Vector3(horizontal, vertical, 0f));
             }
         }
         else
         {
-            if (gameObject.activeSelf) pooler.Recover(gameObject, transform.tag);
+            if (gameObject.activeSelf)
+            {
+                jumpTimer = 0;
+                pooler.Recover(gameObject, transform.tag);
+            }
         }
         #endregion
     }

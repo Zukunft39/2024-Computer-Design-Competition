@@ -137,6 +137,6 @@ MonoBehaviour:
   jumpTimer: 0
   currentTag: 
   maxDis: 20
-  speed: 2
+  speed: 4
   initialPos: {fileID: 0}
   type: 0
