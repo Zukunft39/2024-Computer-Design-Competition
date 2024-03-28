@@ -16,10 +16,14 @@ public class AbacusManager : MonoBehaviour
     int target = 0;//真实结果
     float time = 0;//经过时间
     bool isPause = false;//UI开启判断
+    Animator animB;
+    Animator animF;
 
     public const float latestTime = 16f;
     public static int result = 0;
     public AbacusGameState state;//用于数据传递
+    public GameObject brush;
+    public GameObject frame;
     [Tooltip("计时UI显示")] public Text timerText;
     [Tooltip("算式UI显示")] public List<Text> texts;
     [Tooltip("胜利UI")] public GameObject wPanel;
@@ -30,6 +34,8 @@ public class AbacusManager : MonoBehaviour
 
     private void Awake()
     {
+        animB = brush.GetComponent<Animator>();
+        animF = frame.GetComponent<Animator>();
         Help();
         AddSubCal();
     }
@@ -119,28 +125,9 @@ public class AbacusManager : MonoBehaviour
     {
         if (isBegin)
         {
-            if (isSatisfied()) count++;
-            else
-            {
-                Lose();
-            }
+            StartCoroutine(Anim());
         }
-        isBegin = false;
-
-        //清空UI显示
-        timerText.text = "";
-        foreach (var item in texts) item.text = "";
-
-        //判断是否继续进行游戏
-        if (count < 3 && !isBegin && !isPause)
-        {
-            AddSubCal();
-        }
-        else if (count == 3) Win();
-
-#if UNITY_EDITOR
-        Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
-#endif
+        
     }
     //关于胜利
     private void Win()
@@ -201,5 +188,38 @@ public class AbacusManager : MonoBehaviour
     {
         hPanel.SetActive(false);
         isPause = false;
+    }
+    //关于动画
+    IEnumerator Anim()
+    {
+        animB.SetInteger("move", 1);
+        yield return new WaitForSeconds(1.2f);
+        animF.SetTrigger("tick");
+        yield return new WaitForSeconds(0.8f);
+        animB.SetInteger("move", 0);
+        if (animB.GetInteger("move") == 0)
+        {
+            if (isSatisfied()) count++;
+            else
+            {
+                Lose();
+            }
+        }
+        isBegin = false;
+
+        //清空UI显示
+        timerText.text = "";
+        foreach (var item in texts) item.text = "";
+
+        //判断是否继续进行游戏
+        if (count < 3 && !isBegin && !isPause)
+        {
+            AddSubCal();
+        }
+        else if (count == 3) Win();
+
+#if UNITY_EDITOR
+        Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
+#endif
     }
 }
