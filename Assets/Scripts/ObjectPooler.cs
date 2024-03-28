@@ -73,6 +73,27 @@ public class ObjectPooler : MonoBehaviour
         //poolDic[tag].Enqueue(gameObject);
         return gameObject;
     }
+    //有tag和position
+    public GameObject GetSpawnObj(string tag, Vector3 pos)
+    {
+#if UNITY_EDITOR
+        if (!poolDic.ContainsKey(tag))
+        {
+            Debug.LogError("No Obj With the Tag(" + tag + ") in the Dictionary");
+            return null;
+        }
+#endif
+        GameObject gameObject = poolDic[tag].Dequeue();
+        gameObject.transform.rotation = Quaternion.identity;
+        gameObject.transform.localPosition = pos;
+        if (!gameObject.activeSelf) gameObject.SetActive(true);
+#if UNITY_EDITOR
+        else Debug.LogWarning(gameObject + "should not be active");
+        Debug.Log(gameObject.name);
+#endif
+
+        return gameObject;
+    }
 
     #endregion
     #region 销毁，用于特殊情况手动销毁

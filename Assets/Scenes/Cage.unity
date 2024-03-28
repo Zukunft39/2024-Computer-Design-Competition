@@ -1581,6 +1581,16 @@ MonoBehaviour:
       type: 3}
     size: 10
     parent: {fileID: 1183377674}
+  - tag: RabbitHead
+    prefab: {fileID: 1944452516983646779, guid: e350fddb47b13ef47813d21403e6da7b,
+      type: 3}
+    size: 14
+    parent: {fileID: 1667285710}
+  - tag: ChickenHead
+    prefab: {fileID: 4736255695194034762, guid: b731920316ab0b540bc36af26ac28f67,
+      type: 3}
+    size: 14
+    parent: {fileID: 1667285710}
 --- !u!4 &523581930
 Transform:
   m_ObjectHideFlags: 0
@@ -2410,6 +2420,11 @@ MonoBehaviour:
   transforms:
   - {fileID: 181770594}
   - {fileID: 1183377675}
+  - {fileID: 1667285711}
+  cage: {fileID: 1667285710}
+  cageOffestX: 5
+  cageOffestY: 2
+  poses: 
   timerText: {fileID: 1141311078}
   headText: {fileID: 855686608}
   footText: {fileID: 1747440328}
@@ -4566,7 +4581,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 945307b45b5192b4eb0846ec5d2b3140, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4574,7 +4589,7 @@ SpriteRenderer:
   m_Size: {x: 3.76, y: 2.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1682065812

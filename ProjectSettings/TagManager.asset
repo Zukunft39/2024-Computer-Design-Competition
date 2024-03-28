@@ -7,6 +7,8 @@ TagManager:
   - Bead
   - Chicken
   - Rabbit
+  - ChickenHead
+  - RabbitHead
   layers:
   - Default
   - TransparentFX
