@@ -7,403 +7,403 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02
-    second: {fileID: 2100000, guid: 91c6741721782b040a293fd425ba9af3, type: 2}
+      name: M_NPC_Chumsung02.080
+    second: {fileID: 2100000, guid: f492900e46fec1448849053c7fa6c7a4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.1
-    second: {fileID: 2100000, guid: ca640cb1d35ee7340a67d12cf8a1a46f, type: 2}
+      name: M_NPC_Chumsung02.081
+    second: {fileID: 2100000, guid: cd6f42685d59e6c4fa95cca3f5f3ffd7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.10
-    second: {fileID: 2100000, guid: 0a9183efc53ce3149a4edd0d517b6467, type: 2}
+      name: M_NPC_Chumsung02.082
+    second: {fileID: 2100000, guid: 76046a668b025f74e978e9efd37878e5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.11
-    second: {fileID: 2100000, guid: 64677b293110b6f40a5bd4f38a0394d9, type: 2}
+      name: M_NPC_Chumsung02.083
+    second: {fileID: 2100000, guid: 3cbfa1e722bc5974e9b2375e00ee33a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.12
-    second: {fileID: 2100000, guid: b6ff911c8234a7d4898ba31f7d31d6c9, type: 2}
+      name: M_NPC_Chumsung02.084
+    second: {fileID: 2100000, guid: b2ea32f704c57f54fad059df9816ee7e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.13
-    second: {fileID: 2100000, guid: 12fd6788332b9d54fa9265c0869eafd2, type: 2}
+      name: M_NPC_Chumsung02.085
+    second: {fileID: 2100000, guid: e48608e0073ac4a47b4568323c0bc881, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.14
-    second: {fileID: 2100000, guid: de5a8528b78880641ab0246ae6efacd1, type: 2}
+      name: M_NPC_Chumsung02.086
+    second: {fileID: 2100000, guid: 992dbe7ac245cc74c9b99963f348331d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.15
-    second: {fileID: 2100000, guid: 3fee299a95245e14399bd3106fc03b6a, type: 2}
+      name: M_NPC_Chumsung02.087
+    second: {fileID: 2100000, guid: 27a2c0f64cb65234190c952cd1190028, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.16
-    second: {fileID: 2100000, guid: e256d8d6a3de8214ca55360ccbed7f83, type: 2}
+      name: M_NPC_Chumsung02.088
+    second: {fileID: 2100000, guid: c8e46d181432a2f4dbd5fa92241f8115, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.17
-    second: {fileID: 2100000, guid: f2fd05c8b269e7a4092da8ac0114fe62, type: 2}
+      name: M_NPC_Chumsung02.089
+    second: {fileID: 2100000, guid: 664f20a44643f4c408685be39b413993, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.18
-    second: {fileID: 2100000, guid: 977d3bed0531ecc4ca915a151f8ed67d, type: 2}
+      name: M_NPC_Chumsung02.090
+    second: {fileID: 2100000, guid: 26864d4bcd52bef4f94b0573e9ec8eb5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.19
-    second: {fileID: 2100000, guid: e2884578c73e8d64a9c074dc68760f8f, type: 2}
+      name: M_NPC_Chumsung02.091
+    second: {fileID: 2100000, guid: 63967f196c7b4c44cbe70caa2e284692, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.2
-    second: {fileID: 2100000, guid: 8987851df48afc147aacc94c848053bf, type: 2}
+      name: M_NPC_Chumsung02.092
+    second: {fileID: 2100000, guid: dc9e5928bfbb77f42a541a36d1f95009, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.20
-    second: {fileID: 2100000, guid: 68bb0d43e59c385458e077a620f2ebc5, type: 2}
+      name: M_NPC_Chumsung02.093
+    second: {fileID: 2100000, guid: 81ee537edf92f0945aa568ebbb67bfa4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.21
-    second: {fileID: 2100000, guid: 3c11b57b7615e984f8abe0f4659b20c2, type: 2}
+      name: M_NPC_Chumsung02.094
+    second: {fileID: 2100000, guid: 81031ef1c6445c941a4d82a8e5c38e00, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.22
-    second: {fileID: 2100000, guid: 19af4393c35edbb4c80dba55bd4c0f46, type: 2}
+      name: M_NPC_Chumsung02.095
+    second: {fileID: 2100000, guid: c0f4fe3e513f7f94cbc3b28da802195b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.23
-    second: {fileID: 2100000, guid: d33f44027eee41846a0e53c08a516716, type: 2}
+      name: M_NPC_Chumsung02.096
+    second: {fileID: 2100000, guid: 5acb7dc6ced6998448bcf2ddd536ab39, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.24
-    second: {fileID: 2100000, guid: da3e88a1b50938e4ab194ad122f4526a, type: 2}
+      name: M_NPC_Chumsung02.097
+    second: {fileID: 2100000, guid: bf04706569daba14b98eb7af7e22713e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.25
-    second: {fileID: 2100000, guid: 9eae54b3584c25844a913e8fe742dacf, type: 2}
+      name: M_NPC_Chumsung02.098
+    second: {fileID: 2100000, guid: 5b87208c13c41ec4596f2f1f1924baa6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.26
-    second: {fileID: 2100000, guid: 315998d77617087408d6545ff2959303, type: 2}
+      name: M_NPC_Chumsung02.099
+    second: {fileID: 2100000, guid: cb47ac5ade9cb7f44adbc01c0d1f125d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.27
-    second: {fileID: 2100000, guid: a4d6b130ad8f9a44bbb0508553706fec, type: 2}
+      name: M_NPC_Chumsung02.100
+    second: {fileID: 2100000, guid: d41a05facbedba04eadef83721548abb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.28
-    second: {fileID: 2100000, guid: 240816867452fa04fb2ebde726ef5716, type: 2}
+      name: M_NPC_Chumsung02.101
+    second: {fileID: 2100000, guid: 1de4b273dba28b345b3df1b644b33e38, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.29
-    second: {fileID: 2100000, guid: 1054cb04377f39645b826d85e75bb16f, type: 2}
+      name: M_NPC_Chumsung02.102
+    second: {fileID: 2100000, guid: 3cc03d881d98e134986d8f4d376edf3a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.3
-    second: {fileID: 2100000, guid: 01132b2c418e4ad458a48571cfa27043, type: 2}
+      name: M_NPC_Chumsung02.103
+    second: {fileID: 2100000, guid: 2571413e5b20bcb4f806171ba7124502, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.30
-    second: {fileID: 2100000, guid: 1b5bd066b482e0c47a84b5b6c12ed4dd, type: 2}
+      name: M_NPC_Chumsung02.104
+    second: {fileID: 2100000, guid: 13b805a2756f9ae47aaa9e7d870cb3c6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.31
-    second: {fileID: 2100000, guid: f78882cedfd673e4cadaaefa77382230, type: 2}
+      name: M_NPC_Chumsung02.105
+    second: {fileID: 2100000, guid: 161671baeeb65b24e9be5fe15e421e18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.32
-    second: {fileID: 2100000, guid: 5095e91a30f8e5e4a9e3bce2043d2b85, type: 2}
+      name: M_NPC_Chumsung02.106
+    second: {fileID: 2100000, guid: 91304bf71da8302479e9ba6229b42834, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.33
-    second: {fileID: 2100000, guid: c15d20b9536e44047a4798ffc5544bca, type: 2}
+      name: M_NPC_Chumsung02.107
+    second: {fileID: 2100000, guid: 6b37ceea39674304c94f50b3c1701b65, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.34
-    second: {fileID: 2100000, guid: 885657610167c76418456bacf6794593, type: 2}
+      name: M_NPC_Chumsung02.108
+    second: {fileID: 2100000, guid: 6314928638a113b4fbaa75cd0163b4fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.35
-    second: {fileID: 2100000, guid: 47fc8a52ff6ffda479577305f80f808a, type: 2}
+      name: M_NPC_Chumsung02.109
+    second: {fileID: 2100000, guid: 9e8c36dd39ef25649aa8fc29a8d0f9e9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.36
-    second: {fileID: 2100000, guid: 7888ae4aa48424142ad2c5a7ff3e70ac, type: 2}
+      name: M_NPC_Chumsung02.110
+    second: {fileID: 2100000, guid: add6e06f26fc8fc469c8760d9405d7a7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.37
-    second: {fileID: 2100000, guid: 055152f7f682e5e4080b8c70e548a55c, type: 2}
+      name: M_NPC_Chumsung02.111
+    second: {fileID: 2100000, guid: d644c3f98b6458946b46eaa84fa82f17, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.38
-    second: {fileID: 2100000, guid: be802f9a931a8814d9e7da8aad40795a, type: 2}
+      name: M_NPC_Chumsung02.112
+    second: {fileID: 2100000, guid: 9020d834e8f3d2340bed857c2721ef67, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.39
-    second: {fileID: 2100000, guid: 7da6f35ff467cc14dba90192fa4d2c0a, type: 2}
+      name: M_NPC_Chumsung02.113
+    second: {fileID: 2100000, guid: 730518f2a75de8c4386a2babdc3f79be, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.4
-    second: {fileID: 2100000, guid: d5f8a5fd8d1813644a82958f4a030617, type: 2}
+      name: M_NPC_Chumsung02.114
+    second: {fileID: 2100000, guid: 960704bf53acf2948889f58ba5ccd941, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.40
-    second: {fileID: 2100000, guid: be0a064db57e7574f92649ba71d2b7f2, type: 2}
+      name: M_NPC_Chumsung02.115
+    second: {fileID: 2100000, guid: b5bdd8f5d2cd58d4582fb629d037e1ef, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.41
-    second: {fileID: 2100000, guid: 770f8ed34a1ca6c43a28d6668dbdf2e0, type: 2}
+      name: M_NPC_Chumsung02.116
+    second: {fileID: 2100000, guid: a481d5aa3e31f98429f3ac4ce5019fa9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.42
-    second: {fileID: 2100000, guid: 7dc89ba3f36984a45abf5018907429b9, type: 2}
+      name: M_NPC_Chumsung02.117
+    second: {fileID: 2100000, guid: edca7505bb3d8db4e860f577a7c5209e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.43
-    second: {fileID: 2100000, guid: a8202d683a5bc794b9be27350e563f62, type: 2}
+      name: M_NPC_Chumsung02.118
+    second: {fileID: 2100000, guid: 1491bdd75cef9224299b51bf0572220b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.44
-    second: {fileID: 2100000, guid: ae91561cc2a2ec44eb1cb0f29d66970f, type: 2}
+      name: M_NPC_Chumsung02.119
+    second: {fileID: 2100000, guid: 1a896b49262f3d34ea0927ffe2e3e640, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.45
-    second: {fileID: 2100000, guid: a513c5283fd64cd40a5f4991830cf061, type: 2}
+      name: M_NPC_Chumsung02.120
+    second: {fileID: 2100000, guid: f63e3ae9d9f0651448b9f114e3710457, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.46
-    second: {fileID: 2100000, guid: 845f1f84767a323439fad1d8555fa645, type: 2}
+      name: M_NPC_Chumsung02.121
+    second: {fileID: 2100000, guid: d93c05f1ff867b84697a8d3a9ac4e183, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.47
-    second: {fileID: 2100000, guid: 05382f5413048d1489869217ecb17134, type: 2}
+      name: M_NPC_Chumsung02.122
+    second: {fileID: 2100000, guid: 36203541926ede54d8a4a2a580659a08, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.48
-    second: {fileID: 2100000, guid: c1299969602805a458ef7ada0476b78a, type: 2}
+      name: M_NPC_Chumsung02.123
+    second: {fileID: 2100000, guid: 76e6e89c5a70407409fa41c5ebd64831, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.49
-    second: {fileID: 2100000, guid: c4764458a1e009e4ebd87b8683282628, type: 2}
+      name: M_NPC_Chumsung02.124
+    second: {fileID: 2100000, guid: 16dce78bad4af9044b49e73f4c58127c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.5
-    second: {fileID: 2100000, guid: 80bb89c617afb0e40bbcb24887c31421, type: 2}
+      name: M_NPC_Chumsung02.125
+    second: {fileID: 2100000, guid: e4605b0c892536345b330cad00a9be22, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.50
-    second: {fileID: 2100000, guid: fa9c7a9d3a1d6a74994bc1502be0573f, type: 2}
+      name: M_NPC_Chumsung02.126
+    second: {fileID: 2100000, guid: 39862599751ad0448b8d0bc6671ed9d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.51
-    second: {fileID: 2100000, guid: b1534fc7c4b5d184f988d0468bdfe9f6, type: 2}
+      name: M_NPC_Chumsung02.127
+    second: {fileID: 2100000, guid: e560aa4e9d73fbd43ba50c9d684cf9c4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.52
-    second: {fileID: 2100000, guid: ff00ba3870963f142949a444e86ebb39, type: 2}
+      name: M_NPC_Chumsung02.128
+    second: {fileID: 2100000, guid: ca8914b597ec7b843a3ea8cfcd00fcc7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.53
-    second: {fileID: 2100000, guid: 4883ee4130b9ed3498f51228959b6d0d, type: 2}
+      name: M_NPC_Chumsung02.129
+    second: {fileID: 2100000, guid: 7381732c3f13c2c498e8c0dbe4c07aca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.54
-    second: {fileID: 2100000, guid: 766462d8811b61644bbfdd0c0b484643, type: 2}
+      name: M_NPC_Chumsung02.130
+    second: {fileID: 2100000, guid: 7ad964f2a5089bb44ab7827069b6784f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.55
-    second: {fileID: 2100000, guid: d17aade3c22e01740a9414798503de5a, type: 2}
+      name: M_NPC_Chumsung02.131
+    second: {fileID: 2100000, guid: ed8937428033e6c4492dd3045536a835, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.56
-    second: {fileID: 2100000, guid: f536ec1f4fdd31f4f9d15b5c3c2f3a23, type: 2}
+      name: M_NPC_Chumsung02.132
+    second: {fileID: 2100000, guid: f3bd0a5d84dd8214babfc13c50fb9918, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.57
-    second: {fileID: 2100000, guid: fc5aa12e8e4193a49b94dcd3da62b9eb, type: 2}
+      name: M_NPC_Chumsung02.133
+    second: {fileID: 2100000, guid: 295596ba7b78bd54cb3d4641fbcad239, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.58
-    second: {fileID: 2100000, guid: 6af344321db500340b3e0e7a37d9de16, type: 2}
+      name: M_NPC_Chumsung02.134
+    second: {fileID: 2100000, guid: c77741067aa7a0d4f9fcb85b5361957a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.59
-    second: {fileID: 2100000, guid: de8f2937bacba9248828547ff4196f48, type: 2}
+      name: M_NPC_Chumsung02.135
+    second: {fileID: 2100000, guid: 6a3bec2069992a14eb35d4f098eef60a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.6
-    second: {fileID: 2100000, guid: d1de6a49cbc13b046930e68e3bc6f8e6, type: 2}
+      name: M_NPC_Chumsung02.136
+    second: {fileID: 2100000, guid: 364842d2e78004c47bb779bb5ba88c40, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.60
-    second: {fileID: 2100000, guid: 41a79b5685e3a4a4194503e465ed0b03, type: 2}
+      name: M_NPC_Chumsung02.137
+    second: {fileID: 2100000, guid: c676f15e72212f847a3d128abacd23ca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.61
-    second: {fileID: 2100000, guid: 4445f01f82e892e4f907f4e29fdef2ce, type: 2}
+      name: M_NPC_Chumsung02.138
+    second: {fileID: 2100000, guid: 73ec084891116c94e85038e74bdff757, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.62
-    second: {fileID: 2100000, guid: e5b8ed88fd142f843958c8761d1343a5, type: 2}
+      name: M_NPC_Chumsung02.139
+    second: {fileID: 2100000, guid: f52b12b567291cc49bc45a6cfaca019a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.63
-    second: {fileID: 2100000, guid: cc7a31bc9fe258e4d976899f60fd1ad7, type: 2}
+      name: M_NPC_Chumsung02.140
+    second: {fileID: 2100000, guid: d4c187c4c4c3bd54081c428266b93f3a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.64
-    second: {fileID: 2100000, guid: 5d889c93ba1c6d84db9664c31bc35a91, type: 2}
+      name: M_NPC_Chumsung02.141
+    second: {fileID: 2100000, guid: 63bfa98efb6bd3241831c87bbbf84d7a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.65
-    second: {fileID: 2100000, guid: fd95d5ef865226c49a9121bf9909469c, type: 2}
+      name: M_NPC_Chumsung02.142
+    second: {fileID: 2100000, guid: 9a08339d826b3ea43aa2922fe7595447, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.66
-    second: {fileID: 2100000, guid: 6ab37ed092fd73e4481546d0fc491267, type: 2}
+      name: M_NPC_Chumsung02.143
+    second: {fileID: 2100000, guid: f4b990187f1a38d4d9b0f45cb0e6169f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.67
-    second: {fileID: 2100000, guid: 83f52a29d548831418fe86e4c3dec1c3, type: 2}
+      name: M_NPC_Chumsung02.144
+    second: {fileID: 2100000, guid: a38949c7908e2f04981372f5fed0c653, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.68
-    second: {fileID: 2100000, guid: bbfb7cd03b4f01e44a92834d864d1fc0, type: 2}
+      name: M_NPC_Chumsung02.145
+    second: {fileID: 2100000, guid: 8e018e0cff013064ebaf81084de8cabb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.69
-    second: {fileID: 2100000, guid: 82ef0d30d4473b947bbb1e934946386a, type: 2}
+      name: M_NPC_Chumsung02.146
+    second: {fileID: 2100000, guid: 47388062f05af0e429eba6d7bed8feb8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.7
-    second: {fileID: 2100000, guid: 28f5910b59ace334aa862c40c52d7985, type: 2}
+      name: M_NPC_Chumsung02.147
+    second: {fileID: 2100000, guid: d1e0a39ae746f54489abae64ed1fe7c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.70
-    second: {fileID: 2100000, guid: 74d9d3a1d054d9a4f8fc2392935b9e68, type: 2}
+      name: M_NPC_Chumsung02.148
+    second: {fileID: 2100000, guid: 840e16f5c45664b439123c2daffd4cda, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.71
-    second: {fileID: 2100000, guid: 8b506a1e76fafd14093737901786cc16, type: 2}
+      name: M_NPC_Chumsung02.149
+    second: {fileID: 2100000, guid: 4a2677e8cb101ff4c82121ea1918e036, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.72
-    second: {fileID: 2100000, guid: 767dd812824629a4f89b1e834450f1d8, type: 2}
+      name: M_NPC_Chumsung02.150
+    second: {fileID: 2100000, guid: f252b0f189dd52240989e47210f93ced, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.73
-    second: {fileID: 2100000, guid: 949a9cc6874c5e049b8ffb92000fb3d2, type: 2}
+      name: M_NPC_Chumsung02.151
+    second: {fileID: 2100000, guid: 123557e9043e4bc469c7b64fbf6f9d07, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.74
-    second: {fileID: 2100000, guid: 85128800f0ea05e4b9a84ff1357c91e4, type: 2}
+      name: M_NPC_Chumsung02.152
+    second: {fileID: 2100000, guid: 7a0673b2965146f45bf605e8ba3a3fb0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.75
-    second: {fileID: 2100000, guid: 3cad989d468b0ce4aa3104a074ba8ff4, type: 2}
+      name: M_NPC_Chumsung02.153
+    second: {fileID: 2100000, guid: cf7482b97464d2f4e87f417058b8c7c9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.76
-    second: {fileID: 2100000, guid: 08b4dee2897937c4fbfc68c8b6ad34d1, type: 2}
+      name: M_NPC_Chumsung02.154
+    second: {fileID: 2100000, guid: 136585f6351fd3641a17ec2923a227bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.77
-    second: {fileID: 2100000, guid: 23c87a9294fbcf04f81885b5f72d4592, type: 2}
+      name: M_NPC_Chumsung02.155
+    second: {fileID: 2100000, guid: 65d1673cdfd9ff6498157a921c3ba165, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.78
-    second: {fileID: 2100000, guid: 08888ae84faccee4e88db91009bfe649, type: 2}
+      name: M_NPC_Chumsung02.156
+    second: {fileID: 2100000, guid: feac159a38fd9b24ead1969985e29f87, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.79
-    second: {fileID: 2100000, guid: e98dd975c9196e14d8e09f64d6e039d3, type: 2}
+      name: M_NPC_Chumsung02.157
+    second: {fileID: 2100000, guid: fdf884f71109eaf4397a048864148ae8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.8
-    second: {fileID: 2100000, guid: 2c6679b1a07e8254982ab9d503ac0310, type: 2}
+      name: M_NPC_Chumsung02.158
+    second: {fileID: 2100000, guid: 67594396d0e2d9b4b9b80b1ac3f1ad78, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_NPC_Chumsung02.9
-    second: {fileID: 2100000, guid: f1f8c567340cac345bc5ed70a4534ba8, type: 2}
+      name: M_NPC_Chumsung02.159
+    second: {fileID: 2100000, guid: 2007d6ea1940b634fba1b6e649c5b6cb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -481,8 +481,739 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left leg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right leg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left ankle
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right ankle
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left shoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right shoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper_Arm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_arm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lower_Arm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lower_Arm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left toe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right toe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Upper chest
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: scholar(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: metarig
+      parentName: scholar(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 198.35254, y: 198.35254, z: 198.35254}
+    - name: moj
+      parentName: metarig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 7.0468957e-15, y: 0, z: -0, w: 1}
+      scale: {x: 0.504153, y: 0.504153, z: 0.504153}
+    - name: Hips
+      parentName: metarig
+      position: {x: -0, y: 0.00055199984, z: 0.010098999}
+      rotation: {x: 0.79045534, y: 2.2637752e-15, z: -6.981765e-16, w: 0.6125197}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Spine
+      parentName: Hips
+      position: {x: -0, y: 0.0015221965, z: -2.4214386e-10}
+      rotation: {x: -0.07550427, y: 2.1175824e-22, z: -0, w: 0.99714553}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    - name: Chest
+      parentName: Spine
+      position: {x: -8.470329e-24, y: 0.001663642, z: 3.2014214e-11}
+      rotation: {x: -0.06363371, y: -0.0000001189677, z: 0.000000007585733, w: 0.9979734}
+      scale: {x: 1, y: 1, z: 1.0000111}
+    - name: Upper chest
+      parentName: Chest
+      position: {x: 7.477846e-18, y: 0.0020996553, z: -1.3969838e-11}
+      rotation: {x: -0.0064402362, y: -1.4210853e-14, z: 0.0000000015354622, w: 0.99997926}
+      scale: {x: 1, y: 0.9999913, z: 0.99999094}
+    - name: Neck
+      parentName: Upper chest
+      position: {x: 2.2834313e-19, y: 0.0013675565, z: -3.7252902e-11}
+      rotation: {x: 0.031325243, y: 0.0000021193198, z: -0.000008137955, w: 0.99950933}
+      scale: {x: 1, y: 1.0000069, z: 0.99999726}
+    - name: Head
+      parentName: Neck
+      position: {x: -1.37134744e-14, y: 0.00093815406, z: -1.857282e-11}
+      rotation: {x: 0.048315696, y: 0.00047074538, z: -0.014138172, w: 0.9987319}
+      scale: {x: 1, y: 1.0000019, z: 0.99999976}
+    - name: Head_end
+      parentName: Head
+      position: {x: -0, y: 0.001178108, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Left shoulder
+      parentName: Upper chest
+      position: {x: 2.2834313e-19, y: 0.0013675565, z: -3.7252902e-11}
+      rotation: {x: -0.55211025, y: 0.42459294, z: 0.4515721, w: 0.5576537}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000035}
+    - name: Upper_Arm.L
+      parentName: Left shoulder
+      position: {x: -5.122274e-11, y: 0.0017105541, z: 9.598443e-10}
+      rotation: {x: 0.07256662, y: -0.7316703, z: 0.096026264, w: 0.6709484}
+      scale: {x: 1.0000271, y: 1.0000465, z: 0.9999987}
+    - name: Lower_Arm.L
+      parentName: Upper_Arm.L
+      position: {x: 0.0000000011431984, y: 0.0028560448, z: -1.3038516e-10}
+      rotation: {x: 0.036337875, y: 0.07785478, z: -0.048708417, w: 0.99511087}
+      scale: {x: 1.0000359, y: 1.0000013, z: 1.0000027}
+    - name: Hand.L
+      parentName: Lower_Arm.L
+      position: {x: -6.717164e-10, y: 0.0023983961, z: -9.313225e-11}
+      rotation: {x: 0.021149646, y: -0.023813853, z: -0.008321705, w: 0.9994581}
+      scale: {x: 0.99998885, y: 1.00001, z: 0.99999714}
+    - name: Hand.L_end
+      parentName: Hand.L
+      position: {x: -0, y: 0.00083499274, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right shoulder
+      parentName: Upper chest
+      position: {x: 2.2834313e-19, y: 0.0013675565, z: -3.7252902e-11}
+      rotation: {x: -0.5521104, y: -0.4245928, z: -0.45157188, w: 0.557654}
+      scale: {x: 0.99999857, y: 1, z: 1.000016}
+    - name: upper_arm.R
+      parentName: Right shoulder
+      position: {x: -1.8626451e-11, y: 0.0017105541, z: -0.0000000014400575}
+      rotation: {x: 0.069076926, y: 0.7071298, z: -0.09856614, w: 0.6967643}
+      scale: {x: 0.9999989, y: 1.0000235, z: 0.99999106}
+    - name: Lower_Arm.R
+      parentName: upper_arm.R
+      position: {x: 2.7532224e-10, y: 0.0028560448, z: -4.6566126e-11}
+      rotation: {x: 0.038060326, y: -0.042106565, z: 0.04737257, w: 0.99726343}
+      scale: {x: 0.9999851, y: 1.000023, z: 1.0000046}
+    - name: Hand.R
+      parentName: Lower_Arm.R
+      position: {x: -6.018672e-10, y: 0.002398397, z: 1.8626451e-11}
+      rotation: {x: 0.021149535, y: 0.023813972, z: 0.008321393, w: 0.9994581}
+      scale: {x: 1.0000179, y: 1.0000402, z: 0.99999017}
+    - name: Hand.R_end
+      parentName: Hand.R
+      position: {x: -8.2545737e-10, y: 0.0008349923, z: -2.7939677e-11}
+      rotation: {x: -0.25267425, y: 0.003222409, z: -0.027261106, w: 0.9671619}
+      scale: {x: 1.0000163, y: 0.99982536, z: 1.0001478}
+    - name: Hand.R_end_end
+      parentName: Hand.R_end
+      position: {x: -0, y: 0.0008840735, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Left leg
+      parentName: Hips
+      position: {x: -0.0009799999, y: 0.0007081866, z: 0.00025942287}
+      rotation: {x: 0.98897624, y: -0.06255587, z: 0.01232335, w: 0.13364506}
+      scale: {x: 0.99999493, y: 1.0000021, z: 1.0000134}
+    - name: Left knee
+      parentName: Left leg
+      position: {x: 3.776222e-11, y: 0.0053715077, z: 1.6298145e-11}
+      rotation: {x: 0.020307286, y: -0.0074092275, z: -0.040638503, w: 0.99894005}
+      scale: {x: 1.0000067, y: 1.0000484, z: 1.0000334}
+    - name: Left ankle
+      parentName: Left knee
+      position: {x: 3.2159733e-11, y: 0.0049492507, z: -2.3283063e-11}
+      rotation: {x: -0.68776935, y: 0.15512533, z: 0.023948599, w: 0.7087567}
+      scale: {x: 0.9999986, y: 1.0000345, z: 1.0000533}
+    - name: Left toe
+      parentName: Left ankle
+      position: {x: 2.2351741e-10, y: 0.0010375633, z: -2.561137e-11}
+      rotation: {x: 0.1260166, y: 0.98936343, z: -0.02438345, w: 0.068448626}
+      scale: {x: 1.0003338, y: 0.99983007, z: 0.9999262}
+    - name: Left toe_end
+      parentName: Left toe
+      position: {x: -0, y: 0.0006720004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right leg
+      parentName: Hips
+      position: {x: 0.0009799999, y: 0.0007081866, z: 0.00025942287}
+      rotation: {x: 0.98897624, y: 0.06255587, z: -0.01232335, w: 0.13364506}
+      scale: {x: 0.99999493, y: 1.0000021, z: 1.0000134}
+    - name: Right knee
+      parentName: Right leg
+      position: {x: -3.776222e-11, y: 0.0053715077, z: 1.6298145e-11}
+      rotation: {x: 0.020307286, y: 0.0074092275, z: 0.040638503, w: 0.99894005}
+      scale: {x: 1.0000067, y: 1.0000484, z: 1.0000334}
+    - name: Right ankle
+      parentName: Right knee
+      position: {x: -3.2159733e-11, y: 0.0049492507, z: -2.3283063e-11}
+      rotation: {x: -0.6963635, y: -0.0633645, z: -0.082968086, w: 0.7100557}
+      scale: {x: 1.0000132, y: 1.0000324, z: 1.0000377}
+    - name: Right toe
+      parentName: Right ankle
+      position: {x: 4.5634804e-10, y: 0.0011199005, z: -6.891787e-10}
+      rotation: {x: -0.101415835, y: 0.9939246, z: -0.019623218, w: 0.037994914}
+      scale: {x: 1.0001749, y: 0.9998821, z: 1.0000132}
+    - name: Right toe_end
+      parentName: Right toe
+      position: {x: -0, y: 0.0006720004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_14"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_31"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_46"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_62"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_78"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_13"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_32"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_47"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_63"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_79"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_12"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_33"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_48"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_64"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_80"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_11"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_18"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_34"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_49"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_65"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_10"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_19"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_35"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_50"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_66"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_9"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_20"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_36"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_51"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_67"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_8"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_21"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_37"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_52"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_68"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_7"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_22"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_38"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_53"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_69"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_6"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_23"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_39"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_54"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_70"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_5"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_24"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_40"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_55"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_71"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_4"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_25"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_41"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_56"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_72"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_3"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_26"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_42"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_57"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_73"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_2"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_27"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_43"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_58"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_74"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_1"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_17"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_28"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_44"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_59"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_75"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_16"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_29"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_45"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_60"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_76"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_15"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_30"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_61"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
+    - name: "\u6DD8\u5B9D\u5E97\u94FA\u6728\u5076\u83CC_77"
+      parentName: scholar(Clone)
+      position: {x: 0.000000002242405, y: 0.000000008957909, z: 0.0000000052695106}
+      rotation: {x: -0.70710695, y: -1.6095113e-15, z: -1.6497309e-15, w: 0.7071066}
+      scale: {x: 100.000046, y: 100.000046, z: 100.000046}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

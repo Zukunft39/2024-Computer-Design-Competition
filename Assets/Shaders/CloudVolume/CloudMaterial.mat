@@ -60,11 +60,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTexA:
-        m_Texture: {fileID: 2800000, guid: 6af937cb55a8b3048b5da7e5841a8e6e, type: 3}
+        m_Texture: {fileID: 2800000, guid: a5b0b484f6807b342b4467f8d7ae76e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTexB:
-        m_Texture: {fileID: 2800000, guid: a5b0b484f6807b342b4467f8d7ae76e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6af937cb55a8b3048b5da7e5841a8e6e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTexC:
@@ -104,8 +104,8 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _CloudDes: 0.5
-    - _CloudIntensity: 1.5
+    - _CloudDes: 0.489
+    - _CloudIntensity: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -116,13 +116,13 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightIntensity: 2.5
+    - _LightIntensity: 0.1
     - _LightMarchCount: 10
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
-    - _RayMarchCount: 300
+    - _RayMarchCount: 200
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -134,14 +134,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BoundMax: {r: 100, g: 100, b: 100, a: 1}
-    - _BoundMin: {r: 0, g: 0, b: 0, a: 1}
+    - _BoundMax: {r: 1000, g: 50, b: 1000, a: 1}
+    - _BoundMin: {r: -1000, g: 40, b: -1000, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DarkColor: {r: 0, g: 0, b: 0, a: 1}
+    - _DarkColor: {r: 0.8726415, g: 1, b: 0.9363208, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MoveSpeed: {r: 0.1, g: 0, b: 0, a: 1}
+    - _MoveSpeed: {r: 0, g: -0.001, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tilling: {r: 1, g: 1, b: 1, a: 1}
+    - _Tilling: {r: 25, g: 50, b: 25, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4469013706718762986
 MonoBehaviour:

@@ -113,7 +113,7 @@ MonoBehaviour:
   settings:
     normalMat: {fileID: 2100000, guid: 9919f95412e86bd48a627868c28dd1be, type: 2}
     postMat: {fileID: 2100000, guid: d740e8ee6c1d42043b64f6ae48b9579f, type: 2}
-    delRenderLayer: 1000
+    delRenderLayer: 550
     drawLayer:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 4294967295

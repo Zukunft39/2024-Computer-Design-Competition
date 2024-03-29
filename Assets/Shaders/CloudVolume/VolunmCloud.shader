@@ -32,10 +32,10 @@ Shader "Custom/VolunmCloud"
             #pragma vertex vert
             #pragma fragment frag            
             #include "UnityCG.cginc"
-            /*深度引动模式（Depth Priming Mode）：如果你的项目中使用了自定义的一些shader来实现特殊效果，这时如果直接使用新建材质与无光照着色器（Unlit shader）
-            ，可能会发生一个对于新手而言意料之外的问题——物体消失了。这是因为深度引动模式需要使用一种LightMode为DepthOnly的特殊Pass来生成场景中不透明物体的深度图，
-            而我们所创建的无光照着色器是不具有该类型Pass的（因为压根就没写这东西），这就导致在开启了该技术的渲染流程中，这些使用了“不具备 DepthOnlyPass 
-            的shader”的物体无法生成深度信息从而被Unity过早剔除无法进行后续的渲染，造成了物体的消失。*/
+            /*深度引动模式(Depth Priming Mode):如果你的项目中使用了自定义的一些shader来实现特殊效果,这时如果直接使用新建材质与无光照着色器(Unlit shader)
+            ,可能会发生一个对于新手而言意料之外的问题_物体消失了.这是因为深度引动模式需要使用一种LightMode为DepthOnly的特殊Pass来生成场景中不透明物体的深度图,
+            而我们所创建的无光照着色器是不具有该类型Pass的(因为压根就没写这东西),这就导致在开启了该技术的渲染流程中,这些使用了"不具备 DepthOnlyPass 
+            的shader"的物体无法生成深度信息从而被Unity过早剔除无法进行后续的渲染,造成了物体的消失.*/
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -78,7 +78,7 @@ Shader "Custom/VolunmCloud"
                 random = frac(sin(random) * a);
                 return random;
                 }
-              float RayMarchToLight(float3 dir, float3 pos,float liglength)//对光深度的获得，得到这个点被光照亮的概率，只是这个边界限制太小（现在是这里有问题）
+              float RayMarchToLight(float3 dir, float3 pos,float liglength)//对光深度的获得,得到这个点被光照亮的概率,只是这个边界限制太小(现在是这里有问题)
             {
                // float steplength = /_LightMarchCount;
                 float3 stepvec = liglength*dir;
@@ -88,7 +88,7 @@ Shader "Custom/VolunmCloud"
               [unroll(10)] for(int i = 0; i < _LightMarchCount; i++)
                 {                                                                                                                               
                      if(curpos.x<_BoundMax.x&&curpos.x>_BoundMin.x&&curpos.y<_BoundMax.y&&curpos.y>_BoundMin.y&&curpos.z<_BoundMax.z&&curpos.z>_BoundMin.z)                  
-                     {   //我真的不知道为什么要在这里加限制范围，我觉得这个点直接采样如果不在云里就行了
+                     {   //我真的不知道为什么要在这里加限制范围,我觉得这个点直接采样如果不在云里就行了
                         float Temp = tex3D(_NoiseTexC, (curpos/length(_BoundMax-_BoundMin)+_MoveSpeed*_Time.y)*_Tilling);
                         Temp = smoothstep(0,1,Temp);
                         totaldepth += Temp;    
@@ -107,7 +107,7 @@ Shader "Custom/VolunmCloud"
 
                return atten;
             }
-            float2 RayMarch(float3 dir , float3 pos , float raylength , v2f o)//光线步进,这里实际上是得到这个点的密度，如何解释呢？
+            float2 RayMarch(float3 dir , float3 pos , float raylength , v2f o)//光线步进,这里实际上是得到这个点的密度,如何解释呢?
             {
             float steplength = raylength/_RayMarchCount;
             float3 stepvec = dir*steplength;
@@ -121,7 +121,7 @@ Shader "Custom/VolunmCloud"
                     {
                        float3 Tolight = -normalize(_WorldSpaceLightPos0).xyz;
 
-                       float lightLength = length(_BoundMax-_BoundMin)/(0.1*Random3DTo1D(curpos,_LightMarchCount,_WorldSpaceLightPos0)*length(curpos));//每个点步进的长度不应该是一样的，和当前位置有一些关系，而用random是为了放大差异有一些xyz很相近
+                       float lightLength = length(_BoundMax-_BoundMin)/(0.1*Random3DTo1D(curpos,_LightMarchCount,_WorldSpaceLightPos0)*length(curpos));//每个点步进的长度不应该是一样的,和当前位置有一些关系,而用random是为了放大差异有一些xyz很相近
 
                        float3 TDUV =(curpos/length(_BoundMax-_BoundMin)+_MoveSpeed*_Time.y)*_Tilling;                   
 
@@ -143,7 +143,7 @@ Shader "Custom/VolunmCloud"
                        
                 }
                 
-                return float2(totalnum/_RayMarchCount,totallight/_RayMarchCount);//x是深度，y是亮度
+                return float2(totalnum/_RayMarchCount,totallight/_RayMarchCount);//x是深度,y是亮度
             }
 
           
@@ -176,11 +176,11 @@ Shader "Custom/VolunmCloud"
 
                 float4 ndcPos = o.pos / o.pos.w;//ndc坐标变换公式
 
-                float far = _ProjectionParams.z; //获取投影信息的z值，代表远平面距离
+                float far = _ProjectionParams.z; //获取投影信息的z值,代表远平面距离
 
                
 
-                float3 clipVec = float3(ndcPos.x , ndcPos.y * -1 , ndcPos.z * -1) * far; //裁切空间下的视锥顶点坐标//观察空间下Y轴从上往下 裁剪里Y由下往上 观察里Z朝向相机，也就是反向的//从左手坐标系转换到右手坐标系，我们需要交换 Y 轴和 Z 轴的方向
+                float3 clipVec = float3(ndcPos.x , ndcPos.y * -1 , ndcPos.z * -1) * far; //裁切空间下的视锥顶点坐标//观察空间下Y轴从上往下 裁剪里Y由下往上 观察里Z朝向相机,也就是反向的//从左手坐标系转换到右手坐标系,我们需要交换 Y 轴和 Z 轴的方向
 
                 o.viewVec = mul(unity_CameraInvProjection, clipVec.xyzz).xyz; //观察空间下的视锥向量           
 
@@ -222,7 +222,7 @@ Shader "Custom/VolunmCloud"
 
               float alpha = step(0.2,cloudDns.x);
 
-              float test = smoothstep(1,1-_CloudDes,cloudDns.y);//这个是光深度，越大越暗
+              float test = smoothstep(1,1-_CloudDes,cloudDns.y);//这个是光深度,越大越暗
 
               
 

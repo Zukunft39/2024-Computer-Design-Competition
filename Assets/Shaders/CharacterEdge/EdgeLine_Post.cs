@@ -73,7 +73,7 @@ public class EdgeLine_Post : ScriptableRendererFeature
         {
             CommandBuffer cmd = CommandBufferPool.Get("后处理效果");
             int sceneColor = Shader.PropertyToID("_CameraColorTexture");
-            int camera = Shader.PropertyToID("_CameraColorAttachmentA");
+            int camera = Shader.PropertyToID("_CameraColorAttachmentA_1920x1080_B10G11R11_UFloatPack32_Tex2D_MSAA4x");//
             cmd.GetTemporaryRT(camera, renderingData.cameraData.cameraTargetDescriptor);
             float[] tempArrayX = new float[25]
             {1, 2, 3, 2, 1,
@@ -91,7 +91,7 @@ public class EdgeLine_Post : ScriptableRendererFeature
             };
             setting.postMat.SetFloatArray("_SobelX", tempArrayX);
             setting.postMat.SetFloatArray("_SobelY", tempArrayY);
-            cmd.Blit(camera, camera, setting.postMat, 0);
+            cmd.Blit(sceneColor, camera, setting.postMat, 0);
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
         }

@@ -201,14 +201,14 @@ Shader "Unlit/EdgeLine_Post"
                   finnalColor = float4(0,0,0,0);
                 }*/
 
-                return finnalColor;
+                
                 if(finnalColor.r>0)
                 {
                 return _LineColor;
                 }
                 else
                 {
-                return float4(1,1,1,1);
+                return float4(tex2D(_MainTex,v.uv));
                 }
             }
             ENDCG
