@@ -85,7 +85,7 @@ public class CircleRenderer : MonoBehaviour
             distance+= Vector3.Distance(chopLineRenderer.GetPosition(i), chopLineRenderer.GetPosition(i + 1));
         }
         estimatedPi =(float)Math.Round( distance / (2 * radius),3);
-        piText.text = "Estimated Pi: " + estimatedPi;
+        piText.text = "预估π值  " + estimatedPi;
     }
     
     void ShowInitialChopLines()
@@ -152,6 +152,7 @@ public class CircleRenderer : MonoBehaviour
 
     private void Start()
     {
+        EstimatePi();
         ShowInitialChopLines();
     }
 

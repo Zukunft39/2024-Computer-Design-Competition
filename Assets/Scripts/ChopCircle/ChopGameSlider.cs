@@ -20,12 +20,13 @@ public class ChopGameSlider : MonoBehaviour
 
     private List<GameObject> targetAreas;
     private float sliderTimer;
-
-     void Slide(float time)
+    private bool isSliding = true;
+     void Slide()
     {
+        if(!isSliding)return;
         handle.transform.position =
             Vector3.LerpUnclamped(leftPivot.position, rightPivot.position, handleCurve.Evaluate(
-                (time % handleMoveDuration)/handleMoveDuration));
+                (sliderTimer % handleMoveDuration)/handleMoveDuration));
     }
 
     public void ResetSlider()
@@ -73,12 +74,13 @@ public class ChopGameSlider : MonoBehaviour
     
     public void ActivateHandle()
     {
-        handle.SetActive(true);
+        isSliding = true;
     }
     
     public void DeactivateHandle()
     {
-        handle.SetActive(false);
+        isSliding = false;
+        
     }
     
     private void Awake()
@@ -88,7 +90,8 @@ public class ChopGameSlider : MonoBehaviour
 
     private void Update()
     {
-        sliderTimer += Time.deltaTime;
-        Slide(sliderTimer);
+        if(isSliding)
+            sliderTimer += Time.deltaTime;
+        Slide();
     }
 }

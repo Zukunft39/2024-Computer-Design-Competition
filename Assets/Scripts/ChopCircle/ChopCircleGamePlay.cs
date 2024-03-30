@@ -10,27 +10,28 @@ public class ChopCircleGamePlay : MonoBehaviour
 {
     public static ChopCircleGamePlay instance;
     public ChopGameSlider chopGameSlider;
-    public int maxGamePhase;
     public CircleRenderer circleRenderer;
     public float transitionDuration;
     public ChopCircleLevelSO levelSo;
     public Text missText;
     public Text timeText;
     public Text levelnameText;
-    public float totalTime;
+    public ResultPanel resultPanel;
+
+    private String resultTxt;
+    private float[] levelTimeList;
+    private int[] missTimeList;
     public int missTimes
     {
         get { return missTimesPri; }
         set
         {
-            missTimesPri = value;
+            missTimesPri = missTimeList[gamePhase]  = value;
             OnMissed();
         }
     }
-
-    public String endingText;
-
     private int missTimesPri;
+    
     private int gamePhase;
     private bool isGaming;
     private bool isTransitioning;
@@ -38,6 +39,9 @@ public class ChopCircleGamePlay : MonoBehaviour
     private void Awake()
     {
         instance=this;
+        levelTimeList = new float[levelSo.levels.Length];
+        missTimeList = new int[levelSo.levels.Length];
+        resultTxt = "";
     }
 
     private void Start()
@@ -50,12 +54,12 @@ public class ChopCircleGamePlay : MonoBehaviour
     {
         if(isGaming&&!isTransitioning)
         {
-            totalTime += Time.deltaTime;
-            timeText.text = "Time: " + totalTime.ToString("F2")+"s";
+            levelTimeList[gamePhase] += Time.deltaTime;
+            timeText.text = "当前用时  " + levelTimeList[gamePhase].ToString("F2")+"秒";
         }
     }
 
-    public void InitializeGame()
+    void InitializeGame()
     {
         gamePhase = 0;
         
@@ -64,18 +68,15 @@ public class ChopCircleGamePlay : MonoBehaviour
     
     void StartGame()
     {
-        if(gamePhase>=maxGamePhase)
+        if(gamePhase>=levelSo.levels.Length)
         {
-            //Game Clear
-            Debug.Log("Game Clear");
-            isGaming = false;
-            levelnameText.text= endingText;
+            GameClear();
             return;
         }
-        Debug.Log("Start Game");
-        chopGameSlider.ActivateHandle();
         isGaming= true;
         levelnameText.text = levelSo.levels[gamePhase].levelName;
+        chopGameSlider.ActivateHandle();
+        chopGameSlider.handleMoveDuration = levelSo.levels[gamePhase].sliderDuration;
         GenerateTargetAreas();
     }
     void FinishGame()
@@ -86,14 +87,25 @@ public class ChopCircleGamePlay : MonoBehaviour
         circleRenderer.Chop();
         StartCoroutine(transitionToNextPhase());
     }
+
+    void GameClear()
+    {
+        isGaming = false;
+        float totalTime=0;
+        for (int i = 0; i < gamePhase; i++)
+        {
+            resultTxt += $"<b>第{i + 1}关</b>\n耗时：{levelTimeList[i]:F}秒\n失误次数：{missTimeList[i]}次\n";
+            totalTime += levelTimeList[i];
+        }
+        resultTxt += $"<b>总时间：{totalTime:F}秒</b>";
+        resultPanel.ShowResultPanel(resultTxt);
+    }
     
     IEnumerator transitionToNextPhase()
     {
         isTransitioning= true;
         yield return new WaitForSeconds(transitionDuration);
-        Debug.Log("Next Phase");
         isTransitioning= false;
-        chopGameSlider.ResetSlider();
         StartGame();
     }
 
@@ -107,6 +119,11 @@ public class ChopCircleGamePlay : MonoBehaviour
 
     void OnMissed()
     {
-        missText.text = "Miss: " + missTimesPri;
+        missText.text = "失误次数  " + missTimesPri;
+    }
+
+    public bool GetGameState()
+    {
+        return isGaming;
     }
 }
