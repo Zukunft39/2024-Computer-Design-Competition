@@ -40,7 +40,7 @@ public class CageManager : MonoBehaviour
     private int rabbit = 0;
     private int chicken = 0;
     [Header("UI面板")]
-    [SerializeField] private GameObject[] panels;//0、1、2、3对应说明、暂停、失败、成功
+    [SerializeField] private GameObject[] panels;//0、1、2、3、4对应说明、暂停、失败、成功、黑幕
     [Space]
     [SerializeField] private Transform[] transforms;//0-Chicken，1-Rabbit，2-cage
     [Space]
@@ -101,6 +101,12 @@ public class CageManager : MonoBehaviour
         #endregion
         #region 检查
         Check();
+
+        //黑幕
+        if(currentPanel == panels[0] && currentPanel.activeSelf)
+        {
+            panels[4].SetActive(true);
+        }else panels[4].SetActive(false);
         #endregion
         //if (Input.GetKey(KeyCode.Alpha1)) LoseGame();
     }

@@ -31,6 +31,7 @@ public class AbacusManager : MonoBehaviour
     [Tooltip("暂停UI")] public GameObject pPanel;
     [Tooltip("帮助UI")] public GameObject hPanel;
     [Tooltip("总UI")] public GameObject tCanvas;
+    [Tooltip("黑幕")] public GameObject bCanvas;
 
     private void Awake()
     {
@@ -161,18 +162,21 @@ public class AbacusManager : MonoBehaviour
         count = 0;
         AddSubCal();
         lPanel.SetActive(false);
+        bCanvas.SetActive(false);
         isPause = false;
     }
     //关于继续
     public void Continue()
     {
         pPanel.SetActive(false);
+        bCanvas.SetActive(false);
         isPause = false;
     }
     //关于退出
     public void Exit()
     {
         tCanvas.SetActive(false);
+        bCanvas.SetActive(false);
         isPause = false;
 
         //跳转
@@ -180,6 +184,7 @@ public class AbacusManager : MonoBehaviour
     //关于帮助
     public void Help()
     {
+        bCanvas.SetActive(true);
         hPanel.SetActive(true);
         isPause = true;
     }
@@ -187,6 +192,7 @@ public class AbacusManager : MonoBehaviour
     public void Skip()
     {
         hPanel.SetActive(false);
+        bCanvas.SetActive(false);
         isPause = false;
     }
     //关于动画
@@ -199,6 +205,9 @@ public class AbacusManager : MonoBehaviour
         animB.SetInteger("move", 0);
         if (animB.GetInteger("move") == 0)
         {
+            //黑幕打开
+            bCanvas.SetActive(true);
+
             if (isSatisfied()) count++;
             else
             {
