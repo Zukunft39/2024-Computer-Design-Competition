@@ -19,7 +19,7 @@ MonoBehaviour:
       radiusFrom: 140
       radiusTo: 120
       color: {r: 1, g: 0, b: 0, a: 1}
-    sliderDuration: 5
+    sliderDuration: 6
   - levelName: "\u7B2C\u4E8C\u5207\uFF1A\u5173"
     targetAreaDatas:
     - distributeType: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
       radiusFrom: 70
       radiusTo: 80
       color: {r: 1, g: 0.96559095, b: 0, a: 0}
-    sliderDuration: 6
+    sliderDuration: 7
   - levelName: "\u7B2C\u56DB\u5207\uFF1A\u6C38\u96CF\u5854\u83F2"
     targetAreaDatas:
     - distributeType: 1
@@ -64,31 +64,31 @@ MonoBehaviour:
       radiusFrom: 60
       radiusTo: 70
       color: {r: 0, g: 0.26723528, b: 1, a: 0}
-    sliderDuration: 6
+    sliderDuration: 8
   - levelName: "\u6700\u7EC8\u5207\uFF1A\u55B5"
     targetAreaDatas:
     - distributeType: 0
-      radiusFrom: 10
-      radiusTo: 10
+      radiusFrom: 13
+      radiusTo: 17
       color: {r: 1, g: 0, b: 0, a: 0}
     - distributeType: 1
       radiusFrom: 20
-      radiusTo: 20
+      radiusTo: 25
       color: {r: 0.12834764, g: 1, b: 0, a: 0}
     - distributeType: 0
-      radiusFrom: 10
-      radiusTo: 15
+      radiusFrom: 16
+      radiusTo: 20
       color: {r: 0.891067, g: 1, b: 0, a: 0}
     - distributeType: 1
       radiusFrom: 30
       radiusTo: 30
       color: {r: 0.047379494, g: 0, b: 1, a: 0}
     - distributeType: 1
-      radiusFrom: 15
-      radiusTo: 20
+      radiusFrom: 30
+      radiusTo: 40
       color: {r: 1, g: 0, b: 0.8365736, a: 0}
     - distributeType: 0
-      radiusFrom: 9
-      radiusTo: 10
+      radiusFrom: 13
+      radiusTo: 16
       color: {r: 0, g: 1, b: 0.95004964, a: 0}
-    sliderDuration: 7
+    sliderDuration: 9

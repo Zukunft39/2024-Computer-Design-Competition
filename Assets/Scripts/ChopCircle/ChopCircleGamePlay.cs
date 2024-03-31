@@ -75,9 +75,10 @@ public class ChopCircleGamePlay : MonoBehaviour
         }
         isGaming= true;
         levelnameText.text = levelSo.levels[gamePhase].levelName;
-        chopGameSlider.ActivateHandle();
         chopGameSlider.handleMoveDuration = levelSo.levels[gamePhase].sliderDuration;
         GenerateTargetAreas();
+        if(gamePhase==0) chopGameSlider.ActivateHandle();
+        else chopGameSlider.ActivateHandle(levelSo.levels[gamePhase-1].sliderDuration,levelSo.levels[gamePhase].sliderDuration);
     }
     void FinishGame()
     {

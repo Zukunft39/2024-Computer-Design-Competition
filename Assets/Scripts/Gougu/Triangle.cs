@@ -15,6 +15,7 @@ public class Triangle : MonoBehaviour
     public TriDir dir=TriDir.LEFT;
     public int triType;
     public TriRepresentMethod triRepresentMethod;
+    public bool enableOnValidate = true;
     
     public enum TriDir
     {
@@ -169,6 +170,7 @@ public class Triangle : MonoBehaviour
 
     private void OnValidate()
     {
+        if(!enableOnValidate)return;
         InitializeTriangleMesh();
         switch (triRepresentMethod)
         {

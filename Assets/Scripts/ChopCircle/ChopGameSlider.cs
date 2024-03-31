@@ -24,10 +24,16 @@ public class ChopGameSlider : MonoBehaviour
      void Slide()
     {
         if(!isSliding)return;
+        sliderTimer += Time.deltaTime;
         handle.transform.position =
             Vector3.LerpUnclamped(leftPivot.position, rightPivot.position, handleCurve.Evaluate(
                 (sliderTimer % handleMoveDuration)/handleMoveDuration));
     }
+
+     void CalculateSliderStartPos(float previousDuration,float currentDuration)
+     {
+         sliderTimer = ((sliderTimer % previousDuration) / previousDuration)*currentDuration;
+     }
 
     public void ResetSlider()
     {
@@ -77,10 +83,15 @@ public class ChopGameSlider : MonoBehaviour
         isSliding = true;
     }
     
+    public void ActivateHandle(float previousDuration,float currentDuration)
+    {
+        CalculateSliderStartPos(previousDuration,currentDuration);
+        isSliding = true;
+    }
+    
     public void DeactivateHandle()
     {
         isSliding = false;
-        
     }
     
     private void Awake()
@@ -90,8 +101,6 @@ public class ChopGameSlider : MonoBehaviour
 
     private void Update()
     {
-        if(isSliding)
-            sliderTimer += Time.deltaTime;
         Slide();
     }
 }
