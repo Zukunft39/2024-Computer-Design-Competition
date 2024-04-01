@@ -46,6 +46,7 @@ public class Door : MonoBehaviour
                 animator.SetBool("isOpenDoorInward",false);
                 animator.SetBool("isOpenDoorOutward",false);
                 animator.SetBool("isCloseDoorOutward",false);
+                MainAudioManager.AudioManagerInstance.PlaySFXScene("CloseDoor");
             }
         }
         else{
@@ -56,9 +57,9 @@ public class Door : MonoBehaviour
                 animator.SetBool("isOpenDoorOutward",false);
                 animator.SetBool("isOpenDoorInward",false);
                 animator.SetBool("isCloseDoorInward",false);    
+                MainAudioManager.AudioManagerInstance.PlaySFXScene("CloseDoor");
             }
         }
-        MainAudioManager.AudioManagerInstance.PlaySFXScene("CloseDoor");
     }
     private void OnTriggerEnter(Collider other) {
         isForward = CalculateForward();
