@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c693b639aac0e214f8604407521e9644, type: 3}
   m_Name: QingDiagram
   m_EditorClassIdentifier: 
-  levelName: "\u5218\u5FBD  \u9752\u6731\u51FA\u5165\u56FE"
+  levelName: "\u5218\u5FBD ~ \u9752\u6731\u51FA\u5165\u56FE"
   levelData:
     level_id: 0
     maps:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c693b639aac0e214f8604407521e9644, type: 3}
   m_Name: XianDiagram
   m_EditorClassIdentifier: 
-  levelName: "\u8D75\u723D  \u52FE\u80A1\u5706\u65B9\u56FE"
+  levelName: "\u8D75\u723D ~ \u52FE\u80A1\u5706\u65B9\u56FE"
   levelData:
     level_id: 0
     maps:

@@ -11,7 +11,6 @@ public class InputJudge : MonoBehaviour
     public delegate void FinishEventDelegate();
     public static InputJudge instance;
     public event FinishEventDelegate finishEvent;
-    public Animator bladeAnimator;
     
     private List<GameObject> targetAreas;
     
@@ -22,6 +21,7 @@ public class InputJudge : MonoBehaviour
         {
             if(handle.position.x>i.transform.position.x-i.transform.localScale.x/2&&handle.position.x<i.transform.position.x+i.transform.localScale.x/2)
             {
+                Debug.Log("Hit");
                 targetAreas.Remove(i);
                 Destroy(i);
                 JudgeIsFinish();
@@ -36,6 +36,7 @@ public class InputJudge : MonoBehaviour
         targetAreas = chopGameSlider.GetTargetAreas();
         if(targetAreas.Count==0)
         {
+            Debug.Log("Finish");
             if(finishEvent!=null)
             {
                 finishEvent();
@@ -50,11 +51,11 @@ public class InputJudge : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(inputKey)&& ChopCircleGamePlay.instance.GetGameState())
+        if(Input.GetKeyDown(inputKey))
         {
             JudgeInput();
-            bladeAnimator.SetTrigger("cut");
         }
     }
+    
    
 }

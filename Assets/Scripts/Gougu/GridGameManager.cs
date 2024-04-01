@@ -18,7 +18,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     public GameObject[] guideLines;
     public float generateRange = 2;
     public Text levelNameTxt;
-    public Text timeUsedTxt;
    
 
     private bool clicked;
@@ -29,7 +28,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     private List<Triangle> generatedTriangles;
     private bool isGaming;
     private int cur_id;
-    private float timer;
 
     public void GenerateTriangle(int _triType)
     {
@@ -133,6 +131,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         curTriangle = null;
         clicked = false;
         dummy.SetActive(false);
+        levelNameTxt.text = "";
     }
 
     private void Awake()
@@ -144,12 +143,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
 
     private void Update()
     {
-       if(isGaming)
-       {
-           DragTri();
-           timer += Time.deltaTime;
-           timeUsedTxt.text = $"当前用时：{timer:F}秒";
-       }
+       if(isGaming) DragTri();
     }
 
     private void FixedUpdate()
