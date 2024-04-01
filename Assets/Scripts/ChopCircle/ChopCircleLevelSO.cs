@@ -23,4 +23,5 @@ public struct Level
 {
     public string levelName;
     public TargetAreaData[] targetAreaDatas;
+    public float sliderDuration;
 }
