@@ -8,6 +8,8 @@ TagManager:
   - Rabbit
   - Chicken
   - Ground
+  - ChickenHead
+  - RabbitHead
   layers:
   - Default
   - TransparentFX

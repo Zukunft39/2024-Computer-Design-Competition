@@ -16,10 +16,14 @@ public class AbacusManager : MonoBehaviour
     int target = 0;//真实结果
     float time = 0;//经过时间
     bool isPause = false;//UI开启判断
+    Animator animB;
+    Animator animF;
 
     public const float latestTime = 16f;
     public static int result = 0;
     public AbacusGameState state;//用于数据传递
+    public GameObject brush;
+    public GameObject frame;
     [Tooltip("计时UI显示")] public Text timerText;
     [Tooltip("算式UI显示")] public List<Text> texts;
     [Tooltip("胜利UI")] public GameObject wPanel;
@@ -27,9 +31,12 @@ public class AbacusManager : MonoBehaviour
     [Tooltip("暂停UI")] public GameObject pPanel;
     [Tooltip("帮助UI")] public GameObject hPanel;
     [Tooltip("总UI")] public GameObject tCanvas;
+    [Tooltip("黑幕")] public GameObject bCanvas;
 
     private void Awake()
     {
+        animB = brush.GetComponent<Animator>();
+        animF = frame.GetComponent<Animator>();
         Help();
         AddSubCal();
     }
@@ -119,6 +126,93 @@ public class AbacusManager : MonoBehaviour
     {
         if (isBegin)
         {
+            StartCoroutine(Anim());
+        }
+        
+    }
+    //关于胜利
+    private void Win()
+    {
+        //黑幕打开
+        bCanvas.SetActive(true);
+        //传递数据
+        if (state != null) state.Count(count);
+#if UNITY_EDITOR
+        else Debug.LogError("No State Object!");
+#endif
+        //UI显示成功界面
+        wPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于失败
+    private void Lose()
+    {
+        //黑幕打开
+        bCanvas.SetActive(true);
+        //UI显示失败界面
+        lPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于暂停
+    private void Pause()
+    {
+        //黑幕打开
+        bCanvas.SetActive(true);
+        //UI显示暂停界面
+        pPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于重新开始
+    public void Restart()
+    {
+        count = 0;
+        AddSubCal();
+        lPanel.SetActive(false);
+        StartCoroutine(Black());
+        isPause = false;
+    }
+    //关于继续
+    public void Continue()
+    {
+        pPanel.SetActive(false);
+        StartCoroutine(Black());
+        isPause = false;
+    }
+    //关于退出
+    public void Exit()
+    {
+        tCanvas.SetActive(false);
+        bCanvas.SetActive(false);
+        isPause = false;
+
+        //跳转
+    }
+    //关于帮助
+    public void Help()
+    {
+        //黑幕打开
+        bCanvas.SetActive(true);
+        hPanel.SetActive(true);
+        isPause = true;
+    }
+    //关于跳过
+    public void Skip()
+    {
+        hPanel.SetActive(false);
+        StartCoroutine("Black");
+        isPause = false;
+    }
+    //关于动画
+    IEnumerator Anim()
+    {
+        animB.SetInteger("move", 1);
+        yield return new WaitForSeconds(1.2f);
+        animF.SetTrigger("tick");
+        yield return new WaitForSeconds(0.8f);
+        animB.SetInteger("move", 0);
+        if (animB.GetInteger("move") == 0)
+        {
+
             if (isSatisfied()) count++;
             else
             {
@@ -142,64 +236,13 @@ public class AbacusManager : MonoBehaviour
         Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
 #endif
     }
-    //关于胜利
-    private void Win()
+    IEnumerator Black()
     {
-        //传递数据
-        if (state != null) state.Count(count);
-#if UNITY_EDITOR
-        else Debug.LogError("No State Object!");
-#endif
-        //UI显示成功界面
-        wPanel.SetActive(true);
-        isPause = true;
-    }
-    //关于失败
-    private void Lose()
-    {
-        //UI显示失败界面
-        lPanel.SetActive(true);
-        isPause = true;
-    }
-    //关于暂停
-    private void Pause()
-    {
-        //UI显示暂停界面
-        pPanel.SetActive(true);
-        isPause = true;
-    }
-    //关于重新开始
-    public void Restart()
-    {
-        count = 0;
-        AddSubCal();
-        lPanel.SetActive(false);
-        isPause = false;
-    }
-    //关于继续
-    public void Continue()
-    {
-        pPanel.SetActive(false);
-        isPause = false;
-    }
-    //关于退出
-    public void Exit()
-    {
-        tCanvas.SetActive(false);
-        isPause = false;
-
-        //跳转
-    }
-    //关于帮助
-    public void Help()
-    {
-        hPanel.SetActive(true);
-        isPause = true;
-    }
-    //关于跳过
-    public void Skip()
-    {
-        hPanel.SetActive(false);
-        isPause = false;
+        Color color = bCanvas.GetComponent<Image>().color;
+        Animator animator = bCanvas.GetComponent<Animator>();
+        animator.SetTrigger("Black");
+        yield return new WaitForSeconds(1);
+        bCanvas.SetActive(false);
+        bCanvas.GetComponent<Image>().color = new Color(color.r, color.g, color.b, 0.78431f);
     }
 }

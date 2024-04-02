@@ -111,6 +111,9 @@ public class Rope : MonoBehaviour
 #if UNITY_EDITOR
                 if (move == null) Debug.LogError("" + hook.GetChild(0).name + "have no Move Script");
 #endif
+                //笼子生成目标
+                manager.Catch(hook.GetChild(0).tag);
+                //回收子物体
                 pooler.Recover(hook.GetChild(0).gameObject, hook.GetChild(0).tag);
                 hook.GetChild(0).gameObject.transform.SetParent(move.GetTransform(), false);
                 move.enabled = true;

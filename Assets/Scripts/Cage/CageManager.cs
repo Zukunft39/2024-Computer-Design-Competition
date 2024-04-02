@@ -40,9 +40,16 @@ public class CageManager : MonoBehaviour
     private int rabbit = 0;
     private int chicken = 0;
     [Header("UI面板")]
-    [SerializeField] private GameObject[] panels;//0、1、2、3对应说明、暂停、失败、成功
+    [SerializeField] private GameObject[] panels;//0、1、2、3、4对应说明、暂停、失败、成功、黑幕
     [Space]
-    [SerializeField] private Transform[] transforms;//0-Chicken,1-Rabbit
+    [SerializeField] private Transform[] transforms;//0-Chicken，1-Rabbit，2-cage
+    [Space]
+    [Header("笼子数据")]
+    [SerializeField] private GameObject cage;
+    [Tooltip("笼子横向半径")][SerializeField] private float cageOffestX;
+    [Tooltip("笼子竖向半径")][SerializeField] private float cageOffestY;
+    [Tooltip("笼子点位置信息")][SerializeField] private int[] poses;//0代表没有占用，1代表占用
+    private int currentNum;//确定当前列表里第一个未被占有的数据
     [Space]
 
     public Text timerText;
@@ -94,6 +101,13 @@ public class CageManager : MonoBehaviour
         #endregion
         #region 检查
         Check();
+
+        //黑幕
+        if(currentPanel.activeSelf) panels[4].SetActive(true);
+        else
+        {
+            StartCoroutine(Black());
+        }
         #endregion
         //if (Input.GetKey(KeyCode.Alpha1)) LoseGame();
     }
@@ -119,6 +133,8 @@ public class CageManager : MonoBehaviour
         rabbit = foot / 2 - head;
         chicken = head - rabbit;
 
+        currentNum = 0;
+        poses = new int[28];
     }
     private void Check()
     {
@@ -270,6 +286,7 @@ public class CageManager : MonoBehaviour
 #endif
         Clear(transforms[0]);
         Clear(transforms[1]);
+        Clear(transforms[2]);
         isPause = false;
         currentPanel.SetActive(false);
         Init();
@@ -325,6 +342,48 @@ public class CageManager : MonoBehaviour
             yield return null;
         }
         transform.anchoredPosition = end;
+    }
+    IEnumerator Black()
+    {
+        Color color = panels[4].transform.GetChild(0).GetComponent<Image>().color;
+        Animator animator = panels[4].GetComponent<Animator>();
+        animator.SetTrigger("Black");
+        yield return new WaitForSeconds(1);
+        panels[4].SetActive(false);
+        panels[4].transform.GetChild(0).GetComponent<Image>().color = new Color(color.r, color.g, color.b, 1f);
+    }
+    //笼子抓取
+    public void Catch(string tag)
+    {
+        if (tag == "Chicken")
+        {
+            pooler.GetSpawnObj("ChickenHead", FindPos(currentNum));
+        }
+        else if (tag == "Rabbit")
+        {
+            pooler.GetSpawnObj("RabbitHead", FindPos(currentNum));
+        }
+#if UNITY_EDITOR
+        else Debug.LogError("No this tag(" + tag + ")!");
+#endif
+    }
+    //寻找抓取后位置
+    private Vector3 FindPos(int i)
+    {
+        if (poses[i] == 0)
+        {
+            poses[i] = 1;
+            int tempX = i % 5;
+            int tempY = (int)i / 5;
+            Vector3 target = new Vector3(cageOffestX * (tempX - 2) / 2, cageOffestY * (tempY - 1), 0f);
+#if UNITY_EDITOR
+            if (cageOffestX == 0 || cageOffestY == 0) Debug.LogError("The cage info is null!");
+            Debug.Log("Target Pos:" + target);
+#endif
+            return target;
+        }
+        i++;
+        return FindPos(i);
     }
     #endregion
 }
