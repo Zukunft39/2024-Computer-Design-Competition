@@ -103,10 +103,11 @@ public class CageManager : MonoBehaviour
         Check();
 
         //黑幕
-        if(currentPanel == panels[0] && currentPanel.activeSelf)
+        if(currentPanel.activeSelf) panels[4].SetActive(true);
+        else
         {
-            panels[4].SetActive(true);
-        }else panels[4].SetActive(false);
+            StartCoroutine(Black());
+        }
         #endregion
         //if (Input.GetKey(KeyCode.Alpha1)) LoseGame();
     }
@@ -341,6 +342,15 @@ public class CageManager : MonoBehaviour
             yield return null;
         }
         transform.anchoredPosition = end;
+    }
+    IEnumerator Black()
+    {
+        Color color = panels[4].transform.GetChild(0).GetComponent<Image>().color;
+        Animator animator = panels[4].GetComponent<Animator>();
+        animator.SetTrigger("Black");
+        yield return new WaitForSeconds(1);
+        panels[4].SetActive(false);
+        panels[4].transform.GetChild(0).GetComponent<Image>().color = new Color(color.r, color.g, color.b, 1f);
     }
     //笼子抓取
     public void Catch(string tag)

@@ -133,6 +133,8 @@ public class AbacusManager : MonoBehaviour
     //关于胜利
     private void Win()
     {
+        //黑幕打开
+        bCanvas.SetActive(true);
         //传递数据
         if (state != null) state.Count(count);
 #if UNITY_EDITOR
@@ -145,6 +147,8 @@ public class AbacusManager : MonoBehaviour
     //关于失败
     private void Lose()
     {
+        //黑幕打开
+        bCanvas.SetActive(true);
         //UI显示失败界面
         lPanel.SetActive(true);
         isPause = true;
@@ -152,6 +156,8 @@ public class AbacusManager : MonoBehaviour
     //关于暂停
     private void Pause()
     {
+        //黑幕打开
+        bCanvas.SetActive(true);
         //UI显示暂停界面
         pPanel.SetActive(true);
         isPause = true;
@@ -162,14 +168,14 @@ public class AbacusManager : MonoBehaviour
         count = 0;
         AddSubCal();
         lPanel.SetActive(false);
-        bCanvas.SetActive(false);
+        StartCoroutine(Black());
         isPause = false;
     }
     //关于继续
     public void Continue()
     {
         pPanel.SetActive(false);
-        bCanvas.SetActive(false);
+        StartCoroutine(Black());
         isPause = false;
     }
     //关于退出
@@ -184,6 +190,7 @@ public class AbacusManager : MonoBehaviour
     //关于帮助
     public void Help()
     {
+        //黑幕打开
         bCanvas.SetActive(true);
         hPanel.SetActive(true);
         isPause = true;
@@ -192,7 +199,7 @@ public class AbacusManager : MonoBehaviour
     public void Skip()
     {
         hPanel.SetActive(false);
-        bCanvas.SetActive(false);
+        StartCoroutine("Black");
         isPause = false;
     }
     //关于动画
@@ -205,8 +212,6 @@ public class AbacusManager : MonoBehaviour
         animB.SetInteger("move", 0);
         if (animB.GetInteger("move") == 0)
         {
-            //黑幕打开
-            bCanvas.SetActive(true);
 
             if (isSatisfied()) count++;
             else
@@ -230,5 +235,14 @@ public class AbacusManager : MonoBehaviour
 #if UNITY_EDITOR
         Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
 #endif
+    }
+    IEnumerator Black()
+    {
+        Color color = bCanvas.GetComponent<Image>().color;
+        Animator animator = bCanvas.GetComponent<Animator>();
+        animator.SetTrigger("Black");
+        yield return new WaitForSeconds(1);
+        bCanvas.SetActive(false);
+        bCanvas.GetComponent<Image>().color = new Color(color.r, color.g, color.b, 0.78431f);
     }
 }
