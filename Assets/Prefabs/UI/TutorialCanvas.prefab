@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7881628507765416681}
         m_TargetAssemblyTypeName: TutorialPanel, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
