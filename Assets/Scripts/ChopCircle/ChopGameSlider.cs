@@ -20,7 +20,7 @@ public class ChopGameSlider : MonoBehaviour
 
     private List<GameObject> targetAreas;
     private float sliderTimer;
-    private bool isSliding = true;
+    private bool isSliding;
      void Slide()
     {
         if(!isSliding)return;

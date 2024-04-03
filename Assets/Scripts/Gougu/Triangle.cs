@@ -139,15 +139,12 @@ public class Triangle : MonoBehaviour
     public void UpdateLineRenderer()
     {
         Vector3[] positions = new Vector3[4];
-        for (int i=0;i<positions.Length-1;i++)
+        for (int i = 0; i < positions.Length - 1; i++)
             try
             {
-                positions[i] = transform.position + transform.rotation * vertices[i];
+                positions[i] = vertices[i];
             }
-            catch
-            {
-                ;
-            }
+            catch {}
         positions[3] = positions[0];
         _lineRenderer.SetPositions(positions);
     }

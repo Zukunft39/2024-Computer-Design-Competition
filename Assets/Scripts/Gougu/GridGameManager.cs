@@ -18,7 +18,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     public GameObject[] guideLines;
     public float generateRange = 2;
     public Text levelNameTxt;
-    public Text timeUsedTxt;
    
 
     private bool clicked;
@@ -29,7 +28,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     private List<Triangle> generatedTriangles;
     private bool isGaming;
     private int cur_id;
-    private float timer;
 
     public void GenerateTriangle(int _triType)
     {

@@ -47,7 +47,8 @@ public class ChopCircleGamePlay : MonoBehaviour
     private void Start()
     {
         InputJudge.instance.finishEvent+=FinishGame;
-        InitializeGame();
+        chopGameSlider.
+        StartCoroutine(GameplayCoroutine());
     }
 
     private void Update()
@@ -59,10 +60,9 @@ public class ChopCircleGamePlay : MonoBehaviour
         }
     }
 
-    void InitializeGame()
+    IEnumerator GameplayCoroutine()
     {
-        gamePhase = 0;
-        
+        yield return new TutorialPanel.WaitForTutorialEnd();
         StartGame();
     }
     
