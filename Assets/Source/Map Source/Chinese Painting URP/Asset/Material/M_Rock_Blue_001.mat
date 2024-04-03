@@ -186,7 +186,7 @@ Material:
     - _EnergyConservingSpecularColor: 1
     - _Float: 5.53
     - _Float_1: 0.26
-    - _Fresnel: 5
+    - _Fresnel: 3
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -196,7 +196,7 @@ Material:
     - _HeightPoMAmplitude: 2
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
-    - _Intensity: 0.1
+    - _Intensity: 0.05
     - _InvTilingScale: 1
     - _Ior: 1.5
     - _IridescenceMask: 1

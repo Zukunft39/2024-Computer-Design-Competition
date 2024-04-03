@@ -148,7 +148,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
        {
            DragTri();
            timer += Time.deltaTime;
-           timeUsedTxt.text = $"当前用时：{timer:F}秒";
+           timeUsedTxt.text = $"当前用时:{timer:F}秒";
        }
     }
 

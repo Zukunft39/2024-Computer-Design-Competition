@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChangeManager : MonoBehaviour
 {
     public static SceneChangeManager instance;
+    public Vector3 PlayerPosition { get; private set; }
     private void Awake()
     {
         if (instance == null)
@@ -35,5 +36,15 @@ public class SceneChangeManager : MonoBehaviour
             //yourProgressBar.value = progress;
             yield return null;
         }
+    }
+    /// <summary>
+    /// 保存及恢复玩家位置
+    /// </summary>
+    /// <param name="position"></param>
+    public void SavePlayerPosition(Vector3 position) {
+        PlayerPosition = position;
+    }
+    public void RestorePlayerPosition(GameObject player) {
+        player.transform.position = PlayerPosition;
     }
 }
