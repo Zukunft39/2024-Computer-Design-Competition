@@ -286,7 +286,7 @@ public class CageManager : MonoBehaviour
 #endif
         Clear(transforms[0]);
         Clear(transforms[1]);
-        Clear(transforms[2]);
+        Clear(transforms[2].GetChild(0));
         isPause = false;
         currentPanel.SetActive(false);
         Init();
