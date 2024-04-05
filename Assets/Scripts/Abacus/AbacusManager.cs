@@ -206,12 +206,24 @@ public class AbacusManager : MonoBehaviour
     IEnumerator Anim()
     {
         isPause = true;
-        animB.SetInteger("move", 1);
-        yield return new WaitForSeconds(1.2f);
-        animF.SetTrigger("tick");
-        yield return new WaitForSeconds(0.8f);
-        animB.SetInteger("move", 0);
-        if (animB.GetInteger("move") == 0)
+        if (isSatisfied())
+        {
+            animB.SetInteger("move", 1);
+            yield return new WaitForSeconds(1.2f);
+            animF.SetTrigger("tick");
+            yield return new WaitForSeconds(0.8f);
+            animB.SetInteger("move", 0);
+        }
+        else
+        {
+            animB.SetInteger("move_cross", 1);
+            yield return new WaitForSeconds(1.2f);
+            animF.SetTrigger("cross");
+            yield return new WaitForSeconds(0.8f);
+            animB.SetInteger("move_cross", 0);
+        }
+        isPause = false;
+        if (animB.GetInteger("move") == 0 || animB.GetInteger("move_cross") == 0)
         {
 
             if (isSatisfied()) count++;
