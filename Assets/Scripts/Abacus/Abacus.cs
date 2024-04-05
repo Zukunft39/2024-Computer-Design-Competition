@@ -76,7 +76,7 @@ public class Abacus : MonoBehaviour
                 PointerEventData eventData = new PointerEventData(EventSystem.current);
                 eventData.position = Input.mousePosition;
                 EventSystem.current.RaycastAll(eventData, raycasts);
-                foreach(var r in raycasts)
+                /*foreach(var r in raycasts)
                 {
                     GameObject clickObj = r.gameObject;
                     for(int x = 0; x < col; x++)
@@ -84,6 +84,21 @@ public class Abacus : MonoBehaviour
                         for(int y = 0; y < row; y++)
                         {
                             if(clickObj == beads[x, y].obj)
+                            {
+                                if (beads[x, y].GetCount() > 0) BeadClose(x, y, y);
+                                else if (beads[x, y].GetCount() == 0) BeadOpen(x, y, row - 2 - y);
+                            }
+                        }
+                    }
+                }*/
+                if(raycasts.Count > 0)
+                {
+                    GameObject clickObj = raycasts[0].gameObject;
+                    for (int x = 0; x < col; x++)
+                    {
+                        for (int y = 0; y < row; y++)
+                        {
+                            if (clickObj == beads[x, y].obj)
                             {
                                 if (beads[x, y].GetCount() > 0) BeadClose(x, y, y);
                                 else if (beads[x, y].GetCount() == 0) BeadOpen(x, y, row - 2 - y);
