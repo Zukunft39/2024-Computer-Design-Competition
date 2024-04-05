@@ -42,13 +42,13 @@ public class CageManager : MonoBehaviour
     [Header("UI面板")]
     [SerializeField] private GameObject[] panels;//0、1、2、3、4对应说明、暂停、失败、成功、黑幕
     [Space]
-    [SerializeField] private Transform[] transforms;//0-Chicken,1-Rabbit,2-cage
+    [SerializeField] private Transform[] transforms;//0-Chicken，1-Rabbit，2-cage
     [Space]
     [Header("笼子数据")]
     [SerializeField] private GameObject cage;
     [Tooltip("笼子横向半径")][SerializeField] private float cageOffestX;
     [Tooltip("笼子竖向半径")][SerializeField] private float cageOffestY;
-    [Tooltip("笼子点位置信息")][SerializeField] private int[] poses;//0代表没有占用,1代表占用
+    [Tooltip("笼子点位置信息")][SerializeField] private int[] poses;//0代表没有占用，1代表占用
     private int currentNum;//确定当前列表里第一个未被占有的数据
     [Space]
 
@@ -269,8 +269,6 @@ public class CageManager : MonoBehaviour
 #endif
         panelState = PanelState.None;
         //跳转
-        StartCoroutine(SceneChangeManager.instance.LoadSceneAsync("DemoScene"));
-        
     }
     public void Continue()
     {
@@ -288,7 +286,7 @@ public class CageManager : MonoBehaviour
 #endif
         Clear(transforms[0]);
         Clear(transforms[1]);
-        Clear(transforms[2]);
+        Clear(transforms[2].GetChild(0));
         isPause = false;
         currentPanel.SetActive(false);
         Init();

@@ -15,7 +15,7 @@ public class Move : MonoBehaviour
     [SerializeField] private float speed;
     private Vector3 dir;
     [SerializeField] private Transform initialPos;
-    [SerializeField] private int type;//1-chicken,-1-rabbit
+    [SerializeField] private int type;//1-chicken，-1-rabbit
 
     ObjectPooler pooler;
     CageManager manager;
