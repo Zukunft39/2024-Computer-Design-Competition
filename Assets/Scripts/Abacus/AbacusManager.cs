@@ -142,7 +142,7 @@ public class AbacusManager : MonoBehaviour
 #endif
         //UI显示成功界面
         wPanel.SetActive(true);
-        isPause = true;
+        if(!isPause) isPause = true;
     }
     //关于失败
     private void Lose()
@@ -151,7 +151,7 @@ public class AbacusManager : MonoBehaviour
         bCanvas.SetActive(true);
         //UI显示失败界面
         lPanel.SetActive(true);
-        isPause = true;
+        if(!isPause) isPause = true;
     }
     //关于暂停
     private void Pause()
@@ -205,6 +205,7 @@ public class AbacusManager : MonoBehaviour
     //关于动画
     IEnumerator Anim()
     {
+        isPause = true;
         animB.SetInteger("move", 1);
         yield return new WaitForSeconds(1.2f);
         animF.SetTrigger("tick");

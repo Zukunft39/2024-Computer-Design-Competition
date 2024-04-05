@@ -122,10 +122,10 @@ public class CageManager : MonoBehaviour
         currentRabbit = 0;
 
         //feet>=2head并且feet是偶数
-        head = Random.Range(1, 15);
+        head = Random.Range(5, 9);
         int temp = Mathf.FloorToInt(Random.value * 2.99f);
-        if (temp == 0) foot = 2 * Random.Range(head, 15);
-        else foot = 2 * Random.Range(head, 20);
+        if (temp == 0) foot = 2 * Random.Range(head, 9);
+        else foot = 2 * Random.Range(head, 15);
         if (foot > 4 * head) foot = 4 * head;
         headText.text = head.ToString();
         footText.text = foot.ToString();
