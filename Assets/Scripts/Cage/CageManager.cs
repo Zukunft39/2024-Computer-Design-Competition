@@ -70,6 +70,7 @@ public class CageManager : MonoBehaviour
     ObjectPooler pooler;
     CageGameState state;
     GameObject currentPanel;
+    bool temp;
     PanelState panelState = new PanelState();
 
     private void Awake()
@@ -103,8 +104,12 @@ public class CageManager : MonoBehaviour
         Check();
 
         //黑幕
-        if(currentPanel.activeSelf) panels[4].SetActive(true);
-        else
+        if(currentPanel.activeSelf)
+        {
+            if(currentPanel == panels[0]) temp = true;
+            panels[4].SetActive(true);
+        }
+        else if(temp)
         {
             StartCoroutine(Black());
         }
@@ -290,6 +295,10 @@ public class CageManager : MonoBehaviour
         isPause = false;
         currentPanel.SetActive(false);
         Init();
+        //说明UI显示
+        panelState = PanelState.Instruction;
+        PanelChange(panelState.ToString());
+        PanelDisplay();
     }
     #endregion
 
@@ -345,6 +354,7 @@ public class CageManager : MonoBehaviour
     }
     IEnumerator Black()
     {
+        temp = false;
         Color color = panels[4].transform.GetChild(0).GetComponent<Image>().color;
         Animator animator = panels[4].GetComponent<Animator>();
         animator.SetTrigger("Black");
