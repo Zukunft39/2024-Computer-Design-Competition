@@ -223,7 +223,7 @@ public class AbacusManager : MonoBehaviour
             animB.SetInteger("move_cross", 0);
         }
         isPause = false;
-        if (animB.GetInteger("move") == 0 || animB.GetInteger("move_cross") == 0)
+        if (animB.GetInteger("move") == 0)
         {
 
             if (isSatisfied()) count++;
