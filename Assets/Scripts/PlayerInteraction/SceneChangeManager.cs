@@ -20,7 +20,7 @@ public class SceneChangeManager : MonoBehaviour
         }
     }
     /// <summary>
-    /// 非阻塞式异步加载场景
+    /// 异步加载场景
     /// </summary>
     /// <param name="sceneName"></param>
     /// <returns></returns>
@@ -37,14 +37,18 @@ public class SceneChangeManager : MonoBehaviour
             yield return null;
         }
     }
-    /// <summary>
-    /// 保存及恢复玩家位置
-    /// </summary>
-    /// <param name="position"></param>
-    public void SavePlayerPosition(Vector3 position) {
-        PlayerPosition = position;
+    public void SavePlayerPosition(GameObject player) {
+        PlayerPosition = player.transform.position;
     }
     public void RestorePlayerPosition(GameObject player) {
         player.transform.position = PlayerPosition;
+    }
+    /// <summary>
+    /// 包装器,用于在Unity的事件系统中使用包装
+    /// </summary>
+    /// <param name="sceneName"></param>
+    public void WrapperLoadSceneAsync(string sceneName)
+    {
+        StartCoroutine(LoadSceneAsync(sceneName));
     }
 }

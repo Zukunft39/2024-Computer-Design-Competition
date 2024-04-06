@@ -17,7 +17,7 @@ public class TriggerChangeScene : MonoBehaviour
         if(other.tag == "Player"){
             Debug.Log("进入触发器");
             ChangeScene();
-            SceneChangeManager.instance.SavePlayerPosition(other.transform.position);
+            SceneChangeManager.instance.SavePlayerPosition(other.gameObject);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
