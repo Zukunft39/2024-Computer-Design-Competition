@@ -12,10 +12,6 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2714695542258860574}
-<<<<<<< HEAD
-  - {fileID: -2088194813376744540}
-=======
->>>>>>> parent of f272a066 (Merge branch 'main' of https://github.com/Zukunft39/2024-Computer-Design-Competition)
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -170,12 +166,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 7073724557666763277}
     m_Position: {x: 260, y: 200, z: 0}
-<<<<<<< HEAD
-  - serializedVersion: 1
-    m_State: {fileID: -2069422957175114008}
-    m_Position: {x: 260, y: -10, z: 0}
-=======
->>>>>>> parent of f272a066 (Merge branch 'main' of https://github.com/Zukunft39/2024-Computer-Design-Competition)
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
