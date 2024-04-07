@@ -58,7 +58,7 @@ MonoBehaviour:
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_DepthPrimingMode: 0
-  m_CopyDepthMode: 0
+  m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
 --- !u!114 &5468374992422552248
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c73b93d2f0c3db4180919d99a26582a, type: 3}
   m_Name: EdgeLinePost
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
     normalMat: {fileID: 2100000, guid: 9919f95412e86bd48a627868c28dd1be, type: 2}
     postMat: {fileID: 2100000, guid: d740e8ee6c1d42043b64f6ae48b9579f, type: 2}

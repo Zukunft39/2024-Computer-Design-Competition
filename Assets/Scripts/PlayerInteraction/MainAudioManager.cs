@@ -11,7 +11,7 @@ public class MainAudioManager : MonoBehaviour
     private void Awake() {
         if(AudioManagerInstance == null){
             AudioManagerInstance = this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
         }
         else{
             Destroy(gameObject);
@@ -84,6 +84,4 @@ public class MainAudioManager : MonoBehaviour
     public void DialogueVolume(float volume){
         dialogueSource.volume = volume;
     }
-
-    
 }

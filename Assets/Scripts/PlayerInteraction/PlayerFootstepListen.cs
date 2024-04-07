@@ -27,6 +27,7 @@ public class PlayerFootstepListen: MonoBehaviour
     }
     /// <summary>
     /// 当时写的时候没注意...这个能用Switch简单优化
+    /// Todo 优化这里的算法逻辑
     /// </summary>
     /// <param name="type"></param>
     public void PlayFootstepSound(SoundType type){

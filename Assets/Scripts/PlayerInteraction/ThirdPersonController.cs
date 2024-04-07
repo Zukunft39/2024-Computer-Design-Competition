@@ -151,6 +151,7 @@ public class ThirdPersonController : MonoBehaviour
     /// 计算玩家位置相对相机的移动
     /// </summary>
     void CalculateInputDirection(){
+        if(playerTransform == null || cameraTransform == null) return;
         Vector3 camForwardProjection = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
         playerMovement = camForwardProjection * moveInput.y + cameraTransform.right * moveInput.x;
         playerMovement = playerTransform.InverseTransformVector(playerMovement);

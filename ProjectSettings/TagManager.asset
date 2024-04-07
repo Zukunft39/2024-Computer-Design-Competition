@@ -10,6 +10,9 @@ TagManager:
   - Ground
   - ChickenHead
   - RabbitHead
+  - Bead
+  - Girl
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - UI
   - Circle
   - GouGuLevel
-  - 
+  - Player
   - 
   - 
   - 

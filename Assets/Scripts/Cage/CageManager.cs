@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "CageData", menuName = "GamesData")]
@@ -70,6 +71,7 @@ public class CageManager : MonoBehaviour
     ObjectPooler pooler;
     CageGameState state;
     GameObject currentPanel;
+    bool temp;
     PanelState panelState = new PanelState();
 
     private void Awake()
@@ -103,8 +105,12 @@ public class CageManager : MonoBehaviour
         Check();
 
         //黑幕
-        if(currentPanel.activeSelf) panels[4].SetActive(true);
-        else
+        if(currentPanel.activeSelf)
+        {
+            panels[4].SetActive(true);
+            temp = true;
+        }
+        else if(temp)
         {
             StartCoroutine(Black());
         }
@@ -269,6 +275,7 @@ public class CageManager : MonoBehaviour
 #endif
         panelState = PanelState.None;
         //跳转
+        StartCoroutine(SceneChangeManager.instance.LoadSceneAsync("DemoScene"));
     }
     public void Continue()
     {
@@ -345,6 +352,7 @@ public class CageManager : MonoBehaviour
     }
     IEnumerator Black()
     {
+        temp = false;
         Color color = panels[4].transform.GetChild(0).GetComponent<Image>().color;
         Animator animator = panels[4].GetComponent<Animator>();
         animator.SetTrigger("Black");

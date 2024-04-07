@@ -13,7 +13,7 @@ public class ShaderChange : MonoBehaviour
     /// </summary>
     private void ChangeShader(){
         Material material = GetComponent<Renderer>().material;
-        if (material.HasProperty("_BaseMap"))
+        if (material.HasProperty("_BaseMap") && material != null)
         {
             Texture originalBaseMap = material.GetTexture("_BaseMap");
             Shader lineShader = Shader.Find("Shader Graphs/Line");
