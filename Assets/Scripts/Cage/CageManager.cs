@@ -48,6 +48,7 @@ public class CageManager : MonoBehaviour
     [SerializeField] private GameObject cage;
     [Tooltip("笼子横向半径")][SerializeField] private float cageOffestX;
     [Tooltip("笼子竖向半径")][SerializeField] private float cageOffestY;
+    [Tooltip("笼子点位置信息")][SerializeField] private int[] poses;//0代表没有占用,1代表占用
     private int currentNum;//确定当前列表里第一个未被占有的数据
     [Space]
 
