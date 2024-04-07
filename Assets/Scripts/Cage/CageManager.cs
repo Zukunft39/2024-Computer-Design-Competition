@@ -42,13 +42,12 @@ public class CageManager : MonoBehaviour
     [Header("UI面板")]
     [SerializeField] private GameObject[] panels;//0、1、2、3、4对应说明、暂停、失败、成功、黑幕
     [Space]
-    [SerializeField] private Transform[] transforms;//0-Chicken，1-Rabbit，2-cage
+    [SerializeField] private Transform[] transforms;//0-Chicken,1-Rabbit,2-cage
     [Space]
     [Header("笼子数据")]
     [SerializeField] private GameObject cage;
     [Tooltip("笼子横向半径")][SerializeField] private float cageOffestX;
     [Tooltip("笼子竖向半径")][SerializeField] private float cageOffestY;
-    [Tooltip("笼子点位置信息")][SerializeField] private int[] poses;//0代表没有占用，1代表占用
     private int currentNum;//确定当前列表里第一个未被占有的数据
     [Space]
 
@@ -70,7 +69,6 @@ public class CageManager : MonoBehaviour
     ObjectPooler pooler;
     CageGameState state;
     GameObject currentPanel;
-    bool temp;
     PanelState panelState = new PanelState();
 
     private void Awake()
@@ -104,12 +102,8 @@ public class CageManager : MonoBehaviour
         Check();
 
         //黑幕
-        if(currentPanel.activeSelf)
-        {
-            panels[4].SetActive(true);
-            temp = true;
-        }
-        else if(temp)
+        if(currentPanel.activeSelf) panels[4].SetActive(true);
+        else
         {
             StartCoroutine(Black());
         }
@@ -350,7 +344,6 @@ public class CageManager : MonoBehaviour
     }
     IEnumerator Black()
     {
-        temp = false;
         Color color = panels[4].transform.GetChild(0).GetComponent<Image>().color;
         Animator animator = panels[4].GetComponent<Animator>();
         animator.SetTrigger("Black");

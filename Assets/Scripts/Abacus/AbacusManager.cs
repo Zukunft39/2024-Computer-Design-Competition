@@ -246,7 +246,7 @@ public class AbacusManager : MonoBehaviour
         else if (count == 3) Win();
 
 #if UNITY_EDITOR
-        Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
+        Debug.Log("真实结果:" + target + " ," + "经过时间:" + time);
 #endif
     }
     IEnumerator Black()
