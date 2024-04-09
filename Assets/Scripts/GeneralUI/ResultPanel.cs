@@ -48,6 +48,6 @@ public class ResultPanel : MonoBehaviour
     IEnumerator EnterPreviousLevelCoroutine()
     {
         yield return new WaitForSeconds(3);
-        StartCoroutine(SceneChangeManager.instance.LoadSceneAsync("DemoScene"));
+        StartCoroutine(SceneChangeManager.Instance.LoadSceneAsync("DemoScene"));
     }
 }
