@@ -2002,7 +2002,7 @@ GameObject:
   - component: {fileID: 118649703}
   - component: {fileID: 118649706}
   - component: {fileID: 118649705}
-  - component: {fileID: 118649704}
+  - component: {fileID: 118649707}
   m_Layer: 0
   m_Name: Rock_Blue_01_LOD0 (1)
   m_TagString: Untagged
@@ -2019,33 +2019,12 @@ Transform:
   m_GameObject: {fileID: 118649702}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.67362726, w: 0.73907125}
-  m_LocalPosition: {x: -29.79, y: 1.43, z: 3}
+  m_LocalPosition: {x: -32.5, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8721395955985782826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 84.695}
---- !u!65 &118649704
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118649702}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 44.5895, y: 53.243107, z: 52.32133}
-  m_Center: {x: -4.4268484, y: 0.40765008, z: -24.777843}
 --- !u!23 &118649705
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2096,6 +2075,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118649702}
+  m_Mesh: {fileID: -1205503015372635253, guid: b0b32affff2c72e42a0d4029daa2420f, type: 3}
+--- !u!64 &118649707
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118649702}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1205503015372635253, guid: b0b32affff2c72e42a0d4029daa2420f, type: 3}
 --- !u!1 &128869902
 GameObject:
@@ -4613,36 +4614,36 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 567.16766
+      - x: 570.7976
         y: 1.4108515
-        z: 577.55493
-      - x: 567.166
+        z: 577.18494
+      - x: 570.79596
         y: 1.392363
-        z: 577.55493
-      - x: 567.1644
+        z: 577.18494
+      - x: 570.7944
         y: 1.3738741
-        z: 577.55493
-      - x: 567.1628
+        z: 577.18494
+      - x: 570.7927
         y: 1.3553854
-        z: 577.55493
-      - x: 567.1612
+        z: 577.18494
+      - x: 570.79114
         y: 1.3368967
-        z: 577.55493
-      - x: 567.00433
+        z: 577.18494
+      - x: 570.6343
         y: 1.4064666
-        z: 577.54944
-      - x: 567.00635
+        z: 577.17944
+      - x: 570.6363
         y: 1.389707
-        z: 577.54944
-      - x: 567.00836
+        z: 577.17944
+      - x: 570.6383
         y: 1.3729476
-        z: 577.54944
-      - x: 567.01044
+        z: 577.17944
+      - x: 570.6404
         y: 1.3561885
-        z: 577.54944
-      - x: 567.01245
+        z: 577.17944
+      - x: 570.6424
         y: 1.339429
-        z: 577.54944
+        z: 577.17944
       attributes:
       - Value: 1
       - Value: 2
@@ -5995,48 +5996,48 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 567.2498
+      - x: 570.87976
         y: 1.10923
-        z: 577.4408
-      - x: 567.20953
+        z: 577.0708
+      - x: 570.8395
         y: 1.067981
-        z: 577.3863
-      - x: 567.1692
+        z: 577.0163
+      - x: 570.79913
         y: 1.0267321
-        z: 577.33185
-      - x: 567.12885
+        z: 576.96185
+      - x: 570.7588
         y: 0.9854831
-        z: 577.27734
-      - x: 567.08856
+        z: 576.90735
+      - x: 570.7185
         y: 0.944234
-        z: 577.22284
-      - x: 567.0482
+        z: 576.85284
+      - x: 570.67816
         y: 0.9029852
-        z: 577.16833
-      - x: 567.0079
+        z: 576.79834
+      - x: 570.6378
         y: 0.8617363
-        z: 577.1139
-      - x: 566.93024
+        z: 576.7439
+      - x: 570.5602
         y: 1.1092296
-        z: 577.4408
-      - x: 566.9705
+        z: 577.0708
+      - x: 570.60046
         y: 1.0679806
-        z: 577.3863
-      - x: 567.01086
+        z: 577.0163
+      - x: 570.6408
         y: 1.0267316
-        z: 577.33185
-      - x: 567.0512
+        z: 576.96185
+      - x: 570.68115
         y: 0.9854826
-        z: 577.27734
-      - x: 567.0915
+        z: 576.90735
+      - x: 570.72144
         y: 0.94423354
-        z: 577.22284
-      - x: 567.13184
+        z: 576.85284
+      - x: 570.7618
         y: 0.90298474
-        z: 577.16833
-      - x: 567.1722
+        z: 576.79834
+      - x: 570.8021
         y: 0.8617357
-        z: 577.1139
+        z: 576.7439
       attributes:
       - Value: 1
       - Value: 2
@@ -6273,6 +6274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326902620}
   - component: {fileID: 326902621}
+  - component: {fileID: 326902622}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6308,6 +6310,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeScale: 1
+--- !u!114 &326902622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326902618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353489aed2f6f7a45a1c64823f52c692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!4 &333008054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2360086540714841371, guid: 8cc123bafe5c1374588376550beadbe2,
@@ -7858,7 +7873,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 567.09
+      value: 570.72
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
@@ -7868,7 +7883,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 577.5
+      value: 577.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
@@ -9111,10 +9126,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 392723824}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb76427b4c26445408b881c48f692754,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 392723820}
   m_SourcePrefab: {fileID: 100100000, guid: cb76427b4c26445408b881c48f692754, type: 3}
 --- !u!1 &392723815 stripped
@@ -9324,19 +9335,6 @@ MonoBehaviour:
   dialogueCamera: {fileID: 525828787}
   playerFootsteps: {fileID: 529329303}
   currentDialogueIndex: 0
---- !u!114 &392723824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392723815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353489aed2f6f7a45a1c64823f52c692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thirdPersonController: {fileID: 392723819}
 --- !u!4 &393755576
 Transform:
   m_ObjectHideFlags: 0
@@ -25124,7 +25122,7 @@ Transform:
   m_GameObject: {fileID: 1099914255}
   serializedVersion: 2
   m_LocalRotation: {x: 0.03549115, y: -0.98080283, z: -0.028885597, w: -0.18955694}
-  m_LocalPosition: {x: 567.09, y: 1.423, z: 577.517}
+  m_LocalPosition: {x: 570.72, y: 1.423, z: 577.14703}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31033,7 +31031,7 @@ Transform:
   m_GameObject: {fileID: 1372618687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 567.09, y: 1.5981597, z: 577.53534}
+  m_LocalPosition: {x: 570.72, y: 1.5981597, z: 577.16534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38248,54 +38246,54 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 566.98987
+      - x: 570.821
         y: 1.4616069
-        z: 577.60345
-      - x: 566.96045
+        z: 577.02734
+      - x: 570.85046
         y: 1.3907886
-        z: 577.6184
-      - x: 566.9263
+        z: 577.01263
+      - x: 570.88477
         y: 1.3199764
-        z: 577.63385
-      - x: 566.91675
+        z: 576.9975
+      - x: 570.8945
         y: 1.2490841
-        z: 577.649
-      - x: 566.90796
+        z: 576.9824
+      - x: 570.9034
         y: 1.1781919
-        z: 577.6641
-      - x: 566.899
+        z: 576.96735
+      - x: 570.9124
         y: 1.1072999
-        z: 577.67926
-      - x: 566.8896
+        z: 576.9523
+      - x: 570.92194
         y: 1.0364077
-        z: 577.6944
-      - x: 566.88007
+        z: 576.9372
+      - x: 570.9316
         y: 0.9655156
-        z: 577.70953
-      - x: 567.1948
+        z: 576.9221
+      - x: 570.61597
         y: 1.461607
-        z: 577.6018
-      - x: 567.2204
+        z: 577.02734
+      - x: 570.5905
         y: 1.3910567
-        z: 577.617
-      - x: 567.2467
+        z: 577.01196
+      - x: 570.56433
         y: 1.3199505
-        z: 577.6321
-      - x: 567.2687
+        z: 576.9967
+      - x: 570.5425
         y: 1.2487258
-        z: 577.6467
-      - x: 567.27454
+        z: 576.9819
+      - x: 570.53674
         y: 1.1704485
-        z: 577.6627
-      - x: 567.28375
+        z: 576.9658
+      - x: 570.5277
         y: 1.0995564
-        z: 577.6777
-      - x: 567.29333
+        z: 576.95074
+      - x: 570.5182
         y: 1.0286642
-        z: 577.6927
-      - x: 567.3031
+        z: 576.9357
+      - x: 570.50854
         y: 0.957772
-        z: 577.7077
+        z: 576.92065
       attributes:
       - Value: 1
       - Value: 2
@@ -38313,7 +38311,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 2
       - Value: 2
-      maxConnectionDistance: 0.0801315
+      maxConnectionDistance: 0.080125436
       userEdit: 1
   gizmoSerializeData:
     always: 0
@@ -40836,219 +40834,219 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 567.1453
+      - x: 570.77527
         y: 1.0159276
-        z: 577.6253
-      - x: 567.1547
+        z: 577.2553
+      - x: 570.78467
         y: 0.9776484
-        z: 577.6364
-      - x: 567.1641
+        z: 577.2664
+      - x: 570.79407
         y: 0.9393513
-        z: 577.64746
-      - x: 567.17346
+        z: 577.27747
+      - x: 570.8034
         y: 0.90104187
-        z: 577.6585
-      - x: 567.18286
+        z: 577.2885
+      - x: 570.8128
         y: 0.8627248
-        z: 577.66956
-      - x: 567.1922
+        z: 577.29956
+      - x: 570.82214
         y: 0.8244026
-        z: 577.6806
-      - x: 567.18585
+        z: 577.3106
+      - x: 570.8158
         y: 1.0197554
-        z: 577.5995
-      - x: 567.2021
+        z: 577.2295
+      - x: 570.83203
         y: 0.9847181
-        z: 577.6058
-      - x: 567.2183
+        z: 577.2358
+      - x: 570.84827
         y: 0.9496417
-        z: 577.612
-      - x: 567.23456
+        z: 577.242
+      - x: 570.8645
         y: 0.91453904
-        z: 577.6182
-      - x: 567.2508
+        z: 577.2482
+      - x: 570.88074
         y: 0.87941986
-        z: 577.62445
-      - x: 567.267
+        z: 577.25446
+      - x: 570.897
         y: 0.84429
-        z: 577.6306
-      - x: 567.2007
+        z: 577.2606
+      - x: 570.8306
         y: 1.0212898
-        z: 577.5643
-      - x: 567.2194
+        z: 577.1943
+      - x: 570.84937
         y: 0.9871305
-        z: 577.5643
-      - x: 567.23816
+        z: 577.1943
+      - x: 570.8681
         y: 0.95297134
-        z: 577.5643
-      - x: 567.2569
+        z: 577.1943
+      - x: 570.88684
         y: 0.91881204
-        z: 577.5643
-      - x: 567.27563
+        z: 577.1943
+      - x: 570.9056
         y: 0.884653
-        z: 577.5643
-      - x: 567.2944
+        z: 577.1943
+      - x: 570.9243
         y: 0.85049397
-        z: 577.5643
-      - x: 567.18585
+        z: 577.1943
+      - x: 570.8158
         y: 1.0184839
-        z: 577.5248
-      - x: 567.2021
+        z: 577.1548
+      - x: 570.83203
         y: 0.98076576
-        z: 577.51355
-      - x: 567.2183
+        z: 577.14355
+      - x: 570.84827
         y: 0.94300866
-        z: 577.50226
-      - x: 567.23456
+        z: 577.13226
+      - x: 570.8645
         y: 0.9052254
-        z: 577.4909
-      - x: 567.2508
+        z: 577.1209
+      - x: 570.88074
         y: 0.8674257
-        z: 577.4796
-      - x: 567.267
+        z: 577.1096
+      - x: 570.897
         y: 0.82961506
-        z: 577.46826
-      - x: 567.1453
+        z: 577.09827
+      - x: 570.77527
         y: 1.0137252
-        z: 577.4959
-      - x: 567.1547
+        z: 577.1259
+      - x: 570.78467
         y: 0.97080296
-        z: 577.4766
-      - x: 567.1641
+        z: 577.1066
+      - x: 570.79407
         y: 0.92786264
-        z: 577.45734
-      - x: 567.17346
+        z: 577.08734
+      - x: 570.8034
         y: 0.8849102
-        z: 577.438
-      - x: 567.18286
+        z: 577.068
+      - x: 570.8128
         y: 0.84195006
-        z: 577.4187
-      - x: 567.1922
+        z: 577.0487
+      - x: 570.82214
         y: 0.7989848
-        z: 577.39935
-      - x: 567.09
+        z: 577.02936
+      - x: 570.72
         y: 1.0114118
-        z: 577.48535
-      - x: 567.09
+        z: 577.11536
+      - x: 570.72
         y: 0.96603554
-        z: 577.4632
-      - x: 567.09
+        z: 577.0932
+      - x: 570.72
         y: 0.92065936
-        z: 577.441
-      - x: 567.09
+        z: 577.071
+      - x: 570.72
         y: 0.875283
-        z: 577.4188
-      - x: 567.09
+        z: 577.0488
+      - x: 570.72
         y: 0.8299067
-        z: 577.3966
-      - x: 567.09
+        z: 577.0266
+      - x: 570.72
         y: 0.7845305
-        z: 577.37445
-      - x: 567.0347
+        z: 577.00446
+      - x: 570.6647
         y: 1.0137252
-        z: 577.4959
-      - x: 567.0253
+        z: 577.1259
+      - x: 570.6553
         y: 0.97080296
-        z: 577.4766
-      - x: 567.0159
+        z: 577.1066
+      - x: 570.6459
         y: 0.92786264
-        z: 577.45734
-      - x: 567.0066
+        z: 577.08734
+      - x: 570.63654
         y: 0.8849104
-        z: 577.438
-      - x: 566.9972
+        z: 577.068
+      - x: 570.62714
         y: 0.84195036
-        z: 577.4187
-      - x: 566.98785
+        z: 577.0487
+      - x: 570.6178
         y: 0.79898506
-        z: 577.39935
-      - x: 566.9942
+        z: 577.02936
+      - x: 570.62415
         y: 1.0184839
-        z: 577.5248
-      - x: 566.97797
+        z: 577.1548
+      - x: 570.6079
         y: 0.98076576
-        z: 577.51355
-      - x: 566.96173
+        z: 577.14355
+      - x: 570.5917
         y: 0.9430085
-        z: 577.50226
-      - x: 566.9455
+        z: 577.13226
+      - x: 570.57544
         y: 0.9052255
-        z: 577.4909
-      - x: 566.92926
+        z: 577.1209
+      - x: 570.5592
         y: 0.8674258
-        z: 577.4796
-      - x: 566.913
+        z: 577.1096
+      - x: 570.54297
         y: 0.8296151
-        z: 577.46826
-      - x: 566.9794
+        z: 577.09827
+      - x: 570.6093
         y: 1.0212897
-        z: 577.5643
-      - x: 566.96063
+        z: 577.1943
+      - x: 570.5906
         y: 0.98713064
-        z: 577.5643
-      - x: 566.9419
+        z: 577.1943
+      - x: 570.57184
         y: 0.95297134
-        z: 577.5643
-      - x: 566.92316
+        z: 577.1943
+      - x: 570.5531
         y: 0.9188121
-        z: 577.5643
-      - x: 566.9044
+        z: 577.1943
+      - x: 570.53436
         y: 0.8846531
-        z: 577.5643
-      - x: 566.8857
+        z: 577.1943
+      - x: 570.5156
         y: 0.85049397
-        z: 577.5643
-      - x: 566.9942
+        z: 577.1943
+      - x: 570.62415
         y: 1.0197554
-        z: 577.5995
-      - x: 566.97797
+        z: 577.2295
+      - x: 570.6079
         y: 0.984718
-        z: 577.6058
-      - x: 566.96173
+        z: 577.2358
+      - x: 570.5917
         y: 0.94964147
-        z: 577.612
-      - x: 566.9455
+        z: 577.242
+      - x: 570.57544
         y: 0.91453904
-        z: 577.6182
-      - x: 566.92926
+        z: 577.2482
+      - x: 570.5592
         y: 0.87942
-        z: 577.62445
-      - x: 566.913
+        z: 577.25446
+      - x: 570.54297
         y: 0.84429
-        z: 577.6306
-      - x: 567.0347
+        z: 577.2606
+      - x: 570.6647
         y: 1.0159276
-        z: 577.6253
-      - x: 567.0253
+        z: 577.2553
+      - x: 570.6553
         y: 0.97764844
-        z: 577.6364
-      - x: 567.0159
+        z: 577.2664
+      - x: 570.6459
         y: 0.9393513
-        z: 577.64746
-      - x: 567.0066
+        z: 577.27747
+      - x: 570.63654
         y: 0.9010419
-        z: 577.6585
-      - x: 566.98785
+        z: 577.2885
+      - x: 570.6178
         y: 0.8244028
-        z: 577.6806
-      - x: 567.09
+        z: 577.3106
+      - x: 570.72
         y: 1.0139549
-        z: 577.63477
-      - x: 567.09
+        z: 577.2648
+      - x: 570.72
         y: 0.9739399
-        z: 577.64764
-      - x: 567.09
+        z: 577.27765
+      - x: 570.72
         y: 0.93392503
-        z: 577.6605
-      - x: 567.09
+        z: 577.2905
+      - x: 570.72
         y: 0.8939103
-        z: 577.6734
-      - x: 567.09
+        z: 577.3034
+      - x: 570.72
         y: 0.8538954
-        z: 577.6863
-      - x: 567.09
+        z: 577.3163
+      - x: 570.72
         y: 0.81388056
-        z: 577.69916
+        z: 577.32916
       attributes:
       - Value: 1
       - Value: 2

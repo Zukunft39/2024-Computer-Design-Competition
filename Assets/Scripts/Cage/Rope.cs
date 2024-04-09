@@ -82,9 +82,6 @@ public class Rope : MonoBehaviour
     //拉伸
     private void Stretch()
     {
-#if UNITY_EDITOR
-        Debug.Log("拉伸");
-#endif
         if (length >= currentMaxLength)
         {
             state = State.Shorten;

@@ -7,6 +7,6 @@ public class TriggerChangeScene : MonoBehaviour
     [SerializeField] private string sceneName;
     public void ChangeScene()
     {
-        StartCoroutine(SceneChangeManager.instance.LoadSceneAsync(sceneName));
+        StartCoroutine(SceneChangeManager.Instance.LoadSceneAsync(sceneName));
     }
 }

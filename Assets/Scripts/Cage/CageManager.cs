@@ -226,10 +226,6 @@ public class CageManager : MonoBehaviour
             currentPanel.SetActive(true);
             Anim();
         }
-#if UNITY_EDITOR
-        else if (currentPanel == null) Debug.LogError("No Panel!");
-        else if (currentPanel.activeSelf) Debug.LogWarning("Panel(" + panelState + ") is not exist!");
-#endif
     }
     //失败
     private void LoseGame()
@@ -275,7 +271,7 @@ public class CageManager : MonoBehaviour
 #endif
         panelState = PanelState.None;
         //跳转
-        StartCoroutine(SceneChangeManager.instance.LoadSceneAsync("DemoScene"));
+        StartCoroutine(SceneChangeManager.Instance.LoadSceneAsync("DemoScene"));
     }
     public void Continue()
     {

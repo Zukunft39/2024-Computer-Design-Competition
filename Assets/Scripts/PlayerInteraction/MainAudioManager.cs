@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+// todo 修改这个为接口进行抽象类处理,太难管理了
 public class MainAudioManager : MonoBehaviour
 {
     public static MainAudioManager AudioManagerInstance;
@@ -11,7 +12,7 @@ public class MainAudioManager : MonoBehaviour
     private void Awake() {
         if(AudioManagerInstance == null){
             AudioManagerInstance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this);
         }
         else{
             Destroy(gameObject);
@@ -83,5 +84,20 @@ public class MainAudioManager : MonoBehaviour
     }
     public void DialogueVolume(float volume){
         dialogueSource.volume = volume;
+    }
+    /// <summary>
+    /// 停止播放银屏
+    /// </summary>
+    public void StopMusic(){
+        musicSource.Stop();
+    }
+    public void StopSFX(){
+        sfxSource.Stop();
+    }
+    public void StopSFXScene(){
+        sfxSceneSource.Stop();
+    }
+    public void StopDialogue(){
+        dialogueSource.Stop();
     }
 }
