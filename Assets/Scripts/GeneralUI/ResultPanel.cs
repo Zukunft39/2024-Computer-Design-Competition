@@ -40,12 +40,14 @@ public class ResultPanel : MonoBehaviour
 
     private void EnterPreviousLevel()
     {
+        SoundManager.Instance.PlaySFX("btnClick");
         maskAnimator.SetTrigger("fadeIn");
         StartCoroutine(EnterPreviousLevelCoroutine());
     }
 
     IEnumerator EnterPreviousLevelCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
+        StartCoroutine(SceneChangeManager.instance.LoadSceneAsync("DemoScene"));
     }
 }

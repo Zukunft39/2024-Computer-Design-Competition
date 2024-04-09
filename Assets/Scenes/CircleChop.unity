@@ -1729,7 +1729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.3, y: 70.4}
+  m_AnchoredPosition: {x: 13, y: 103}
   m_SizeDelta: {x: 150, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065714757
@@ -1867,6 +1867,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091071571}
   m_CullTransparentMesh: 1
+--- !u!1001 &1101247852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 218516184529908565, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7945634390397671769, guid: cda45efb1b9ff024eb17f17aedc6c544,
+        type: 2}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 858.6695
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 527.4295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.9512234
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894334655422066787, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144160719419655621, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[1]._keys
+      value: knifeCut
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[2]._keys
+      value: appr1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[3]._keys
+      value: appr2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[4]._keys
+      value: appr3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[5]._keys
+      value: appr4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[1]._values
+      value: 
+      objectReference: {fileID: 8300000, guid: 76af31c6192bd914a8680901ce224ceb, type: 3}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[2]._values
+      value: 
+      objectReference: {fileID: 8300000, guid: 45431f4338e338148aea3580384ccaa4, type: 3}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[3]._values
+      value: 
+      objectReference: {fileID: 8300000, guid: cc66274372581ad49b3638f06626e7e0, type: 3}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[4]._values
+      value: 
+      objectReference: {fileID: 8300000, guid: b7da46abbadf00d4284a1bdd2904d9a0, type: 3}
+    - target: {fileID: 5155254339915621569, guid: d789edf9b65f1a34882f86007b7440a3,
+        type: 3}
+      propertyPath: globalAudioDict.dict.Array.data[5]._values
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c2ffce595cb216468c32c0b93f8b9fc, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d789edf9b65f1a34882f86007b7440a3, type: 3}
 --- !u!114 &1245683413 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7881628507765416681, guid: 9bf3b6195eb6e9841b5d2ec47c0bee03,
@@ -3478,3 +3607,4 @@ SceneRoots:
   - {fileID: 7618148024849105534}
   - {fileID: 283091909}
   - {fileID: 818480341}
+  - {fileID: 1101247852}
