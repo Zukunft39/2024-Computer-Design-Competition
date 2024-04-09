@@ -40,6 +40,8 @@ public class GouguGameplay : MonoBehaviour
             resultTxt += $"第{i + 1}关用时：{timeArray[i]:F}秒\n";
         }
         resultPanel.ShowResultPanel(resultTxt);
+        //TODO Switch Scene
+        
     }
 
     private void Awake()

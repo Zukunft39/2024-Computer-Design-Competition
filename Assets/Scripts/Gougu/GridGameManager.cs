@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,12 +18,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
     public GameObject[] guideLines;
     public float generateRange = 2;
     public Text levelNameTxt;
-    [Range(0,1f)]
-    public float placeSfxVolume = 0.5f;
-    [Range(0,1f)]
-    public float fetchSfxVolume = 0.5f;
-    [Range(0,1f)]
-    public float approvedSfxVolume = 0.8f;
    
 
     private bool clicked;
@@ -54,10 +47,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         triangle.triType = _triType;
         var pos = triangle.transform.position;
         pos.z = -0.5f;
-        triangle.transform.position = pos;
-        
-        SoundManager.Instance.PlaySFX(GouguData.Instance.audioDict["FetchWood"],0.15f,fetchSfxVolume);
-    }
+        triangle.transform.position = pos; }
 
     void DragTri()
     {
@@ -124,7 +114,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
             curTriangle.Set2PivotPos(pivotedGrid);
             curTriangle.rotateOffset = Vector3.zero;
             curTriangle = null;
-            SoundManager.Instance.PlaySFX(GouguData.Instance.audioDict["PlaceWood"],0.15f,placeSfxVolume);
             if(Judger.Instance.JudgeIsApproved(generatedTriangles)) approvedAct();
         }
     }
@@ -142,7 +131,6 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         curTriangle = null;
         clicked = false;
         dummy.SetActive(false);
-        SoundManager.Instance.PlaySFX(cur_id!=GouguData.Instance.levels.Length-1? GouguData.Instance.audioDict[$"Approved{cur_id+1}"]:GouguData.Instance.audioDict["Final"],volume:approvedSfxVolume);
     }
 
     private void Awake()

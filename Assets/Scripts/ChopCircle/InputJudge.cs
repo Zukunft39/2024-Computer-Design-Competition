@@ -36,7 +36,7 @@ public class InputJudge : MonoBehaviour
         targetAreas = chopGameSlider.GetTargetAreas();
         if(targetAreas.Count==0)
         {
-            if(finishEvent is not null)
+            if(finishEvent!=null)
             {
                 finishEvent();
             }
@@ -54,7 +54,6 @@ public class InputJudge : MonoBehaviour
         {
             JudgeInput();
             bladeAnimator.SetTrigger("cut");
-            SoundManager.Instance.PlaySFX("knifeCut");
         }
     }
    

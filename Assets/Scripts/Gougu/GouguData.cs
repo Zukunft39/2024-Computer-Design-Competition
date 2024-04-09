@@ -7,5 +7,4 @@ public class GouguData : MonoBehaviourSingleton<GouguData>
     public float gridSize;
     public bool isDebug;
     public GouguLevelSO[] levels;
-    public SerializeableDictionary<string,AudioClip> audioDict;
 }

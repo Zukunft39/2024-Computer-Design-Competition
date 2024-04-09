@@ -14,7 +14,6 @@ public class TutorialPanel : MonoBehaviourSingleton<TutorialPanel>
    
    public void ClosePanel()
    {
-      SoundManager.Instance.PlaySFX("btnClick");
       tutoriaPanel.gameObject.SetActive(false);
       flag = false;
    }
