@@ -13,6 +13,8 @@ TagManager:
   - Bead
   - Girl
   - Door
+  - PlayerCam
+  - AudioManager
   layers:
   - Default
   - TransparentFX

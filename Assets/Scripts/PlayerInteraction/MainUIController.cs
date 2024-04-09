@@ -12,7 +12,6 @@ public class MainUIController : MonoBehaviour
     private void Awake() {
         if(mainUIControllerInstance == null){
             mainUIControllerInstance = this;
-            DontDestroyOnLoad(this);
         }
         else{
             Destroy(gameObject);

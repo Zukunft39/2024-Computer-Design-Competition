@@ -58,59 +58,35 @@ public class SceneChangeManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator LoadSceneAsync(string sceneName)
     {
-
-        Debug.Log("成功传入参数");
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         while (asyncLoad.progress < 0.9f)
         {
-            Debug.Log("Loading: " + 100 * asyncLoad.progress +"%");
             // 更新UI显示进度
             //yourProgressBar.value = progress;
-
-
             yield return null;
         }
-        if(sceneName != "DemoScene"){
-            SavePlayerPosition();
-            Debug.Log("保存玩家位置" + _PlayerTransform.position);
-        }
+        if(sceneName != "DemoScene") SavePlayerPosition();
         StartCoroutine(Init(sceneName));
     }
     public IEnumerator Init(string sceneName){
-
-        yield return new WaitForSeconds(0.25f);
-        Debug.Log("0.25秒已过,现在执行");
-
         // 通用设置
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        MainEventManager.Instance.ShowCursor();
         MainAudioManager.AudioManagerInstance.StopMusic();
         MainAudioManager.AudioManagerInstance.StopSFX();
 
         if(sceneName == "DemoScene"){
-            // 特定场景设置
-            yield return new WaitForSeconds(3f); // Separate this as it's a different delay.
-            Debug.Log("延迟三秒进入");
-            player = GameObject.FindWithTag("Player").transform;
-            //todo PlayerTransform 未获取到位置,明天来解决
-            // todo 解决中
-            if(player && _PlayerTransform)
-            {
-                Debug.Log("已找到玩家的位置"+player.transform.position);
-                Debug.Log("原位置"+ _PlayerTransform.position);
-
-                //RestorePlayerPosition(player.transform);
-                Debug.Log("还原玩家位置"+ player.transform.position);
-                MainAudioManager.AudioManagerInstance.PlayMusic("MainBackGroundMusic");
-
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            else Debug.LogError("Player or PlayerTransform not found.");
+            yield return new WaitForSeconds(0.75f); 
+            if(!player) player = GameObject.FindWithTag("Player").transform;
+            player.GetComponent<CharacterController>().enabled = false;
+            player = RestorePlayerPosition(player);
+            player.GetComponent<CharacterController>().enabled = true;
+            MainAudioManager.AudioManagerInstance.PlayMusic("MainBackGroundMusic");
+            MainEventManager.Instance.HideCursor();  
+            CameraFindPlayer.Instance.FindPlayer();
         }
+        else yield return new WaitForSeconds(0.35f);
     }
 
-    //todo 将玩家位置数据存储到JSON文件中进行读取
     /// <summary>
     /// 存储玩家位置到Json文件中
     /// </summary>
@@ -134,25 +110,19 @@ public class SceneChangeManager : MonoBehaviour
     /// </summary>
     public void SavePlayerPosition() {
         _PlayerTransform = GameObject.FindWithTag("Player").transform;
-        
-        /*if (_PlayerTransform == null)
-        {
-            Debug.LogError("_PlayerTransform is not set!");
-        }
-        if (playerData == null)
-        {
-            Debug.LogError("playerData has not been instantiated!");
-        }*/
 
         playerData.playerPosition = _PlayerTransform.position;
         playerData.playerRotation = _PlayerTransform.rotation.eulerAngles;
         playerData.playerScale = _PlayerTransform.localScale;
         SavePlayerTransformToJson(playerData);
     }
-    public void RestorePlayerPosition(Transform player) {
+    public Transform RestorePlayerPosition(Transform playerTrans) {
         playerData = LoadPlayerTransformFromJson();
-        player.position = playerData.playerPosition;
-        player.rotation = Quaternion.Euler(playerData.playerRotation);
-        player.localScale = playerData.playerScale;
+
+        playerTrans.position = playerData.playerPosition;
+        playerTrans.rotation = Quaternion.Euler(playerData.playerRotation);
+        playerTrans.localScale = playerData.playerScale;
+        return playerTrans;
     }
 }
+

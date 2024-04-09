@@ -3,21 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using System.IO;
 public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
     [SerializeField] private Transform NPCTransform;
     [SerializeField] private Transform CamTargetTransform;
-    private bool hasSpoken = false;
     private void OnTriggerEnter(Collider other){
-        if(other.CompareTag("Player") && !hasSpoken) {
+        int hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
+        if(other.CompareTag("Player") && hasSpoken == 0){
             other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform);
-            hasSpoken = true;
+            PlayerPrefs.SetInt("HasSpoken" + transform.parent.name, 1);
+            hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
         }
     }
 }
-
 [System.Serializable]
 public class DialogueString
 {
@@ -34,5 +34,4 @@ public class DialogueString
     [Header("Triggered Events")] 
     public UnityEvent startDialogueEvent;
     public UnityEvent endDialougueEvent;
-
 }

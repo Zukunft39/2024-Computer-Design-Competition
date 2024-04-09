@@ -26,10 +26,11 @@ public class DialogueManager : MonoBehaviour
 
     public int currentDialogueIndex = 0;//当前读取的对话序列
     private bool optionSelected = false;//选项被选中判定
+    
     private void Start() {
         dialogueParent.SetActive(false);
+        playerFootsteps = GameObject.FindWithTag("AudioManager").GetComponent<MainAudioManager>().sfxSource.GetComponent<AudioSource>();
     }
-
     /// <summary>
     /// 对话初始化设置
     /// </summary>
@@ -42,11 +43,10 @@ public class DialogueManager : MonoBehaviour
         animator.SetFloat("Status",1f);
         animator.SetFloat("Move Speed",0f);
         animator.SetFloat("Turn Speed",0f);
-        playerFootsteps.enabled = false;
+        if(playerFootsteps) playerFootsteps.enabled = false;
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
+        MainEventManager.Instance.ShowCursor();
+        
         TurnCameraTowardsNPC(Cam);
 
         dialogueList = textToPrint;
@@ -62,13 +62,16 @@ public class DialogueManager : MonoBehaviour
     /// 禁用按钮
     /// </summary>
     private void DisableButtons(){
-        option1Button.interactable = false;//这里我们可以写成取消显示Button
-        option2Button.interactable = false;
-        option1Button.gameObject.SetActive(false);
-        option2Button.gameObject.SetActive(false);
-
-        option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
-        option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
+        if(option1Button){
+            option1Button.interactable = false;//这里我们可以写成取消显示Button
+            option1Button.gameObject.SetActive(false);
+            option1Button.GetComponentInChildren<TMP_Text>().text = "No Option";
+        }
+        if(option2Button){
+            option2Button.interactable = false;   
+            option2Button.gameObject.SetActive(false);
+            option2Button.GetComponentInChildren<TMP_Text>().text = "No Option";
+        }  
     }
     private void RotateToPlayer(Transform NPC){
         Vector3 directionToNPC = NPC.position - transform.position;
@@ -80,8 +83,7 @@ public class DialogueManager : MonoBehaviour
             NPC.rotation = quaternionToPlayer * additionalRotation;
         }
         else{
-            NPC.rotation = Quaternion.LookRotation(directionToPlayer); 
-            Debug.Log(NPC.tag);        
+            NPC.rotation = Quaternion.LookRotation(directionToPlayer);
         }
     }
     /// <summary>
@@ -176,8 +178,7 @@ public class DialogueManager : MonoBehaviour
         thirdPersonController.enabled = true;
         playerFootsteps.enabled = true;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        MainEventManager.Instance.HideCursor();
 
         dialogueCamera.Priority = 0;
         dialogueCamera.LookAt = null;

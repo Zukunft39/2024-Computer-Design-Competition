@@ -6,12 +6,26 @@ using System;
 // todo 修改这个为接口进行抽象类处理,太难管理了
 public class MainAudioManager : MonoBehaviour
 {
-    public static MainAudioManager AudioManagerInstance;
+    private static MainAudioManager _AudioManagerInstance;
+    public static MainAudioManager AudioManagerInstance{
+        get{
+            if (_AudioManagerInstance == null)
+            {
+                _AudioManagerInstance = FindObjectOfType<MainAudioManager>();
+                if (_AudioManagerInstance == null)
+                {
+                    GameObject singletonObject = new GameObject(typeof(MainAudioManager).Name);
+                    _AudioManagerInstance = singletonObject.AddComponent<MainAudioManager>();
+                }
+            }
+            return _AudioManagerInstance;
+        }
+    }
     public Sound[] musicSounds,sfxSounds,sfxSceneSounds,dialogue;
     public AudioSource musicSource,sfxSource,sfxSceneSource,dialogueSource;
     private void Awake() {
-        if(AudioManagerInstance == null){
-            AudioManagerInstance = this;
+        if(_AudioManagerInstance == null){
+            _AudioManagerInstance = this as MainAudioManager;
             DontDestroyOnLoad(this);
         }
         else{
@@ -86,8 +100,9 @@ public class MainAudioManager : MonoBehaviour
         dialogueSource.volume = volume;
     }
     /// <summary>
-    /// 停止播放银屏
+    /// 停止播放音频
     /// </summary>
+    //todo 这里可以使用接口优化
     public void StopMusic(){
         musicSource.Stop();
     }

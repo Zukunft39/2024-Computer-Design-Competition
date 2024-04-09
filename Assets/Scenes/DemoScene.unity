@@ -3360,7 +3360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.5, z: -1}
+  m_FollowOffset: {x: 0, y: 2.500086, z: -1.000442}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -4614,36 +4614,36 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 570.7976
+      - x: 572.71967
         y: 1.4108515
-        z: 577.18494
-      - x: 570.79596
+        z: 577.3339
+      - x: 572.718
         y: 1.392363
-        z: 577.18494
-      - x: 570.7944
+        z: 577.3339
+      - x: 572.71643
         y: 1.3738741
-        z: 577.18494
-      - x: 570.7927
+        z: 577.3339
+      - x: 572.7148
         y: 1.3553854
-        z: 577.18494
-      - x: 570.79114
+        z: 577.3339
+      - x: 572.7132
         y: 1.3368967
-        z: 577.18494
-      - x: 570.6343
+        z: 577.3339
+      - x: 572.55634
         y: 1.4064666
-        z: 577.17944
-      - x: 570.6363
+        z: 577.3284
+      - x: 572.55835
         y: 1.389707
-        z: 577.17944
-      - x: 570.6383
+        z: 577.3284
+      - x: 572.56036
         y: 1.3729476
-        z: 577.17944
-      - x: 570.6404
+        z: 577.3284
+      - x: 572.56244
         y: 1.3561885
-        z: 577.17944
-      - x: 570.6424
+        z: 577.3284
+      - x: 572.56445
         y: 1.339429
-        z: 577.17944
+        z: 577.3284
       attributes:
       - Value: 1
       - Value: 2
@@ -5525,7 +5525,7 @@ GameObject:
   - component: {fileID: 299958072}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5564,7 +5564,7 @@ MonoBehaviour:
   musicSounds:
   - name: MainBackGroundMusic
     character: System
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 22a23c7316736e044969bc9f73c8b40d, type: 3}
   sfxSounds:
   - name: Walk
     character: System
@@ -5996,48 +5996,48 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 570.87976
+      - x: 572.8018
         y: 1.10923
-        z: 577.0708
-      - x: 570.8395
+        z: 577.2198
+      - x: 572.76154
         y: 1.067981
-        z: 577.0163
-      - x: 570.79913
+        z: 577.1653
+      - x: 572.7212
         y: 1.0267321
-        z: 576.96185
-      - x: 570.7588
+        z: 577.11084
+      - x: 572.68085
         y: 0.9854831
-        z: 576.90735
-      - x: 570.7185
+        z: 577.05634
+      - x: 572.64056
         y: 0.944234
-        z: 576.85284
-      - x: 570.67816
+        z: 577.00183
+      - x: 572.6002
         y: 0.9029852
-        z: 576.79834
-      - x: 570.6378
+        z: 576.9473
+      - x: 572.5599
         y: 0.8617363
-        z: 576.7439
-      - x: 570.5602
+        z: 576.8929
+      - x: 572.48224
         y: 1.1092296
-        z: 577.0708
-      - x: 570.60046
+        z: 577.2198
+      - x: 572.5225
         y: 1.0679806
-        z: 577.0163
-      - x: 570.6408
+        z: 577.1653
+      - x: 572.56287
         y: 1.0267316
-        z: 576.96185
-      - x: 570.68115
+        z: 577.11084
+      - x: 572.6032
         y: 0.9854826
-        z: 576.90735
-      - x: 570.72144
+        z: 577.05634
+      - x: 572.6435
         y: 0.94423354
-        z: 576.85284
-      - x: 570.7618
+        z: 577.00183
+      - x: 572.68384
         y: 0.90298474
-        z: 576.79834
-      - x: 570.8021
+        z: 576.9473
+      - x: 572.7242
         y: 0.8617357
-        z: 576.7439
+        z: 576.8929
       attributes:
       - Value: 1
       - Value: 2
@@ -6322,7 +6322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353489aed2f6f7a45a1c64823f52c692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 392723817}
+  playerData:
+    playerPosition: {x: 0, y: 0, z: 0}
+    playerRotation: {x: 0, y: 0, z: 0}
+    playerScale: {x: 0, y: 0, z: 0}
 --- !u!4 &333008054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2360086540714841371, guid: 8cc123bafe5c1374588376550beadbe2,
@@ -7873,7 +7877,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 570.72
+      value: 572.642
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
@@ -7883,7 +7887,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 577.13
+      value: 577.279
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
@@ -9333,7 +9337,7 @@ MonoBehaviour:
   thirdPersonController: {fileID: 392723819}
   animator: {fileID: 392723816}
   dialogueCamera: {fileID: 525828787}
-  playerFootsteps: {fileID: 529329303}
+  playerFootsteps: {fileID: 0}
   currentDialogueIndex: 0
 --- !u!4 &393755576
 Transform:
@@ -13796,7 +13800,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16475,7 +16479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.5, z: -1}
+  m_FollowOffset: {x: 0, y: 2.500086, z: -1.000442}
   m_XDamping: 2
   m_YDamping: 2
   m_ZDamping: 2
@@ -23915,7 +23919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.5, z: -1}
+  m_FollowOffset: {x: 0, y: 2.500086, z: -1.000442}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -25106,8 +25110,9 @@ GameObject:
   - component: {fileID: 1099914256}
   - component: {fileID: 1099914257}
   - component: {fileID: 1099914258}
+  - component: {fileID: 1099914259}
   m_Layer: 0
-  m_Name: Virtual Camera
+  m_Name: First Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25122,7 +25127,7 @@ Transform:
   m_GameObject: {fileID: 1099914255}
   serializedVersion: 2
   m_LocalRotation: {x: 0.03549115, y: -0.98080283, z: -0.028885597, w: -0.18955694}
-  m_LocalPosition: {x: 570.72, y: 1.423, z: 577.14703}
+  m_LocalPosition: {x: 572.642, y: 1.423, z: 577.296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25205,6 +25210,19 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!114 &1099914259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099914255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5297e23d92d1b4e84733c3216aea49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTrans: {fileID: 0}
 --- !u!4 &1102717940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319551059964785097, guid: cb76427b4c26445408b881c48f692754,
@@ -31031,7 +31049,7 @@ Transform:
   m_GameObject: {fileID: 1372618687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 570.72, y: 1.5981597, z: 577.16534}
+  m_LocalPosition: {x: 572.642, y: 1.5981597, z: 577.31433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32556,7 +32574,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.71, y: 1.97, z: -1.9079998}
-  m_LocalScale: {x: 3.4007819, y: 3.7668974, z: 1}
+  m_LocalScale: {x: 4.2417955, y: 3.7668974, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1347279353}
@@ -40834,219 +40852,219 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 570.77527
+      - x: 572.6973
         y: 1.0159276
-        z: 577.2553
-      - x: 570.78467
+        z: 577.4043
+      - x: 572.7067
         y: 0.9776484
-        z: 577.2664
-      - x: 570.79407
+        z: 577.4154
+      - x: 572.7161
         y: 0.9393513
-        z: 577.27747
-      - x: 570.8034
+        z: 577.42645
+      - x: 572.72546
         y: 0.90104187
-        z: 577.2885
-      - x: 570.8128
+        z: 577.4375
+      - x: 572.73486
         y: 0.8627248
-        z: 577.29956
-      - x: 570.82214
+        z: 577.44855
+      - x: 572.7442
         y: 0.8244026
-        z: 577.3106
-      - x: 570.8158
+        z: 577.4596
+      - x: 572.73785
         y: 1.0197554
-        z: 577.2295
-      - x: 570.83203
+        z: 577.3785
+      - x: 572.7541
         y: 0.9847181
-        z: 577.2358
-      - x: 570.84827
+        z: 577.38477
+      - x: 572.7703
         y: 0.9496417
-        z: 577.242
-      - x: 570.8645
+        z: 577.391
+      - x: 572.78656
         y: 0.91453904
-        z: 577.2482
-      - x: 570.88074
+        z: 577.3972
+      - x: 572.8028
         y: 0.87941986
-        z: 577.25446
-      - x: 570.897
+        z: 577.40344
+      - x: 572.81903
         y: 0.84429
-        z: 577.2606
-      - x: 570.8306
+        z: 577.4096
+      - x: 572.7527
         y: 1.0212898
-        z: 577.1943
-      - x: 570.84937
+        z: 577.34326
+      - x: 572.7714
         y: 0.9871305
-        z: 577.1943
-      - x: 570.8681
+        z: 577.34326
+      - x: 572.79016
         y: 0.95297134
-        z: 577.1943
-      - x: 570.88684
+        z: 577.34326
+      - x: 572.8089
         y: 0.91881204
-        z: 577.1943
-      - x: 570.9056
+        z: 577.34326
+      - x: 572.82764
         y: 0.884653
-        z: 577.1943
-      - x: 570.9243
+        z: 577.34326
+      - x: 572.8464
         y: 0.85049397
-        z: 577.1943
-      - x: 570.8158
+        z: 577.34326
+      - x: 572.73785
         y: 1.0184839
-        z: 577.1548
-      - x: 570.83203
+        z: 577.3038
+      - x: 572.7541
         y: 0.98076576
-        z: 577.14355
-      - x: 570.84827
+        z: 577.29254
+      - x: 572.7703
         y: 0.94300866
-        z: 577.13226
-      - x: 570.8645
+        z: 577.28125
+      - x: 572.78656
         y: 0.9052254
-        z: 577.1209
-      - x: 570.88074
+        z: 577.2699
+      - x: 572.8028
         y: 0.8674257
-        z: 577.1096
-      - x: 570.897
+        z: 577.2586
+      - x: 572.81903
         y: 0.82961506
-        z: 577.09827
-      - x: 570.77527
+        z: 577.24725
+      - x: 572.6973
         y: 1.0137252
-        z: 577.1259
-      - x: 570.78467
+        z: 577.2749
+      - x: 572.7067
         y: 0.97080296
-        z: 577.1066
-      - x: 570.79407
+        z: 577.2556
+      - x: 572.7161
         y: 0.92786264
-        z: 577.08734
-      - x: 570.8034
+        z: 577.2363
+      - x: 572.72546
         y: 0.8849102
-        z: 577.068
-      - x: 570.8128
+        z: 577.217
+      - x: 572.73486
         y: 0.84195006
-        z: 577.0487
-      - x: 570.82214
+        z: 577.1977
+      - x: 572.7442
         y: 0.7989848
-        z: 577.02936
-      - x: 570.72
+        z: 577.17834
+      - x: 572.642
         y: 1.0114118
-        z: 577.11536
-      - x: 570.72
+        z: 577.26434
+      - x: 572.642
         y: 0.96603554
-        z: 577.0932
-      - x: 570.72
+        z: 577.2422
+      - x: 572.642
         y: 0.92065936
-        z: 577.071
-      - x: 570.72
+        z: 577.22
+      - x: 572.642
         y: 0.875283
-        z: 577.0488
-      - x: 570.72
+        z: 577.1978
+      - x: 572.642
         y: 0.8299067
-        z: 577.0266
-      - x: 570.72
+        z: 577.1756
+      - x: 572.642
         y: 0.7845305
-        z: 577.00446
-      - x: 570.6647
+        z: 577.15344
+      - x: 572.58673
         y: 1.0137252
-        z: 577.1259
-      - x: 570.6553
+        z: 577.2749
+      - x: 572.57733
         y: 0.97080296
-        z: 577.1066
-      - x: 570.6459
+        z: 577.2556
+      - x: 572.56793
         y: 0.92786264
-        z: 577.08734
-      - x: 570.63654
+        z: 577.2363
+      - x: 572.5586
         y: 0.8849104
-        z: 577.068
-      - x: 570.62714
+        z: 577.217
+      - x: 572.5492
         y: 0.84195036
-        z: 577.0487
-      - x: 570.6178
+        z: 577.1977
+      - x: 572.53986
         y: 0.79898506
-        z: 577.02936
-      - x: 570.62415
+        z: 577.17834
+      - x: 572.5462
         y: 1.0184839
-        z: 577.1548
-      - x: 570.6079
+        z: 577.3038
+      - x: 572.52997
         y: 0.98076576
-        z: 577.14355
-      - x: 570.5917
+        z: 577.29254
+      - x: 572.51373
         y: 0.9430085
-        z: 577.13226
-      - x: 570.57544
+        z: 577.28125
+      - x: 572.4975
         y: 0.9052255
-        z: 577.1209
-      - x: 570.5592
+        z: 577.2699
+      - x: 572.48126
         y: 0.8674258
-        z: 577.1096
-      - x: 570.54297
+        z: 577.2586
+      - x: 572.465
         y: 0.8296151
-        z: 577.09827
-      - x: 570.6093
+        z: 577.24725
+      - x: 572.5314
         y: 1.0212897
-        z: 577.1943
-      - x: 570.5906
+        z: 577.34326
+      - x: 572.51263
         y: 0.98713064
-        z: 577.1943
-      - x: 570.57184
+        z: 577.34326
+      - x: 572.4939
         y: 0.95297134
-        z: 577.1943
-      - x: 570.5531
+        z: 577.34326
+      - x: 572.47516
         y: 0.9188121
-        z: 577.1943
-      - x: 570.53436
+        z: 577.34326
+      - x: 572.4564
         y: 0.8846531
-        z: 577.1943
-      - x: 570.5156
+        z: 577.34326
+      - x: 572.4377
         y: 0.85049397
-        z: 577.1943
-      - x: 570.62415
+        z: 577.34326
+      - x: 572.5462
         y: 1.0197554
-        z: 577.2295
-      - x: 570.6079
+        z: 577.3785
+      - x: 572.52997
         y: 0.984718
-        z: 577.2358
-      - x: 570.5917
+        z: 577.38477
+      - x: 572.51373
         y: 0.94964147
-        z: 577.242
-      - x: 570.57544
+        z: 577.391
+      - x: 572.4975
         y: 0.91453904
-        z: 577.2482
-      - x: 570.5592
+        z: 577.3972
+      - x: 572.48126
         y: 0.87942
-        z: 577.25446
-      - x: 570.54297
+        z: 577.40344
+      - x: 572.465
         y: 0.84429
-        z: 577.2606
-      - x: 570.6647
+        z: 577.4096
+      - x: 572.58673
         y: 1.0159276
-        z: 577.2553
-      - x: 570.6553
+        z: 577.4043
+      - x: 572.57733
         y: 0.97764844
-        z: 577.2664
-      - x: 570.6459
+        z: 577.4154
+      - x: 572.56793
         y: 0.9393513
-        z: 577.27747
-      - x: 570.63654
+        z: 577.42645
+      - x: 572.5586
         y: 0.9010419
-        z: 577.2885
-      - x: 570.6178
+        z: 577.4375
+      - x: 572.53986
         y: 0.8244028
-        z: 577.3106
-      - x: 570.72
+        z: 577.4596
+      - x: 572.642
         y: 1.0139549
-        z: 577.2648
-      - x: 570.72
+        z: 577.41376
+      - x: 572.642
         y: 0.9739399
-        z: 577.27765
-      - x: 570.72
+        z: 577.42664
+      - x: 572.642
         y: 0.93392503
-        z: 577.2905
-      - x: 570.72
+        z: 577.4395
+      - x: 572.642
         y: 0.8939103
-        z: 577.3034
-      - x: 570.72
+        z: 577.4524
+      - x: 572.642
         y: 0.8538954
-        z: 577.3163
-      - x: 570.72
+        z: 577.4653
+      - x: 572.642
         y: 0.81388056
-        z: 577.32916
+        z: 577.47815
       attributes:
       - Value: 1
       - Value: 2
@@ -41351,16 +41369,6 @@ MonoBehaviour:
         m_Calls: []
     endDialougueEvent:
       m_PersistentCalls:
-        m_Calls: []
-  - text: 
-    isEnd: 0
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
-    option1IndexJump: 0
-    option2IndexJump: 0
-    startDialogueEvent:
-      m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1896706771}
           m_TargetAssemblyTypeName: TriggerChangeScene, Assembly-CSharp
@@ -41374,9 +41382,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    endDialougueEvent:
-      m_PersistentCalls:
-        m_Calls: []
   NPCTransform: {fileID: 2398847186095435850}
   CamTargetTransform: {fileID: 0}
 --- !u!114 &1896706771
@@ -43827,7 +43832,7 @@ GameObject:
   - component: {fileID: 2023919528}
   m_Layer: 8
   m_Name: First Camera Target
-  m_TagString: Untagged
+  m_TagString: PlayerCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

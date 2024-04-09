@@ -122,8 +122,15 @@ public class CageManager : MonoBehaviour
     //初始化
     private void Init()
     {
-        timer = 61f;
-        timerText.text = "60s";
+        
+        // timer = 61f;
+        // timerText.text = "60s";
+
+        //测试使用代码
+        //todo 测试完毕后删除
+        timer = 1f;
+        timerText.text = "0s";
+
         currentChicken = 0;
         currentRabbit = 0;
 

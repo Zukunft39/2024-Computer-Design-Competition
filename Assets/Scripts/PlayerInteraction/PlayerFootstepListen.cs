@@ -5,12 +5,8 @@ using UnityEngine;
 using System;
 using Unity.VisualScripting;
 
-public class PlayerFootstepListen: MonoBehaviour
+public class PlayerFootstepListen: MonoBehaviourSingleton<PlayerFootstepListen>
 {
-    
-/// <summary>
-/// 脚步声音的监听
-/// </summary>
     public delegate void FootstepEventHander(SoundType type);
     public static event FootstepEventHander OnFootstep;
     private bool isWalkSound = false,isRunSound = false;
@@ -26,40 +22,40 @@ public class PlayerFootstepListen: MonoBehaviour
         OnFootstep -= PlayFootstepSound;
     }
     /// <summary>
-    /// 当时写的时候没注意...这个能用Switch简单优化
-    /// Todo 优化这里的算法逻辑
+    /// 播放走路声音控制变化
     /// </summary>
-    /// <param name="type"></param>
-    public void PlayFootstepSound(SoundType type){
-        if(type == SoundType.WalkSound){
-            if(MainAudioManager.AudioManagerInstance.sfxSource.isPlaying == true && MainAudioManager.AudioManagerInstance.sfxSource.clip.name == "WalkSound") return;
-            else{
-                if(!isWalkSound){
-                    isRunSound = false;
-                    MainAudioManager.AudioManagerInstance.PlaySFX("Walk");
-                    isWalkSound = true;
-                }
-                else return;
-            }
+    /// <param name="type"> 声音类型 </param>
+    /// <param name="soundName"> 声音名称 </param>
+    /// <param name="currentState"> 当前状态 </param>
+    /// <param name="otherState"> 其他状态 </param>
+    private void PlaySound(SoundType type, string soundName, ref bool currentState, ref bool otherState) {
+        AudioSource sfxSource = MainAudioManager.AudioManagerInstance.sfxSource;
+        if (sfxSource.isPlaying && sfxSource.clip.name == soundName) return; // 防止重复播放
+        if (!currentState) { // 停止播放其他声音并播放当前声音
+            otherState = false;
+            currentState = true;
+            MainAudioManager.AudioManagerInstance.PlaySFX(soundName);
         }
-        else if(type == SoundType.RunSound){
-            if(MainAudioManager.AudioManagerInstance.sfxSource.isPlaying == true && MainAudioManager.AudioManagerInstance.sfxSource.clip.name == "RunSound") return;
-            else{
-                if(!isRunSound){
-                    isWalkSound = false;
-                    MainAudioManager.AudioManagerInstance.PlaySFX("Run");
-                    isRunSound = true;
-                }
-                else return;
-            }
+    }
+    private void StopAllSounds() {
+        AudioSource sfxSource = MainAudioManager.AudioManagerInstance.sfxSource;
+        if (sfxSource.isPlaying) {
+            isRunSound = false;
+            isWalkSound = false;
+            sfxSource.Stop();
         }
-        else if(type == SoundType.NoSound){
-            if(MainAudioManager.AudioManagerInstance.sfxSource.isPlaying == true){
-                isRunSound = false;
-                isWalkSound = false;
-                MainAudioManager.AudioManagerInstance.sfxSource.Stop();
-            }
-            else return;
+    }
+    public void PlayFootstepSound(SoundType type) {
+        switch (type) {
+            case SoundType.WalkSound:
+                PlaySound(type, "Walk", ref isWalkSound, ref isRunSound);
+                break;
+            case SoundType.RunSound:
+                PlaySound(type, "Run", ref isRunSound, ref isWalkSound);
+                break;
+            case SoundType.NoSound:
+                StopAllSounds();
+                break;
         }
     }
     public static void TriggerFootStep(SoundType type){
