@@ -40,7 +40,7 @@ public class ResultPanel : MonoBehaviour
 
     private void EnterPreviousLevel()
     {
-        SoundManager.Instance.PlaySFX("btnClick");
+        maskAnimator.gameObject.SetActive(true);
         maskAnimator.SetTrigger("fadeIn");
         StartCoroutine(EnterPreviousLevelCoroutine());
     }
