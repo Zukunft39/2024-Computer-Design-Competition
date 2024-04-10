@@ -26,7 +26,7 @@ public class InitialUIController : MonoBehaviour
     //开始游戏
     public void Begin()
     {
-
+        StartCoroutine(SceneChangeManager.Instance.LoadSceneAsync("DemoScene"));
     }
     //制作人界面展示
     public void Instruct()
