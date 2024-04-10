@@ -30,7 +30,7 @@ MonoBehaviour:
       radiusFrom: 100
       radiusTo: 150
       color: {r: 0.3042903, g: 1, b: 0, a: 0}
-    sliderDuration: 5
+    sliderDuration: 6
   - levelName: "\u4E09\u5B9A\u5706\u5ED3"
     targetAreaDatas:
     - distributeType: 0
@@ -91,4 +91,4 @@ MonoBehaviour:
       radiusFrom: 90
       radiusTo: 100
       color: {r: 0, g: 1, b: 0.95004964, a: 0}
-    sliderDuration: 9
+    sliderDuration: 8.5

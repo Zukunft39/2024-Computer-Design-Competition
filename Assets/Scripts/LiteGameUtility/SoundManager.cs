@@ -20,20 +20,15 @@ public class SoundManager : MonoBehaviourSingleton<SoundManager>
     public void PlaySFX(AudioClip clip,float pitchOffset=0,float volume=1)
     {
         if(clip is null) return;
-        AudioSource curSource = sfxSource.isPlaying?sfxSource2:sfxSource;
+        AudioSource curSource = sfxSource.isPlaying||pitchOffset!=0?sfxSource2:sfxSource;
         curSource.clip = clip;
-        curSource.pitch = Random.Range(1-pitchOffset,1+pitchOffset);
+        sfxSource2.pitch = Random.Range(1-pitchOffset,1+pitchOffset);
         curSource.volume = volume;
         curSource.PlayOneShot(clip);
     }
     public void PlaySFX(string clipName,float pitchOffset=0,float volume=1)
     {
         AudioClip clip = globalAudioDict[clipName];
-        if(clip is null) return;
-        AudioSource curSource = sfxSource.isPlaying?sfxSource2:sfxSource;
-        curSource.clip = clip;
-        curSource.pitch = Random.Range(1-pitchOffset,1+pitchOffset);
-        curSource.volume = volume;
-        curSource.PlayOneShot(clip);
+        PlaySFX(clip,pitchOffset,volume);
     }
 }
