@@ -37,7 +37,7 @@ public class GouguGameplay : MonoBehaviour
         string resultTxt = "";
         for (int i=0;i<timeArray.Length;i++)
         {
-            resultTxt += $"第{i + 1}关用时：{timeArray[i]:F}秒\n";
+            resultTxt += $"第{i + 1}关用时:{timeArray[i]:F}秒\n";
         }
         resultPanel.ShowResultPanel(resultTxt);
     }
@@ -57,7 +57,7 @@ public class GouguGameplay : MonoBehaviour
         if (isGaming)
         {
             float curTime = Time.time;
-            timeTxt.text = $"当前用时：{(curTime - timer):F}秒";
+            timeTxt.text = $"当前用时:{(curTime - timer):F}秒";
         }
     }
 }

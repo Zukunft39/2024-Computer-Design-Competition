@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Cinemachine;
-using DG.Tweening;
-using DG.Tweening.Core;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -74,6 +72,7 @@ public class DialogueManager : MonoBehaviour
         }  
     }
     private void RotateToPlayer(Transform NPC){
+        //todo 这里旋转还有点小问题,如果对面不转,那么有概率会转歪,之后修改成只绕着y轴转
         Vector3 directionToNPC = NPC.position - transform.position;
         Vector3 directionToPlayer = transform.position - NPC.position;
         transform.rotation = Quaternion.LookRotation(directionToNPC);
@@ -82,9 +81,10 @@ public class DialogueManager : MonoBehaviour
             Quaternion additionalRotation = Quaternion.Euler(0, 55f, 0);
             NPC.rotation = quaternionToPlayer * additionalRotation;
         }
-        else{
+        else if(NPC.tag == "Untagged"){
             NPC.rotation = Quaternion.LookRotation(directionToPlayer);
         }
+        else return; 
     }
     /// <summary>
     /// 旋转相机到NPC的位置

@@ -111,10 +111,10 @@ public class ChopCircleGamePlay : MonoBehaviour
         float totalTime=0;
         for (int i = 0; i < gamePhase; i++)
         {
-            resultTxt += $"<b>第{i + 1}关</b>\n耗时：{levelTimeList[i]:F}秒\n失误次数：{missTimeList[i]}次\n";
+            resultTxt += $"<b>第{i + 1}关</b>\n耗时:{levelTimeList[i]:F}秒\n失误次数:{missTimeList[i]}次\n";
             totalTime += levelTimeList[i];
         }
-        resultTxt += $"<b>总时间：{totalTime:F}秒</b>";
+        resultTxt += $"<b>总时间:{totalTime:F}秒</b>";
         resultPanel.ShowResultPanel(resultTxt);
     }
     
