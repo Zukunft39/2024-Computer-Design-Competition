@@ -27,8 +27,8 @@ MonoBehaviour:
       radiusTo: 250
       color: {r: 1, g: 0, b: 0, a: 0}
     - distributeType: 1
-      radiusFrom: 200
-      radiusTo: 250
+      radiusFrom: 100
+      radiusTo: 150
       color: {r: 0.3042903, g: 1, b: 0, a: 0}
     sliderDuration: 5
   - levelName: "\u4E09\u5B9A\u5706\u5ED3"
@@ -38,31 +38,31 @@ MonoBehaviour:
       radiusTo: 200
       color: {r: 1, g: 0, b: 0, a: 0}
     - distributeType: 1
-      radiusFrom: 150
-      radiusTo: 200
+      radiusFrom: 70
+      radiusTo: 100
       color: {r: 0, g: 1, b: 0.123636246, a: 0}
     - distributeType: 0
-      radiusFrom: 150
-      radiusTo: 200
+      radiusFrom: 100
+      radiusTo: 150
       color: {r: 1, g: 0.96559095, b: 0, a: 0}
     sliderDuration: 7
   - levelName: "\u56DB\u663E\u5706\u7387"
     targetAreaDatas:
     - distributeType: 1
-      radiusFrom: 100
-      radiusTo: 150
+      radiusFrom: 70
+      radiusTo: 80
       color: {r: 1, g: 0, b: 0, a: 0}
     - distributeType: 1
-      radiusFrom: 100
-      radiusTo: 150
+      radiusFrom: 70
+      radiusTo: 80
       color: {r: 0, g: 1, b: 0.19270587, a: 0}
     - distributeType: 0
       radiusFrom: 100
-      radiusTo: 150
+      radiusTo: 120
       color: {r: 1, g: 0, b: 0.93470955, a: 0}
     - distributeType: 0
       radiusFrom: 100
-      radiusTo: 150
+      radiusTo: 120
       color: {r: 0, g: 0.26723528, b: 1, a: 0}
     sliderDuration: 8
   - levelName: "\u4E94\u51FA\u5706\u5F62"
@@ -72,23 +72,23 @@ MonoBehaviour:
       radiusTo: 150
       color: {r: 1, g: 0, b: 0, a: 0}
     - distributeType: 1
-      radiusFrom: 100
-      radiusTo: 150
+      radiusFrom: 80
+      radiusTo: 90
       color: {r: 0.12834764, g: 1, b: 0, a: 0}
     - distributeType: 0
       radiusFrom: 100
-      radiusTo: 150
+      radiusTo: 120
       color: {r: 0.891067, g: 1, b: 0, a: 0}
     - distributeType: 1
-      radiusFrom: 100
-      radiusTo: 150
+      radiusFrom: 50
+      radiusTo: 60
       color: {r: 0.047379494, g: 0, b: 1, a: 0}
     - distributeType: 1
-      radiusFrom: 100
-      radiusTo: 150
+      radiusFrom: 50
+      radiusTo: 50
       color: {r: 1, g: 0, b: 0.8365736, a: 0}
     - distributeType: 0
-      radiusFrom: 100
-      radiusTo: 150
+      radiusFrom: 90
+      radiusTo: 100
       color: {r: 0, g: 1, b: 0.95004964, a: 0}
     sliderDuration: 9
