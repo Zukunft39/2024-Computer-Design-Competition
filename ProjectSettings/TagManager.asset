@@ -15,6 +15,7 @@ TagManager:
   - Door
   - PlayerCam
   - AudioManager
+  - NPC
   layers:
   - Default
   - TransparentFX
