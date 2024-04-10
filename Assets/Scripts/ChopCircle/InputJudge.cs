@@ -54,7 +54,7 @@ public class InputJudge : MonoBehaviour
         {
             JudgeInput();
             bladeAnimator.SetTrigger("cut");
-            SoundManager.Instance.PlaySFX("knifeCut");
+            SoundManager.Instance.PlaySFX("knifeCut",0.12f);
         }
     }
    
