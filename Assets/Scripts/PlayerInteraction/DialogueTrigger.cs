@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
         int hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
         if(other.CompareTag("Player") && hasSpoken == 0){
             other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform);
+            other.transform.rotation = Quaternion.Euler(other.transform.rotation.x, 0, other.transform.rotation.z);
             PlayerPrefs.SetInt("HasSpoken" + transform.parent.name, 1);
             hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
         }
