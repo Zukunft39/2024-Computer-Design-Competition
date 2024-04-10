@@ -98,11 +98,13 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
                 curTriangle.transform.position = Vector3.Lerp(pos+(Vector3)offset+ (Vector3)curTriangle.rotateOffset, curTriangle.transform.position, smoothFactor);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    SoundManager.Instance.PlaySFX("cut",0.1f,fetchSfxVolume);
                     curTriangle.Rotate(pos);
                 }
 
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
+                    SoundManager.Instance.PlaySFX("cut",0.1f,fetchSfxVolume);
                     curTriangle.Rotate(pos,false);
                 }
 
@@ -112,6 +114,7 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
                     curTriangle.DeleteTri();
                     curTriangle = null;
                     clicked = false;
+                    SoundManager.Instance.PlaySFX("cut",0.1f,fetchSfxVolume);
                     if(Judger.Instance.JudgeIsApproved(generatedTriangles)) approvedAct();
                 }
             }
