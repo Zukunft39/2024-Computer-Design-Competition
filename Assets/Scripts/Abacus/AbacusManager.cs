@@ -181,11 +181,12 @@ public class AbacusManager : MonoBehaviour
     //关于退出
     public void Exit()
     {
-        tCanvas.SetActive(false);
-        bCanvas.SetActive(false);
+        tCanvas.SetActive(true);
+        bCanvas.SetActive(true);
         isPause = false;
 
         //跳转
+        StartCoroutine(SceneChangeManager.Instance.LoadSceneAsync("DemoScene"));
     }
     //关于帮助
     public void Help()

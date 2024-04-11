@@ -6,6 +6,7 @@ using System.Linq;
 public class MainEventManager : MonoBehaviour
 {
     public float timeScale = 1;
+    public GameObject BeginCanvas;
     private static MainEventManager instance;
     public static MainEventManager Instance{
         get{
@@ -37,10 +38,10 @@ public class MainEventManager : MonoBehaviour
         }
     }
     void Start() {
-        HideCursor();
+        ShowGameStartPanel();
     }
     void Update() {
-        TimeScale();
+        
     }
     void OnApplicationQuit() {
         PlayerPrefs.DeleteAll();
@@ -69,6 +70,10 @@ public class MainEventManager : MonoBehaviour
             npcCount++;
         }
         return NPCNum.All(x => x == NPCNum[0]);
+    }
+    public void ShowGameStartPanel(){
+        ShowCursor();
+        BeginCanvas.SetActive(true);
     }
     public void ShowGameOverPanel(){
         
