@@ -52,8 +52,10 @@ public class Rope : MonoBehaviour
         if (state == State.Shorten) Shorten();
         else if(state == State.None)
         {
-            if (Input.GetKeyUp(KeyCode.Space)) state = State.Stretch;
-
+            if (Input.GetKeyUp(KeyCode.Space)){
+                state = State.Stretch;
+                MainAudioManager.AudioManagerInstance.PlaySFXScene("Rope");
+            }
             Rotate();
             Switch();
         }
@@ -81,7 +83,7 @@ public class Rope : MonoBehaviour
 
     //拉伸
     private void Stretch()
-    {
+    {   
         if (length >= currentMaxLength)
         {
             state = State.Shorten;

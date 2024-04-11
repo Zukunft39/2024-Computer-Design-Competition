@@ -63,12 +63,12 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         isForward = CalculateForward();
-        MainUIController.mainUIControllerInstance.GenerateDoorButton();
+        MainUIController.Instance.GenerateDoorButton();
         isOpenDoorInfo = true;
         Debug.Log("进入触发器,进行前后位置判断");
     }
     private void OnTriggerExit(Collider other) {
-        MainUIController.mainUIControllerInstance.DesTroyDoorButton();
+        MainUIController.Instance.DesTroyDoorButton();
         isOpenDoorInfo = false;
         Close();
         Debug.Log("退出触发器判断");
@@ -79,7 +79,7 @@ public class Door : MonoBehaviour
                 Open();
                 isOpen = true;
                 isOpenDoorInfo = false;
-                MainUIController.mainUIControllerInstance.DesTroyDoorButton();
+                MainUIController.Instance.DesTroyDoorButton();
             }
         }
         else return;

@@ -16,6 +16,8 @@ TagManager:
   - PlayerCam
   - AudioManager
   - NPC
+  - BlackStartPanel
+  - BlackEndPanel
   layers:
   - Default
   - TransparentFX

@@ -145,13 +145,13 @@ public class CageManager : MonoBehaviour
     }
     private void Check()
     {
-        if (currentChicken == chicken && currentRabbit == rabbit && timer > 0)
+        if (currentChicken == chicken && currentRabbit == rabbit && timer > 0 && isBegin)
         {
             //UI显示
             WinGame();
 
             isBegin = false;
-
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("GameEnd");
             if (state != null) state.Over();
         }
         else if(timer <= 0 && isBegin)
@@ -159,6 +159,7 @@ public class CageManager : MonoBehaviour
             LoseGame();
 
             isBegin = false;
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("GameEnd");
         }
     }
     private void InstantiateObjC()
@@ -200,7 +201,7 @@ public class CageManager : MonoBehaviour
                 currentPanel = panels[2];
                 break;
             case "Win":
-                currentPanel = panels[3];
+                currentPanel = panels[3]; 
                 break;
             case "None":
                 break;

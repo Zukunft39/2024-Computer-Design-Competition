@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using DG.Tweening;
 
 public class MainEventManager : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class MainEventManager : MonoBehaviour
         Time.timeScale = timeScale;
     }
     /// <summary>
-    /// 判断游戏是否达到游戏判定胜利条件,如果是则返回true
+    /// 判断游戏是否达到游戏判定胜利条件,如果是则返回true,暂时用别的方法实现了
     /// </summary>
     /// <returns></returns>
     public bool GameEnds(){
@@ -74,8 +75,5 @@ public class MainEventManager : MonoBehaviour
     public void ShowGameStartPanel(){
         ShowCursor();
         BeginCanvas.SetActive(true);
-    }
-    public void ShowGameOverPanel(){
-        
     }
 }

@@ -8,17 +8,37 @@ using TMPro;
 
 public class MainUIController : MonoBehaviour
 {
-    public static MainUIController mainUIControllerInstance;
     public Slider _musicSlider,_sfxSlider,_dialogueSlider;
     public Image fDoorButton;
     public Image blackPanelStart;
     public Image blackPanelEnd;
-    private void Awake() {
-        if(mainUIControllerInstance == null){
-            mainUIControllerInstance = this;
+    private static MainUIController instance;
+    public static MainUIController Instance{
+        get{
+            if (instance == null)
+            {
+                instance = FindObjectOfType<MainUIController>();
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject(typeof(MainUIController).Name);
+                    instance = singletonObject.AddComponent<MainUIController>();
+                }
+            }
+            return instance;
         }
-        else{
-            Destroy(gameObject);
+    }
+    protected virtual void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this as MainUIController;
+        }
+        else
+        {
+            if (this != instance)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 /// <summary>
@@ -64,8 +84,10 @@ public class MainUIController : MonoBehaviour
         StartCoroutine(ShowDialogueStart());
     }
     public void ShowBlackEndPanel(){
-        blackPanelStart.gameObject.SetActive(true);
-        blackPanelStart.DOFade(1,2).SetEase(Ease.Linear);
+        blackPanelEnd = GameObject.FindWithTag("BlackEndPanel").GetComponent<Image>();
+        Debug.Log(blackPanelEnd.transform.position);
+        blackPanelEnd.gameObject.SetActive(true);
+        blackPanelEnd.DOFade(1,2).SetEase(Ease.Linear);
         StartCoroutine(ShowDialogueEnd());
     }
     public IEnumerator ShowDialogueStart(){
@@ -90,5 +112,6 @@ public class MainUIController : MonoBehaviour
             temp.GetComponent<TextMeshProUGUI>().DOFade(0,2).SetEase(Ease.Linear).OnComplete(()=>temp.gameObject.SetActive(false));
             yield return new WaitForSeconds(2);
         }
+        InitialUIController.Instance.ShitToShowPanel();
     }
 }

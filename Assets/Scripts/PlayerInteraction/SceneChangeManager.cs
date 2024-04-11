@@ -82,9 +82,11 @@ public class SceneChangeManager : MonoBehaviour
             player.GetComponent<CharacterController>().enabled = true;
             MainAudioManager.AudioManagerInstance.PlayMusic("MainBackGroundMusic");
             MainEventManager.Instance.HideCursor();  
-            CameraFindPlayer.Instance.FindPlayer();
         }
-        else yield return new WaitForSeconds(0.35f);
+        else{
+            MainAudioManager.AudioManagerInstance.PlayMusic("SceneMusic");
+            yield return new WaitForSeconds(0.35f);
+        }
     }
 
     /// <summary>

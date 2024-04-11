@@ -8,14 +8,13 @@ public class Hook : MonoBehaviour
     private void Start()
     {
         rope = transform.parent.GetComponent<Rope>();
-#if UNITY_EDITOR
-        if (rope == null) Debug.LogError("The 'rope' script is not loaded or mounted successfully.");
-#endif
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.CompareTag("Chicken") && rope.CheckLength()) || (collision.CompareTag("Rabbit") && !rope.CheckLength()))
         {
+            if (collision.CompareTag("Chicken")) MainAudioManager.AudioManagerInstance.PlaySFXScene("Chicken");
+            else if (collision.CompareTag("Rabbit")) MainAudioManager.AudioManagerInstance.PlaySFXScene("Rabbit");
             Move move = collision.GetComponent<Move>();
 #if UNITY_EDITOR
             if (move == null) Debug.LogError("" + collision.name + "have no Move Script");

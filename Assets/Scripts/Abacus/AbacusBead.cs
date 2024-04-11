@@ -30,6 +30,7 @@ public class AbacusBead
             Transform.anchoredPosition += targetPos;
             RectTransform rectTransform = obj.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = Transform.anchoredPosition;
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("Abacus");
         }
 #if UNITY_EDITOR
         else Debug.LogError("No AbacusBead Prefab!");
@@ -42,6 +43,7 @@ public class AbacusBead
             Transform.anchoredPosition = originPos;
             RectTransform rectTransform = obj.GetComponent<RectTransform>();
             rectTransform = Transform;
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("Abacus");
         }
 #if UNITY_EDITOR
         else Debug.LogError("No AbacueBead Prefab!");

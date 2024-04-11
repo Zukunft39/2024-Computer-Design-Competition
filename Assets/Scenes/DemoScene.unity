@@ -4970,36 +4970,36 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 526.85236
-        y: 3.7708514
-        z: 576.11505
-      - x: 526.854
-        y: 3.7523627
-        z: 576.11505
-      - x: 526.8556
-        y: 3.7338738
-        z: 576.11505
-      - x: 526.85724
-        y: 3.7153854
-        z: 576.11505
-      - x: 526.8588
-        y: 3.6968966
-        z: 576.11505
-      - x: 527.0157
-        y: 3.7664666
-        z: 576.12054
-      - x: 527.0137
-        y: 3.7497067
-        z: 576.12054
-      - x: 527.01166
-        y: 3.7329473
-        z: 576.12054
-      - x: 527.0096
-        y: 3.7161884
-        z: 576.12054
-      - x: 527.00757
-        y: 3.699429
-        z: 576.12054
+      - x: 551.2284
+        y: 3.6908514
+        z: 522.41205
+      - x: 551.23004
+        y: 3.6723628
+        z: 522.41205
+      - x: 551.2316
+        y: 3.653874
+        z: 522.41205
+      - x: 551.2333
+        y: 3.6353855
+        z: 522.41205
+      - x: 551.23486
+        y: 3.6168966
+        z: 522.41205
+      - x: 551.3917
+        y: 3.6864667
+        z: 522.41754
+      - x: 551.3897
+        y: 3.6697068
+        z: 522.41754
+      - x: 551.3877
+        y: 3.6529474
+        z: 522.41754
+      - x: 551.3856
+        y: 3.6361885
+        z: 522.41754
+      - x: 551.3836
+        y: 3.619429
+        z: 522.41754
       attributes:
       - Value: 1
       - Value: 2
@@ -5920,7 +5920,10 @@ MonoBehaviour:
   musicSounds:
   - name: MainBackGroundMusic
     character: System
-    audioClip: {fileID: 8300000, guid: 22a23c7316736e044969bc9f73c8b40d, type: 3}
+    audioClip: {fileID: 8300000, guid: 6bb8ba70183a2a146bd4079136acc119, type: 3}
+  - name: SceneMusic
+    character: System
+    audioClip: {fileID: 8300000, guid: a80b6ce0485f5254c949b93f2f8869ac, type: 3}
   sfxSounds:
   - name: Walk
     character: System
@@ -5931,10 +5934,28 @@ MonoBehaviour:
   sfxSceneSounds:
   - name: OpenDoor
     character: System
-    audioClip: {fileID: 8300000, guid: 9e5f49784a971fb41b9170fcb1c196e8, type: 3}
+    audioClip: {fileID: 8300000, guid: 64bddffb4eb1b87479bc4380640ee316, type: 3}
   - name: CloseDoor
     character: System
-    audioClip: {fileID: 8300000, guid: c299067bb5be9134686a84d02fe60fb5, type: 3}
+    audioClip: {fileID: 8300000, guid: bc243cc961805394caa961fb9a00940a, type: 3}
+  - name: Rabbit
+    character: System
+    audioClip: {fileID: 8300000, guid: 70a39961e2c866249889d1e51ccd1791, type: 3}
+  - name: Chicken
+    character: System
+    audioClip: {fileID: 8300000, guid: 026f0b2e07688e644b21adb090d0cd84, type: 3}
+  - name: Abacus
+    character: System
+    audioClip: {fileID: 8300000, guid: aca887cf7b625de42b5aa0faaca553e0, type: 3}
+  - name: GameEnd
+    character: System
+    audioClip: {fileID: 8300000, guid: 988ba53d047dba4408cd416d7779f486, type: 3}
+  - name: PenWrite
+    character: System
+    audioClip: {fileID: 8300000, guid: 207b9c72336bd6044b8930aa8f9ebcd3, type: 3}
+  - name: Rope
+    character: System
+    audioClip: {fileID: 8300000, guid: 4955638806d993b4aa2b0ec83a0d9704, type: 3}
   dialogue:
   - name: 
     character: 
@@ -6352,48 +6373,48 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 526.7702
-        y: 3.46923
-        z: 576.2292
-      - x: 526.8105
-        y: 3.427981
-        z: 576.2837
-      - x: 526.8508
-        y: 3.386732
-        z: 576.33813
-      - x: 526.8912
-        y: 3.345483
-        z: 576.39264
-      - x: 526.93146
-        y: 3.304234
-        z: 576.44714
-      - x: 526.9718
-        y: 3.2629852
-        z: 576.50165
-      - x: 527.01215
-        y: 3.2217362
-        z: 576.5561
-      - x: 527.0898
-        y: 3.4692295
-        z: 576.2292
-      - x: 527.0495
-        y: 3.4279804
-        z: 576.2837
-      - x: 527.00916
-        y: 3.3867316
-        z: 576.33813
-      - x: 526.9688
-        y: 3.3454823
-        z: 576.39264
-      - x: 526.9285
-        y: 3.3042336
-        z: 576.44714
-      - x: 526.8882
-        y: 3.2629848
-        z: 576.50165
-      - x: 526.84784
-        y: 3.2217355
-        z: 576.5561
+      - x: 551.14624
+        y: 3.38923
+        z: 522.5262
+      - x: 551.1865
+        y: 3.347981
+        z: 522.5807
+      - x: 551.22687
+        y: 3.3067322
+        z: 522.63513
+      - x: 551.2672
+        y: 3.2654831
+        z: 522.68964
+      - x: 551.3075
+        y: 3.224234
+        z: 522.74414
+      - x: 551.34784
+        y: 3.1829853
+        z: 522.79865
+      - x: 551.3882
+        y: 3.1417363
+        z: 522.8531
+      - x: 551.4658
+        y: 3.3892295
+        z: 522.5262
+      - x: 551.42554
+        y: 3.3479805
+        z: 522.5807
+      - x: 551.3852
+        y: 3.3067317
+        z: 522.63513
+      - x: 551.34485
+        y: 3.2654824
+        z: 522.68964
+      - x: 551.30457
+        y: 3.2242336
+        z: 522.74414
+      - x: 551.2642
+        y: 3.1829848
+        z: 522.79865
+      - x: 551.2239
+        y: 3.1417356
+        z: 522.8531
       attributes:
       - Value: 1
       - Value: 2
@@ -6508,7 +6529,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6823,7 +6844,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8639,17 +8660,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 526.93
+      value: 551.306
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.36
+      value: 2.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 576.17
+      value: 522.467
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb76427b4c26445408b881c48f692754,
         type: 3}
@@ -14638,13 +14659,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.6
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 197
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -25205,7 +25226,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -26192,7 +26213,7 @@ GameObject:
   - component: {fileID: 1078062051}
   m_Layer: 5
   m_Name: BlackEndPanel
-  m_TagString: Untagged
+  m_TagString: BlackEndPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26241,7 +26262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9ed43a952393b564482f91beb46813d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26385,7 +26406,6 @@ GameObject:
   - component: {fileID: 1099914256}
   - component: {fileID: 1099914257}
   - component: {fileID: 1099914258}
-  - component: {fileID: 1099914259}
   m_Layer: 0
   m_Name: First Camera
   m_TagString: Untagged
@@ -26402,7 +26422,7 @@ Transform:
   m_GameObject: {fileID: 1099914255}
   serializedVersion: 2
   m_LocalRotation: {x: -0.028885597, y: -0.18955694, z: -0.03549115, w: 0.98080283}
-  m_LocalPosition: {x: 526.93, y: 3.783, z: 576.15295}
+  m_LocalPosition: {x: 551.306, y: 3.703, z: 522.44995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26485,19 +26505,6 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
---- !u!114 &1099914259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1099914255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d5297e23d92d1b4e84733c3216aea49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTrans: {fileID: 0}
 --- !u!4 &1102717940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3319551059964785097, guid: cb76427b4c26445408b881c48f692754,
@@ -30547,7 +30554,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -30899,7 +30906,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -32909,7 +32916,7 @@ Transform:
   m_GameObject: {fileID: 1372618687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 526.93, y: 3.9581594, z: 576.13464}
+  m_LocalPosition: {x: 551.306, y: 3.8781595, z: 522.43164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35648,7 +35655,7 @@ GameObject:
   - component: {fileID: 1585497597}
   m_Layer: 5
   m_Name: BlackStartPanel
-  m_TagString: Untagged
+  m_TagString: BlackStartPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35696,8 +35703,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9ed43a952393b564482f91beb46813d2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -42792,219 +42799,219 @@ MonoBehaviour:
   serializeData2:
     selectionData:
       positions:
-      - x: 526.8747
-        y: 3.3759274
-        z: 576.0447
-      - x: 526.8653
-        y: 3.3376484
-        z: 576.03357
-      - x: 526.8559
-        y: 3.2993512
-        z: 576.0225
-      - x: 526.84656
-        y: 3.2610416
-        z: 576.0115
-      - x: 526.83716
-        y: 3.2227247
-        z: 576.0004
-      - x: 526.8278
-        y: 3.1844025
-        z: 575.9894
-      - x: 526.83417
-        y: 3.3797553
-        z: 576.0705
-      - x: 526.81793
-        y: 3.344718
-        z: 576.0642
-      - x: 526.8017
-        y: 3.3096416
-        z: 576.058
-      - x: 526.78546
-        y: 3.274539
-        z: 576.05176
-      - x: 526.7692
-        y: 3.2394197
-        z: 576.04553
-      - x: 526.753
-        y: 3.20429
-        z: 576.03937
-      - x: 526.81934
-        y: 3.3812897
-        z: 576.1057
-      - x: 526.8006
-        y: 3.3471303
-        z: 576.1057
-      - x: 526.78186
-        y: 3.312971
-        z: 576.1057
-      - x: 526.7631
-        y: 3.278812
-        z: 576.1057
-      - x: 526.7444
-        y: 3.2446527
-        z: 576.1057
-      - x: 526.72565
-        y: 3.2104938
-        z: 576.1057
-      - x: 526.83417
-        y: 3.3784838
-        z: 576.1452
-      - x: 526.81793
-        y: 3.3407657
-        z: 576.15643
-      - x: 526.8017
-        y: 3.3030086
-        z: 576.1677
-      - x: 526.78546
-        y: 3.2652254
-        z: 576.1791
-      - x: 526.7692
-        y: 3.2274256
-        z: 576.19037
-      - x: 526.753
-        y: 3.189615
-        z: 576.2017
-      - x: 526.8747
-        y: 3.373725
-        z: 576.1741
-      - x: 526.8653
-        y: 3.330803
-        z: 576.19336
-      - x: 526.8559
-        y: 3.2878625
-        z: 576.21265
-      - x: 526.84656
-        y: 3.2449102
-        z: 576.232
-      - x: 526.83716
-        y: 3.20195
-        z: 576.2513
-      - x: 526.8278
-        y: 3.1589847
-        z: 576.2706
-      - x: 526.93
-        y: 3.3714118
-        z: 576.18463
-      - x: 526.93
-        y: 3.3260355
-        z: 576.2068
-      - x: 526.93
-        y: 3.2806592
-        z: 576.229
-      - x: 526.93
-        y: 3.235283
-        z: 576.25116
-      - x: 526.93
-        y: 3.1899066
-        z: 576.2734
-      - x: 526.93
-        y: 3.1445303
-        z: 576.29553
-      - x: 526.9853
-        y: 3.373725
-        z: 576.1741
-      - x: 526.9947
-        y: 3.330803
-        z: 576.19336
-      - x: 527.0041
-        y: 3.2878625
-        z: 576.21265
-      - x: 527.0134
-        y: 3.2449102
-        z: 576.232
-      - x: 527.0228
-        y: 3.2019503
-        z: 576.2513
-      - x: 527.03217
-        y: 3.158985
-        z: 576.2706
-      - x: 527.0258
-        y: 3.3784838
-        z: 576.1452
-      - x: 527.04205
-        y: 3.3407657
-        z: 576.15643
-      - x: 527.0583
-        y: 3.3030083
-        z: 576.1677
-      - x: 527.0745
-        y: 3.2652254
-        z: 576.1791
-      - x: 527.09076
-        y: 3.2274256
-        z: 576.19037
-      - x: 527.107
-        y: 3.189615
-        z: 576.2017
-      - x: 527.04065
-        y: 3.3812895
-        z: 576.1057
-      - x: 527.0594
-        y: 3.3471305
-        z: 576.1057
-      - x: 527.0781
-        y: 3.312971
-        z: 576.1057
-      - x: 527.09686
-        y: 3.278812
-        z: 576.1057
-      - x: 527.1156
-        y: 3.244653
-        z: 576.1057
-      - x: 527.13434
-        y: 3.2104938
-        z: 576.1057
-      - x: 527.0258
-        y: 3.3797553
-        z: 576.0705
-      - x: 527.04205
-        y: 3.344718
-        z: 576.0642
-      - x: 527.0583
-        y: 3.3096414
-        z: 576.058
-      - x: 527.0745
-        y: 3.274539
-        z: 576.05176
-      - x: 527.09076
-        y: 3.23942
-        z: 576.04553
-      - x: 527.107
-        y: 3.20429
-        z: 576.03937
-      - x: 526.9853
-        y: 3.3759274
-        z: 576.0447
-      - x: 526.9947
-        y: 3.3376484
-        z: 576.03357
-      - x: 527.0041
-        y: 3.2993512
-        z: 576.0225
-      - x: 527.0134
-        y: 3.2610419
-        z: 576.0115
-      - x: 527.03217
-        y: 3.1844027
-        z: 575.9894
-      - x: 526.93
-        y: 3.3739548
-        z: 576.0352
-      - x: 526.93
-        y: 3.3339398
-        z: 576.02234
-      - x: 526.93
-        y: 3.2939248
-        z: 576.00946
-      - x: 526.93
-        y: 3.25391
-        z: 575.9966
-      - x: 526.93
-        y: 3.2138953
-        z: 575.9837
-      - x: 526.93
-        y: 3.1738806
-        z: 575.9708
+      - x: 551.25073
+        y: 3.2959275
+        z: 522.3417
+      - x: 551.24133
+        y: 3.2576485
+        z: 522.33057
+      - x: 551.23193
+        y: 3.2193513
+        z: 522.3195
+      - x: 551.2226
+        y: 3.1810417
+        z: 522.3085
+      - x: 551.2132
+        y: 3.1427248
+        z: 522.2974
+      - x: 551.20386
+        y: 3.1044025
+        z: 522.2864
+      - x: 551.2102
+        y: 3.2997553
+        z: 522.3675
+      - x: 551.194
+        y: 3.264718
+        z: 522.3612
+      - x: 551.17773
+        y: 3.2296417
+        z: 522.355
+      - x: 551.1615
+        y: 3.194539
+        z: 522.34875
+      - x: 551.14526
+        y: 3.1594198
+        z: 522.3425
+      - x: 551.129
+        y: 3.12429
+        z: 522.33636
+      - x: 551.1954
+        y: 3.3012898
+        z: 522.4027
+      - x: 551.17664
+        y: 3.2671304
+        z: 522.4027
+      - x: 551.1579
+        y: 3.2329712
+        z: 522.4027
+      - x: 551.13916
+        y: 3.198812
+        z: 522.4027
+      - x: 551.1204
+        y: 3.1646528
+        z: 522.4027
+      - x: 551.1017
+        y: 3.1304939
+        z: 522.4027
+      - x: 551.2102
+        y: 3.2984838
+        z: 522.4422
+      - x: 551.194
+        y: 3.2607658
+        z: 522.4534
+      - x: 551.17773
+        y: 3.2230086
+        z: 522.4647
+      - x: 551.1615
+        y: 3.1852255
+        z: 522.4761
+      - x: 551.14526
+        y: 3.1474257
+        z: 522.48737
+      - x: 551.129
+        y: 3.109615
+        z: 522.4987
+      - x: 551.25073
+        y: 3.293725
+        z: 522.47107
+      - x: 551.24133
+        y: 3.250803
+        z: 522.49036
+      - x: 551.23193
+        y: 3.2078626
+        z: 522.50964
+      - x: 551.2226
+        y: 3.1649103
+        z: 522.529
+      - x: 551.2132
+        y: 3.1219501
+        z: 522.5483
+      - x: 551.20386
+        y: 3.0789847
+        z: 522.5676
+      - x: 551.306
+        y: 3.2914119
+        z: 522.4816
+      - x: 551.306
+        y: 3.2460356
+        z: 522.5038
+      - x: 551.306
+        y: 3.2006593
+        z: 522.526
+      - x: 551.306
+        y: 3.155283
+        z: 522.54816
+      - x: 551.306
+        y: 3.1099067
+        z: 522.5704
+      - x: 551.306
+        y: 3.0645304
+        z: 522.5925
+      - x: 551.3613
+        y: 3.293725
+        z: 522.47107
+      - x: 551.3707
+        y: 3.250803
+        z: 522.49036
+      - x: 551.3801
+        y: 3.2078626
+        z: 522.50964
+      - x: 551.38947
+        y: 3.1649103
+        z: 522.529
+      - x: 551.39886
+        y: 3.1219504
+        z: 522.5483
+      - x: 551.4082
+        y: 3.078985
+        z: 522.5676
+      - x: 551.40186
+        y: 3.2984838
+        z: 522.4422
+      - x: 551.4181
+        y: 3.2607658
+        z: 522.4534
+      - x: 551.4343
+        y: 3.2230084
+        z: 522.4647
+      - x: 551.45056
+        y: 3.1852255
+        z: 522.4761
+      - x: 551.4668
+        y: 3.1474257
+        z: 522.48737
+      - x: 551.48303
+        y: 3.109615
+        z: 522.4987
+      - x: 551.4167
+        y: 3.3012896
+        z: 522.4027
+      - x: 551.4354
+        y: 3.2671306
+        z: 522.4027
+      - x: 551.45416
+        y: 3.2329712
+        z: 522.4027
+      - x: 551.4729
+        y: 3.198812
+        z: 522.4027
+      - x: 551.49164
+        y: 3.164653
+        z: 522.4027
+      - x: 551.5104
+        y: 3.1304939
+        z: 522.4027
+      - x: 551.40186
+        y: 3.2997553
+        z: 522.3675
+      - x: 551.4181
+        y: 3.264718
+        z: 522.3612
+      - x: 551.4343
+        y: 3.2296414
+        z: 522.355
+      - x: 551.45056
+        y: 3.194539
+        z: 522.34875
+      - x: 551.4668
+        y: 3.15942
+        z: 522.3425
+      - x: 551.48303
+        y: 3.12429
+        z: 522.33636
+      - x: 551.3613
+        y: 3.2959275
+        z: 522.3417
+      - x: 551.3707
+        y: 3.2576485
+        z: 522.33057
+      - x: 551.3801
+        y: 3.2193513
+        z: 522.3195
+      - x: 551.38947
+        y: 3.181042
+        z: 522.3085
+      - x: 551.4082
+        y: 3.1044028
+        z: 522.2864
+      - x: 551.306
+        y: 3.2939548
+        z: 522.3322
+      - x: 551.306
+        y: 3.2539399
+        z: 522.31934
+      - x: 551.306
+        y: 3.213925
+        z: 522.30646
+      - x: 551.306
+        y: 3.1739101
+        z: 522.2936
+      - x: 551.306
+        y: 3.1338954
+        z: 522.2807
+      - x: 551.306
+        y: 3.0938807
+        z: 522.2678
       attributes:
       - Value: 1
       - Value: 2
@@ -43309,19 +43316,7 @@ MonoBehaviour:
         m_Calls: []
     endDialougueEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - text: "\u6211\u662F\u8FD9\u5EA7\u9662\u5B50\u7684\u8BBE\u8BA1\u5E08\uFF0C\u5982\u8FD9\u79CD\u4EAD\u5B50\uFF0C\u5C31\u662F\u7531\u6211\u672C\u4EBA\u4EB2\u81EA\u8BBE\u8BA1\u7684\u3002"
     isEnd: 0
     isQuestion: 0
@@ -91293,7 +91288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5349152491592430984
 Transform:
   m_ObjectHideFlags: 0

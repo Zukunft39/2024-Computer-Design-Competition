@@ -42,7 +42,6 @@ public class AbacusManager : MonoBehaviour
     }
     private void Update()
     {
-        #region 计时器
         if (isBegin && !isPause)
         {
             time -= Time.deltaTime;
@@ -51,20 +50,11 @@ public class AbacusManager : MonoBehaviour
                 timerText.text = ((int)time).ToString();
                 texts[4].text = result.ToString();
             }
-#if UNITY_EDITOR
-            else if (timerText == null) Debug.LogError("No TimerText in UI");
-            else Debug.LogError("No Result in UI");
-#endif
             if (time <= 0) Judge();
         }
         else if(!isBegin) time = latestTime;
-        #endregion
 
-        #region 进行UI操作
         if (Input.GetKey(KeyCode.Escape)) Pause();
-        //else if (Input.GetKey(KeyCode.L)) Lose();
-        //else if (Input.GetKey(KeyCode.W)) Win();
-        #endregion
     }
     //出现算式
     private void AddSubCal()
@@ -73,11 +63,6 @@ public class AbacusManager : MonoBehaviour
         int nums2 = Random.Range(0, 100);
 
         bool isAdd = Mathf.FloorToInt(Random.value * 1.99f) == 0;//判断是加或减
-
-#if UNITY_EDITOR
-        if (texts.Count <= 0) Debug.LogError("No Calculation UI");
-        Debug.Log(texts.Count);
-#endif
 
         //场景初始化
         #region 算珠初始化
@@ -119,7 +104,6 @@ public class AbacusManager : MonoBehaviour
     {
         if (result == target && time > 0) return true;
         return false;
-
     }
     //关于最终次数的计算,进行最终结果判断时调用
     public void Judge()
@@ -137,12 +121,13 @@ public class AbacusManager : MonoBehaviour
         bCanvas.SetActive(true);
         //传递数据
         if (state != null) state.Count(count);
-#if UNITY_EDITOR
-        else Debug.LogError("No State Object!");
-#endif
         //UI显示成功界面
+        
         wPanel.SetActive(true);
-        if(!isPause) isPause = true;
+        if(!isPause){
+            isPause = true; 
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("GameEnd");
+        }
     }
     //关于失败
     private void Lose()
@@ -151,7 +136,10 @@ public class AbacusManager : MonoBehaviour
         bCanvas.SetActive(true);
         //UI显示失败界面
         lPanel.SetActive(true);
-        if(!isPause) isPause = true;
+        if(!isPause){
+            isPause = true;
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("GameEnd");
+        } 
     }
     //关于暂停
     private void Pause()
@@ -187,6 +175,7 @@ public class AbacusManager : MonoBehaviour
 
         //跳转
         StartCoroutine(SceneChangeManager.Instance.LoadSceneAsync("DemoScene"));
+        InitialUIController.Instance.ShowEndCanvas();
     }
     //关于帮助
     public void Help()
@@ -210,6 +199,7 @@ public class AbacusManager : MonoBehaviour
         if (isSatisfied())
         {
             animB.SetInteger("move", 1);
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("PenWrite");
             yield return new WaitForSeconds(1.2f);
             animF.SetTrigger("tick");
             yield return new WaitForSeconds(0.8f);
@@ -218,6 +208,7 @@ public class AbacusManager : MonoBehaviour
         else
         {
             animB.SetInteger("move_cross", 1);
+            MainAudioManager.AudioManagerInstance.PlaySFXScene("PenWrite");
             yield return new WaitForSeconds(1.2f);
             animF.SetTrigger("cross");
             yield return new WaitForSeconds(0.8f);
@@ -245,10 +236,6 @@ public class AbacusManager : MonoBehaviour
             AddSubCal();
         }
         else if (count == 3) Win();
-
-#if UNITY_EDITOR
-        Debug.Log("真实结果：" + target + " ，" + "经过时间：" + time);
-#endif
     }
     IEnumerator Black()
     {
