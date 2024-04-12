@@ -4,15 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.IO;
+using UnityEngine.Serialization;
+
 public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private List<DialogueString> dialogueStrings = new List<DialogueString>();
     [SerializeField] private Transform NPCTransform;
     [SerializeField] private Transform CamTargetTransform;
+    [SerializeField] private bool isAINpc = false;
+    [SerializeField] private string AIPrompt;
     private void OnTriggerEnter(Collider other){
         int hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
-        if(other.CompareTag("Player") && hasSpoken == 0){
-            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform);
+        if(other.CompareTag("Player") && (isAINpc || hasSpoken == 0)){
+            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform,AIPrompt);
             PlayerPrefs.SetInt("HasSpoken" + transform.parent.name, 1);
             hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
         }
@@ -23,6 +27,7 @@ public class DialogueString
 {
     public string text;
     public bool isEnd;
+    public bool isAIDialog;
 
     [Header("Branch")] 
     public bool isQuestion;
