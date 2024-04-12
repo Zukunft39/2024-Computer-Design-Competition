@@ -145,7 +145,11 @@ public class GridGameManager : MonoBehaviourSingleton<GridGameManager>
         curTriangle = null;
         clicked = false;
         dummy.SetActive(false);
-        SoundManager.Instance.PlaySFX(cur_id!=GouguData.Instance.levels.Length-1? GouguData.Instance.audioDict[$"Approved{cur_id+1}"]:GouguData.Instance.audioDict["Final"],volume:approvedSfxVolume);
+        SoundManager.Instance.PlaySFX(cur_id!=GouguData.Instance.levels.Length-1? 
+            GouguData.Instance.audioDict[$"Approved{cur_id+1}"]:
+            GouguData.Instance.audioDict["Final"],
+            volume:approvedSfxVolume,
+            isWeakenBGM:true);
     }
 
     private void Awake()

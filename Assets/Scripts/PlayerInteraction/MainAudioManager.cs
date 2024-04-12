@@ -115,4 +115,33 @@ public class MainAudioManager : MonoBehaviour
     public void StopDialogue(){
         dialogueSource.Stop();
     }
+    
+    private float prevBgmVolume,targetVolume;
+    public void WeakenMusic(float volumePercentage,float time){
+        prevBgmVolume = musicSource.volume;
+        targetVolume = prevBgmVolume * volumePercentage;
+        StartCoroutine(WeakenMusicCoroutine(time));
+    }
+    
+    private IEnumerator WeakenMusicCoroutine(float time){
+        float timer = 0;
+        while(timer < time){
+            musicSource.volume = Mathf.Lerp(prevBgmVolume,targetVolume,timer/time);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+    
+    public void RecoverMusic(float time){
+        StartCoroutine(RecoverMusicCoroutine(time));
+    }
+    
+    private IEnumerator RecoverMusicCoroutine(float time){
+        float timer = 0;
+        while(timer < time){
+            musicSource.volume = Mathf.Lerp(targetVolume,prevBgmVolume,timer/time);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
 }

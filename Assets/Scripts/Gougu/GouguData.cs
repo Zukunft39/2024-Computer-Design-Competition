@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GouguData : MonoBehaviourSingleton<GouguData>
+public class GouguData : MonoBehaviourSingletonPersistent<GouguData>
 {
     public float gridSize;
     public bool isDebug;
