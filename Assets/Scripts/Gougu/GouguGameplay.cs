@@ -41,9 +41,11 @@ public class GouguGameplay : MonoBehaviour
         }
         resultPanel.ShowResultPanel(resultTxt);
     }
+    private void Awake() {
+        timeArray = new float[GouguData.Instance.levels.Length];
+    }
     private void Start()
     {   
-        //timeArray = new float[GouguData.Instance.levels.Length];
         StartCoroutine(Gameplay());
     }
 
