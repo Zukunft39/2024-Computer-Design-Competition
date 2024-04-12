@@ -84,18 +84,22 @@ public class ChopCircleGamePlay : MonoBehaviour
     {
         if(gamePhase<=levelSo.levels.Length/3)
         {
-            SoundManager.Instance.PlaySFX("appr1");
+            SoundManager.Instance.PlaySFX("appr1",
+                isWeakenBGM:true);
         }else if (gamePhase <= levelSo.levels.Length / 3 * 2)
         {
-            SoundManager.Instance.PlaySFX("appr2");
+            SoundManager.Instance.PlaySFX("appr2",
+                isWeakenBGM:true);
         }
         else if(gamePhase < levelSo.levels.Length -1)
         {
-            SoundManager.Instance.PlaySFX("appr3");
+            SoundManager.Instance.PlaySFX("appr3",
+                isWeakenBGM:true);
         }
         else
         {
-            SoundManager.Instance.PlaySFX("appr4");
+            SoundManager.Instance.PlaySFX("appr4",
+                isWeakenBGM:true);
         }
 
         chopGameSlider.DeactivateHandle();

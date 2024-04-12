@@ -44,6 +44,7 @@ public class Triangle : MonoBehaviour
     /// <param name="p3"></param>
     public void CreateTriangle(Vector3 p1,Vector3 p2,Vector3 p3)
     {
+       // if (GouguData.Instance is null) return;
         vertices=new[]{p1,p2,p3};
         triangles=new[]{0,1,2};
         uvs=new[]{new Vector2(0,0),new Vector2(1,0),new Vector2(0,1)};
@@ -64,6 +65,7 @@ public class Triangle : MonoBehaviour
     /// <param name="e2"></param>
     public void CreateTriangle(float e1,float angle,float e2)
     {
+       
         Vector3 p1 =Vector3.zero;
         Vector3 p2 = new Vector3(p1.x + e1*GouguData.Instance.gridSize, p1.y, p1.z);
         Vector3 p3 = new Vector3(p1.x+Mathf.Cos(Mathf.Deg2Rad* angle)*e2*GouguData.Instance.gridSize, p1.y+Mathf.Sin(Mathf.Deg2Rad*angle)*e2*GouguData.Instance.gridSize, p1.z);
