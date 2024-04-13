@@ -33,7 +33,11 @@ public class DialogueManager : MonoBehaviour
     public int currentDialogueIndex = 0;//当前读取的对话序列
     private bool optionSelected = false;//选项被选中判定
     
-    private void Start() {
+    private string urlHead;
+    
+    private void Start()
+    {
+        urlHead = $"https://script.google.com/macros/s/{deployId}/exec?question=";
         dialogueParent.SetActive(false);
         playerFootsteps = GameObject.FindWithTag("AudioManager").GetComponent<MainAudioManager>().sfxSource.GetComponent<AudioSource>();
     }
@@ -162,9 +166,10 @@ public class DialogueManager : MonoBehaviour
         questionInputField.gameObject.SetActive(true);
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
         questionInputField.gameObject.SetActive(false);
+        string requestText = AIPrompt+" " + universalAIExtraPrompt+" "+questionInputField.text;
         questionInputField.text = "";
-        string requestText = AIPrompt+" " + universalAIExtraPrompt+" "+questionText;
-        string url = $"https://script.google.com/macros/s/{deployId}/exec?question=" + UnityWebRequest.EscapeURL(requestText);
+        Debug.Log(requestText);
+        string url = urlHead + UnityWebRequest.EscapeURL(requestText);
         UnityWebRequest request = UnityWebRequest.Get(url);
         yield return StartCoroutine(TypeText("正在思考中...",false));
         yield return request.SendWebRequest();
