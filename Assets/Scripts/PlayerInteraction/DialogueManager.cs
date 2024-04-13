@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -34,6 +35,9 @@ public class DialogueManager : MonoBehaviour
     private bool optionSelected = false;//选项被选中判定
     
     private string urlHead;
+    
+    private List<string> questionList = new List<string>();
+    private List<string> answerList = new List<string>();
     
     private void Start()
     {
@@ -163,31 +167,75 @@ public class DialogueManager : MonoBehaviour
     //AI Dialog coroutine
     private IEnumerator AIDialogCoroutine(string questionText)
     {
+        //Wait for input
         questionInputField.gameObject.SetActive(true);
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+        yield return new WaitUntil(() =>
+        {
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                questionInputField.text = "";
+                questionInputField.gameObject.SetActive(false);
+                DialogueStop();
+                return true;
+            }
+            return Input.GetKeyDown(KeyCode.Return);
+        });
+        
+        //Send request to AI
         questionInputField.gameObject.SetActive(false);
-        string requestText = AIPrompt+" " + universalAIExtraPrompt+" "+questionInputField.text;
+        string dialogHistroy = "";
+        if(questionList.Count>0&&answerList.Count>0)
+        {
+            dialogHistroy += "历史对话：\n";
+            foreach (var i in questionList)
+            {
+                dialogHistroy +="提问:"+ i + "\n";
+                if(questionList.IndexOf(i)<answerList.Count)
+                    dialogHistroy += "回答:" + answerList[questionList.IndexOf(i)] + "\n";
+            }
+            dialogHistroy += "历史对话结束。\n";
+        }
+        string requestText = AIPrompt+" " + universalAIExtraPrompt+dialogHistroy+" 下面是我的问题："+questionInputField.text;
+        questionList.Add(questionInputField.text);
         questionInputField.text = "";
         Debug.Log(requestText);
         string url = urlHead + UnityWebRequest.EscapeURL(requestText);
         UnityWebRequest request = UnityWebRequest.Get(url);
-        yield return StartCoroutine(TypeText("正在思考中...",false));
+        Coroutine thinkingCoroutine = StartCoroutine(TypeText("正在思考中...",false,false));
+        
+        //Wait for response
         yield return request.SendWebRequest();
+        StopCoroutine(thinkingCoroutine);
+        
+        //Handle response
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            yield return StartCoroutine(TypeText($"看来你问的问题因为{request.error}太高深了，我也不是很懂"));
+            //Handle error
+            Debug.LogError("Error: " + request.error);
+            yield return StartCoroutine(TypeText($"这问题太高深了，我也不是很懂"));
         }
         else
         {
+           //Handle response text
             string answerRawText = request.downloadHandler.text;
-            AIAnswer answerClass = JsonUtility.FromJson<AIAnswer>(answerRawText);
-            bool isEnd = answerClass.answer.Contains("结束对话");
-            if(isEnd )
+            AIAnswer answerClass=new AIAnswer();
+            try
             {
-                answerClass.answer = answerClass.answer.Replace("结束对话","");
+                answerClass = JsonUtility.FromJson<AIAnswer>(answerRawText);
+            }catch(Exception e)
+            {
+                Debug.LogError("Error: " + e);
+               DialogueStop();
             }
+            answerList.Add(answerClass.answer);
+            bool isEnd = answerClass.answer.Contains("结束对话");
+            if (isEnd) {
+                answerClass.answer = answerClass.answer.Replace("结束对话", "");
+                currentDialogueIndex++; 
+            }
+            
             Debug.Log(answerRawText+" "+answerClass.answer);
-            yield return StartCoroutine(TypeText(answerClass.answer));
+            yield return StartCoroutine(TypeText(answerClass.answer,true,false));
             if (!isEnd)
             { 
                 dialogueText.text = "";
@@ -213,14 +261,14 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="text"> Dialoguelist 中的文字 </param>
     /// <returns></returns>
-    private IEnumerator TypeText(string text,bool isWaitForInput = true){
+    private IEnumerator TypeText(string text,bool isWaitForInput = true,bool isAddIndex = true){
         dialogueText.text = "";
         foreach(char letter in text.ToCharArray()){
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        if(!dialogueList[currentDialogueIndex].isQuestion){
+        if(!dialogueList[currentDialogueIndex].isQuestion && isWaitForInput){
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         }
 
@@ -228,7 +276,7 @@ public class DialogueManager : MonoBehaviour
             DialogueStop();
         }
 
-        currentDialogueIndex ++;
+       if(isAddIndex) currentDialogueIndex ++;
     }
 
     /// <summary>

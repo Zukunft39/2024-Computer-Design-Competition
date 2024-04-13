@@ -43,6 +43,7 @@ public class InitialUIController : MonoBehaviour
     }
     private void Start(){
         animator = blackPanel.GetComponent<Animator>();
+        gameObject.SetActive(false);
     }
     public void Exit()
     {
