@@ -31,9 +31,9 @@ public class CircleRenderer : MonoBehaviour
     private float estimatedPi;
 
     /// <summary>
-    /// 円を表示する
+    /// 显示圆形
     /// </summary>
-    /// <param name="segments">円の間隔</param>
+    /// <param name="segments">步长</param>
     void ShowCircle(int segments)
     {
         circleRenderer.positionCount = segments + 1;
@@ -49,7 +49,7 @@ public class CircleRenderer : MonoBehaviour
     }
 
     /// <summary>
-    /// チョップラインを表示する
+    /// 显示切割线
     /// </summary>
     void ShowChopLines()
     {
@@ -76,7 +76,8 @@ public class CircleRenderer : MonoBehaviour
                 break;
         }
     }
-
+    
+    // 预估π值
     void EstimatePi()
     {
         float distance = 0;
@@ -87,7 +88,7 @@ public class CircleRenderer : MonoBehaviour
         estimatedPi =(float)Math.Round( distance / (2 * radius),3);
         piText.text = "预估π值  " + estimatedPi;
     }
-    
+    // 显示初始切割线
     void ShowInitialChopLines()
     {
         chopLineRenderer.useWorldSpace = false;
@@ -101,11 +102,12 @@ public class CircleRenderer : MonoBehaviour
             angle += 360f / edgeCount;
         }
     }
-
+    // 显示切割线
     void ShowChoppingChopLines(float t)
     {
         for (int i = 0; i < edgeCount*2 + 1; i++)
         {
+            //插值计算多边形顶点在极坐标系的角度分量
            float angle= Mathf.LerpUnclamped(startAngles[i/2], endAngles[i], choppingCurve.Evaluate(t));
             float x = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
             float y = Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
@@ -114,7 +116,7 @@ public class CircleRenderer : MonoBehaviour
     }
     
     /// <summary>
-    /// 全てのチョップラインを削除する
+    /// 清除切割线
     /// </summary>
     void ClearChopLines()
     {
@@ -122,16 +124,16 @@ public class CircleRenderer : MonoBehaviour
     }
     
     /// <summary>
-    /// Chop the Circle
+    /// 割圆
     /// </summary>
     public void Chop()
     {
         chopTimes++;
         ClearChopLines();
-        //Set LineRenderer for chopping
+        // 设置lineRenderer
         chopLineRenderer.useWorldSpace = false;
         chopLineRenderer.positionCount = edgeCount*2 + 1;
-        //Precalculate start and end angle
+        // 预计算切割线的起始角度和结束角度
         startAngles = new float[edgeCount+1];
         endAngles = new float[edgeCount*2+1];
         for(int i=0;i<edgeCount+1;i++)
@@ -146,7 +148,7 @@ public class CircleRenderer : MonoBehaviour
         }
 
         angleOffset += newOffset;
-        //Switch Status
+        // 设置状态
         status = Status.Chopping;
     }
 

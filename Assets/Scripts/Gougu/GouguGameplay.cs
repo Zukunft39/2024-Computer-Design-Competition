@@ -16,6 +16,7 @@ public class GouguGameplay : MonoBehaviour
     private float timer;
     private bool isGaming;
     
+    //主游戏过程协程
     IEnumerator Gameplay()
     {
         yield return new TutorialPanel.WaitForTutorialEnd();
@@ -41,12 +42,11 @@ public class GouguGameplay : MonoBehaviour
         }
         resultPanel.ShowResultPanel(resultTxt);
     }
-    private void Awake() {
-        
-    }
     private void Start()
     {   
+        //初始化用时数组
         timeArray = new float[GouguData.Instance.levels.Length];
+        //开始游戏
         StartCoroutine(Gameplay());
     }
 
@@ -54,6 +54,7 @@ public class GouguGameplay : MonoBehaviour
     {
         if (isGaming)
         {
+            //更新用时
             float curTime = Time.time;
             timeTxt.text = $"当前用时:{(curTime - timer):F}秒";
         }

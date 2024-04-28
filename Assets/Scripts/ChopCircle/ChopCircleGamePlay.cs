@@ -21,6 +21,8 @@ public class ChopCircleGamePlay : MonoBehaviour
     private String resultTxt;
     private float[] levelTimeList;
     private int[] missTimeList;
+    
+    //设置失误次数
     public int missTimes
     {
         get { return missTimesPri; }
@@ -66,6 +68,9 @@ public class ChopCircleGamePlay : MonoBehaviour
         StartGame();
     }
     
+    /// <summary>
+    /// 开始游戏
+    /// </summary>
     void StartGame()
     {
         if(gamePhase>=levelSo.levels.Length)
@@ -74,12 +79,15 @@ public class ChopCircleGamePlay : MonoBehaviour
             return;
         }
         isGaming= true;
-//        levelnameText.text = levelSo.levels[gamePhase].levelName;
         chopGameSlider.handleMoveDuration = levelSo.levels[gamePhase].sliderDuration;
         GenerateTargetAreas();
         if(gamePhase==0) chopGameSlider.ActivateHandle();
         else chopGameSlider.ActivateHandle(levelSo.levels[gamePhase-1].sliderDuration,levelSo.levels[gamePhase].sliderDuration);
     }
+    
+    /// <summary>
+    /// 结束游戏
+    /// </summary>
     void FinishGame()
     {
         if(gamePhase<=levelSo.levels.Length/3)
@@ -108,7 +116,10 @@ public class ChopCircleGamePlay : MonoBehaviour
         circleRenderer.Chop();
         StartCoroutine(transitionToNextPhase());
     }
-
+    
+    /// <summary>
+    /// 完成关卡
+    /// </summary>
     void GameClear()
     {
         isGaming = false;
@@ -122,6 +133,10 @@ public class ChopCircleGamePlay : MonoBehaviour
         resultPanel.ShowResultPanel(resultTxt);
     }
     
+   /// <summary>
+   /// 切换到下一关的协程
+   /// </summary>
+   /// <returns></returns>
     IEnumerator transitionToNextPhase()
     {
         isTransitioning= true;
@@ -129,7 +144,10 @@ public class ChopCircleGamePlay : MonoBehaviour
         isTransitioning= false;
         StartGame();
     }
-
+    
+    /// <summary>
+    /// 生成目标区域
+    /// </summary>
     void GenerateTargetAreas()
     {
         foreach (var VARIABLE in levelSo.levels[gamePhase].targetAreaDatas)

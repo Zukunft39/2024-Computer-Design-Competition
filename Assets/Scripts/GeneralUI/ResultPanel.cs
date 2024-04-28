@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
+/// <summary>
+/// 结果面板
+/// </summary>
 public class ResultPanel : MonoBehaviour
 {
     [SerializeField]
@@ -21,7 +24,11 @@ public class ResultPanel : MonoBehaviour
     {
         closeBtn.onClick.AddListener(EnterPreviousLevel);
     }
-
+    
+    /// <summary>
+    /// 显示结果数据
+    /// </summary>
+    /// <param name="result">结果</param>
     public void ShowResultPanel(String result)
     {
         resultText.text = result;
@@ -31,13 +38,19 @@ public class ResultPanel : MonoBehaviour
         transform.localScale = s;
         _animator.SetTrigger("fadeIn");
     }
-
+    
+    /// <summary>
+    /// 隐藏结果面板
+    /// </summary>
     public void HideResultPanel()
     {
         resultText.text = "";
         gameObject.SetActive(false);
     }
-
+    
+    /// <summary>
+    /// 返回前一关
+    /// </summary>
     private void EnterPreviousLevel()
     {
         maskAnimator.gameObject.SetActive(true);

@@ -13,10 +13,11 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private Transform CamTargetTransform;
     [SerializeField] private bool isAINpc = false;
     [SerializeField] private string AIPrompt;
+    [SerializeField] private bool isRuledByGlobalPrompt = true;
     private void OnTriggerEnter(Collider other){
         int hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
         if(other.CompareTag("Player") && (isAINpc || hasSpoken == 0)){
-            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform,AIPrompt);
+            other.gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings, NPCTransform,CamTargetTransform,AIPrompt,isRuledByGlobalPrompt);
             PlayerPrefs.SetInt("HasSpoken" + transform.parent.name, 1);
             hasSpoken = PlayerPrefs.GetInt("HasSpoken" + transform.parent.name, 0);
         }

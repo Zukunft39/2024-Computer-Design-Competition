@@ -10,6 +10,7 @@ public class InitialUIController : MonoBehaviour
     public GameObject blackPanel;
     public GameObject instruction;
     public Animator animator;
+    public bool dontShowOnStart;
 
     private static InitialUIController instance;
     public static InitialUIController Instance{
@@ -43,7 +44,7 @@ public class InitialUIController : MonoBehaviour
     }
     private void Start(){
         animator = blackPanel.GetComponent<Animator>();
-        
+        if(dontShowOnStart)gameObject.SetActive(false);
     }
     public void Exit()
     {

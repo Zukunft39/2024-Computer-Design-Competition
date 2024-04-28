@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Mask : MonoBehaviour
 {
+    //遮罩动画的实现
     public Color initColor;
     
     private Image maskImage;
@@ -26,11 +27,13 @@ public class Mask : MonoBehaviour
         maskImage.color = initColor;
     }
     
+    //遮罩淡入
     public void FadeIn(float duration=1)
     {
         StartCoroutine(FadeInCoroutine(duration));
     }
     
+    //遮罩淡出
     public void FadeOut(float duration=1)
     {
         StartCoroutine(FadeOutCoroutine(duration));

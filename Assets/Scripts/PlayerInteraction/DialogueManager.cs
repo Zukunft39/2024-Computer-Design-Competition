@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private string deployId;
     [SerializeField] private string universalAIExtraPrompt;
     private string AIPrompt;
+    private bool isRuledByGlobalPrompt = true;
 
     [SerializeField] private float typingSpeed = 0.1f; // 每个字出现的速度
 
@@ -50,9 +51,10 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="textToPrint"> 对话详细设置内容 </param>
     /// <param name="NPC"> 摄像机转向的移动目标 </param>
-    public void DialogueStart(List<DialogueString> textToPrint,Transform NPC,Transform Cam,String m_AIPrompt = "")
+    public void DialogueStart(List<DialogueString> textToPrint,Transform NPC,Transform Cam,String m_AIPrompt = "",bool m_IsRuledByGlobalPrompt = true)
     {
         AIPrompt = m_AIPrompt;
+        isRuledByGlobalPrompt = m_IsRuledByGlobalPrompt;
         
         dialogueParent.SetActive(true);
 
@@ -164,10 +166,10 @@ public class DialogueManager : MonoBehaviour
         DialogueStop();
     }
     
-    //AI Dialog coroutine
+    // AI对话主异步逻辑
     private IEnumerator AIDialogCoroutine(string questionText)
     {
-        //Wait for input
+        //等待输入
         questionInputField.gameObject.SetActive(true);
         yield return new WaitUntil(() =>
         {
@@ -180,8 +182,18 @@ public class DialogueManager : MonoBehaviour
             }
             return Input.GetKeyDown(KeyCode.Return);
         });
+
+        if (questionInputField.text.Contains("忘掉一切吧"))
+        {
+            questionList.Clear();
+            answerList.Clear();
+            questionInputField.text = "";
+            questionInputField.gameObject.SetActive(false);
+            DialogueStop();
+            yield break;
+        }
         
-        //Send request to AI
+        // 设置发送参数参数，发送AI大模型网络交互请求
         questionInputField.gameObject.SetActive(false);
         string dialogHistroy = "";
         if(questionList.Count>0&&answerList.Count>0)
@@ -195,7 +207,7 @@ public class DialogueManager : MonoBehaviour
             }
             dialogHistroy += "历史对话结束。\n";
         }
-        string requestText = AIPrompt+" " + universalAIExtraPrompt+dialogHistroy+" 下面是我的问题："+questionInputField.text;
+        string requestText = AIPrompt+" " + (isRuledByGlobalPrompt ? universalAIExtraPrompt : "")+dialogHistroy+" 下面是我的问题："+questionInputField.text;
         questionList.Add(questionInputField.text);
         questionInputField.text = "";
         Debug.Log(requestText);
@@ -203,39 +215,47 @@ public class DialogueManager : MonoBehaviour
         UnityWebRequest request = UnityWebRequest.Get(url);
         Coroutine thinkingCoroutine = StartCoroutine(TypeText("正在思考中...",false,false));
         
-        //Wait for response
+        //等待请求返回
         yield return request.SendWebRequest();
         StopCoroutine(thinkingCoroutine);
         
-        //Handle response
+        //处理返回的数据
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            //Handle error
+            //异常处理
             Debug.LogError("Error: " + request.error);
+            questionList.RemoveAt(questionList.Count-1);
             yield return StartCoroutine(TypeText($"这问题太高深了，我也不是很懂"));
         }
         else
         {
-           //Handle response text
+           //处理回答文字
             string answerRawText = request.downloadHandler.text;
             AIAnswer answerClass=new AIAnswer();
             try
             {
                 answerClass = JsonUtility.FromJson<AIAnswer>(answerRawText);
-            }catch(Exception e)
+            }
+            catch(Exception e)
             {
                 Debug.LogError("Error: " + e);
-               DialogueStop();
+                questionList.RemoveAt(questionList.Count-1);
+                DialogueStop();
             }
             answerList.Add(answerClass.answer);
+            
+            //判断是否结束对话
             bool isEnd = answerClass.answer.Contains("结束对话");
             if (isEnd) {
                 answerClass.answer = answerClass.answer.Replace("结束对话", "");
                 currentDialogueIndex++; 
             }
             
+            //输出回答文字
             Debug.Log(answerRawText+" "+answerClass.answer);
             yield return StartCoroutine(TypeText(answerClass.answer,true,false));
+            
+            //如果对话继续，则开启新一轮的AI对话
             if (!isEnd)
             { 
                 dialogueText.text = "";

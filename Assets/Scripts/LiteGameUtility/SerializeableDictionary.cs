@@ -3,18 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 可序列化的字典
+/// </summary>
+/// <typeparam name="TKey">键类型</typeparam>
+/// <typeparam name="TValue">值类型</typeparam>
 [Serializable]
 public class SerializeableDictionary<TKey,TValue> 
 {
+    // 键值对
     [Serializable]
     public struct Element
     {
         public TKey _keys;
         public TValue _values;
     }
-
+    
+    // 字典
     public List<Element> dict=new();
     
+    // 索引器
     public (TKey,TValue) this[int index]
     {
         get
@@ -31,6 +39,7 @@ public class SerializeableDictionary<TKey,TValue>
         }
     }
     
+    // 索引器重载
     public TValue this[TKey key]
     {
         get
@@ -43,6 +52,7 @@ public class SerializeableDictionary<TKey,TValue>
         }
     }
     
+    // 根据键获取值
     public TValue GetValueByKey(TKey key)
     {
         foreach (var element in dict)
@@ -56,6 +66,7 @@ public class SerializeableDictionary<TKey,TValue>
         return default;
     }
     
+    // 根据键设置值
     public void SetValueByKey(TKey key,TValue value)
     {
         for (int i = 0; i < dict.Count; i++)

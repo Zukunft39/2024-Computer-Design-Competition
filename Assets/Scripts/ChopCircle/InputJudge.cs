@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class InputJudge : MonoBehaviour
 {
+    //割圆按键
     public KeyCode inputKey=KeyCode.Space;
+    //割圆滑动条
     public ChopGameSlider chopGameSlider;
+    //割圆手柄
     public Transform handle;
+    //割圆完成事件
     public delegate void FinishEventDelegate();
+    //单例引用
     public static InputJudge instance;
+    //割圆完成事件
     public event FinishEventDelegate finishEvent;
+    //割圆刀刃动画
     public Animator bladeAnimator;
     
+    //目标区域列表
     private List<GameObject> targetAreas;
     
+    //判断输入
     void JudgeInput()
     {
         targetAreas = chopGameSlider.GetTargetAreas();
@@ -30,7 +39,8 @@ public class InputJudge : MonoBehaviour
         }
         ChopCircleGamePlay.instance.missTimes++;
     }
-
+    
+    //判断是否完成
     void JudgeIsFinish()
     {
         targetAreas = chopGameSlider.GetTargetAreas();
@@ -50,6 +60,7 @@ public class InputJudge : MonoBehaviour
 
     private void Update()
     {
+        //检测按下按键
         if(Input.GetKeyDown(inputKey)&& ChopCircleGamePlay.instance.GetGameState())
         {
             JudgeInput();
